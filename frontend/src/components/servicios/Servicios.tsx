@@ -2,6 +2,7 @@
 
 import ServicioCard from "@/components/servicios/ServiciosCard";
 import { servicios } from "@/data/servicios";
+import Link from "next/link";
 
 interface ServiciosProps {
   showTitle?: boolean;
@@ -56,12 +57,12 @@ export default function Servicios({
         {/* Botón para ver todos los servicios - condicional */}
         {showViewAllButton && maxItems && servicios.length > maxItems && (
           <div className="text-center mt-12">
-            <a
+            <Link
               href="/servicios"
               className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all transform hover:scale-105"
             >
               Ver todos los servicios
-            </a>
+            </Link>
           </div>
         )}
 
