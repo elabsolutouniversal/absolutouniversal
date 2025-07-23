@@ -6,11 +6,11 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'El Absoluto Universal',
-  description: 'Psicoterapia Holística y Servicios Espirituales',
-  
-}
+
+export const metadata = {
+    icons: '/favicon.ico',
+};
+
 
 export default function RootLayout({
   children,

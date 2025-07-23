@@ -1,11 +1,23 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['res.cloudinary.com', 'ui-avatars.com'],
-    dangerouslyAllowSVG: true, // ← Esto permite SVG
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;", // Seguridad adicional
-  }
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/dhhjcvwll/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
+        pathname: '/api/**',
+      },
+    ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy:
+      "default-src 'self'; img-src * data: blob:; sandbox;",
+  },
 };
 
 export default nextConfig;
