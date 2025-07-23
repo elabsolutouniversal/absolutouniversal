@@ -12,9 +12,10 @@ import CardConImagen from '@/components/servicios/terapia-integrativa-holistica/
 import Lightbox from '@/components/servicios/terapia-integrativa-holistica/Galeria/Lightbox';
 import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
 import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';
-
-import TestimoniosSection, { Testimonio } from '@/components/testimonios';
 import FAQSection from '@/components/FAQ';
+
+// ✅ AGREGAR: Import del componente TestimoniosSection
+import TestimoniosSection from '@/components/testimonios/TestimoniosSection'
 
 import {
   tarjetas,
@@ -23,7 +24,9 @@ import {
   testimonios as testimoniosRaw,
   faqs
 } from '@/data/servicios/terapia-integrativa-holistica';
+import { testimonios as testimoniosGlobales } from '@/data/testimonios/testimonios';
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
+import { ITestimonio } from '@/types/testimonios/testimonio';
 
 export default function TerapiaIntegrativaHolistica() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -47,14 +50,21 @@ export default function TerapiaIntegrativaHolistica() {
     };
   }, [openIndex, onKey]);
 
-  const testimonios: Testimonio[] = testimoniosRaw.map(t => ({
+  // ✅ TESTIMONIOS DEL SERVICIO: Transformar al formato correcto
+  const testimoniosServicio: ITestimonio[] = testimoniosRaw.map(t => ({
     nombre: t.nombre,
-    rol: t.edad,
+    rol: t.edad, // o t.rol si existe en tus datos
     contenido: t.contenido,
     rating: t.rating,
     fecha: t.fecha,
     avatar: t.avatar ?? null,
   }));
+
+  // ✅ COMBINAR: Testimonios del servicio + testimonios globales
+  const todosLosTestimonios: ITestimonio[] = [
+    ...testimoniosServicio,
+    ...testimoniosGlobales.slice(0, 7) // Tomar solo los primeros 7 globales
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
@@ -197,8 +207,13 @@ export default function TerapiaIntegrativaHolistica() {
           </motion.div>
         </section>
 
-        {/* Testimonios */}
-        <TestimoniosSection testimonios={testimonios} />
+        {/* ✅ TESTIMONIOS: Con más contenido para mostrar paginación */}
+        <TestimoniosSection 
+          testimonios={todosLosTestimonios}
+          title="Lo que dicen nuestros pacientes"
+          subtitle="Experiencias reales de transformación y sanación a través de nuestro tratamiento integral"
+          itemsPerPage={3}
+        />
 
         <BloqueTexto
           titulo="Enfoque complementario"
