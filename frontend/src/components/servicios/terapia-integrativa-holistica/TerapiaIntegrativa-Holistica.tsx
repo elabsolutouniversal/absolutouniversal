@@ -15,13 +15,8 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 
-/* ============= Tipos ============= */
-type Beneficio = {
-  icon: React.ReactNode;
-  titulo: string;
-  descripcion: string;
-};
-
+/* ------------ Tipos ------------ */
+type Beneficio = { icon: React.ReactNode; titulo: string; descripcion: string };
 type TarjetaImg = {
   titulo: string;
   src: string;
@@ -30,7 +25,7 @@ type TarjetaImg = {
   href?: string;
 };
 
-/* ============= Componente principal ============= */
+/* ------------ Principal ------------ */
 export default function SanacionIntegrativa() {
   const tarjetas: TarjetaImg[] = [
     {
@@ -92,7 +87,7 @@ export default function SanacionIntegrativa() {
     },
   ];
 
-  // Lightbox
+  /* Lightbox */
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const close = useCallback(() => setOpenIndex(null), []);
   const onKey = useCallback((e: KeyboardEvent) => e.key === 'Escape' && close(), [close]);
@@ -113,24 +108,24 @@ export default function SanacionIntegrativa() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-      {/* HERO */}
       <HeroSection />
 
       {/* GALERÍA */}
-      <section className="max-w-7xl mx-auto px-4 pb-14 sm:px-6 lg:px-8 -mt-8 md:-mt-12 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
+      <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900">
           Conoce nuestras terapias
         </h2>
 
-        {/* Mobile: scroll horizontal / Desktop: grid */}
-        <div className="md:hidden flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory">
+        {/* Mobile horizontal */}
+        <div className="md:hidden flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory -mx-4 px-4">
           {tarjetas.map((t, i) => (
-            <div key={i} className="min-w-[80%] snap-center">
+            <div key={i} className="min-w-[78%] snap-center">
               <CardConImagen {...t} onOpen={() => setOpenIndex(i)} />
             </div>
           ))}
         </div>
 
+        {/* Desktop grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-6">
           {tarjetas.map((t, i) => (
             <CardConImagen key={i} {...t} onOpen={() => setOpenIndex(i)} />
@@ -139,7 +134,7 @@ export default function SanacionIntegrativa() {
       </section>
 
       {/* CONTENIDO */}
-      <main className="max-w-7xl mx-auto px-4 py-14 sm:px-6 lg:px-8 space-y-20">
+      <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
         <BloqueTexto
           titulo="¿En qué consiste este tratamiento?"
           texto={
@@ -156,28 +151,30 @@ export default function SanacionIntegrativa() {
 
         {/* Proceso */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">¿Cómo es el proceso?</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
+            ¿Cómo es el proceso?
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {sesiones.map((s, i) => (
               <CardSesion key={i} {...s} />
             ))}
           </div>
         </section>
 
-        {/* Avisos */}
         <AvisosImportantes />
 
         {/* Beneficios */}
         <section>
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">Beneficios integrales</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
+            Beneficios integrales
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {beneficios.map((b, i) => (
               <CardBeneficio key={i} {...b} />
             ))}
           </div>
         </section>
 
-        {/* Complementario */}
         <BloqueTexto
           titulo="Enfoque complementario"
           texto={
@@ -192,10 +189,9 @@ export default function SanacionIntegrativa() {
         />
       </main>
 
-      {/* CTA */}
       <CTA />
 
-      {/* LIGHTBOX */}
+      {/* Lightbox */}
       <AnimatePresence>
         {openIndex !== null && (
           <Lightbox
@@ -209,22 +205,22 @@ export default function SanacionIntegrativa() {
   );
 }
 
-/* ============= Sub-componentes ============= */
+/* ------------ Sub-componentes ------------ */
 
 function HeroSection() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 text-white">
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 py-14 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+          <h1 className="text-[2.4rem] leading-tight sm:text-5xl md:text-6xl font-bold mb-5 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
             Sanación Integrativa Holística
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-pink-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 text-pink-100 max-w-3xl mx-auto leading-snug">
             Un punto de partida integral para tu proceso de sanación emocional, mental, energética y espiritual.
           </p>
           <div className="flex justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-white text-purple-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Iniciar mi transformación
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
@@ -255,9 +251,8 @@ function CardConImagen({
           alt={titulo}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
-          sizes="(max-width:768px) 80vw, (max-width:1200px) 33vw, 25vw"
+          sizes="(max-width:768px) 78vw, (max-width:1200px) 33vw, 25vw"
           onError={() => setError(true)}
-          priority={false}
         />
       ) : (
         <div className={`absolute inset-0 flex flex-col ${fallbackBg} items-center justify-center`}>
@@ -297,9 +292,9 @@ function BloqueTexto({
 }) {
   return (
     <section>
-      <div className={`${bg} ${border} rounded-3xl shadow-xl p-8 md:p-12`}>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">{titulo}</h2>
-        <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">{texto}</p>
+      <div className={`${bg} ${border} rounded-3xl shadow-xl p-6 sm:p-8 md:p-12`}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-gray-900 text-center">{titulo}</h2>
+        <p className="text-base sm:text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">{texto}</p>
       </div>
     </section>
   );
@@ -319,7 +314,7 @@ function CardSesion({
   gratuita?: boolean;
 }) {
   return (
-    <div className={`${color} rounded-2xl p-8 relative overflow-hidden`}>
+    <div className={`${color} rounded-2xl p-6 sm:p-8 relative overflow-hidden`}>
       {gratuita && (
         <div className="absolute top-4 right-4">
           <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -328,13 +323,13 @@ function CardSesion({
           </span>
         </div>
       )}
-      <div className="flex items-center mb-4">
-        <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg text-gray-800 mr-4">
+      <div className="flex items-center mb-3 sm:mb-4">
+        <div className="bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg text-gray-800 mr-3 sm:mr-4">
           {numero}
         </div>
-        <h3 className="text-2xl font-bold text-gray-800">{titulo}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{titulo}</h3>
       </div>
-      <p className="text-gray-700 leading-relaxed">{descripcion}</p>
+      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{descripcion}</p>
     </div>
   );
 }
@@ -342,12 +337,12 @@ function CardSesion({
 function AvisosImportantes() {
   return (
     <section>
-      <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 border-l-4 border-amber-400">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900 flex items-center">
-          <Shield className="w-8 h-8 mr-3 text-amber-600" />
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-6 sm:p-8 md:p-12 border-l-4 border-amber-400">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-5 text-gray-900 flex items-center">
+          <Shield className="w-7 h-7 mr-3 text-amber-600" />
           ¿Qué debes saber antes de iniciar?
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <ItemAviso>
             Las primeras sesiones no garantizan resultados inmediatos. Constituyen la base y el inicio de tu proceso,
             abriendo el camino para un tratamiento profundo y personalizado.
@@ -365,18 +360,20 @@ function AvisosImportantes() {
 function ItemAviso({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-start">
-      <CheckCircle className="w-6 h-6 text-amber-600 mr-3 mt-1 flex-shrink-0" />
-      <p className="text-gray-700">{children}</p>
+      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+      <p className="text-gray-700 text-sm sm:text-base">{children}</p>
     </div>
   );
 }
 
 function CardBeneficio({ icon, titulo, descripcion }: Beneficio) {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105">
-      <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="text-xl font-bold mb-4 text-gray-900">{titulo}</h3>
-      <p className="text-gray-600 leading-relaxed">{descripcion}</p>
+    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105">
+      <div className="flex justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
+      <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">{titulo}</h3>
+      <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{descripcion}</p>
     </div>
   );
 }
@@ -384,13 +381,12 @@ function CardBeneficio({ icon, titulo, descripcion }: Beneficio) {
 function CTA() {
   return (
     <section className="text-center px-4 pb-16">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-white shadow-2xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Lista para iniciar tu proceso de transformación?</h2>
-        <p className="text-lg md:text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-          Comienza tu camino de sanación integral con este protocolo de 5 sesiones (la última gratuita) y experimenta
-          los beneficios de un enfoque que armoniza mente, emociones y energía.
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">¿Lista para iniciar tu proceso de transformación?</h2>
+        <p className="text-base sm:text-lg md:text-xl mb-7 text-purple-100 max-w-3xl mx-auto">
+          Comienza tu camino de sanación integral con este protocolo de 5 sesiones (la última gratuita) y experimenta los beneficios de un enfoque que armoniza mente, emociones y energía.
         </p>
-        <button className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+        <button className="bg-white text-purple-600 px-8 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
           Reservar mi primera sesión
         </button>
       </div>
@@ -398,16 +394,8 @@ function CTA() {
   );
 }
 
-/* ============= Lightbox ============= */
-function Lightbox({
-  src,
-  titulo,
-  onClose,
-}: {
-  src: string;
-  titulo: string;
-  onClose: () => void;
-}) {
+/* ------------ Lightbox ------------ */
+function Lightbox({ src, titulo, onClose }: { src: string; titulo: string; onClose: () => void }) {
   return (
     <motion.div
       className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
@@ -417,7 +405,7 @@ function Lightbox({
       onClick={onClose}
     >
       <motion.div
-        className="relative max-w-4xl w-[90%] md:w-auto"
+        className="relative max-w-3xl w-[92%] md:w-auto"
         initial={{ scale: 0.85, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.85, opacity: 0 }}
@@ -425,25 +413,18 @@ function Lightbox({
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute -top-10 right-0 text-white hover:text-pink-300 transition"
+          className="absolute -top-9 right-0 text-white hover:text-pink-300 transition"
           onClick={onClose}
           aria-label="Cerrar"
         >
           <CloseIcon className="w-7 h-7" />
         </button>
 
-        <div className="relative w-full h-[80vh]">
-          <Image
-            src={src}
-            alt={titulo}
-            fill
-            className="object-contain rounded-xl"
-            sizes="100vw"
-            priority
-          />
+        <div className="relative w-full h-[70vh] md:h-[80vh]">
+          <Image src={src} alt={titulo} fill className="object-contain rounded-xl" sizes="100vw" priority />
         </div>
 
-        <p className="text-white mt-3 text-center">{titulo}</p>
+        <p className="text-white mt-3 text-center text-sm md:text-base">{titulo}</p>
       </motion.div>
     </motion.div>
   );
