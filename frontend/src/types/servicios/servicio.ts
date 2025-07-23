@@ -4,4 +4,4 @@ export interface Servicio {
   slug: string;
   image: string;
   description: string;
-}
+} 

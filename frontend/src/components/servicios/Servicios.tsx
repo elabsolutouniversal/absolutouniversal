@@ -1,7 +1,7 @@
 "use client";
 
 import ServicioCard from "@/components/servicios/ServiciosCard";
-import { servicios } from "@/data/servicios";
+import { servicios } from "@/data/servicios/servicios";
 import Link from "next/link";
 
 interface ServiciosProps {

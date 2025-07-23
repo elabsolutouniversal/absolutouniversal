@@ -1,96 +1,37 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import HeroSection from '@/components/servicios/terapia-integrativa-holistica/HeroSection';
+import BloqueTexto from '@/components/servicios/terapia-integrativa-holistica/BloqueTexto';
+import AvisosImportantes from '@/components/servicios/terapia-integrativa-holistica/Avisos/AvisosImportantes';
+import CardSesion from '@/components/servicios/terapia-integrativa-holistica/Proceso/CardSesion';
+import CardBeneficio from '@/components/servicios/terapia-integrativa-holistica/Beneficios/CardBeneficio';
+import CardConImagen from '@/components/servicios/terapia-integrativa-holistica/Galeria/CardConImagen';
+import Lightbox from '@/components/servicios/terapia-integrativa-holistica/Galeria/Lightbox';
+import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
+import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';
+
+import TestimoniosSection, { Testimonio } from '@/components/testimonios';
+import FAQSection from '@/components/FAQ';
+
 import {
-  Heart,
-  Sparkles,
-  Users,
-  Shield,
-  Star,
-  CheckCircle,
-  Gift,
-  ArrowRight,
-  X as CloseIcon,
-} from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
+  tarjetas,
+  sesiones,
+  beneficios,
+  testimonios as testimoniosRaw,
+  faqs
+} from '@/data/servicios/terapia-integrativa-holistica';
+import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
 
-/* ------------ Tipos ------------ */
-type Beneficio = { icon: React.ReactNode; titulo: string; descripcion: string };
-type TarjetaImg = {
-  titulo: string;
-  src: string;
-  fallbackBg: string;
-  icon: React.ReactNode;
-  href?: string;
-};
-
-/* ------------ Principal ------------ */
-export default function SanacionIntegrativa() {
-  const tarjetas: TarjetaImg[] = [
-    {
-      titulo: 'Terapia Integrativa Holística',
-      src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg',
-      fallbackBg: 'bg-purple-200',
-      icon: <Heart className="w-12 h-12 mx-auto mb-2 text-purple-600" />,
-      href: '/servicios/psicoterapia-integrativa-holistica',
-    },
-    {
-      titulo: 'Péndulo Hebreo',
-      src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154206/pendulo-hebreo-1_n1lavx.jpg',
-      fallbackBg: 'bg-blue-200',
-      icon: <Sparkles className="w-12 h-12 mx-auto mb-2 text-blue-600" />,
-      href: '/servicios/pendulo-hebreo',
-    },
-    {
-      titulo: 'Proceso de Sanación',
-      src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg',
-      fallbackBg: 'bg-pink-200',
-      icon: <Star className="w-12 h-12 mx-auto mb-2 text-pink-600" />,
-      href: '/servicios/proceso-de-sanacion',
-    },
-  ];
-
-  const sesiones = [
-    {
-      numero: '1–4',
-      titulo: 'Evaluación y Preparación',
-      descripcion:
-        'Enfocadas en la evaluación, diagnóstico energético, limpieza inicial y desbloqueo. Abordamos tus desafíos, necesidades y expectativas.',
-      color: 'bg-gradient-to-r from-pink-100 to-purple-100',
-    },
-    {
-      numero: '5',
-      titulo: 'Inicio del Tratamiento',
-      descripcion:
-        'Sesión gratuita que marca el inicio real del tratamiento personalizado basado en las sesiones previas.',
-      color: 'bg-gradient-to-r from-green-100 to-blue-100',
-      gratuita: true,
-    },
-  ];
-
-  const beneficios: Beneficio[] = [
-    {
-      icon: <Heart className="w-6 h-6 text-pink-600" />,
-      titulo: 'Equilibrio emocional',
-      descripcion: 'Bienestar mental y emocional a través de técnicas integradas de sanación.',
-    },
-    {
-      icon: <Sparkles className="w-6 h-6 text-purple-600" />,
-      titulo: 'Armonía energética',
-      descripcion: 'Limpieza y fortalecimiento de tu campo electromagnético para un flujo energético óptimo.',
-    },
-    {
-      icon: <Users className="w-6 h-6 text-blue-600" />,
-      titulo: 'Crecimiento personal',
-      descripcion: 'Desarrollo y evolución a partir de un protocolo personalizado y acompañamiento continuo.',
-    },
-  ];
-
-  /* Lightbox */
+export default function TerapiaIntegrativaHolistica() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const close = useCallback(() => setOpenIndex(null), []);
-  const onKey = useCallback((e: KeyboardEvent) => e.key === 'Escape' && close(), [close]);
+  const onKey = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') close();
+  }, [close]);
 
   useEffect(() => {
     if (openIndex !== null) {
@@ -106,20 +47,58 @@ export default function SanacionIntegrativa() {
     };
   }, [openIndex, onKey]);
 
+  const testimonios: Testimonio[] = testimoniosRaw.map(t => ({
+    nombre: t.nombre,
+    rol: t.edad,
+    contenido: t.contenido,
+    rating: t.rating,
+    fecha: t.fecha,
+    avatar: t.avatar ?? null,
+  }));
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-      <HeroSection />
+    {/* HERO + BARRA DE BENEFICIOS */}
+<section className="relative md:overflow-visible pb-4 md:pb-20">
+  {/* Hero */}
+  <div className="-mx-4 sm:-mx-6 md:mx-auto md:max-w-7xl md:px-6">
+    <HeroSection />
+  </div>
+
+  {/* Barra mobile */}
+  <QuickBenefitsBar variant="static" className="mt-5 px-4 md:hidden" />
+
+  {/* Barra desktop (menos espacio) */}
+  <QuickBenefitsBar
+    variant="floating"
+    gapTop={20}        // antes 56
+    gapBottom={14}     // antes 40-48
+    className="hidden md:block"
+  />
+</section>
+
 
       {/* GALERÍA */}
-      <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900">
-          Conoce nuestras terapias
-        </h2>
+      <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10 mt-10 md:mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className=" text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900
+    pt-0 md:pt-10">
+            Conoce nuestras terapias
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral
+          </p>
+        </motion.div>
 
         {/* Mobile horizontal */}
         <div className="md:hidden flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory -mx-4 px-4">
           {tarjetas.map((t, i) => (
-            <div key={i} className="min-w-[78%] snap-center">
+            <div key={i} className="min-w-[85%] snap-center">
               <CardConImagen {...t} onOpen={() => setOpenIndex(i)} />
             </div>
           ))}
@@ -128,35 +107,59 @@ export default function SanacionIntegrativa() {
         {/* Desktop grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-6">
           {tarjetas.map((t, i) => (
-            <CardConImagen key={i} {...t} onOpen={() => setOpenIndex(i)} />
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <CardConImagen {...t} onOpen={() => setOpenIndex(i)} />
+            </motion.div>
           ))}
         </div>
       </section>
 
-      {/* CONTENIDO */}
+      {/* CONTENIDO PRINCIPAL */}
       <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
         <BloqueTexto
+          id="que-consiste"
           titulo="¿En qué consiste este tratamiento?"
           texto={
             <>
+              <p className="text-gray-600 leading-relaxed text-justify">
               La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
               <span className="font-semibold text-purple-600">psicología</span>,{' '}
               <span className="font-semibold text-blue-600">radiestesia con péndulo hebreo</span> y{' '}
               <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este protocolo está diseñado para
               abrir tu camino de transformación, abordando tanto tus necesidades emocionales como energéticas, e iniciar
               un proceso profundo de autoconocimiento y bienestar.
+            </p>
             </>
           }
         />
 
         {/* Proceso */}
-        <section>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
-            ¿Cómo es el proceso?
-          </h2>
+        <section id="proceso">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center md:text-justify md:max-w-4xl md:mx-auto"
+          >
+            Tu viaje de transformación
+          </motion.h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {sesiones.map((s, i) => (
-              <CardSesion key={i} {...s} />
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+              >
+                <CardSesion {...s} />
+              </motion.div>
             ))}
           </div>
         </section>
@@ -165,15 +168,37 @@ export default function SanacionIntegrativa() {
 
         {/* Beneficios */}
         <section>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
-            Beneficios integrales
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+              Beneficios que transformarán tu vida
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Experimenta cambios profundos en todas las áreas de tu ser
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {beneficios.map((b, i) => (
-              <CardBeneficio key={i} {...b} />
+              <motion.div key={i} variants={fadeInUp} transition={{ delay: b.delay }}>
+                <CardBeneficio {...b} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
+
+        {/* Testimonios */}
+        <TestimoniosSection testimonios={testimonios} />
 
         <BloqueTexto
           titulo="Enfoque complementario"
@@ -184,9 +209,12 @@ export default function SanacionIntegrativa() {
               bienestar general, actuando en armonía con el cuidado y las recomendaciones de tus profesionales de salud.
             </>
           }
-          bg="bg-blue-50"
-          border="border border-blue-200"
+          bg="bg-gradient-to-r from-blue-50 to-purple-50"
+          border="border-2 border-blue-200"
         />
+
+        {/* FAQ */}
+        <FAQSection faqs={faqs} />
       </main>
 
       <CTA />
@@ -202,230 +230,5 @@ export default function SanacionIntegrativa() {
         )}
       </AnimatePresence>
     </div>
-  );
-}
-
-/* ------------ Sub-componentes ------------ */
-
-function HeroSection() {
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 text-white">
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="relative max-w-7xl mx-auto px-4 py-14 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-[2.4rem] leading-tight sm:text-5xl md:text-6xl font-bold mb-5 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
-            Sanación Integrativa Holística
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 text-pink-100 max-w-3xl mx-auto leading-snug">
-            Un punto de partida integral para tu proceso de sanación emocional, mental, energética y espiritual.
-          </p>
-          <div className="flex justify-center">
-            <button className="bg-white text-purple-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Iniciar mi transformación
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function CardConImagen({
-  titulo,
-  src,
-  fallbackBg,
-  icon,
-  href,
-  onOpen,
-}: TarjetaImg & { onOpen: () => void }) {
-  const [error, setError] = useState(false);
-  return (
-    <div
-      className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3] cursor-pointer"
-      onClick={onOpen}
-    >
-      {!error ? (
-        <Image
-          src={src}
-          alt={titulo}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-          sizes="(max-width:768px) 78vw, (max-width:1200px) 33vw, 25vw"
-          onError={() => setError(true)}
-        />
-      ) : (
-        <div className={`absolute inset-0 flex flex-col ${fallbackBg} items-center justify-center`}>
-          {icon}
-          <p className="font-medium text-gray-700">{titulo}</p>
-        </div>
-      )}
-
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-        <p className="text-white font-semibold text-sm md:text-base">{titulo}</p>
-      </div>
-
-      {href && (
-        <a
-          href={href}
-          onClick={(e) => e.stopPropagation()}
-          className="absolute top-3 right-3 text-white/80 hover:text-white text-xs underline"
-        >
-          Ver más
-        </a>
-      )}
-    </div>
-  );
-}
-
-function BloqueTexto({
-  titulo,
-  texto,
-  bg = 'bg-white',
-  border = '',
-}: {
-  titulo: string;
-  texto: React.ReactNode;
-  bg?: string;
-  border?: string;
-}) {
-  return (
-    <section>
-      <div className={`${bg} ${border} rounded-3xl shadow-xl p-6 sm:p-8 md:p-12`}>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-gray-900 text-center">{titulo}</h2>
-        <p className="text-base sm:text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">{texto}</p>
-      </div>
-    </section>
-  );
-}
-
-function CardSesion({
-  numero,
-  titulo,
-  descripcion,
-  color,
-  gratuita,
-}: {
-  numero: string;
-  titulo: string;
-  descripcion: string;
-  color: string;
-  gratuita?: boolean;
-}) {
-  return (
-    <div className={`${color} rounded-2xl p-6 sm:p-8 relative overflow-hidden`}>
-      {gratuita && (
-        <div className="absolute top-4 right-4">
-          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-            <Gift className="w-4 h-4 mr-1" />
-            Gratuita
-          </span>
-        </div>
-      )}
-      <div className="flex items-center mb-3 sm:mb-4">
-        <div className="bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg text-gray-800 mr-3 sm:mr-4">
-          {numero}
-        </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{titulo}</h3>
-      </div>
-      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{descripcion}</p>
-    </div>
-  );
-}
-
-function AvisosImportantes() {
-  return (
-    <section>
-      <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-6 sm:p-8 md:p-12 border-l-4 border-amber-400">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-5 text-gray-900 flex items-center">
-          <Shield className="w-7 h-7 mr-3 text-amber-600" />
-          ¿Qué debes saber antes de iniciar?
-        </h2>
-        <div className="space-y-3 sm:space-y-4">
-          <ItemAviso>
-            Las primeras sesiones no garantizan resultados inmediatos. Constituyen la base y el inicio de tu proceso,
-            abriendo el camino para un tratamiento profundo y personalizado.
-          </ItemAviso>
-          <ItemAviso>
-            La sanación es un proceso gradual y personal; cada persona avanza a su propio ritmo, con acompañamiento
-            adaptado a sus necesidades.
-          </ItemAviso>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ItemAviso({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-start">
-      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
-      <p className="text-gray-700 text-sm sm:text-base">{children}</p>
-    </div>
-  );
-}
-
-function CardBeneficio({ icon, titulo, descripcion }: Beneficio) {
-  return (
-    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105">
-      <div className="flex justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-        {icon}
-      </div>
-      <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">{titulo}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{descripcion}</p>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <section className="text-center px-4 pb-16">
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">¿Lista para iniciar tu proceso de transformación?</h2>
-        <p className="text-base sm:text-lg md:text-xl mb-7 text-purple-100 max-w-3xl mx-auto">
-          Comienza tu camino de sanación integral con este protocolo de 5 sesiones (la última gratuita) y experimenta los beneficios de un enfoque que armoniza mente, emociones y energía.
-        </p>
-        <button className="bg-white text-purple-600 px-8 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-          Reservar mi primera sesión
-        </button>
-      </div>
-    </section>
-  );
-}
-
-/* ------------ Lightbox ------------ */
-function Lightbox({ src, titulo, onClose }: { src: string; titulo: string; onClose: () => void }) {
-  return (
-    <motion.div
-      className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={onClose}
-    >
-      <motion.div
-        className="relative max-w-3xl w-[92%] md:w-auto"
-        initial={{ scale: 0.85, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.85, opacity: 0 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          className="absolute -top-9 right-0 text-white hover:text-pink-300 transition"
-          onClick={onClose}
-          aria-label="Cerrar"
-        >
-          <CloseIcon className="w-7 h-7" />
-        </button>
-
-        <div className="relative w-full h-[70vh] md:h-[80vh]">
-          <Image src={src} alt={titulo} fill className="object-contain rounded-xl" sizes="100vw" priority />
-        </div>
-
-        <p className="text-white mt-3 text-center text-sm md:text-base">{titulo}</p>
-      </motion.div>
-    </motion.div>
   );
 }
