@@ -8,10 +8,10 @@ export interface Servicio {
 
 export const servicios: Servicio[] = [
   {
-    title: "Psicoterapia Integrativa Holística",
-    slug: "psicoterapia-integrativa",
+    title: "Sanacion integrativa holística",
+    slug: "sanacion-integrativa-holistica",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
-    description: "Combina las técnicas psicológicas tradicionales con la terapia de radiestesia con péndulo hebreo y el Tarot terapéutico.",
+    description: "Combino recursos de la psicología moderna con radiestesia mediante péndulo hebreo y Tarot terapéutico para liberar bloqueos y guiarte hacia una sanación integral.",
   },
   // {
   //   title: "Lectura de Registros Akáshicos",
@@ -26,8 +26,8 @@ export const servicios: Servicio[] = [
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
   },
   {
-    title: "Psico Educación",
-    slug: "psico-educacion",
+    title: "Psico educación Consciente",
+    slug: "psico-educacion-consciente",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
     description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
   },

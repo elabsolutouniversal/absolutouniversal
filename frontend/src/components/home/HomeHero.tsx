@@ -140,7 +140,6 @@ export default function HomeHero() {
               </h3>
               <ul className={`list-disc list-inside space-y-1 ${listTextColor}`}>
                 <li>Psicoterapia Integrativa Holística</li>
-                <li>Registros akáshicos</li>
                 <li>Psico Educación</li>
                 <li>Tarot Predictivo con Enfoque Terapéutico</li>
               </ul>
