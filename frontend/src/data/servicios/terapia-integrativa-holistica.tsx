@@ -5,8 +5,17 @@ import {
   Users, 
   Brain, 
   Flower2, 
-  Zap 
+  Zap, 
 } from 'lucide-react';
+
+import { 
+  User,           // Evaluación personal
+  Sparkle,        // Energía/limpieza  
+  FlowerLotus,          // Chakras/meditación
+  SunDim,         // Aura/protección energética
+  Target,         // Integración/objetivos
+} from 'phosphor-react';
+
 import type { 
   TarjetaTerapiaIntegrativa, 
   SesionTerapiaIntegrativa, 
@@ -14,6 +23,8 @@ import type {
   TestimonioTerapiaIntegrativa, 
   FAQTerapiaIntegrativa 
 } from '@/types/servicios/terapia-integrativa-holistica';
+
+
 
 export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   {
@@ -138,5 +149,73 @@ export const faqs: FAQTerapiaIntegrativa[] = [
   {
     pregunta: "¿Qué debo esperar en la primera sesión?",
     respuesta: "En la primera sesión realizaremos una evaluación integral de tu estado actual, identificaremos tus necesidades específicas y comenzaremos con técnicas suaves de limpieza energética y equilibrio emocional."
+  }
+];
+
+export const sesiones5Pasos = [
+  {
+    numero: 1,
+    titulo: "Evaluación Integral Personalizada",
+    duracion: "90 minutos",
+    icon: User,        // ✅ MANTENER - funciona perfecto
+    color: "from-purple-400 to-pink-400",
+    puntos: [
+      "Entrevista profunda para conocer tu historia y necesidades específicas",
+      "Identificación de patrones energéticos y emocionales",
+      "Diseño de tu plan de tratamiento personalizado"
+    ]
+  },
+  {
+    numero: 2,
+    titulo: "Diagnóstico y Limpieza Energética",
+    duracion: "75 minutos",
+    icon: Sparkle,     // 🔹 CAMBIO: era Sparkles → ahora Sparkle (más específico)
+    color: "from-blue-400 to-cyan-400",
+    puntos: [
+      "Testeo energético completo de tu sistema",
+      "Limpieza profunda de bloqueos energéticos acumulados",
+      "Técnicas avanzadas de reprogramación celular",
+      "Revitalización de tu campo energético"
+    ]
+  },
+  {
+    numero: 3,
+    titulo: "Armonización de Chakras",
+    duracion: "75 minutos",
+    icon: FlowerLotus,       // 🔹 CAMBIO: era Heart → ahora Lotus (PERFECTO para chakras!)
+    color: "from-green-400 to-emerald-400",
+    puntos: [
+      "Desbloqueo y equilibrio de los 7 chakras principales",
+      "Potenciación de tu flujo energético natural",
+      "Restauración del equilibrio emocional, mental y físico",
+      "Técnicas de activación energética"
+    ]
+  },
+  {
+    numero: 4,
+    titulo: "Reparación y Fortalecimiento del Aura",
+    duracion: "75 minutos",
+    icon: SunDim,      // 🔹 CAMBIO: era Shield → ahora SunDim (ideal para aura/energía)
+    color: "from-yellow-400 to-orange-400",
+    puntos: [
+      "Sellado y reparación de tu campo áurico",
+      "Fortalecimiento de tu protección energética natural",
+      "Prevención de futuras pérdidas energéticas",
+      "Técnicas de autoprotección energética"
+    ]
+  },
+  {
+    numero: 5,
+    titulo: "Integración y Consolidación",
+    duracion: "60 minutos",
+    icon: Target,      // 🔹 CAMBIO: era Star → ahora Target (mejor para objetivos)
+    color: "from-indigo-400 to-purple-400",
+    badge: "GRATUITA",
+    puntos: [
+      "Sesión personalizada basada en tus necesidades específicas",
+      "Consolidación de todos los avances logrados",
+      "Herramientas para mantener tu equilibrio energético",
+      "Plan de seguimiento personalizado"
+    ]
   }
 ];

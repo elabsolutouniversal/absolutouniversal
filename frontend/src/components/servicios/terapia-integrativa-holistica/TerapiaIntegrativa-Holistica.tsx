@@ -14,6 +14,7 @@ import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
 import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';
 import FAQSection from '@/components/FAQ';
 
+// 🔹 NUEVO IMPORT - AGREGA ESTA LÍNEA
 
 import {
   tarjetas,
@@ -22,6 +23,7 @@ import {
   faqs
 } from '@/data/servicios/terapia-integrativa-holistica';
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
+import SanacionEnergetica from './5PasosSanacionEnergetica/PasosSanacionEnergetica';
 
 export default function TerapiaIntegrativaHolistica() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -65,7 +67,6 @@ export default function TerapiaIntegrativaHolistica() {
     className="hidden md:block"
   />
 </section>
-
 
       {/* GALERÍA */}
       <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10 mt-10 md:mt-16">
@@ -127,6 +128,9 @@ export default function TerapiaIntegrativaHolistica() {
             </>
           }
         />
+
+        {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
+        <SanacionEnergetica />
 
         {/* Proceso */}
         <section id="proceso">
