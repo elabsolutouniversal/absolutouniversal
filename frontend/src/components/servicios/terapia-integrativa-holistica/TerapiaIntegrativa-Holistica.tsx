@@ -21,12 +21,10 @@ import {
   tarjetas,
   sesiones,
   beneficios,
-  testimonios as testimoniosRaw,
   faqs
 } from '@/data/servicios/terapia-integrativa-holistica';
-import { testimonios as testimoniosGlobales } from '@/data/testimonios/testimonios';
+import { testimonios } from '@/data/testimonios/testimonios';
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
-import { ITestimonio } from '@/types/testimonios/testimonio';
 
 export default function TerapiaIntegrativaHolistica() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -49,22 +47,6 @@ export default function TerapiaIntegrativaHolistica() {
       window.removeEventListener('keydown', onKey);
     };
   }, [openIndex, onKey]);
-
-  // ✅ TESTIMONIOS DEL SERVICIO: Transformar al formato correcto
-  const testimoniosServicio: ITestimonio[] = testimoniosRaw.map(t => ({
-    nombre: t.nombre,
-    rol: t.edad, // o t.rol si existe en tus datos
-    contenido: t.contenido,
-    rating: t.rating,
-    fecha: t.fecha,
-    avatar: t.avatar ?? null,
-  }));
-
-  // ✅ COMBINAR: Testimonios del servicio + testimonios globales
-  const todosLosTestimonios: ITestimonio[] = [
-    ...testimoniosServicio,
-    ...testimoniosGlobales.slice(0, 7) // Tomar solo los primeros 7 globales
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
@@ -207,9 +189,9 @@ export default function TerapiaIntegrativaHolistica() {
           </motion.div>
         </section>
 
-        {/* ✅ TESTIMONIOS: Con más contenido para mostrar paginación */}
+        {/* ✅ TESTIMONIOS: Usando solo los testimonios reales */}
         <TestimoniosSection 
-          testimonios={todosLosTestimonios}
+          testimonios={testimonios}
           title="Lo que dicen nuestros pacientes"
           subtitle="Experiencias reales de transformación y sanación a través de nuestro tratamiento integral"
           itemsPerPage={3}
