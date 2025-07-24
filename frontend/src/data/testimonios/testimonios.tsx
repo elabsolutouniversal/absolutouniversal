@@ -6,6 +6,7 @@ export const testimonios: ITestimonio[] = [
         contenido: `Hola Diana, soy Rosa R. Gracias por tu ayuda; una de las mejores experiencias con tus servicios, tanto en el tarot (muy acertado) como en el péndulo hebreo. Me fue de mucha ayuda físicamente y mentalmente. Me hizo cambiar mi forma de pensar y de alimentarme; también me siento otra persona, más saludable y más consciente. ¡Gracias! Muchas gracias por ayudarme tanto, sin duda alguna recurriría a pedirte ayuda, me das muchísima confianza 🙏🏻`,
         fecha: '2024',
         rating: 5,
+        rol:'EEUU'
     },
     {
         nombre: 'Jeannete I.',
@@ -25,16 +26,18 @@ Y, aparte de todo ello, tus acertadas lecturas de cartas para orientarme por el 
         nombre: 'Noris K.',
         contenido: `A Nunash la conozco desde hace 25 años y sus cálculos son muy exactos, es muy confiable. Ella tiene una habilidad muy especial para confrontar el pasado-presente y demasiado bien el futuro. Yo confío en ella y en sus cálculos al 100%. Ahora organizada con su canal es fantástico ya que me ayuda siempre cuando busco respuestas. Y conmigo nunca se equivocó al consultarle.`,
         rating: 5,
+        rol:'EEUU'
     },
     {
-        nombre: 'Rosa S.',
+        nombre: 'Ana Quiñones.',
         contenido: `En noviembre de 2024 descubrí el péndulo hebreo. Luego que mi mamá fuera diagnosticada de una enfermedad rara y tras verla poco a poco perder todas sus facultades, surgieron en mí muchas preguntas. Los conocimientos y la escucha de Dahiana como psicóloga, además de su energía en el tratamiento del péndulo hebreo, me dieron muchas respuestas. Entender ciertos patrones de conducta que se repiten de padres a hijos, saber lo que debemos cambiar, aceptar los eventos que no podemos controlar para poder seguir adelante sin que nos pesen, trabajar en sí mismos, en nuestra energía.
-
+        
 Hoy mi percepción de la vida y de los problemas es diferente y, aunque aún hay trabajo que hacer, ya puedo ver los resultados en las relaciones que tengo con las personas a mi alrededor. Por eso yo recomiendo el tratamiento del péndulo hebreo: a pesar de que puede parecer largo, es un proceso que cura de raíz.
 
 También quiero agradecer a Dahiana por su paciencia, honestidad y dedicación. Yo traté con muchos disque profesionales o coach holísticos, y ninguno iguala su profesionalismo. Gracias 😊`,
         fecha: 'Nov 2024',
         rating: 5,
+        rol:'Canada'
     },
     {
         nombre: 'Ana Quiñonez',
