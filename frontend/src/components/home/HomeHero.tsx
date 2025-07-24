@@ -77,7 +77,7 @@ export default function HomeHero() {
             {/* Foto + nombre + redes */}
             <div className="flex flex-col items-center">
               <Image
-                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753150894/about-profile_kuacih.jpg"
+                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
                 alt="Psicoterapeuta Dahiana"
                 width={180}
                 height={180}
