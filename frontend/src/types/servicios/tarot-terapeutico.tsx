@@ -1,9 +1,11 @@
-// @/data/servicios/tarot-terapeutico.ts
-import { Heart, Eye, Users, Star, Triangle, Sparkles, Target, Compass, RotateCcw, Scale } from 'lucide-react'
-import { Servicio, AudienciaItem } from '@/types/servicios/tarot-terapeutico'
+// Servicio Tarot
 
-// Datos de servicios del Tarot Terapéutico
-export const serviciosDataTarotTerapeutico: Servicio[] = [
+import React from 'react';
+import { Heart, Eye, Users, Star, Triangle, Sparkles, Target, Compass, RotateCcw, Scale } from 'lucide-react';
+
+
+
+export const serviciosDataTarotTerapeutico = [
   {
     id: 1,
     icon: <Sparkles className="w-6 h-6" />,
@@ -34,10 +36,10 @@ export const serviciosDataTarotTerapeutico: Servicio[] = [
     titulo: "Identificación de patrones internos y sucesos externos",
     descripcion: "Desde un enfoque Junguiano y Gestáltico, comprende cómo tu mundo interno influye en tu realidad."
   }
-]
+];
 
-// Datos de audiencia objetivo del Tarot Terapéutico
-export const audienciaDataTarotTerapeutico: AudienciaItem[] = [
+// Datos de audiencia objetivo
+export const audienciaDataTarotTerapeutico = [
   {
     id: 1,
     icon: <Scale className="w-5 h-5" />,
@@ -78,4 +80,4 @@ export const audienciaDataTarotTerapeutico: AudienciaItem[] = [
     icon: <Compass className="w-5 h-5" />,
     texto: "Si buscas claridad sin desconectarte de tu proceso emocional y espiritual"
   }
-]
+];

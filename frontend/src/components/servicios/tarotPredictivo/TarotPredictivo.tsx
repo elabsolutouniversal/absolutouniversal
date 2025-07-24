@@ -1,6 +1,4 @@
 'use client'
-
-import { audienciaDataTarotTerapeutico, serviciosDataTarotTerapeutico } from '@/data/servicios/tarot-terapeutico'
 import React, { useState } from 'react'
 import { ImageData } from '@/types/servicios/tarot-terapeutico'
 
@@ -11,6 +9,7 @@ import ImageModal from '@/components/servicios/tarotPredictivo/ImageModal'
 import ServicesSection from '@/components/servicios/tarotPredictivo/ServicesSection'
 import AudienceSection from '@/components/servicios/tarotPredictivo/AudienceSection'
 import TarotFooter from '@/components/servicios/tarotPredictivo/TarotFooter'
+import { serviciosDataTarotTerapeutico, audienciaDataTarotTerapeutico } from '@/data/servicios/tarot-terapeutico';
 
 const TarotPredictivo: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null)
