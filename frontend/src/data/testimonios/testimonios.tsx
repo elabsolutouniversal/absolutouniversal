@@ -40,11 +40,6 @@ También quiero agradecer a Dahiana por su paciencia, honestidad y dedicación. 
         rol:'Canada'
     },
     {
-        nombre: 'Ana Quiñonez',
-        contenido: `A Nunash la conozco desde hace 25 años y sus cálculos son muy exactos, es muy confiable. Ella tiene una habilidad muy especial para confrontar el pasado-presente y demasiado bien el futuro. Yo confío en ella y en sus cálculos al 100%. Ahora organizada con su canal es fantástico ya que me ayuda siempre cuando busco respuestas. Y conmigo nunca se equivocó al consultarle.`,
-        rating: 5,
-    },
-    {
         nombre: 'Brenda R.S.',
         contenido: `Yo, Brenda R.S., tengo una experiencia satisfactoria con las lecturas que me hizo la señora Dahiana; en todas me acertó y gracias a ella actué rápido con algunos problemas de salud. Realmente estoy muy agradecida y espero que muchas personas hagan sus consultas, ya que la señora es muy amable y hace que su trabajo te saque de muchas dudas que siempre tenemos. 🙏🤗 Saludos cordiales 🫂`,
         rating: 5,
