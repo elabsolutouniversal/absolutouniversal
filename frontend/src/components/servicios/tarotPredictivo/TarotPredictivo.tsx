@@ -9,31 +9,12 @@ import ImageModal from '@/components/servicios/tarotPredictivo/ImageModal'
 import ServicesSection from '@/components/servicios/tarotPredictivo/ServicesSection'
 import AudienceSection from '@/components/servicios/tarotPredictivo/AudienceSection'
 import TarotFooter from '@/components/servicios/tarotPredictivo/TarotFooter'
-import { serviciosDataTarotTerapeutico, audienciaDataTarotTerapeutico } from '@/data/servicios/tarot-terapeutico';
+import { serviciosDataTarotTerapeutico, audienciaDataTarotTerapeutico, tarotPredictivoImages } from '@/data/servicios/tarot-terapeutico';
 
 const TarotPredictivo: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null)
+   const images: ImageData[] = tarotPredictivoImages
 
-  const images: ImageData[] = [
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
-      alt: "Sesión de Tarot Terapéutico",
-      title: "Sesión Principal",
-      subtitle: "Tarot Terapéutico"
-    },
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
-      alt: "Terapia Integrativa Holística",
-      title: "Lectura Intuitiva",
-      subtitle: "Conexión profunda"
-    },
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753150894/about-profile_kuacih.jpg",
-      alt: "Perfil Profesional",
-      title: "Sanación Emocional",
-      subtitle: "Transformación personal"
-    }
-  ]
 
   const openModal = (image: ImageData): void => {
     setSelectedImage(image)

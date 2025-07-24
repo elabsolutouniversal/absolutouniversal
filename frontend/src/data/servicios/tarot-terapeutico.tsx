@@ -1,6 +1,7 @@
 // @/data/servicios/tarot-terapeutico.ts
 import { Heart, Eye, Users, Star, Triangle, Sparkles, Target, Compass, RotateCcw, Scale } from 'lucide-react'
 import { Servicio, AudienciaItem } from '@/types/servicios/tarot-terapeutico'
+import { ImageData } from '@/types/servicios/tarot-terapeutico';
 
 // Datos de servicios del Tarot Terapéutico
 export const serviciosDataTarotTerapeutico: Servicio[] = [
@@ -79,3 +80,25 @@ export const audienciaDataTarotTerapeutico: AudienciaItem[] = [
     texto: "Si buscas claridad sin desconectarte de tu proceso emocional y espiritual"
   }
 ]
+ 
+
+export const tarotPredictivoImages: ImageData[] = [
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
+      alt: "Sesión de Tarot Terapéutico",
+      title: "Sesión Principal",
+      subtitle: "Tarot Terapéutico"
+    },
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
+      alt: "Terapia Integrativa Holística",
+      title: "Lectura Intuitiva",
+      subtitle: "Conexión profunda"
+    },
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753150894/about-profile_kuacih.jpg",
+      alt: "Perfil Profesional",
+      title: "Sanación Emocional",
+      subtitle: "Transformación personal"
+    }
+  ]

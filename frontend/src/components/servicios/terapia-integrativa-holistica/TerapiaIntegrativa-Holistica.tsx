@@ -14,8 +14,6 @@ import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
 import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';
 import FAQSection from '@/components/FAQ';
 
-// ✅ AGREGAR: Import del componente TestimoniosSection
-import TestimoniosSection from '@/components/testimonios/TestimoniosSection'
 
 import {
   tarjetas,
@@ -23,7 +21,6 @@ import {
   beneficios,
   faqs
 } from '@/data/servicios/terapia-integrativa-holistica';
-import { testimonios } from '@/data/testimonios/testimonios';
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
 
 export default function TerapiaIntegrativaHolistica() {
@@ -188,15 +185,6 @@ export default function TerapiaIntegrativaHolistica() {
             ))}
           </motion.div>
         </section>
-
-        {/* ✅ TESTIMONIOS: Usando solo los testimonios reales */}
-        <TestimoniosSection 
-          testimonios={testimonios}
-          title="Lo que dicen nuestros pacientes"
-          subtitle="Experiencias reales de transformación y sanación a través de nuestro tratamiento integral"
-          itemsPerPage={3}
-        />
-
         <BloqueTexto
           titulo="Enfoque complementario"
           texto={

@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   icons: '/favicon.ico',
   metadataBase: new URL('https://www.absolutouniversal.com'),
+   title: 'El Absoluto Universal',
   openGraph: {
     title: 'El Absoluto Universal',
     description: 'Psicoterapia Holística y Servicios Espirituales.',

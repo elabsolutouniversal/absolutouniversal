@@ -1,7 +1,13 @@
 import { X } from 'lucide-react'
-import Image from 'next/image'
+import Image from 'next/image';
 import React from 'react'
-import { ImageData } from '@/types/servicios/tarot-terapeutico'
+
+interface ImageData {
+  src: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+}
 
 interface ImageModalProps {
   selectedImage: ImageData | null;
@@ -23,14 +29,14 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
       onClick={handleModalClick}
     >
       <div className="relative max-w-6xl max-h-[90vh] w-full h-full">
-        {/* Botón cerrar */}
+        {/* Botón cerrar - POSICIÓN AJUSTADA */}
         <button
           onClick={onClose}
-          className="absolute -top-12 right-0 z-10 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-colors duration-300"
+          className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
           type="button"
           aria-label="Cerrar modal"
         >
-          <X className="w-6 h-6" />
+          <X className="w-6 h-6 text-gray-800" />
         </button>
         
         {/* Imagen ampliada */}
@@ -38,10 +44,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
-            fill
-            className="object-contain"
-            sizes="90vw"
-            priority
+            className="w-full h-full object-contain"
           />
         </div>
         
@@ -54,6 +57,5 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
     </div>
   )
 }
-
 
 export default ImageModal
