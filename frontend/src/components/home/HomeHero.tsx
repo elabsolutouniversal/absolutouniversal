@@ -15,14 +15,12 @@ export default function HomeHero() {
   // 🎨 COLORES CONFIGURABLES - Cambia solo aquí
   const heroBg = "bg-pink-100";                           // Fondo hero principal
   const cardBg = "bg-white";                             // Fondo tarjeta blanca
-  const titleColor = "text-gray-900";                    // Color títulos principales
   const textColor = "text-gray-700";                     // Color texto normal
   const buttonBg = "bg-pink-600";                        // Fondo botón principal
   const buttonHover = "hover:bg-pink-700";               // Hover botón principal
   const buttonText = "text-white";                       // Texto botón principal
   const sectionBg = "bg-gradient-to-b from-pink-50 via-white to-white"; // Fondo segunda sección
   const presentationBg = "bg-white/70";                  // Fondo tarjeta presentación
-  const nameColor = "text-gray-800";                     // Color nombre terapeuta
   const nameHighlight = "text-black";                    // Color destacado nombre
   const whatsappBg = "bg-green-500";                     // Fondo botón WhatsApp
   const whatsappHover = "hover:bg-green-600";            // Hover WhatsApp
@@ -38,7 +36,7 @@ export default function HomeHero() {
           {/* Texto de bienvenida con tarjeta blanca */}
           <div className="w-full md:w-1/2">
             <div className={`${cardBg} rounded-2xl shadow-xl p-8 text-center md:text-left`}>
-              <h1 className={`text-4xl md:text-5xl font-extrabold ${titleColor} mb-4`}>
+              <h1 className={`text-4xl md:text-5xl font-extrabold text-pink-700 mb-4`}>
                 Bienvenido a tu espacio de bienestar
               </h1>
               <p className={`${textColor} text-lg mb-6 leading-relaxed text-justify`}>
@@ -83,11 +81,12 @@ export default function HomeHero() {
                 height={180}
                 className="rounded-full shadow-lg object-cover"
               />
-              <p className={`mt-4 text-center font-semibold ${nameColor}`}>
-                Lic Psic. Dahiana Velásquez G <br /> Psicóloga y psicoterapeuta holística <br />
-                <span className={`${nameHighlight} font-bold`}>
+              <p className={`mt-4 text-center font-semibold`}>
+                Psicóloga, Psicoterapeuta Holística <br/> y Especialista en Sanación Energética. <br /><br/>
+                <span className={`${nameHighlight} text-pink-700 font-bold`}>
                   Soy Dahiana Velasquez de Lima – Perú
                 </span>
+                <br/>
               </p>
 
               {/* Redes sociales */}
@@ -117,7 +116,7 @@ export default function HomeHero() {
 
             {/* Contenido derecho */}
             <div>
-              <h1 className={`text-3xl md:text-4xl font-extrabold ${titleColor} mb-4`}>
+              <h1 className={`text-3xl md:text-4xl font-extrabold text-pink-700 mb-4`}>
                 Estás a un paso de transformar tu vida
               </h1>
               <p className={`${textColor} text-lg mb-6 leading-relaxed text-justify`}>
