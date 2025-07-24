@@ -54,7 +54,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
   {
     numero: '5',
     titulo: 'Inicio del Tratamiento',
-    descripcion: 'Sesión gratuita que marca el inicio real del tratamiento personalizado basado en las sesiones previas.',
+    descripcion: 'Sesión gratuita que marca el inicio  del tratamiento personalizado definido en en las sesiones previas.',
     color: 'bg-gradient-to-r from-green-100 to-blue-100',
     gratuita: true,
     duracion: '120 min',
