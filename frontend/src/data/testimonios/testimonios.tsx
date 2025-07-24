@@ -3,7 +3,7 @@ import { ITestimonio } from "@/types/testimonios/testimonio";
 export const testimonios: ITestimonio[] = [
     {
         nombre: 'Rosa R.',
-        contenido: `Hola Diana, soy Rosa R. Gracias por tu ayuda; una de las mejores experiencias con tus servicios, tanto en el tarot (muy acertado) como en el péndulo hebreo. Me fue de mucha ayuda físicamente y mentalmente. Me hizo cambiar mi forma de pensar y de alimentarme; también me siento otra persona, más saludable y más consciente. ¡Gracias! Muchas gracias por ayudarme tanto, sin duda alguna recurriría a pedirte ayuda, me das muchísima confianza 🙏🏻`,
+        contenido: `Hola Dahiana, soy Rosa R. Gracias por tu ayuda; una de las mejores experiencias con tus servicios, tanto en el tarot (muy acertado) como en el péndulo hebreo. Me fue de mucha ayuda físicamente y mentalmente. Me hizo cambiar mi forma de pensar y de alimentarme; también me siento otra persona, más saludable y más consciente. ¡Gracias! Muchas gracias por ayudarme tanto, sin duda alguna recurriría a pedirte ayuda, me das muchísima confianza 🙏🏻`,
         fecha: '2024',
         rating: 5,
         rol:'EEUU'
