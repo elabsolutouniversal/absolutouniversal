@@ -76,7 +76,8 @@ export const penduloData: PenduloData = {
   ],
   ctaButton: {
     text: "Agenda tu sesión por WhatsApp",
-    link: "https://wa.me/51987654321?text=Hola,%20me%20interesa%20la%20terapia%20con%20Péndulo%20Hebreo" // ← Reemplaza con tu número real
+    link: "https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%3F" // ← Reemplaza con tu número real
+    
   }
 };
 
