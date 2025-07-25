@@ -90,16 +90,23 @@ export const tarotPredictivoImages: ImageData[] = [
       subtitle: "Tarot Terapéutico"
     },
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
       alt: "Terapia Integrativa Holística",
       title: "Lectura Intuitiva",
       subtitle: "Conexión profunda"
     },
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753150894/about-profile_kuacih.jpg",
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3665_s4whct.jpg",
+      alt: "Perfil Profesional",
+      title: "",
+      subtitle: ""
+    },
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154286/terapiaIntegrativa-holiticia-2_uli8ak.jpg",
       alt: "Perfil Profesional",
       title: "Sanación Emocional",
       subtitle: "Transformación personal"
     }
+     
   ]
 

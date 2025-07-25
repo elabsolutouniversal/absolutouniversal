@@ -20,7 +20,7 @@ export const servicios: Servicio[] = [
   //   description: "Conecta con tu alma para comprender tus aprendizajes y caminos.",
   // },
   {
-    title: "Tarot Predictivo Terapéutico",
+    title: "Tarot Predictivo con Enfoque Terapéutico",
     slug: "tarot-predictivo",
    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
@@ -28,7 +28,7 @@ export const servicios: Servicio[] = [
   {
     title: "Psico educación Consciente",
     slug: "psico-educacion-consciente",
-    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
+    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
     description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
   },
   {

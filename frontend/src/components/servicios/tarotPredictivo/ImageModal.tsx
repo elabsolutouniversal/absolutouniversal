@@ -29,7 +29,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
       onClick={handleModalClick}
     >
       <div className="relative max-w-6xl max-h-[90vh] w-full h-full">
-        {/* Botón cerrar - POSICIÓN AJUSTADA */}
+        {/* Botón cerrar */}
         <button
           onClick={onClose}
           className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
@@ -39,12 +39,13 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
           <X className="w-6 h-6 text-gray-800" />
         </button>
         
-        {/* Imagen ampliada */}
+        {/* Imagen ampliada: uso de fill dentro de contenedor relativo */}
         <div className="relative w-full h-full rounded-2xl overflow-hidden">
           <Image
             src={selectedImage.src}
             alt={selectedImage.alt}
-            className="w-full h-full object-contain"
+            fill
+            className="object-contain"
           />
         </div>
         
