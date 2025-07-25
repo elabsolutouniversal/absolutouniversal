@@ -1,96 +1,127 @@
 "use client";
 
-import { useState } from 'react';
-import { MessageCircle } from 'lucide-react';
-import { AccordionItem } from '@/components/servicios/pendulo/AccordionItem';
-import { SimpleGallery } from '@/components/servicios/pendulo/SimpleGalery';
-import { penduloData } from '@/data/servicios/pendulo';
+import React, { useState } from 'react';
+import { MessageCircle, Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, RefreshCw, Zap, Sun, Moon, ChevronDown } from 'lucide-react';
+import AccordionItem from './AccordionItem';
+import { penduloData, galleryData } from '@/data/servicios/pendulo';
+import SimpleGallery from './SimpleGalery';
+
+const BenefitIcon = ({ index }: { index: number }) => {
+  const icons = [
+    <Sparkles key="sparkles" className="text-pink-500" />,
+    <RefreshCw key="refresh" className="text-purple-500" />,
+    <Shield key="shield" className="text-red-500" />,
+    <Zap key="zap" className="text-yellow-500" />,
+    <HeartPulse key="heart" className="text-green-500" />,
+    <Cross key="cross" className="text-blue-500" />,
+    <Sun key="sun" className="text-orange-500" />,
+    <Brain key="brain" className="text-indigo-500" />,
+    <EyeOff key="eye" className="text-rose-500" />,
+    <Moon key="moon" className="text-violet-500" />,
+    <HeartPulse key="heart2" className="text-pink-400" />
+  ];
+  
+  return icons[index % icons.length];
+};
 
 export default function PenduloHebreo() {
-  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
-  const [benefitsOpen, setBenefitsOpen] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [benefitsOpen, setBenefitsOpen] = useState(false);
 
-  const handleAccordionClick = (id: string) => {
-    setOpenAccordion(openAccordion === id ? null : id);
-  };
-
-  const handleWhatsAppClick = () => {
-    window.open(penduloData.ctaButton.link, '_blank');
+  const toggleSection = (id: string) => {
+    setActiveSection(curr => (curr === id ? null : id));
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-      {/* Header Section */}
+    <div className="max-w-5xl mx-auto px-4 py-8 space-y-12">
+      {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+        <div className="inline-flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 rounded-full px-6 py-2 mb-3">
+          <Sparkles className="w-5 h-5 text-pink-500 mr-2" />
+          <span className="text-sm font-medium text-pink-700">Terapia Energética</span>
+        </div>
+        
+        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
           {penduloData.title}
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        
+        <p className="text-gray-700 text-lg mx-auto max-w-2xl leading-relaxed">
           {penduloData.description}
         </p>
       </div>
 
-      {/* Gallery Section */}
-      <SimpleGallery />
+      {/* Gallery */}
+      <SimpleGallery data={galleryData} />
 
       {/* Benefits Section */}
-      <div className="space-y-4">
-        <AccordionItem
-          title={penduloData.benefitsSection.title}
-          content=""
-          iconType={penduloData.benefitsSection.iconType}
-          isOpen={benefitsOpen}
+      <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6 shadow-sm">
+        <div 
+          className="cursor-pointer"
           onClick={() => setBenefitsOpen(!benefitsOpen)}
-        />
-
-        {benefitsOpen && (
-          <div className="bg-white rounded-lg border border-pink-200 shadow-sm">
-            <div className="p-6">
-              {/* Benefits List */}
-              <ul className="space-y-3">
-                {penduloData.benefitsSection.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed text-sm">
-                      {benefit.text}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-white rounded-xl shadow-sm">
+                <HeartPulse className="w-6 h-6 text-pink-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-pink-800">
+                {penduloData.benefitsSection.title}
+              </h2>
             </div>
+            <ChevronDown 
+              className={`w-6 h-6 text-pink-600 transition-transform ${benefitsOpen ? 'rotate-180' : ''}`}
+            />
+          </div>
+        </div>
+        
+        {benefitsOpen && (
+          <div className="mt-6 grid md:grid-cols-2 gap-4">
+            {penduloData.benefitsSection.benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 bg-white/80 rounded-lg">
+                <div className="mt-1">
+                  <BenefitIcon index={index} />
+                </div>
+                <p className="text-gray-700">{benefit.text}</p>
+              </div>
+            ))}
           </div>
         )}
       </div>
 
       {/* Accordion Sections */}
       <div className="space-y-4">
-        {penduloData.accordionSections.map((section) => (
+        {penduloData.accordionSections.map((sec) => (
           <AccordionItem
-            key={section.id}
-            title={section.title}
-            content={section.content}
-            iconType={section.iconType}
-            isOpen={openAccordion === section.id}
-            onClick={() => handleAccordionClick(section.id)}
+            key={sec.id}
+            id={sec.id}
+            title={sec.title}
+            content={
+              <div className="prose prose-pink max-w-none text-gray-700">
+                {sec.content}
+              </div>
+            }
+            iconType={sec.iconType}
+            isOpen={activeSection === sec.id}
+            onClick={() => toggleSection(sec.id)}
           />
         ))}
       </div>
 
-      {/* CTA Button */}
-      <div className="text-center pt-8">
-        <button
-          onClick={handleWhatsAppClick}
-          className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-        >
-          <MessageCircle className="w-5 h-5" />
-          {penduloData.ctaButton.text}
-        </button>
-      </div>
-
-      {/* Decorative Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-100 rounded-full opacity-20 blur-3xl"></div>
+      {/* CTA Section */}
+      <div className="text-center py-8">
+        <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold mb-3">¿Listo para tu transformación energética?</h3>
+          <p className="mb-6 opacity-90">
+            Agenda una sesión y comienza tu camino hacia el equilibrio y sanación integral.
+          </p>
+          <button
+            onClick={() => window.open(penduloData.ctaButton.link, '_blank')}
+            className="inline-flex items-center gap-3 bg-white text-pink-600 px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
+          >
+            <MessageCircle className="w-5 h-5" />
+            {penduloData.ctaButton.text}
+          </button>
+        </div>
       </div>
     </div>
   );

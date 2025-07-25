@@ -86,26 +86,26 @@ export const tarotPredictivoImages: ImageData[] = [
     {
       src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
       alt: "Sesión de Tarot Terapéutico",
-      title: "Sesión Principal",
-      subtitle: "Tarot Terapéutico"
-    },
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
-      alt: "Terapia Integrativa Holística",
-      title: "Lectura Intuitiva",
-      subtitle: "Conexión profunda"
-    },
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3665_s4whct.jpg",
-      alt: "Perfil Profesional",
       title: "",
       subtitle: ""
     },
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154286/terapiaIntegrativa-holiticia-2_uli8ak.jpg",
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
+      alt: "Terapia Integrativa Holística",
+      title: "",
+      subtitle: ""
+    },
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3665_s4whct.jpg",
+      alt: "",
+      title: "",
+      subtitle: ""
+    },
+    {
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3670_baozpb.jpg",
       alt: "Perfil Profesional",
-      title: "Sanación Emocional",
-      subtitle: "Transformación personal"
+      title: "",
+      subtitle: ""
     }
      
   ]
