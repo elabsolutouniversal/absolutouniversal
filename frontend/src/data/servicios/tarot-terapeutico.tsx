@@ -102,3 +102,4 @@ export const tarotPredictivoImages: ImageData[] = [
       subtitle: "Transformación personal"
     }
   ]
+
