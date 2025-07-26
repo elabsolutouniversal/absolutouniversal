@@ -1,27 +1,22 @@
-// app/psico-educacion/page.tsx
+// page.tsx
+"use client";
 import { Metadata } from 'next';
-import BlogWithSidebar from '@/components/blog/BlogWithSidebar';
+import CoursesGrid from './cursos/CourseGrid';
+import { courses } from '@/data/servicios/cursos';
 
 export const metadata: Metadata = {
-  title: 'Blog de Psico‑Educación | Terapias Holísticas y Bienestar',
-  description:
-    'Descubre artículos sobre terapias holísticas, bienestar mental y crecimiento personal. Aprende sobre meditación, chakras, astrología y más.',
-  keywords:
-    'psicoeducación, terapias holísticas, bienestar, meditación, chakras, astrología, desarrollo personal',
-  openGraph: {
-    title: 'Blog de Psico‑Educación',
-    description: 'Artículos sobre terapias holísticas y bienestar integral',
-    type: 'website',
-  },
+  title: 'Cursos de Transformación | Terapias Holísticas',
+  description: 'Talleres y cursos para tu crecimiento espiritual y emocional',
 };
 
 export default function PsicoEducacion() {
   return (
-    <section className="bg-pink-50 py-16">
-      {/* Contenedor centralizado con padding */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <BlogWithSidebar />
-      </div>
-    </section>
+    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+      <section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-2">
+          <CoursesGrid courses={courses} />
+        </div>
+      </section>
+    </main>
   );
 }
