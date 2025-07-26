@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
-import BlogList from '@/components/blog/BlogList';
-import { blogPosts } from '@/data/servicios/blog';
+
+import BlogPageWrapper from '@/components/blog/BlogPageWrapper';
+import BlogWithSidebar from '@/components/blog/BlogWithSidebar';
 
 
 export const metadata: Metadata = {
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function PsicoEducacion() {
   return (
-   <main>
-      <BlogList posts={blogPosts} postsPerPage={6} />
+    <main>
+       <BlogWithSidebar />;
     </main>
   )
 }

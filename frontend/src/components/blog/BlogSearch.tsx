@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Search, Filter, X } from 'lucide-react';
 import { BlogSearchProps, BlogSearchFilters } from '@/types/blog';
 
@@ -16,6 +16,10 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
     tag: ''
   });
   const [showFilters, setShowFilters] = useState(false);
+  
+  // Ref para trackear si es el primer render
+  const isFirstRender = useRef(true);
+  const prevFiltersRef = useRef(filters);
 
   const handleSearch = useCallback(() => {
     onSearch(filters);
@@ -36,10 +40,25 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
 
   const hasActiveFilters = !!(filters.query || filters.categoria || filters.tag);
 
-  // Debounce interno
+  // Debounce mejorado que no se ejecuta en el primer render
   useEffect(() => {
-    const id = setTimeout(handleSearch, 300);
-    return () => clearTimeout(id);
+    // Skip en el primer render
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    // Solo ejecutar si realmente cambiaron los filtros
+    const filtersChanged = 
+      prevFiltersRef.current.query !== filters.query ||
+      prevFiltersRef.current.categoria !== filters.categoria ||
+      prevFiltersRef.current.tag !== filters.tag;
+
+    if (filtersChanged) {
+      const id = setTimeout(handleSearch, 300);
+      prevFiltersRef.current = filters;
+      return () => clearTimeout(id);
+    }
   }, [filters, handleSearch]);
 
   return (
@@ -113,6 +132,7 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
             </span>
           )}
         </div>
+
         {hasActiveFilters && (
           <button
             onClick={clearFilters}

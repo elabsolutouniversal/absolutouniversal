@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { BlogPost, BlogSearchFilters } from '@/types/blog';
 import BlogSearch from './BlogSearch';
 import BlogCard from './BlogCard';
@@ -26,6 +26,10 @@ const BlogList: React.FC<BlogListProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // Ref para trackear si es el primer renderizado
+  const isFirstRender = useRef(true);
+  const prevFiltersRef = useRef(searchFilters);
 
   // Filtrar posts
   const filteredPosts = useMemo(() => {
@@ -58,19 +62,44 @@ const BlogList: React.FC<BlogListProps> = ({
   const endIndex = startIndex + postsPerPage;
   const currentPosts = filteredPosts.slice(startIndex, endIndex);
 
-  // Debounce de loading
+  // Efecto mejorado para manejar el loading solo cuando hay cambios reales
   useEffect(() => {
-    setIsLoading(true);
-    const handler = setTimeout(() => {
-      setIsLoading(false);
-      setCurrentPage(1);
-      if (window.innerWidth < 768) {
-        document.getElementById('blog-results')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }, 300);
+    // Skip en el primer render
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
 
-    return () => clearTimeout(handler);
-  }, [searchFilters]);
+    // Solo activar loading si realmente cambiaron los filtros
+    const filtersChanged = 
+      prevFiltersRef.current.query !== searchFilters.query ||
+      prevFiltersRef.current.categoria !== searchFilters.categoria ||
+      prevFiltersRef.current.tag !== searchFilters.tag;
+
+    if (filtersChanged) {
+      setIsLoading(true);
+      const handler = setTimeout(() => {
+        setIsLoading(false);
+        setCurrentPage(1);
+        
+        // Solo hacer scroll en móviles si hay resultados
+        if (window.innerWidth < 768 && filteredPosts.length > 0) {
+          // Usar un pequeño delay para evitar conflictos con el renderizado
+          setTimeout(() => {
+            const element = document.getElementById('blog-results');
+            if (element) {
+              const yOffset = -80; // Offset para considerar headers sticky
+              const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }, 100);
+        }
+      }, 300);
+
+      prevFiltersRef.current = searchFilters;
+      return () => clearTimeout(handler);
+    }
+  }, [searchFilters, filteredPosts.length]);
 
   // Handlers
   const handleSearch = (filters: BlogSearchFilters) => {
@@ -79,7 +108,11 @@ const BlogList: React.FC<BlogListProps> = ({
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll suave al top del contenedor de resultados
+    const element = document.getElementById('blog-container');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const handleReadMore = (postId: number) => {
@@ -102,8 +135,8 @@ const BlogList: React.FC<BlogListProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-4 sm:py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <div id="blog-container" className="min-h-screen bg-gray-50 py-4 sm:py-6">
+      <div className="w-full">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
