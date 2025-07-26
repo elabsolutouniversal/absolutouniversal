@@ -23,33 +23,33 @@ export default function AccordionItem({ id, title, content, iconType = 'healing'
   const { Icon, color } = iconMap[iconType] || iconMap.healing;
 
   return (
-    <div className="border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow mb-3 last:mb-0">
       <button
         id={`hdr-${id}`}
         aria-controls={`panel-${id}`}
         aria-expanded={isOpen}
         onClick={onClick}
-        className="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors"
+        className="w-full flex items-center justify-between p-4 bg-white hover:bg-gray-50 transition-colors"
       >
-        <div className="flex items-center gap-4">
-          <div className={`p-3 rounded-lg ${color}`}>
-            <Icon className="w-5 h-5" />
+        <div className="flex items-center gap-3">
+          <div className={`p-2 rounded-lg ${color}`}>
+            <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <span className="font-semibold text-lg text-gray-800 text-left">{title}</span>
+          <span className="font-medium text-base sm:text-lg text-gray-800 text-left">{title}</span>
         </div>
         {isOpen ? (
-          <ChevronUp className="w-5 h-5 text-gray-500" />
+          <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
         )}
       </button>
       <div
         id={`panel-${id}`}
         role="region"
         aria-labelledby={`hdr-${id}`}
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-screen opacity-100 p-5 bg-gray-50' : 'max-h-0 opacity-0'}`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100 p-4 bg-gray-50' : 'max-h-0 opacity-0'}`}
       >
-        <div className="prose prose-pink max-w-none text-gray-700">
+        <div className="prose prose-sm sm:prose-base max-w-none text-gray-700">
           {content}
         </div>
       </div>
