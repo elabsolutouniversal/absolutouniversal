@@ -5,26 +5,22 @@ import BlogList from './BlogList';
 import SocialAside from './SocialAside';
 import { blogPosts } from '@/data/servicios/blog';
 
-const BlogWithSidebar: React.FC = () => {
+export default function BlogWithSidebar() {
   return (
-    <div className="min-h-screen bg-gray-50 py-4 sm:py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr,320px] gap-8">
-          
-          {/* Contenido principal */}
-          <main className="w-full">
-            <BlogList posts={blogPosts} />
-          </main>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      
+      {/* MAIN: Lista de posts (incluye buscador y paginación internamente) */}
+      <main className="lg:col-span-2">
+        <BlogList posts={blogPosts} />
+      </main>
 
-          {/* Sidebar */}
-          <aside className="w-full md:w-[320px]">
-            <SocialAside />
-          </aside>
-
+      {/* ASIDE: Redes sociales */}
+      <aside className="mt-12 lg:mt-0">
+        <div className="sticky top-24">
+          <SocialAside />
         </div>
-      </div>
+      </aside>
+      
     </div>
   );
-};
-
-export default BlogWithSidebar;
+}
