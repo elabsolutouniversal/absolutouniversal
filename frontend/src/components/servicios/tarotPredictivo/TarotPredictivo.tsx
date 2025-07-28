@@ -11,6 +11,7 @@ import AudienceSection from '@/components/servicios/tarotPredictivo/AudienceSect
 import TarotFooter from '@/components/servicios/tarotPredictivo/TarotFooter'
 import { serviciosDataTarotTerapeutico, audienciaDataTarotTerapeutico, tarotPredictivoImages } from '@/data/servicios/tarot-terapeutico';
 
+
 const TarotPredictivo: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null)
    const images: ImageData[] = tarotPredictivoImages
@@ -43,7 +44,7 @@ const TarotPredictivo: React.FC = () => {
         <AudienceSection 
           audiencia={audienciaDataTarotTerapeutico}
         />
-        
+       
         <TarotFooter />
       </div>
 
