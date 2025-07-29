@@ -14,7 +14,6 @@ export default function HomeHero() {
   const buttonBg = "bg-pink-600";
   const buttonHover = "hover:bg-pink-700";
   const buttonText = "text-white";
-  const sectionBg = "bg-gradient-to-b from-pink-50 via-white to-white";
 
   return (
     <>

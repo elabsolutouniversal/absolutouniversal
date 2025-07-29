@@ -156,7 +156,7 @@ export const sesiones5Pasos = [
   {
     numero: 1,
     titulo: "Evaluación Integral Personalizada",
-    duracion: "90 minutos",
+    duracion: "1 hora y 30 minutos",
     icon: User,        // ✅ MANTENER - funciona perfecto
     color: "from-purple-400 to-pink-400",
     puntos: [
@@ -168,7 +168,7 @@ export const sesiones5Pasos = [
   {
     numero: 2,
     titulo: "Diagnóstico y Limpieza Energética",
-    duracion: "75 minutos",
+    duracion: "2 horas",
     icon: Sparkle,     // 🔹 CAMBIO: era Sparkles → ahora Sparkle (más específico)
     color: "from-blue-400 to-cyan-400",
     puntos: [
@@ -181,7 +181,7 @@ export const sesiones5Pasos = [
   {
     numero: 3,
     titulo: "Armonización de Chakras",
-    duracion: "75 minutos",
+    duracion: "1 hora",
     icon: FlowerLotus,       // 🔹 CAMBIO: era Heart → ahora Lotus (PERFECTO para chakras!)
     color: "from-green-400 to-emerald-400",
     puntos: [
@@ -194,7 +194,7 @@ export const sesiones5Pasos = [
   {
     numero: 4,
     titulo: "Reparación y Fortalecimiento del Aura",
-    duracion: "75 minutos",
+    duracion: "2 horas",
     icon: SunDim,      // 🔹 CAMBIO: era Shield → ahora SunDim (ideal para aura/energía)
     color: "from-yellow-400 to-orange-400",
     puntos: [
@@ -207,7 +207,7 @@ export const sesiones5Pasos = [
   {
     numero: 5,
     titulo: "Integración y Consolidación",
-    duracion: "60 minutos",
+    duracion: "1 Hora",
     icon: Target,      // 🔹 CAMBIO: era Star → ahora Target (mejor para objetivos)
     color: "from-indigo-400 to-purple-400",
     badge: "GRATUITA",

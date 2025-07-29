@@ -1,54 +1,105 @@
 'use client';
+
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
+import { BrainCircuit, Sparkles, HeartPulse, Check, ChevronRight } from 'lucide-react';
 
 export default function ProfessionalProfile() {
-  // Colores configurables
+  // Paleta de colores profesional
   const colors = {
-    primary: "bg-gradient-to-r from-purple-600 to-pink-600",
-    primaryHover: "hover:from-purple-700 hover:to-pink-700",
-    cardBg: "bg-white/95",
-    textDark: "text-gray-800",
-    textLight: "text-white",
-    accent: "text-pink-500",
-    border: "border-white/30",
-    whatsappBg: "bg-green-500",
-    whatsappHover: "hover:bg-green-600"
+    primary: 'bg-gradient-to-r from-indigo-700 to-violet-700',
+    secondary: 'bg-gradient-to-r from-teal-400 to-emerald-500',
+    cardBg: 'bg-white',
+    textDark: 'text-gray-800',
+    textLight: 'text-white',
+    accent: 'text-indigo-600',
+    border: 'border-gray-200',
+    whatsappBg: 'bg-[#25D366]',
+    whatsappHover: 'hover:bg-[#128C7E]',
+    bookingBg: 'bg-indigo-600',
+    bookingHover: 'hover:bg-indigo-700'
   };
 
+  // Servicios ofrecidos
+  const services = [
+    {
+      icon: <BrainCircuit className="h-8 w-8 text-indigo-600" />,
+      title: "Psicoterapia Gestalt",
+      description: "Sana tus heridas en el presente con un enfoque humanista que potencia tu autoconocimiento y crecimiento personal."
+    },
+    {
+      icon: <Sparkles className="h-8 w-8 text-indigo-600" />,
+      title: "Tarot Terapéutico Junguiano",
+      description: "Explora tu inconsciente a través de arquetipos para revelar patrones limitantes y alinear tu vida con tu propósito."
+    },
+    {
+      icon: <HeartPulse className="h-8 w-8 text-indigo-600" />,
+      title: "Sanación Energética",
+      description: "Equilibra tu campo energético y libera bloqueos emocionales con técnicas avanzadas de péndulo hebreo."
+    }
+  ];
+
+  // Beneficios clave
+  const benefits = [
+    "Sesiones completamente personalizadas",
+    "Enfoque holístico mente-cuerpo-espíritu",
+    "Resultados medibles y sostenibles",
+    "Acompañamiento profesional con rigor científico",
+    "Confidencialidad absoluta",
+    "Modalidades presencial y virtual"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       {/* Tarjeta principal */}
-      <div className={`max-w-3xl mx-auto ${colors.cardBg} rounded-2xl shadow-xl overflow-hidden ${colors.border}`}>
+      <div className={`max-w-5xl mx-auto ${colors.cardBg} rounded-2xl shadow-xl overflow-hidden ${colors.border} border`}>
         
         {/* Encabezado con gradiente */}
-        <div className={`${colors.primary} py-6 px-8 text-center`}>
-          <h1 className="text-2xl md:text-3xl font-bold text-white">Lic. Numash Dahiana Velásquez Guerrero</h1>
-          <div className="w-20 h-1 bg-white/50 mx-auto my-3 rounded-full"></div>
-          <p className="text-white/90 font-medium">Psicóloga colegiada (CPSP N.°12004) - CDR I Lima y Callao</p>
+        <div className={`${colors.primary} py-10 px-8 text-center relative overflow-hidden`}>
+          <div className="absolute inset-0 opacity-10 pattern-dots pattern-indigo-100 pattern-size-4" />
+          <div className="relative max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
+              Lic. Nunash Dahiana Velásquez Guerrero
+            </h1>
+            <div className="w-28 h-1.5 bg-white/80 mx-auto my-5 rounded-full" />
+            <p className="text-white/95 font-medium text-lg md:text-xl">
+              Psicóloga colegiada (CPSP N.°12004) – CDR I Lima y Callao
+            </p>
+          </div>
         </div>
 
-        {/* Contenido */}
-        <div className="p-8">
-          {/* Foto y especialidades */}
-          <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-            <div className="shrink-0">
+        <div className="p-8 md:p-12">
+          {/* Sección de presentación */}
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+            <div className="relative group flex-shrink-0">
+              <div className="absolute -inset-3 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-2xl opacity-20 blur-lg group-hover:opacity-30 transition duration-500 -z-10" />
               <Image
                 src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
-                alt="Lic. Numash Dahiana"
-                width={160}
-                height={160}
-                className="rounded-full shadow-lg border-4 border-white/50 object-cover"
+                alt="Lic. Nunash Dahiana"
+                width={240}
+                height={240}
+                className="rounded-xl shadow-lg border-4 border-white object-cover transform group-hover:scale-103 transition duration-500"
+                priority
               />
             </div>
-            <div className="text-center md:text-left">
-              <p className="text-lg italic text-pink-600 font-medium mb-2 text-justify">
-                Terapeuta Gestalt | Especialista en Tarot Terapéutico Junguiano y Sanación Energética con Péndulo Hebreo
+            
+            <div className="text-center lg:text-left space-y-5 flex-1">
+              <h2 className="text-3xl font-bold text-gray-800 leading-tight">
+                Transformación personal a través de <span className="text-indigo-600">Terapia Integrativa Holistica</span>
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Con más de <span className="font-semibold">15 años de experiencia</span>, combino <span className="font-semibold">Terapia Gestalt</span>, <span className="font-semibold">Tarot Junguiano</span> y <span className="font-semibold">Sanación Energética</span> para ofrecerte un camino único hacia tu bienestar integral.
               </p>
-              <div className="flex justify-center md:justify-start gap-3 mt-4">
-                {['Psicoterapia', 'Tarot', 'Sanación'].map((tag, i) => (
-                  <span key={i} className="text-xs font-semibold bg-purple-100 text-purple-800 px-3 py-1 rounded-full">
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
+                {['Psicoterapia Humanista', 'Tarot Terapéutico', 'Sanación Energética', 'Desarrollo Personal', 'Liberación Emocional', 'Autoconocimiento'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="flex items-center gap-2 text-sm font-medium bg-indigo-50/80 text-indigo-700 px-4 py-2 rounded-full border border-indigo-100"
+                  >
+                    <Check className="h-4 w-4" />
                     {tag}
                   </span>
                 ))}
@@ -56,70 +107,107 @@ export default function ProfessionalProfile() {
             </div>
           </div>
 
-          {/* Descripción - Texto justificado */}
-          <div className="text-gray-700 mb-8 space-y-4">
-            <p className="text-justify">
-              Psicóloga titulada y habilitada, con enfoque integrador que combina la psicoterapia humanista y simbólica con herramientas energéticas.
-            </p>
-            <p className="text-justify">
-              Mi acompañamiento se centra en facilitar procesos de sanación emocional, liberación de bloqueos y conexión profunda con el alma, mediante el Tarot terapéutico junguiano, el enfoque Gestalt y la sanación energética con péndulo hebreo.
-            </p>
-            <p className="font-medium text-pink-600 text-justify">
-              Uniendo ciencia, conciencia y espiritualidad desde una mirada ética, respetuosa y transformadora.
-            </p>
-          </div>
-
-          {/* Separador */}
-          <div className="border-t border-gray-200 my-8"></div>
-
-          {/* WhatsApp */}
-          <div className="text-center mb-8">
-            <Link
-              href="https://wa.me/51962305362?text=Hola%20Dahiana,%20quisiera%20agendar%20una%20sesión"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center ${colors.whatsappBg} ${colors.whatsappHover} ${colors.textLight} font-semibold px-6 py-3 rounded-full shadow-lg transition-all`}
-            >
-              <FaWhatsapp className="mr-2 text-xl" />
-              Hablemos por WhatsApp
-            </Link>
-          </div>
-
-          {/* Separador decorativo */}
-          <div className="relative my-8">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-200"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-white px-4 text-pink-500 text-lg">✨</span>
-            </div>
-          </div>
-
-          {/* Mensaje inspirador */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Estás a un paso de transformar tu vida</h2>
-            <p className="text-lg italic text-pink-600 max-w-md mx-auto text-justify">
-              &quot;El cambio empieza dentro de ti. Escucha a tu alma, honra tu proceso y permítete sanar con amor y conciencia.&quot;
-            </p>
-          </div>
-
-          {/* Herramientas terapéuticas */}
-          <div className="bg-purple-50/50 rounded-xl p-6 border border-purple-100">
-            <h3 className="text-xl font-semibold text-purple-700 mb-4 text-center">Herramientas terapéuticas</h3>
-            <ul className="space-y-3">
-              {[
-                "Psicoterapia Integrativa Holística",
-                "Psico Educación",
-                "Tarot Predictivo con Enfoque Terapéutico"
-              ].map((item, i) => (
-                <li key={i} className="flex items-start">
-                  <svg className="h-5 w-5 text-pink-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700 text-justify">{item}</span>
-                </li>
+          {/* Sección de metodología */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-gray-800 mb-10 text-center lg:text-left">
+              Mi <span className="text-indigo-600">enfoque terapéutico</span>
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {services.map((service, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white p-7 rounded-xl hover:shadow-lg transition duration-300 border border-gray-100 hover:border-indigo-100 group"
+                >
+                  <div className="flex items-center mb-5">
+                    <div className="p-3 bg-indigo-100 rounded-xl mr-5 group-hover:bg-indigo-200 transition duration-300">
+                      {service.icon}
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-800">{service.title}</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                </div>
               ))}
-            </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100">
+              <h4 className="text-2xl font-bold text-gray-800 mb-5">Beneficios exclusivos de mi método:</h4>
+              <ul className="grid md:grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-600">
+                        <Check className="h-4 w-4" />
+                      </div>
+                    </div>
+                    <span className="ml-3 text-gray-700 font-medium">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Testimonios */}
+          <div className="mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="text-center mb-6">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
+                  Testimonios reales
+                </span>
+              </div>
+              <blockquote className="text-center italic text-gray-600 text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
+                Dahiana tiene una capacidad extraordinaria para conectar con lo esencial. En pocas sesiones logré entender patrones que arrastraba desde la infancia. Su enfoque integrador me permitió sanar heridas emocionales y encontrar claridad en mi propósito. Hoy me siento más plena y auténtica que nunca.
+              </blockquote>
+              <p className="text-center font-bold text-indigo-600">— M. Fernández, paciente desde 2020</p>
+            </div>
+          </div>
+
+          {/* Llamado a la acción */}
+          <div className="text-center">
+            <div className="mb-10">
+              <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                ¿Preparado para tu transformación?
+              </h3>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Agenda tu primera sesión y comienza un viaje de autodescubrimiento y sanación profunda.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+              <Link
+                href="https://wa.me/51962305362?text=Hola%20Dahiana,%20quisiera%20agendar%20una%20sesión"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center justify-center ${colors.whatsappBg} ${colors.whatsappHover} ${colors.textLight} font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
+              >
+                <FaWhatsapp className="mr-3 text-xl" />
+                <span>WhatsApp</span>
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+              
+              <Link
+                href="#"
+                className={`inline-flex items-center justify-center ${colors.bookingBg} ${colors.bookingHover} ${colors.textLight} font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
+              >
+                <FaCalendarAlt className="mr-3 text-xl" />
+                <span>Agendar online</span>
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+            
+            <div className="bg-indigo-50/50 p-4 rounded-lg inline-flex items-center gap-3">
+              <div className="flex-shrink-0">
+                <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                  <Check className="h-5 w-5 text-indigo-600" />
+                </div>
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-medium text-gray-700">
+                  <span className="text-indigo-600 font-bold">Oferta especial:</span> Primera sesión con 15% de descuento
+                </p>
+                <p className="text-xs text-gray-500">Respuesta garantizada en menos de 12 horas</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

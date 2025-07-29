@@ -64,7 +64,7 @@ export const penduloData: PenduloData = {
     {
       id: "como-se-cura",
       title: "¿Cómo se cura con el péndulo hebreo?",
-      content: "Se tenta cada centro energético para detectar desequilibrios en sus primeras fases, antes que se manifiesten en el cuerpo físico. Funciona gracias a la alta vibración que transmiten las letras hebreas, escritas en la plaquita que se coloca alrededor del péndulo, permitiendo la sanación física, mental, emocional y espiritual.",
+      content: "Se testa cada centro energético para detectar desequilibrios en sus primeras fases, antes que se manifiesten en el cuerpo físico. Funciona gracias a la alta vibración que transmiten las letras hebreas, escritas en la plaquita que se coloca alrededor del péndulo, permitiendo la sanación física, mental, emocional y espiritual.",
       iconType: "time"
     },
     {

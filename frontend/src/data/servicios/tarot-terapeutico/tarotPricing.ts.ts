@@ -15,7 +15,7 @@ export const tarotPlans: TarotPlan[] = [
     id: 'single-question',
     name: 'Consulta Rápida',
     duration: '1 Pregunta',
-    price: 10,
+    price: 15,
     currency: '$',
     description: 'Respuesta clara y directa a una pregunta específica',
     features: [
@@ -30,7 +30,7 @@ export const tarotPlans: TarotPlan[] = [
     id: 'half-session',
     name: 'Sesión Media',
     duration: '30 minutos',
-    price: 30,
+    price: 50,
     currency: '$',
     description: 'Exploración profunda de tu situación actual',
     features: [
@@ -47,7 +47,7 @@ export const tarotPlans: TarotPlan[] = [
     id: 'full-session',
     name: 'Sesión Completa',
     duration: '1 hora',
-    price: 60,
+    price: 70,
     currency: '$',
     description: 'Consulta integral con enfoque terapéutico completo',
     features: [
