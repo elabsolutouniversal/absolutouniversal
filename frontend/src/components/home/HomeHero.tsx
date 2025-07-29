@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {
   FaArrowRight,
 } from 'react-icons/fa';
-import ProfessionalProfile from '../sobre-mi/ProfessionalProfile'; // Asegúrate de tener este componente en la misma carpeta
+
 
 export default function HomeHero() {
   // 🎨 COLORES CONFIGURABLES - Cambia solo aquí
@@ -51,9 +51,6 @@ export default function HomeHero() {
           </div>
         </div>
       </section>
-
-      {/* Reemplazamos la sección antigua con el nuevo componente */}
-      <ProfessionalProfile />
     </>
   );
 }

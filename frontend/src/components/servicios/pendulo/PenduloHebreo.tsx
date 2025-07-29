@@ -5,6 +5,7 @@ import { MessageCircle, Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, Refr
 import AccordionItem from './AccordionItem';
 import { penduloData, galleryData } from '@/data/servicios/pendulo';
 import SimpleGallery from './SimpleGalery';
+import TherapyPricing from '@/components/therapy/TherapyPricing';
 
 const BenefitIcon = ({ index }: { index: number }) => {
   const icons = [
@@ -106,7 +107,7 @@ export default function PenduloHebreo() {
           />
         ))}
       </div>
-
+      <TherapyPricing category="pendulo"/>
       {/* CTA Section */}
       <div className="text-center py-8">
         <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">

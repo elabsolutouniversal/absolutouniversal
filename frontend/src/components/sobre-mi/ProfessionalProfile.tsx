@@ -5,67 +5,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
 import { BrainCircuit, Sparkles, HeartPulse, Check, ChevronRight } from 'lucide-react';
+import { profileData } from '@/data/profile/profileData';
+
+// Mapeo de iconos
+const iconComponents = {
+  BrainCircuit: BrainCircuit,
+  Sparkles: Sparkles,
+  HeartPulse: HeartPulse
+} as const;
+
+type IconName = keyof typeof iconComponents;
 
 export default function ProfessionalProfile() {
-  // Paleta de colores profesional
-  const colors = {
-    primary: 'bg-gradient-to-r from-indigo-700 to-violet-700',
-    secondary: 'bg-gradient-to-r from-teal-400 to-emerald-500',
-    cardBg: 'bg-white',
-    textDark: 'text-gray-800',
-    textLight: 'text-white',
-    accent: 'text-indigo-600',
-    border: 'border-gray-200',
-    whatsappBg: 'bg-[#25D366]',
-    whatsappHover: 'hover:bg-[#128C7E]',
-    bookingBg: 'bg-indigo-600',
-    bookingHover: 'hover:bg-indigo-700'
-  };
-
-  // Servicios ofrecidos
-  const services = [
-    {
-      icon: <BrainCircuit className="h-8 w-8 text-indigo-600" />,
-      title: "Psicoterapia Gestalt",
-      description: "Sana tus heridas en el presente con un enfoque humanista que potencia tu autoconocimiento y crecimiento personal."
-    },
-    {
-      icon: <Sparkles className="h-8 w-8 text-indigo-600" />,
-      title: "Tarot Terapéutico Junguiano",
-      description: "Explora tu inconsciente a través de arquetipos para revelar patrones limitantes y alinear tu vida con tu propósito."
-    },
-    {
-      icon: <HeartPulse className="h-8 w-8 text-indigo-600" />,
-      title: "Sanación Energética",
-      description: "Equilibra tu campo energético y libera bloqueos emocionales con técnicas avanzadas de péndulo hebreo."
-    }
-  ];
-
-  // Beneficios clave
-  const benefits = [
-    "Sesiones completamente personalizadas",
-    "Enfoque holístico mente-cuerpo-espíritu",
-    "Resultados medibles y sostenibles",
-    "Acompañamiento profesional con rigor científico",
-    "Confidencialidad absoluta",
-    "Modalidades presencial y virtual"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       {/* Tarjeta principal */}
-      <div className={`max-w-5xl mx-auto ${colors.cardBg} rounded-2xl shadow-xl overflow-hidden ${colors.border} border`}>
+      <div className={`max-w-5xl mx-auto ${profileData.colors.cardBg} rounded-2xl shadow-xl overflow-hidden ${profileData.colors.border} border`}>
         
         {/* Encabezado con gradiente */}
-        <div className={`${colors.primary} py-10 px-8 text-center relative overflow-hidden`}>
+        <div className={`${profileData.colors.primary} py-10 px-8 text-center relative overflow-hidden`}>
           <div className="absolute inset-0 opacity-10 pattern-dots pattern-indigo-100 pattern-size-4" />
           <div className="relative max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
-              Lic. Nunash Dahiana Velásquez Guerrero
+              {profileData.generalInfo.name}
             </h1>
             <div className="w-28 h-1.5 bg-white/80 mx-auto my-5 rounded-full" />
             <p className="text-white/95 font-medium text-lg md:text-xl">
-              Psicóloga colegiada (CPSP N.°12004) – CDR I Lima y Callao
+              {profileData.generalInfo.title} ({profileData.generalInfo.credential})
             </p>
           </div>
         </div>
@@ -76,8 +42,8 @@ export default function ProfessionalProfile() {
             <div className="relative group flex-shrink-0">
               <div className="absolute -inset-3 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-2xl opacity-20 blur-lg group-hover:opacity-30 transition duration-500 -z-10" />
               <Image
-                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
-                alt="Lic. Nunash Dahiana"
+                src={profileData.generalInfo.imageUrl}
+                alt={profileData.generalInfo.name}
                 width={240}
                 height={240}
                 className="rounded-xl shadow-lg border-4 border-white object-cover transform group-hover:scale-103 transition duration-500"
@@ -87,14 +53,14 @@ export default function ProfessionalProfile() {
             
             <div className="text-center lg:text-left space-y-5 flex-1">
               <h2 className="text-3xl font-bold text-gray-800 leading-tight">
-                Transformación personal a través de <span className="text-indigo-600">Terapia Integrativa Holistica</span>
+                Transformación personal a través de <span className="text-indigo-600">{profileData.generalInfo.specialty}</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Con más de <span className="font-semibold">15 años de experiencia</span>, combino <span className="font-semibold">Terapia Gestalt</span>, <span className="font-semibold">Tarot Junguiano</span> y <span className="font-semibold">Sanación Energética</span> para ofrecerte un camino único hacia tu bienestar integral.
+                Con más de <span className="font-semibold">{profileData.generalInfo.experience}</span>, combino diversas técnicas holísticas para ofrecerte un camino único hacia tu bienestar integral.
               </p>
               
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
-                {['Psicoterapia Humanista', 'Tarot Terapéutico', 'Sanación Energética', 'Desarrollo Personal', 'Liberación Emocional', 'Autoconocimiento'].map((tag) => (
+                {profileData.tags.map((tag) => (
                   <span
                     key={tag}
                     className="flex items-center gap-2 text-sm font-medium bg-indigo-50/80 text-indigo-700 px-4 py-2 rounded-full border border-indigo-100"
@@ -114,26 +80,34 @@ export default function ProfessionalProfile() {
             </h3>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {services.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-7 rounded-xl hover:shadow-lg transition duration-300 border border-gray-100 hover:border-indigo-100 group"
-                >
-                  <div className="flex items-center mb-5">
-                    <div className="p-3 bg-indigo-100 rounded-xl mr-5 group-hover:bg-indigo-200 transition duration-300">
-                      {service.icon}
+              {profileData.services.map((service, index) => {
+                const IconComponent = iconComponents[service.icon as IconName];
+                return (
+                  <div 
+                    key={index} 
+                    className="bg-white p-7 rounded-xl hover:shadow-lg transition duration-300 border border-gray-100 hover:border-indigo-100 group"
+                  >
+                    <div className="flex items-center mb-5">
+                      <div className="p-3 bg-indigo-100 rounded-xl mr-5 group-hover:bg-indigo-200 transition duration-300">
+                        <IconComponent className="h-8 w-8 text-indigo-600" />
+                      </div>
+                      <h4 className="text-xl font-bold text-gray-800">{service.title}</h4>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-800">{service.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                    <div className="mt-4">
+                      <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">
+                        {service.badge}
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100">
               <h4 className="text-2xl font-bold text-gray-800 mb-5">Beneficios exclusivos de mi método:</h4>
               <ul className="grid md:grid-cols-2 gap-4">
-                {benefits.map((benefit, index) => (
+                {profileData.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
                       <div className="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-600">
@@ -146,22 +120,6 @@ export default function ProfessionalProfile() {
               </ul>
             </div>
           </div>
-
-          {/* Testimonios */}
-          <div className="mb-16">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-              <div className="text-center mb-6">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
-                  Testimonios reales
-                </span>
-              </div>
-              <blockquote className="text-center italic text-gray-600 text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
-                Dahiana tiene una capacidad extraordinaria para conectar con lo esencial. En pocas sesiones logré entender patrones que arrastraba desde la infancia. Su enfoque integrador me permitió sanar heridas emocionales y encontrar claridad en mi propósito. Hoy me siento más plena y auténtica que nunca.
-              </blockquote>
-              <p className="text-center font-bold text-indigo-600">— M. Fernández, paciente desde 2020</p>
-            </div>
-          </div>
-
           {/* Llamado a la acción */}
           <div className="text-center">
             <div className="mb-10">
@@ -178,7 +136,7 @@ export default function ProfessionalProfile() {
                 href="https://wa.me/51962305362?text=Hola%20Dahiana,%20quisiera%20agendar%20una%20sesión"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center justify-center ${colors.whatsappBg} ${colors.whatsappHover} ${colors.textLight} font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
+                className={`inline-flex items-center justify-center ${profileData.colors.whatsappBg} ${profileData.colors.whatsappHover} text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
               >
                 <FaWhatsapp className="mr-3 text-xl" />
                 <span>WhatsApp</span>
@@ -187,7 +145,7 @@ export default function ProfessionalProfile() {
               
               <Link
                 href="#"
-                className={`inline-flex items-center justify-center ${colors.bookingBg} ${colors.bookingHover} ${colors.textLight} font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
+                className={`inline-flex items-center justify-center ${profileData.colors.bookingBg} ${profileData.colors.bookingHover} text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none`}
               >
                 <FaCalendarAlt className="mr-3 text-xl" />
                 <span>Agendar online</span>
@@ -203,9 +161,9 @@ export default function ProfessionalProfile() {
               </div>
               <div className="text-left">
                 <p className="text-sm font-medium text-gray-700">
-                  <span className="text-indigo-600 font-bold">Oferta especial:</span> Primera sesión con 15% de descuento
+                  <span className="text-indigo-600 font-bold">Oferta especial:</span> {profileData.offer.text}
                 </p>
-                <p className="text-xs text-gray-500">Respuesta garantizada en menos de 12 horas</p>
+                <p className="text-xs text-gray-500">{profileData.offer.details}</p>
               </div>
             </div>
           </div>

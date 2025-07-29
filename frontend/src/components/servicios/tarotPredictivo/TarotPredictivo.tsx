@@ -10,7 +10,7 @@ import ServicesSection from '@/components/servicios/tarotPredictivo/ServicesSect
 import AudienceSection from '@/components/servicios/tarotPredictivo/AudienceSection'
 import TarotFooter from '@/components/servicios/tarotPredictivo/TarotFooter'
 import { serviciosDataTarotTerapeutico, audienciaDataTarotTerapeutico, tarotPredictivoImages } from '@/data/servicios/tarot-terapeutico/tarot-terapeutico';
-import TarotPricing from './tarotPricing/TarotPricing'
+import TherapyPricing from '@/components/therapy/TherapyPricing'
 
 
 const TarotPredictivo: React.FC = () => {
@@ -45,7 +45,8 @@ const TarotPredictivo: React.FC = () => {
         <AudienceSection 
           audiencia={audienciaDataTarotTerapeutico}
         />
-        <TarotPricing/>
+        {/* <TarotPricing/>  */}
+        <TherapyPricing category="tarot"/>
         <TarotFooter />
       </div>
 

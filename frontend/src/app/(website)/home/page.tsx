@@ -1,5 +1,6 @@
 import HomeHero from "@/components/home/HomeHero";
 import Servicios from "@/components/servicios/Servicios";
+import ProfileTeaser from "@/components/sobre-mi/ProfileTeaser";
 import TestimoniosSection from "@/components/testimonios/TestimoniosSection";
 import { testimonios } from "@/data/testimonios/testimonios";
 
@@ -8,6 +9,7 @@ export default function HomePage() {
   return (
    <>
    <HomeHero/>
+   <ProfileTeaser/>
    <Servicios/>
     <TestimoniosSection
                 testimonios={testimonios}
