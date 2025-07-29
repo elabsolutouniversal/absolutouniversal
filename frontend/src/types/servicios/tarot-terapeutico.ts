@@ -85,3 +85,15 @@ export interface TarotTherapyData {
     contactText: string;
   };
 }
+
+export interface TarotPlan {
+  id: string;
+  name: string;
+  duration: string;
+  price: number;
+  currency: string;
+  description: string;
+  features: string[];
+  recommended?: boolean;
+  icon?: string;
+}

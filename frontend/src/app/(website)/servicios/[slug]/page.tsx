@@ -34,7 +34,7 @@ export default async function ServicioIndividualPage({
 
   return (
     <div className="bg-pink-50 min-h-screen py-12 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <Componente />
       </div>
     </div>
