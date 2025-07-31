@@ -63,37 +63,22 @@ export const therapiesData: TherapiesData = {
     image: "/images/tarot-terapeutico.jpg",
     slug: "tarot-predictivo-terapeutico",
     packages: [
-      {
-        id: 'tarot-rapida',
-        name: "Consulta Rápida",
+     {
+        id: 'tarot-rapida-15',
+        name: "1 Pregunta Rapida",
         description: "Respuesta clara y directa a una pregunta específica",
         price: 15,
         duration: "15 min",
         includes: [
-          "Una pregunta concreta",
+          "Respuesta Si o No",
           "Respuesta inmediata",
           "Orientación puntual",
           "Mensaje de cierre"
         ]
       },
-      {
-        id: 'tarot-media',
-        name: "Sesión Media",
-        description: "Exploración profunda de tu situación actual",
-        price: 50,
-        duration: "30 min",
-        includes: [
-          "Análisis detallado",
-          "Múltiples preguntas",
-          "Identificación de patrones",
-          "Guía personalizada",
-          "Recomendaciones específicas"
-        ],
-        popular: true
-      },
-      {
+       {
         id: 'tarot-completa',
-        name: "Sesión Completa",
+        name: "Sesión Tarot con Enfoque Terapuetico",
         description: "Consulta integral con enfoque terapéutico completo",
         price: 70,
         duration: "1 hora",
@@ -102,81 +87,113 @@ export const therapiesData: TherapiesData = {
           "Análisis de patrones inconscientes",
           "Trabajo con bloqueos emocionales",
           "Plan de acción personalizado",
-          "Seguimiento post-sesión",
+          "2 Lectura de Seguimiento  con 10% descuento en el  Año",
           "Material de apoyo incluido"
+        ],
+         popular: true
+      },
+    
+      {
+        id: 'tarot-media',
+        name: "Sesión Media Hora",
+        description: "Exploración profunda de tu situación actual",
+        price: 50,
+        duration: "30 min",
+        includes: [
+          "Análisis detallado",
+          "1 Lectura de Seguimiento  con 10% descuento en el  Año",
+          "Múltiples preguntas",
+          "Identificación de patrones",
+          "Guía personalizada",
+          "Recomendaciones específicas"
+        ],
+       
+      },
+     
+      {
+        id: 'tarot-15-minutos-rapida',
+        name: "Sesion 15 Minutos",
+        description: "Respuesta clara y directa a una pregunta específica",
+        price: 30,
+        duration: "",
+        includes: [
+          "Varias pregunta concretas",
+          "Respuesta inmediata",
+          "Orientación puntual",
+          "Mensaje de cierre"
         ]
       },
       // Manteniendo el paquete anual como opción premium
-      {
-        id: 'tarot-anual',
-        name: "Lectura Anual Completa",
-        description: "Predicciones y guía energética para todo el año",
-        price: 200,
-        duration: "90 min",
-        includes: [
-          "Tirada anual mes por mes",
-          "Calendario energético personalizado",
-          "Rituales estacionales",
-          "2 consultas de seguimiento",
-          "Manual digital personalizado"
-        ]
-      }
+       {
+         id: 'tarot-anual',
+         name: "Lectura Anual Completa",
+         description: "Predicciones y guía energética para todo el año",
+         price: 85,
+         duration: "2  horas ",
+         includes: [
+           "Tirada anual mes por mes",
+           "Rituales estacionales",
+           "Lectura de Seguimiento 10% descuento a mitad de Año",
+           "Material Digital de Apoyo",
+           "Tratamiento Incluido de Flores de bach y california personalizada"
+         ]
+       }
     ]
   },
   
-  psico: {
-    id: 'psico',
-    name: "Psico Educación Consciente",
-    description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
-    image: "/images/psico-educacion.jpg",
-    slug: "psico-educacion-consciente",
-    packages: [
-      {
-        id: 'psico-individual',
-        name: "Sesión Individual",
-        description: "Sesión personalizada de psico-educación consciente",
-        price: 90,
-        duration: "60 min",
-        includes: [
-          "Evaluación de consciencia personal",
-          "Técnicas de expansión consciente",
-          "Material educativo digital",
-          "Ejercicios prácticos personalizados"
-        ]
-      },
-      {
-        id: 'psico-taller',
-        name: "Taller Consciencia Universal",
-        description: "Taller grupal de conexión cósmica y consciencia",
-        price: 150,
-        duration: "3 horas",
-        includes: [
-          "Taller teórico-práctico completo",
-          "Ejercicios grupales de conexión",
-          "Material completo digital",
-          "Certificado de participación",
-          "Grupo de práctica continua"
-        ],
-        popular: true
-      },
-      {
-        id: 'psico-curso',
-        name: "Curso Completo (8 semanas)",
-        description: "Programa completo de transformación consciente",
-        price: 800,
-        originalPrice: 1200,
-        duration: "8 sesiones de 2 horas",
-        includes: [
-          "8 módulos de transformación",
-          "Material completo del curso",
-          "Sesiones grupales y seguimiento",
-          "Certificación avanzada",
-          "Comunidad exclusiva de práctica",
-          "3 meses de seguimiento post-curso"
-        ]
-      }
-    ]
-  },
+  // psico: {
+  //   id: 'psico',
+  //   name: "Psico Educación Consciente",
+  //   description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
+  //   image: "/images/psico-educacion.jpg",
+  //   slug: "psico-educacion-consciente",
+  //   packages: [
+  //     {
+  //       id: 'psico-individual',
+  //       name: "Sesión Individual",
+  //       description: "Sesión personalizada de psico-educación consciente",
+  //       price: 90,
+  //       duration: "60 min",
+  //       includes: [
+  //         "Evaluación de consciencia personal",
+  //         "Técnicas de expansión consciente",
+  //         "Material educativo digital",
+  //         "Ejercicios prácticos personalizados"
+  //       ]
+  //     },
+  //     {
+  //       id: 'psico-taller',
+  //       name: "Taller Consciencia Universal",
+  //       description: "Taller grupal de conexión cósmica y consciencia",
+  //       price: 150,
+  //       duration: "3 horas",
+  //       includes: [
+  //         "Taller teórico-práctico completo",
+  //         "Ejercicios grupales de conexión",
+  //         "Material completo digital",
+  //         "Certificado de participación",
+  //         "Grupo de práctica continua"
+  //       ],
+  //       popular: true
+  //     },
+  //     {
+  //       id: 'psico-curso',
+  //       name: "Curso Completo (8 semanas)",
+  //       description: "Programa completo de transformación consciente",
+  //       price: 800,
+  //       originalPrice: 1200,
+  //       duration: "8 sesiones de 2 horas",
+  //       includes: [
+  //         "8 módulos de transformación",
+  //         "Material completo del curso",
+  //         "Sesiones grupales y seguimiento",
+  //         "Certificación avanzada",
+  //         "Comunidad exclusiva de práctica",
+  //         "3 meses de seguimiento post-curso"
+  //       ]
+  //     }
+  //   ]
+  // },
   
   pendulo: {
     id: 'pendulo',
@@ -186,24 +203,11 @@ export const therapiesData: TherapiesData = {
     slug: "pendulo-hebreo",
     packages: [
       {
-        id: 'pendulo-diagnostico',
-        name: "Diagnóstico Energético",
-        description: "Evaluación completa de tu estado energético actual",
-        price: 80,
-        duration: "45 min",
-        includes: [
-          "Diagnóstico completo con péndulo",
-          "Mapa energético personal detallado",
-          "Identificación de bloqueos",
-          "Recomendaciones iniciales específicas"
-        ]
-      },
-      {
         id: 'pendulo-sanacion',
         name: "Sesión de Sanación Completa",
-        description: "Limpieza y equilibrio energético integral",
-        price: 120,
-        duration: "75 min",
+        description: "Limpieza y Curaciòn Energetica Integrativa (Tratamiento Base)",
+        price: 285,
+        duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",
           "Limpieza profunda de bloqueos",
@@ -215,9 +219,9 @@ export const therapiesData: TherapiesData = {
       },
       {
         id: 'pendulo-hogar',
-        name: "Limpieza Energética del Hogar",
+        name: "Limpieza Energética de Lugares, Negocios y  Hogar",
         description: "Servicio a domicilio para limpieza espacial",
-        price: 200,
+        price: 300,
         duration: "2 horas",
         includes: [
           "Diagnóstico energético del espacio",

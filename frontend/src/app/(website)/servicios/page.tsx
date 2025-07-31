@@ -1,6 +1,8 @@
 import React from 'react'
 import Servicios from '@/components/servicios/Servicios';
 import TherapyPricing from '@/components/therapy/TherapyPricing';
+import TestimoniosSection from '@/components/testimonios/TestimoniosSection';
+import { testimonios } from '@/data/testimonios/testimonios';
 
 export default function Serviciospage() {
   return (
@@ -12,7 +14,14 @@ export default function Serviciospage() {
             showDescription={true}
             showViewAllButton={false}
           />
-          <TherapyPricing/>
+         
+           <TestimoniosSection
+                testimonios={testimonios}
+                itemsPerPage={6}
+                title="Experiencias que transforman vidas"
+                subtitle="Testimonios reales de personas que han encontrado claridad, sanación y transformación a través de nuestros servicios especializados"
+            />
+             <TherapyPricing/>
         </div>
       </main>
     </>
