@@ -21,7 +21,7 @@ export default function Serviciospage() {
                 title="Experiencias que transforman vidas"
                 subtitle="Testimonios reales de personas que han encontrado claridad, sanación y transformación a través de nuestros servicios especializados"
             />
-             <TherapyPricing/>
+           
         </div>
       </main>
     </>

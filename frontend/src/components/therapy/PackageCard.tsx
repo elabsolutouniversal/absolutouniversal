@@ -1,6 +1,7 @@
 import { useCallback } from "react";
-import { PackageCardProps } from "@/types/therapy.types"; 
+import { PackageCardProps } from "@/types/therapy.types";
 import { calculateSavings, formatPrice } from "@/utils/therapy.utils";
+
 const PackageCard: React.FC<PackageCardProps> = ({ 
   package: pkg, 
   therapyName, 
@@ -14,28 +15,44 @@ const PackageCard: React.FC<PackageCardProps> = ({
     onSelect(pkg, therapyName, therapyId);
   }, [pkg, therapyName, therapyId, onSelect]);
 
+  // Simple check icon matching the design
+  const CheckIcon = () => (
+    <span className="text-blue-500 text-lg">✓</span>
+  );
+
   return (
-    <div className={`relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-      pkg.popular ? 'ring-2 ring-purple-500' : ''
+    <div className={`relative bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${
+      pkg.popular ? 'ring-2 ring-blue-500' : 'border border-gray-200'
     }`}>
+      {/* Popular badge */}
       {pkg.popular && (
-        <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg z-10">
-          Más Popular
+        <div className="absolute top-0 left-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-br-lg rounded-tl-lg">
+          RECOMENDADO
         </div>
       )}
       
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">
+        {/* Icon circle at top */}
+        <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${
+          pkg.popular ? 'bg-blue-600' : 'bg-gray-200'
+        }`}>
+          {/* You can add different icons here based on package type if needed */}
+        </div>
+
+        {/* Title */}
+        <h3 className="text-xl font-bold text-gray-900 text-center mb-2">
           {pkg.name}
         </h3>
         
-        <p className="text-gray-600 text-sm mb-4 min-h-[3rem]">
-          {pkg.description}
+        {/* Duration */}
+        <p className="text-sm text-gray-500 text-center mb-4">
+          {pkg.duration}
         </p>
         
-        <div className="mb-4">
-          <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-bold text-purple-600">
+        {/* Price section */}
+        <div className="text-center mb-6">
+          <div className="flex items-baseline justify-center gap-2">
+            <span className="text-3xl font-bold text-blue-600">
               {formatPrice(pkg.price)}
             </span>
             {hasDiscount && (
@@ -44,35 +61,38 @@ const PackageCard: React.FC<PackageCardProps> = ({
               </span>
             )}
           </div>
-          <p className="text-sm text-gray-500">{pkg.duration}</p>
           {hasDiscount && (
-            <p className="text-sm text-green-600 font-semibold">
+            <p className="text-sm text-green-600 mt-1">
               ¡Ahorra {formatPrice(savings)}!
             </p>
           )}
         </div>
         
+        {/* Includes section */}
         <div className="mb-6">
-          <h4 className="font-semibold text-gray-700 mb-2">Incluye:</h4>
-          <ul className="text-sm text-gray-600 space-y-1">
+          <p className="text-sm font-semibold text-gray-600 text-center mb-3">
+            INCLUYE:
+          </p>
+          <ul className="space-y-2">
             {pkg.includes.map((item, index) => (
               <li key={index} className="flex items-start gap-2">
-                <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
-                <span>{item}</span>
+                <CheckIcon />
+                <span className="text-sm text-gray-700">{item}</span>
               </li>
             ))}
           </ul>
         </div>
         
+        {/* CTA Button */}
         <button
           onClick={handleSelect}
-          className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 ${
+          className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
             pkg.popular 
-              ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 focus:ring-purple-300' 
-              : 'bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-gray-300'
+              ? 'bg-blue-600 text-white hover:bg-blue-700' 
+              : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
           }`}
         >
-          Quiero esta sesión
+          Reservar ahora
         </button>
       </div>
     </div>
