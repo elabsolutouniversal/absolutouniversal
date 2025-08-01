@@ -21,10 +21,12 @@ import {
   sesiones,
   beneficios,
   faqs
-} from '@/data/servicios/terapia-integrativa-holistica';
+} from '@/data/servicios/terapia-holistica-integrativa/terapia-integrativa-holistica';
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
 import SanacionEnergetica from './5PasosSanacionEnergetica/PasosSanacionEnergetica';
 import TherapyPricing from '@/components/therapy/TherapyPricing';
+import AvisosImportantesSection from './ConsideracionesAntesInicia/AvisosImportantes';
+
 
 export default function TerapiaIntegrativaHolistica() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -50,24 +52,24 @@ export default function TerapiaIntegrativaHolistica() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-    {/* HERO + BARRA DE BENEFICIOS */}
-<section className="relative md:overflow-visible pb-4 md:pb-20">
-  {/* Hero */}
-  <div className="-mx-4 sm:-mx-6 md:mx-auto md:max-w-7xl md:px-6">
-    <HeroSection />
-  </div>
+      {/* HERO + BARRA DE BENEFICIOS */}
+      <section className="relative md:overflow-visible pb-4 md:pb-20">
+        {/* Hero */}
+        <div className="-mx-4 sm:-mx-6 md:mx-auto md:max-w-7xl md:px-6">
+          <HeroSection />
+        </div>
 
-  {/* Barra mobile */}
-  <QuickBenefitsBar variant="static" className="mt-5 px-4 md:hidden" />
+        {/* Barra mobile */}
+        <QuickBenefitsBar variant="static" className="mt-5 px-4 md:hidden" />
 
-  {/* Barra desktop (menos espacio) */}
-  <QuickBenefitsBar
-    variant="floating"
-    gapTop={20}        // antes 56
-    gapBottom={14}     // antes 40-48
-    className="hidden md:block"
-  />
-</section>
+        {/* Barra desktop (menos espacio) */}
+        <QuickBenefitsBar
+          variant="floating"
+          gapTop={20}        // antes 56
+          gapBottom={14}     // antes 40-48
+          className="hidden md:block"
+        />
+      </section>
 
       {/* GALERÍA */}
       <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10 mt-10 md:mt-16">
@@ -77,8 +79,7 @@ export default function TerapiaIntegrativaHolistica() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className=" text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900
-    pt-0 md:pt-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900 pt-0 md:pt-10">
             Conoce nuestras terapias
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -119,19 +120,19 @@ export default function TerapiaIntegrativaHolistica() {
           texto={
             <>
               <p className="text-gray-600 leading-relaxed text-justify">
-              La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
-              <span className="font-semibold text-purple-600">psicología</span>,{' '}
-              <span className="font-semibold text-blue-600">radiestesia con péndulo hebreo</span> y{' '}
-              <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este protocolo está diseñado para
-              abrir tu camino de transformación, abordando tanto tus necesidades emocionales como energéticas, e iniciar
-              un proceso profundo de autoconocimiento y bienestar.
-            </p>
+                La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
+                <span className="font-semibold text-purple-600">psicología</span>,{' '}
+                <span className="font-semibold text-blue-600">radiestesia con péndulo hebreo</span> y{' '}
+                <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este protocolo está diseñado para
+                abrir tu camino de transformación, abordando tanto tus necesidades emocionales como energéticas, e iniciar
+                un proceso profundo de autoconocimiento y bienestar.
+              </p>
             </>
           }
         />
 
         {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
-        <SanacionEnergetica/>
+        <SanacionEnergetica />
 
         {/* Proceso */}
         <section id="proceso">
@@ -158,7 +159,8 @@ export default function TerapiaIntegrativaHolistica() {
           </div>
         </section>
 
-        <AvisosImportantes />
+        {/* Avisos Importantes */}
+        <AvisosImportantesSection />
 
         {/* Beneficios */}
         <section>
@@ -190,6 +192,7 @@ export default function TerapiaIntegrativaHolistica() {
             ))}
           </motion.div>
         </section>
+
         <BloqueTexto
           titulo="Enfoque complementario"
           texto={
@@ -202,7 +205,8 @@ export default function TerapiaIntegrativaHolistica() {
           bg="bg-gradient-to-r from-blue-50 to-purple-50"
           border="border-2 border-blue-200"
         />
-        <TherapyPricing   category="holistica"/>
+        
+        <TherapyPricing category="holistica" />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} />

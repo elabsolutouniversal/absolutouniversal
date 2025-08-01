@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Sparkles, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { sesiones5Pasos as sesiones } from '@/data/servicios/terapia-integrativa-holistica';
+import { sesiones5Pasos as sesiones } from '@/data/servicios/terapia-holistica-integrativa/terapia-integrativa-holistica';
 
 const SanacionEnergetica = () => {
   const fadeInUp = {
