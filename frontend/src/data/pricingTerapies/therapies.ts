@@ -11,13 +11,13 @@ export const therapiesData: TherapiesData = {
    packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Sesión de Sanación  Basica Completa",
+        name: "Sesión de Sanación Inicial  Basica",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 285,
         duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza profunda de bloqueos",
+          "Limpieza  Inicial de bloqueo Energeticos",
           "Equilibrio de todos los chakras",
           "Protección energética avanzada",
           "Instrucciones de mantenimiento"
@@ -28,7 +28,7 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
         description: "Servicio a domicilio para limpieza espacial",
-        price: 300,
+        price: 250,
         duration: "2 horas",
         includes: [
           "Diagnóstico energético del espacio",
@@ -42,7 +42,7 @@ export const therapiesData: TherapiesData = {
         id: 'retiro-danos-amarres',
         name: "Limpieza y Sanación Energética Integral contra Daños, Brujería, Amarres y Trabajos de Magia",
         description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
-        price: 600,
+        price: 500,
         duration: "7 sesiones de  tratamiento",
         includes: [
           "Sesión de Sanación Energética Completa (como en 'Sesión de Sanación Completa')",
@@ -147,13 +147,13 @@ export const therapiesData: TherapiesData = {
     packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Sesión de Sanación Completa",
+        name: "Sesión de Sanación Inicial  Basica",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 285,
         duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza profunda de bloqueos",
+          "Limpieza  Inicial de bloqueo Energeticos",
           "Equilibrio de todos los chakras",
           "Protección energética avanzada",
           "Instrucciones de mantenimiento"
@@ -164,7 +164,7 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
         description: "Servicio a domicilio para limpieza espacial",
-        price: 300,
+        price: 250,
         duration: "2 horas",
         includes: [
           "Diagnóstico energético del espacio",
@@ -178,7 +178,7 @@ export const therapiesData: TherapiesData = {
         id: 'retiro-danos-amarres',
         name: "Limpieza y Sanación Energética Integral contra Daños, Brujería, Amarres y Trabajos de Magia",
         description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
-        price: 600,
+        price: 500,
         duration: "7 Sesiones ",
         includes: [
           "Sesión de Sanación Energética Completa (como en 'Sesión de Sanación Completa')",

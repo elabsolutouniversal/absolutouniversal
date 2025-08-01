@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import HeroSection from '@/components/servicios/terapia-integrativa-holistica/HeroSection';
 import BloqueTexto from '@/components/servicios/terapia-integrativa-holistica/BloqueTexto';
-import AvisosImportantes from '@/components/servicios/terapia-integrativa-holistica/Avisos/AvisosImportantes';
 import CardSesion from '@/components/servicios/terapia-integrativa-holistica/Proceso/CardSesion';
 import CardBeneficio from '@/components/servicios/terapia-integrativa-holistica/Beneficios/CardBeneficio';
 import CardConImagen from '@/components/servicios/terapia-integrativa-holistica/Galeria/CardConImagen';
@@ -25,7 +24,7 @@ import {
 import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
 import SanacionEnergetica from './5PasosSanacionEnergetica/PasosSanacionEnergetica';
 import TherapyPricing from '@/components/therapy/TherapyPricing';
-import AvisosImportantesSection from './ConsideracionesAntesInicia/AvisosImportantes';
+import ConsideracionesTratamiento from './ConsideracionesAntesInicia/ConsideracionesTratamiento';
 
 
 export default function TerapiaIntegrativaHolistica() {
@@ -160,7 +159,7 @@ export default function TerapiaIntegrativaHolistica() {
         </section>
 
         {/* Avisos Importantes */}
-        <AvisosImportantesSection />
+         <ConsideracionesTratamiento/>
 
         {/* Beneficios */}
         <section>

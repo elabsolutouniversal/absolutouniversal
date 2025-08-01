@@ -1,53 +1,52 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { InfoItem } from '@/data/servicios/terapia-holistica-integrativa/sanacion-integrativa';
+import { ReactNode } from 'react'
 
-interface InfoCardProps {
-  item: InfoItem
-  index: number
+interface CardProps {
+  title: string
+  content: string
+  icon: ReactNode
+  isImportant?: boolean
 }
 
-export default function InfoCard({ item, index }: InfoCardProps) {
+export function InfoCard({ title, content, icon, isImportant = false }: CardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
-      whileHover={{ scale: 1.02, translateY: -5 }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.35 }}
       className={`
-        relative p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
-        ${item.highlight 
-          ? 'bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-2 border-purple-500/20' 
-          : 'bg-white/5 border border-white/10'
-        }
-        hover:shadow-lg sm:hover:shadow-2xl hover:shadow-purple-500/10
-        transition-all duration-300
+        bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-6 flex flex-col gap-4
+        border ${isImportant ? 'border-purple-500' : 'border-purple-200'}
       `}
+      role="region"
+      aria-label={title}
     >
-      {item.highlight && (
-        <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-0.5 sm:px-3 sm:py-1 rounded-full font-semibold">
-          Importante
+      <div className="flex items-start gap-4">
+        <div
+          className={`
+            w-11 h-11 flex items-center justify-center rounded-full flex-shrink-0
+            ${isImportant ? 'bg-purple-100 text-purple-700' : 'bg-purple-50 text-purple-500'}
+          `}
+        >
+          {icon}
         </div>
-      )}
-      
-      {item.icon && (
-        <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 animate-pulse">
-          {item.icon}
+        <div className="flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className={`font-semibold text-xl ${isImportant ? 'text-[#1f2747]' : 'text-[#2a2f55]'}`}>
+              {title}
+            </h3>
+            {isImportant && (
+              <span className="inline-block text-xs font-medium uppercase tracking-wide bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
+                Relevante
+              </span>
+            )}
+          </div>
+          <p className="mt-1 text-sm text-gray-700 leading-relaxed">{content}</p>
         </div>
-      )}
-      
-      {item.title && (
-        <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
-          {item.title}
-        </h3>
-      )}
-      
-      <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-        {item.content}
-      </p>
-      
-      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      </div>
     </motion.div>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import Servicios from '@/components/servicios/Servicios';
-import TherapyPricing from '@/components/therapy/TherapyPricing';
 import TestimoniosSection from '@/components/testimonios/TestimoniosSection';
 import { testimonios } from '@/data/testimonios/testimonios';
 
