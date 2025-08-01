@@ -5,7 +5,10 @@ import {
   Users, 
   Brain, 
   Flower2, 
-  Zap, 
+  Zap,
+  Droplet,
+  ShieldCheck,
+  RefreshCw, 
 } from 'lucide-react';
 
 import { 
@@ -28,30 +31,52 @@ import type {
 
 export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   {
-    titulo: 'Terapia Integrativa Holística',
+    titulo: 'Sesión 1: Evaluación Integral Personalizada',
     src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg',
     fallbackBg: 'bg-purple-200',
-    icon: <Heart className="w-12 h-12 mx-auto mb-2 text-purple-600" />,
-    href: '/servicios/psicoterapia-integrativa-holistica',
-    descripcion: 'Equilibra tu mente, cuerpo y espíritu a través de técnicas psicológicas avanzadas'
-  },
-  {
-    titulo: 'Péndulo Hebreo',
-    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154206/pendulo-hebreo-1_n1lavx.jpg',
-    fallbackBg: 'bg-blue-200',
-    icon: <Sparkles className="w-12 h-12 mx-auto mb-2 text-blue-600" />,
-    href: '/servicios/pendulo-hebreo',
-    descripcion: 'Limpieza energética profunda utilizando frecuencias vibracionales ancestrales'
-  },
-  {
-    titulo: 'Proceso de Sanación',
-    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg',
-    fallbackBg: 'bg-pink-200',
-    icon: <Star className="w-12 h-12 mx-auto mb-2 text-pink-600" />,
+    icon: <User className="w-12 h-12 mx-auto mb-2 text-purple-600" />,
     href: '/servicios/proceso-de-sanacion',
-    descripcion: 'Acompañamiento personalizado en tu viaje de transformación integral'
+    descripcion:
+      'Entrevista profunda, detección de patrones energéticos y emocionales y diseño de un plan de tratamiento personalizado.'
   },
-];
+  {
+    titulo: 'Sesión 2: Diagnóstico y Limpieza Energética',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153968/pendulo-hebreo_fnvk0o.jpg',
+    fallbackBg: 'bg-blue-200',
+    icon: <Zap className="w-12 h-12 mx-auto mb-2 text-blue-600" />,
+    href: '/servicios/proceso-de-sanacion',
+    descripcion:
+      'Testeo energético completo, limpieza profunda de bloqueos, reprogramación celular y revitalización de tu campo energético.'
+  },
+  {
+    titulo: 'Sesión 3: Armonización de Chakras',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg',
+    fallbackBg: 'bg-green-200',
+    icon: <Droplet className="w-12 h-12 mx-auto mb-2 text-green-600" />,
+    href: '/servicios/proceso-de-sanacion',
+    descripcion:
+      'Desbloqueo y equilibrio de chakras, potenciación del flujo energético natural y restauración del equilibrio emocional, mental y físico.'
+  },
+  {
+    titulo: 'Sesión 4: Reparación y Fortalecimiento del Aura',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076399/IMG_3519_absuy1.jpg',
+    fallbackBg: 'bg-yellow-200',
+    icon: <ShieldCheck className="w-12 h-12 mx-auto mb-2 text-yellow-600" />,
+    href: '/servicios/proceso-de-sanacion',
+    descripcion:
+      'Sellado y reparación del campo áurico, fortalecimiento de tu protección energética y prevención de pérdidas futuras.'
+  },
+  {
+    titulo: 'Sesión 5: Integración y Consolidación',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076557/IMG_3600_1_sv6b1n.jpg',
+    fallbackBg: 'bg-indigo-200',
+    icon: <RefreshCw className="w-12 h-12 mx-auto mb-2 text-indigo-600" />,
+    href: '/servicios/proceso-de-sanacion',
+    descripcion:
+      'Sesión personalizada gratuita para consolidar avances, recibir herramientas de mantenimiento y establecer un plan de seguimiento.'
+  }
+]
+
 
 export const sesiones: SesionTerapiaIntegrativa[] = [
   {

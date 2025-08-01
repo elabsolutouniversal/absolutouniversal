@@ -111,7 +111,21 @@ export const galleryData: GalleryData = {
       description: "Enfoque holístico que combina múltiples técnicas de sanación"
     },
     {
-      id: "terapia-integrativa-2",
+      id: "terapia-integrativa-34",
+      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
+      alt: "Sesión Holística",
+      title: "Sesión Holística",
+      description: "Ambiente tranquilo y armonioso para la sanación integral"
+    },
+    {
+      id: "terapia-integrativa-42",
+      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
+      alt: "Sesión Holística",
+      title: "Sesión Holística",
+      description: "Ambiente tranquilo y armonioso para la sanación integral"
+    },
+    {
+      id: "terapia-integrativa-52",
       url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
       alt: "Sesión Holística",
       title: "Sesión Holística",
