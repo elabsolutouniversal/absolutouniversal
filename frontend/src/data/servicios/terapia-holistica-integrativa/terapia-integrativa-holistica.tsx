@@ -32,7 +32,7 @@ import type {
 export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   {
     titulo: 'Sesión 1: Evaluación Integral Personalizada',
-    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg',
     fallbackBg: 'bg-purple-200',
     icon: <User className="w-12 h-12 mx-auto mb-2 text-purple-600" />,
     href: '/servicios/proceso-de-sanacion',
@@ -68,7 +68,7 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   },
   {
     titulo: 'Sesión 5: Integración y Consolidación',
-    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076557/IMG_3600_1_sv6b1n.jpg',
+    src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076494/IMG_3555_njpbnc.jpg',
     fallbackBg: 'bg-indigo-200',
     icon: <RefreshCw className="w-12 h-12 mx-auto mb-2 text-indigo-600" />,
     href: '/servicios/proceso-de-sanacion',
