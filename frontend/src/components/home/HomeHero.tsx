@@ -92,7 +92,7 @@ export default function HomeHero(): JSX.Element {
                       Todo volverá a estar bien  y no tienes por qué hacerlo solo 💜
                     </span>{" "}
                   </span>
-                  <span className="block font-medium text-2xl md:text-3xl lg:text-4xl text-purple-500 mt-3 leading-relaxed">
+                  <span className="block font-bold text-2xl md:text-3xl lg:text-4xl text-[#bd35ee] mt-3 leading-relaxed">
                     Te acompañaré en  el proceso
                   </span>
                 </h1>

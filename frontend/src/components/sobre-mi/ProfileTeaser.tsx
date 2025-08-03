@@ -97,7 +97,7 @@ export default function ProfileTeaser() {
               <p className="font-semibold text-indigo-600">
                 {profileData.generalInfo.title} ({profileData.generalInfo.credential})
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-900 font-bold">
                 {profileData.generalInfo.specialty} con {profileData.generalInfo.experience}
               </p>
             </div>
