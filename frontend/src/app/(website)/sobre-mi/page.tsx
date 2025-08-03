@@ -7,7 +7,7 @@ import React from 'react'
 export default function page() {
   return (
     <>
-      <ProfessionalProfile/>
+       <ProfessionalProfile/>
       <SocialMediaSimple/>
        <TestimoniosSection
                 testimonios={testimonios}
@@ -15,7 +15,7 @@ export default function page() {
                 title="Experiencias que transforman vidas"
                 subtitle="Testimonios reales de personas que han encontrado claridad, sanación y transformación a través de nuestros servicios especializados"
             />
-      
+       
     </>
   
   )

@@ -1,7 +1,6 @@
 import { 
   Heart, 
   Sparkles, 
-  Star, 
   Users, 
   Brain, 
   Flower2, 
