@@ -2,10 +2,10 @@
 
 export const profileData = {
   generalInfo: {
-    name: "Lic. Nunash Dahiana Velásquez",
-    title: "Psicóloga Holística Colegiada",
+    name: "Lic. Nunash Dahiana Velásquez Guerrero",
+    title: "Psicóloga Clìnica Colegiada",
     credential: "CPSP N.°12004",
-    specialty: "Especialista en sanación mente-cuerpo-alma",
+    specialty: "Terapéuta holística y especialista en curaciones energéticas",
     experience: "15+ años transformando vidas",
     imageUrl: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
   },
