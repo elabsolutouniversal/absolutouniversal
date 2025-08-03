@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { JSX } from 'react';
-import { FaArrowRight, FaHeart, FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface HeroColors {
@@ -29,109 +29,101 @@ export default function HomeHero(): JSX.Element {
   return (
     <>
       {/* Sección personal - Ahora primera */}
-       <section className="relative bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 py-16 md:py-24 overflow-hidden">
-      {/* Elementos decorativos de fondo */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full border-2 border-pink-300 blur-md"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 rounded-full border-2 border-purple-300 blur-md"></div>
-        <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full border-2 border-rose-300 blur-md"></div>
-      </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          {/* Foto personal */}
-          <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-1">
-            <motion.div
-              className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-full shadow-2xl shadow-rose-200 hover:scale-105 transition-transform duration-300"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Image
-                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg"
-                alt="Terapeuta - Sanación integrativa holística"
-                width={400}
-                height={400}
-                className="object-cover w-full h-full"
-                priority
-              />
-            </motion.div>
-          </div>
+      <section className="relative bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 py-16 md:py-24 lg:py-32 overflow-hidden">
+        {/* Elementos decorativos de fondo mejorados */}
+        <div className="absolute inset-0 opacity-10">
+          <motion.div
+            className="absolute top-20 left-10 w-32 h-32 rounded-full bg-pink-200 blur-xl"
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.1, 0.15, 0.1]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          ></motion.div>
 
-          {/* Mensaje personal */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-2 max-w-2xl">
-            {/* Título principal */}
-            <motion.h1
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-pink-700 mb-4 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Todo estará bien... y no tienes que hacerlo sola
-            </motion.h1>
+          <motion.div
+            className="absolute bottom-32 right-16 w-24 h-24 rounded-full bg-purple-200 blur-xl"
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.1, 0.15, 0.1]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          ></motion.div>
 
-            {/* Subtítulo */}
-            <motion.p
-              className="font-sans text-xl md:text-2xl text-rose-600 mb-4 font-light italic"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              Aquí comienza tu camino de vuelta a ti misma
-            </motion.p>
+          <motion.div
+            className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-rose-200 blur-xl"
+            animate={{
+              x: [0, 15, 0],
+              opacity: [0.1, 0.15, 0.1]
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          ></motion.div>
+        </div>
 
-            {/* Afirmación */}
-            <motion.p
-              className="font-sans text-lg md:text-xl text-gray-600 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              Estoy aquí para caminar contigo, con amor y presencia, en tu proceso de sanación y transformación.
-            </motion.p>
-
-            {/* Corazones */}
-            <motion.div
-              className="flex items-center justify-center lg:justify-start gap-3 text-pink-500 mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              <FaHeart className="text-lg animate-pulse" />
-              <span className="font-sans text-base font-medium">Con amor y consciencia</span>
-              <FaHeart className="text-lg animate-pulse" />
-            </motion.div>
-
-            {/* Botones */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <Link
-                href="/sobre-mi"
-                aria-label="Conoce a la terapeuta"
-                className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 xl:gap-24">
+            {/* Contenido de texto */}
+            <div className="w-full lg:w-1/2 text-center lg:text-left order-1 lg:order-2 max-w-2xl">
+              <motion.div
+                className="bg-white/60 backdrop-blur-lg shadow-lg rounded-2xl p-6 md:p-10 hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 20px 25px -5px rgba(244, 114, 182, 0.1), 0 10px 10px -5px rgba(244, 114, 182, 0.04)"
+                }}
               >
-                Conecta conmigo
-                <FaArrowRight className="text-sm" />
-              </Link>
-
-              <Link
-                href="/servicios"
-                aria-label="Agenda tu primera sesión"
-                className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-pink-700 font-semibold px-8 py-4 rounded-full shadow-lg border-2 border-pink-200 hover:border-pink-300 transition-all duration-300"
+                <h1 className="font-sans font-extrabold text-3xl md:text-4xl lg:text-5xl text-pink-700 mb-4 leading-snug">
+                  <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+                    Todo volverá a estar bien y no tiene por que hacerlo solo
+                  </span>
+                  <span className="block font-medium text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 leading-relaxed">
+                    Te acompañaré en <span className="italic font-semibold text-rose-500">el proceso</span>
+                  </span>
+                </h1>
+  
+              </motion.div>
+            </div>
+            {/* Imagen */}
+            <div className="w-full lg:w-1/2 flex justify-center order-2 lg:order-1">
+              <motion.div
+                className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-full shadow-2xl shadow-rose-200/50 hover:shadow-rose-300/70 transition-all duration-500"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 25px 50px -12px rgba(244, 114, 182, 0.4)"
+                }}
               >
-              
-                <FaCalendarAlt className="text-sm" />
-                Agenda tu primera sesión
-              </Link>
-            </motion.div>
+                <Image
+                  src="/images/logo.png"
+                  alt="Terapeuta - Sanación integrativa holística"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                <div className="absolute inset-0 rounded-full border-4 border-white/30 pointer-events-none"></div>
+              </motion.div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Hero de bienvenida - Ahora segunda */}
       <section className={`${colors.heroBg} py-16 md:py-24`}>
@@ -154,11 +146,11 @@ export default function HomeHero(): JSX.Element {
               </Link>
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
               <Image
-                src="/images/logo.png"
+                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg"
                 alt="Psicoterapia con péndulo"
                 width={400}
                 height={500}
