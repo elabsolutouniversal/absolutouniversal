@@ -3,7 +3,7 @@
 export const profileData = {
   generalInfo: {
     name: "Lic. Nunash Dahiana Velásquez Guerrero",
-    title: "Psicóloga Clìnica Colegiada",
+    title: "Psicóloga Colegiada Clìnica ",
     credential: "CPSP N.°12004",
     specialty: "Terapéuta holística , especialista en curaciones energéticas",
     experience: "20+ años de experiencia transformando vidas",
