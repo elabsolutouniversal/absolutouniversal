@@ -197,7 +197,7 @@ export const sesiones5Pasos = [
     color: "from-blue-400 to-cyan-400",
     puntos: [
       "Testeo energético completo de tu sistema",
-      "Limpieza profunda de bloqueos energéticos acumulados",
+      "Limpieza Inicial de bloqueos energéticos acumulados",
       "Técnicas avanzadas de reprogramación celular",
       "Revitalización de tu campo energético"
     ]
