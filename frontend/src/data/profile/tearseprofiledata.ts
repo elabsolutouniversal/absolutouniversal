@@ -5,8 +5,8 @@ export const profileData = {
     name: "Lic. Nunash Dahiana Velásquez Guerrero",
     title: "Psicóloga Clìnica Colegiada",
     credential: "CPSP N.°12004",
-    specialty: "Terapéuta holística y especialista en curaciones energéticas",
-    experience: "15+ años transformando vidas",
+    specialty: "Terapéuta holística , especialista en curaciones energéticas",
+    experience: "20+ años de experiencia transformando vidas",
     imageUrl: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
   },
 
