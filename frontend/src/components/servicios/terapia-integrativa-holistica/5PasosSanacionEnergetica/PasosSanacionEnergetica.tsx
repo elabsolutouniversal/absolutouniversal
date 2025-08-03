@@ -33,12 +33,12 @@ const SanacionEnergetica = () => {
           Sanación Integrativa Energética
         </h2>
         <h3 className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold mb-3 md:mb-4 px-2">
-          Tratamiento Integral Básico de 5 Sesiones para tu Bienestar Completo
+          Tratamiento Inicial Básico de 5 Sesiones para establecer tu Bienestar.
         </h3>
-        <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
+        <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
           Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio
           emocional, físico y energético. Cada sesión ha sido cuidadosamente estructurada para
-          guiarte hacia un estado profundo de bienestar y armonía interior.
+          guiarte hacia un estado de bienestar y armonía interior.
         </p>
       </motion.div>
 

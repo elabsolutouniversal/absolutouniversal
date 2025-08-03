@@ -81,7 +81,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
   {
     numero: '1–4',
     titulo: 'Evaluación y Preparación',
-    descripcion: 'Enfocadas en la evaluación, diagnóstico energético, limpieza inicial y desbloqueo. Abordamos tus desafíos, necesidades y expectativas.',
+    descripcion: 'Enfocadas en la evaluación, diagnóstico , limpieza inicial y desbloqueo energètico. Abordamos tus desafíos, necesidades y expectativas.',
     color: 'bg-gradient-to-r from-pink-100 to-purple-100',
     duracion: '90 min',
     frecuencia: 'Semanal',
