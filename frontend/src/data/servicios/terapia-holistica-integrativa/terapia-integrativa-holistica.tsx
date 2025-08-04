@@ -160,7 +160,7 @@ export const testimonios: TestimonioTerapiaIntegrativa[] = [
 export const faqs: FAQTerapiaIntegrativa[] = [
   {
     pregunta: "¿Cuánto dura cada sesión?",
-    respuesta: "Las primeras 4 sesiones duran aproximadamente 90 minutos cada una. La quinta sesión gratuita tiene una duración de 120 minutos para establecer el tratamiento personalizado."
+    respuesta: "La entrevista inicial dura una hora. El diagnóstico y limpieza inicial duran aproximadamente dos horas y 15 minutos. El desbloqueo de chakras dura una hora. La reparación de grietas del aura dura entre una hora y media y dos horas. La sesión de regalo dura aproximadamente 45 minutos.."
   },
   {
     pregunta: "¿Con qué frecuencia debo asistir?",
@@ -180,12 +180,12 @@ export const sesiones5Pasos = [
   {
     numero: 1,
     titulo: "Evaluación Integral Personalizada",
-    duracion: "1 hora y 30 minutos",
+    duracion: "1 hora",
     icon: User,        // ✅ MANTENER - funciona perfecto
     color: "from-purple-400 to-pink-400",
     puntos: [
       "Entrevista profunda para conocer tu historia y necesidades específicas",
-      "Identificación de patrones energéticos y emocionales",
+      "Identificación de patrones repetitivos , y bloqueos energéticos y emocionales",
       "Diseño de tu plan de tratamiento personalizado"
     ]
   },
@@ -198,8 +198,9 @@ export const sesiones5Pasos = [
     puntos: [
       "Testeo energético completo de tu sistema",
       "Limpieza Inicial de bloqueos energéticos acumulados",
+      "Reprogramacion energética celular.",
       "Técnicas avanzadas de reprogramación celular",
-      "Revitalización de tu campo energético"
+      "Revitalización de tu campo aurico"
     ]
   },
   {

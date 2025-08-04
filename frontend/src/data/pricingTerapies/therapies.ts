@@ -17,7 +17,7 @@ export const therapiesData: TherapiesData = {
         duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza  Inicial de bloqueo Energeticos",
+          "Limpieza  Inicial de bloqueos Energeticos",
           "Equilibrio de todos los chakras",
           "Protección energética avanzada",
           "Instrucciones de mantenimiento"
@@ -40,13 +40,13 @@ export const therapiesData: TherapiesData = {
       },
       {
         id: 'retiro-danos-amarres',
-        name: "Limpieza y Sanación Energética Integral contra Daños, Brujería, Amarres y Trabajos de Magia",
+        name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
         description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
         price: 500,
         duration: "7 sesiones de  tratamiento",
         includes: [
-          "Sesión de Sanación Energética Completa (como en 'Sesión de Sanación Completa')",
-          "Retiro de daños energéticos, brujería y amarres",
+          "Sanacion Inicial Básica",
+          "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
           "Limpieza profunda de bloqueos y ataduras",
           "Reequilibrio de chakras y campo áurico",
           "Protección energética reforzada y personalizada",
@@ -176,13 +176,13 @@ export const therapiesData: TherapiesData = {
       },
       {
         id: 'retiro-danos-amarres',
-        name: "Limpieza y Sanación Energética Integral contra Daños, Brujería, Amarres y Trabajos de Magia",
+        name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
         description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
         price: 500,
         duration: "7 Sesiones ",
         includes: [
-          "Sesión de Sanación Energética Completa (como en 'Sesión de Sanación Completa')",
-          "Retiro de daños energéticos, brujería y amarres",
+          "Sanacion Inicial Básica",
+          "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
           "Limpieza profunda de bloqueos y ataduras",
           "Reequilibrio de chakras y campo áurico",
           "Protección energética reforzada y personalizada",

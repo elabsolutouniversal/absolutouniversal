@@ -88,11 +88,14 @@ export default function HomeHero(): JSX.Element {
               >
                 <h1 className="font-sans font-extrabold text-3xl md:text-4xl lg:text-5xl text-pink-700 mb-4 leading-snug">
                   <span className="block">
-                    <span className="bg-purple-700 bg-clip-text text-transparent">
-                      Todo volverá a estar bien  y no tienes por qué hacerlo solo 💜
+                    <span className="bg-purple-700 bg-clip-text text-transparent text-xxl text-center">
+                      Todo volverá a estar bien  
+                    </span>{" "} <br></br>
+                     <span className="bg-purple-700 text-xl bg-clip-text text-transparent">
+                      No tienes por qué hacerlo solo 💜
                     </span>{" "}
                   </span>
-                  <span className="block font-bold text-2xl md:text-3xl lg:text-4xl text-[#bd35ee] mt-3 leading-relaxed">
+                  <span className="block font-bold text-lg md:text-3xl lg:text-4xl text-[#bd35ee] mt-3 leading-relaxed">
                     Te acompañaré en  el proceso
                   </span>
                 </h1>

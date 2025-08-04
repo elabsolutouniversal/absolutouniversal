@@ -48,7 +48,7 @@ export default function CTA() {
           </div>
 
           <p className="mt-6 text-purple-200 text-sm">
-            ✨ Agenda tu cita hoy y recibe un 20% de descuento en tu primera sesión
+            ✨ Agenda tu cita hoy y recibe un 20% de descuento en el paquete de sanacion básica inicial de 5 sesiones
           </p>
         </div>
       </motion.div>
