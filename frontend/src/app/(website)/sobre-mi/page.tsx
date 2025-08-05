@@ -1,4 +1,4 @@
-import ProfessionalProfile from '@/components/sobre-mi/ProfessionalProfile'
+import About from '@/components/about-me/About'
 import { SocialMediaSimple } from '@/components/SocialMedia/SocialMediaSimple'
 import TestimoniosSection from '@/components/testimonios/TestimoniosSection'
 import { testimonios } from '@/data/testimonios/testimonios'
@@ -7,7 +7,8 @@ import React from 'react'
 export default function page() {
   return (
     <>
-       <ProfessionalProfile/>
+       {/* <ProfessionalProfile/> */}
+       <About/>
       <SocialMediaSimple/>
        <TestimoniosSection
                 testimonios={testimonios}
