@@ -113,7 +113,7 @@ export interface AboutData {
 }
 
 export const aboutData: AboutData = {
-  name: "Lic. Nunash Dahiana Velásquez Guerrero",
+  name: "Lic. Nunash Dahiana  Velásquez Guerrero",
   title: "Psicóloga Clínica",
   license: "CPSP N.°12004 - CDR I Lima y Callao",
   specialties: ["Terapeuta Transpersonal", "Canalizadora Psíquica", "Especialista en Curaciones Energéticas"],
