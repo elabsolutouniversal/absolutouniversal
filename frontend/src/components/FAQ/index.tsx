@@ -22,7 +22,7 @@ export default function FAQSection({
   return (
     <section className="space-y-8">
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-lora-bold text-gray-900 mb-3">
           {titulo}
         </h2>
         {subtitulo && (

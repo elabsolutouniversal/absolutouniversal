@@ -16,7 +16,7 @@ const AboutIsForYou: React.FC<AboutIsForYouProps> = ({ isThisForYou }) => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+            <h2 className="text-3xl font-lora-bold text-gray-900 md:text-4xl">
               {isThisForYou.title}
             </h2>
             <p className="mt-4 text-lg text-gray-600">

@@ -27,7 +27,7 @@ export default function Header() {
             className="w-[60px] h-[60px] object-contain rounded-full"
             priority
           />
-          <span className={`text-xl font-display ${logoTextColor}`}>
+          <span className={`text-xl font-lora-bold-normal ${logoTextColor}`}>
             EL ABSOLUTO UNIVERSAL
           </span>
         </Link>

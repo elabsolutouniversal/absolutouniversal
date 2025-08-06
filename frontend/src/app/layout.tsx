@@ -1,11 +1,16 @@
 
 // app/layout.tsx (RAÍZ)
-import { Inter } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import type { Metadata } from 'next';
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
+const lora = Lora({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-lora',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   icons: '/favicon.ico',
@@ -34,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${lora.variable} font-lora`}>
         {children}
       </body>
     </html>

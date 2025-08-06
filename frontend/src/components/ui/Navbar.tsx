@@ -41,7 +41,7 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
     return pathname === href;
   };
 
-  const baseClass = "transition font-semibold tracking-wide";
+  const baseClass = "transition font-lora-semibold tracking-wide";
   const activeClass = `${activeTextColor} border-b-2 ${activeBorderColor}`;
   const inactiveClass = `${inactiveTextColor} ${hoverTextColor}`;
 
@@ -53,7 +53,7 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
           href={link.href}
           onClick={closeMenu}
           className={`w-full text-center py-2 rounded ${
-            isActive(link.href) ? `${mobileActiveBg} ${mobileActiveText} font-bold` : `${mobileHoverBg} ${mobileHoverText}`
+            isActive(link.href) ? `${mobileActiveBg} ${mobileActiveText} font-lora-bold` : `${mobileHoverBg} ${mobileHoverText}`
           }`}
         >
           {link.label}

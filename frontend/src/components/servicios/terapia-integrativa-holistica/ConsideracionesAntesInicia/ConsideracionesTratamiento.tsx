@@ -15,7 +15,7 @@ export default function ConsideracionesTratamientoHolistico() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h1 className="text-3xl md:text-4xl font-bold mb-1 font-serif text-[#1f2747] leading-tight">
+        <h1 className="text-3xl md:text-4xl font-bold mb-1 font-lora-bold text-[#1f2747] leading-tight">
           {consideracionesData.title}
         </h1>
         <p className="text-base text-gray-500 max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ export default function ConsideracionesTratamientoHolistico() {
         viewport={{ once: true }}
         className="rounded-2xl p-10 bg-gradient-to-br from-white to-[#f5f7fc] shadow-lg border border-gray-100"
       >
-        <h2 className="text-3xl font-bold text-center mb-6 font-serif text-[#5f3dc4]">
+        <h2 className="text-3xl font-bold text-center mb-6 font-lora-bold text-[#5f3dc4]">
           {consideracionesData.processOverview.title}
         </h2>
         <div className="space-y-10">

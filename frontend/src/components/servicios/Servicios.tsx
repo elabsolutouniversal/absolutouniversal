@@ -30,11 +30,11 @@ export default function Servicios({
         {/* Título de la sección - condicional */}
         {showTitle && (
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-700 mb-4">
+            <h2 className="text-3xl md:text-4xl font-lora-bold text-pink-700 mb-4">
               Herramientas que integro en las sesiones
             </h2>
             {showDescription && (
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg font-lora text-gray-600 max-w-2xl mx-auto">
                 Descubre las diferentes modalidades terapéuticas que combino para ofrecerte una experiencia integral de sanación y crecimiento personal.
               </p>
             )}
@@ -59,7 +59,7 @@ export default function Servicios({
           <div className="text-center mt-12">
             <Link
               href="/servicios"
-              className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all transform hover:scale-105"
+              className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-lora-semibold px-8 py-3 rounded-full shadow-lg transition-all transform hover:scale-105 font-normal-style"
             >
               Ver todos los servicios
             </Link>

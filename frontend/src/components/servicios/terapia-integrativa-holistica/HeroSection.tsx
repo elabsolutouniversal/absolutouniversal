@@ -25,7 +25,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[2.5rem] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent"
+            className="text-[2.5rem] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-lora-bold mb-6 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent"
           >
             Sanación Integrativa Holística
           </motion.h1>

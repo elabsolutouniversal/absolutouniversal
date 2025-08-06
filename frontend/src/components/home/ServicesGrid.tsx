@@ -57,7 +57,7 @@ export default function ServicesGrid() {
           
           {/* Contenido */}
           <div className="p-6">
-            <h3 className="text-xl font-serif text-amber-800 mb-3">
+            <h3 className="text-xl font-lora-semibold text-amber-800 mb-3">
               {service.title}
             </h3>
             

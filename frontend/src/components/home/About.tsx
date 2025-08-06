@@ -18,41 +18,48 @@ export default function About() {
         </div>
 
         {/* Información profesional */}
-        <h2 className="text-3xl md:text-4xl font-serif text-amber-800 mb-2">
+        <h2 className="text-3xl md:text-4xl font-lora-bold text-amber-800 mb-2">
           Lic Psic. Dahiana Velásquez G
         </h2>
         
-        <h3 className="text-xl md:text-2xl text-amber-600 mb-6">
+        <h3 className="text-xl md:text-2xl font-lora-medium text-amber-600 mb-6">
           Psicóloga y psicoterapeuta holística
         </h3>
         
-        <p className="text-lg text-amber-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg font-lora text-amber-700 mb-8 max-w-2xl mx-auto leading-relaxed">
           Soy Dahiana Velasquez de Lima – Perú
         </p>
 
         {/* Lista de herramientas */}
-        <div className="bg-amber-50 rounded-lg p-8 max-w-3xl mx-auto">
-          <h4 className="text-xl font-semibold text-amber-800 mb-6">
-            Herramientas terapéuticas:
-          </h4>
-          <ul className="space-y-3 text-amber-700">
-            <li className="flex items-center justify-center gap-2">
-              <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-              Psicoterapia Integrativa Holística
-            </li>
-            <li className="flex items-center justify-center gap-2">
-              <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-              Registros akáshicos
-            </li>
-            <li className="flex items-center justify-center gap-2">
-              <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-              Psico Educación
-            </li>
-            <li className="flex items-center justify-center gap-2">
-              <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-              Tarot Predictivo con Enfoque Terapéutico
-            </li>
-          </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-amber-100">
+            <h4 className="font-lora-semibold text-amber-800 mb-3">Psicoterapia Holística</h4>
+            <p className="font-lora text-amber-700 text-sm">
+              Integración de técnicas tradicionales y alternativas para el bienestar integral
+            </p>
+          </div>
+          
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-amber-100">
+            <h4 className="font-lora-semibold text-amber-800 mb-3">Tarot Terapéutico</h4>
+            <p className="font-lora text-amber-700 text-sm">
+              Herramienta de autoconocimiento y desarrollo personal
+            </p>
+          </div>
+          
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-amber-100">
+            <h4 className="font-lora-semibold text-amber-800 mb-3">Sanación Energética</h4>
+            <p className="font-lora text-amber-700 text-sm">
+              Limpieza y armonización de campos energéticos
+            </p>
+          </div>
+        </div>
+
+        {/* Mensaje personal */}
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+          <p className="font-lora-italic text-lg text-amber-800 leading-relaxed">
+            &ldquo;Mi misión es acompañarte en tu proceso de sanación y crecimiento personal, 
+            proporcionándote herramientas para que puedas vivir una vida más plena y auténtica.&rdquo;
+          </p>
         </div>
       </div>
     </div>

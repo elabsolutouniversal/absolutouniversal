@@ -47,17 +47,17 @@ const AboutHero: React.FC<AboutHeroProps> = ({
           )}
 
           {/* Name */}
-          <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-extrabold italic bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-lora-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
             {name}
           </h1>
 
           {/* Title */}
-          <p className="mb-2 text-xl md:text-2xl font-semibold italic text-purple-600">
+          <p className="mb-2 text-xl md:text-2xl font-lora-semibold text-purple-600">
             {title}
           </p>
 
           {/* License */}
-          <p className="mb-6 text-lg italic text-gray-700">
+          <p className="mb-6 text-lg font-lora text-gray-700">
             {license}
           </p>
 
@@ -66,7 +66,7 @@ const AboutHero: React.FC<AboutHeroProps> = ({
             {specialties.map((specialty, index) => (
               <span
                 key={index}
-                className="rounded-full bg-white px-4 py-2 text-sm font-medium text-pink-600 shadow-sm border border-pink-100"
+                className="rounded-full bg-white px-4 py-2 text-sm font-lora-medium text-pink-600 shadow-sm border border-pink-100"
               >
                 {specialty}
               </span>
@@ -74,13 +74,13 @@ const AboutHero: React.FC<AboutHeroProps> = ({
           </div>
 
           {/* Tagline */}
-          <p className="mx-auto max-w-3xl text-lg md:text-xl italic text-gray-800 font-medium">
+          <p className="mx-auto max-w-3xl text-lg md:text-xl font-lora text-gray-800 font-lora-medium">
             {tagline}
           </p>
 
           {/* Subtext */}
           <div className="mt-8">
-            <p className="text-lg md:text-xl font-medium italic text-pink-600">
+            <p className="text-lg md:text-xl font-lora-medium text-pink-600">
               No es causalidad que estés aquí. Tu alma te ha guiado hasta esta página porque estás listo para una sanación radical.
             </p>
           </div>

@@ -16,7 +16,7 @@ export default function CTA() {
         <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/10 rounded-full translate-x-28 translate-y-28"></div>
 
         <div className="relative z-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-lora-bold mb-6">
             ¿Lista para iniciar tu proceso de transformación?
           </h2>
           <p className="text-lg md:text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
@@ -31,7 +31,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all duration-300 shadow-lg inline-block"
+              className="bg-white text-purple-600 px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-purple-50 transition-all duration-300 shadow-lg inline-block font-normal-style"
             >
               Reservar mi primera sesión
             </motion.a>
@@ -41,7 +41,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-white border-2 border-white/50 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300 inline-block"
+              className="text-white border-2 border-white/50 px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-white/10 transition-all duration-300 inline-block font-normal-style"
             >
               Hablar con un especialista
             </motion.a>
