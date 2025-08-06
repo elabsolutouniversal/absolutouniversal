@@ -26,12 +26,14 @@ export const profileData = {
 
   services: [
     {
+      id: 1,
       icon: "BrainCircuit",
       title: "Sanación del Alma Consciente",
       description: "Integración de experiencias pasadas con tu presente para una vida auténtica",
       badge: "Terapia Transpersonal"
     },
     {
+      
       icon: "Sparkles",
       title: "Tarot de Autoconocimiento",
       description: "Espejo arquetípico para revelar tu sabiduría interior y tomar decisiones alineadas",
