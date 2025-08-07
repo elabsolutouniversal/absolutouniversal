@@ -35,7 +35,7 @@ export default function HomeHero(): JSX.Element {
       `}</style>
 
       {/* Hero de bienvenida - segunda sección */}
-      <section className="bg-gradient-to-b from-white via-pink-50/30 to-pink-100/40 py-12 md:py-16">
+      <section id="bienvenida" className="bg-gradient-to-b from-white via-pink-50/30 to-pink-100/40 pt-20 pb-12 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20">
         <div className="container max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
           <div className="w-full lg:w-1/2 order-1 lg:order-1">
             <motion.div 
@@ -72,7 +72,7 @@ export default function HomeHero(): JSX.Element {
               viewport={{ once: true }}
             >
               <Image
-                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg"
+                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
                 alt="Psicoterapia con péndulo"
                 width={400}
                 height={500}

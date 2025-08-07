@@ -225,7 +225,7 @@ export default function InitialHero(): JSX.Element {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-100/30 to-purple-100/30 group-hover:from-pink-200/40 group-hover:to-purple-200/40 transition-all duration-500 z-0" />
                 <Image
-                  src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076399/IMG_3519_absuy1.jpg"
+                  src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1754526077/ChatGPT_Image_6_ago_2025_19_20_49_q9bnzu.png"
                   alt="Logo Absoluto Universal"
                   fill
                   className="object-cover w-full h-full relative z-10 rounded-3xl"
@@ -274,13 +274,21 @@ export default function InitialHero(): JSX.Element {
                   transition={{ delay: 1, duration: 0.6 }}
                   className="mt-10"
                 >
-                  <Link
-                    href="/servicios"
-                    className="gradient-button inline-flex items-center gap-4 text-white font-semibold px-10 py-5 rounded-full transition-all duration-300 transform hover:scale-105 text-lg md:text-xl font-normal-style"
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById('bienvenida');
+                      if (element) {
+                        element.scrollIntoView({ 
+                          behavior: 'smooth',
+                          block: 'start'
+                        });
+                      }
+                    }}
+                    className="gradient-button inline-flex items-center gap-4 text-white font-semibold px-10 py-5 rounded-full transition-all duration-300 transform hover:scale-105 text-lg md:text-xl font-normal-style cursor-pointer"
                   >
                     <span>Descubre más</span>
                     <FaArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  </button>
                 </motion.div>
               </motion.div>
             </div>
