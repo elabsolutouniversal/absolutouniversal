@@ -35,7 +35,7 @@ export default function HomeHero(): JSX.Element {
       `}</style>
 
       {/* Hero de bienvenida - segunda sección */}
-      <section id="bienvenida" className="bg-gradient-to-b from-white via-pink-50/30 to-pink-100/40 pt-20 pb-12 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20">
+      <section id="bienvenida" className="bg-gradient-to-b from-white via-pink-50/30 to-pink-100/40 py-12 md:py-16">
         <div className="container max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
           <div className="w-full lg:w-1/2 order-1 lg:order-1">
             <motion.div 
@@ -48,7 +48,7 @@ export default function HomeHero(): JSX.Element {
               <h2 className="text-elegant-title text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 leading-tight">
                 Bienvenido a tu espacio de bienestar
               </h2>
-              <p className="text-elegant-body text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+              <p className="text-elegant-body text-purple-700 text-base md:text-lg mb-6 leading-relaxed">
                 Un lugar para reconectar contigo, sanar desde la raíz y transformar tu vida desde la
                 consciencia y el corazón.
               </p>
@@ -72,7 +72,7 @@ export default function HomeHero(): JSX.Element {
               viewport={{ once: true }}
             >
               <Image
-                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
+                src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg"
                 alt="Psicoterapia con péndulo"
                 width={400}
                 height={500}

@@ -57,17 +57,17 @@ export default function ServicesGrid() {
           
           {/* Contenido */}
           <div className="p-6">
-            <h3 className="text-xl font-lora-semibold text-amber-800 mb-3">
+            <h3 className="text-xl font-lora-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
               {service.title}
             </h3>
             
-            <p className="text-amber-600 mb-4 leading-relaxed">
+            <p className="text-purple-600 mb-4 leading-relaxed">
               {service.description}
             </p>
             
             <Link
               href={service.link}
-              className="inline-flex items-center text-amber-700 hover:text-amber-900 font-semibold transition-colors group"
+              className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors group"
             >
               Ver más información
               <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>

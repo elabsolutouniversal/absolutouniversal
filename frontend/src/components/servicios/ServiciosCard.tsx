@@ -25,17 +25,17 @@ export default function ServicioCard({ title, slug, image, description }: Servic
 
       {/* Contenido */}
       <div className="p-6">
-        <h3 className="text-xl font-lora-semibold text-pink-700 mb-3 leading-tight">
+        <h3 className="text-xl font-lora-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 leading-tight">
           {title}
         </h3>
-        <p className="font-lora text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+        <p className="font-lora text-purple-600 mb-4 text-sm leading-relaxed line-clamp-3">
           {description}
         </p>
         
         {/* Botón */}
         <Link
           href={`/servicios/${slug}`}
-          className="inline-block w-full text-center bg-pink-600 hover:bg-pink-700 text-white font-lora-medium py-2 px-4 rounded-lg transition-colors duration-200 font-normal-style"
+          className="inline-block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-lora-medium py-2 px-4 rounded-lg transition-colors duration-200 font-normal-style"
         >
           Conocer más
         </Link>

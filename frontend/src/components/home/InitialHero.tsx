@@ -250,7 +250,7 @@ export default function InitialHero(): JSX.Element {
               >
                 <h1 className="mb-8">
                   <motion.span 
-                    className="block text-elegant-title text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8xl bg-gradient-to-r from-purple-700 via-purple-600 to-purple-700 bg-clip-text text-transparent leading-tight text-glow"
+                    className="block text-elegant-title text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight text-glow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
@@ -258,7 +258,7 @@ export default function InitialHero(): JSX.Element {
                     Todo volverá a estar bien
                   </motion.span>
                   <motion.span 
-                    className="block text-elegant-subtitle text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-7xl bg-gradient-to-r from-pink-600 via-pink-500 to-pink-600 bg-clip-text text-transparent mt-8 leading-tight text-glow"
+                    className="block text-elegant-subtitle text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-7xl text-fuchsia-500 mt-8 leading-tight text-glow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}

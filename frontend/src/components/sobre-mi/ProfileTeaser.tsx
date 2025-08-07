@@ -24,16 +24,10 @@ export default function ProfileTeaser() {
           <span className="inline-block px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-lora-medium mb-5">
             {profileData.content.tagline}
           </span>
-          <h2 className="text-4xl md:text-5xl font-lora-bold text-gray-800 mb-6 leading-tight">
-            {profileData.content.mainHeading.split(' ').map((word, index, array) => 
-              index === array.length - 1 ? (
-                <span key={index} className="text-pink-600"> {word}</span>
-              ) : (
-                ` ${word}`
-              )
-            )}
+          <h2 className="text-4xl md:text-5xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 leading-tight">
+            {profileData.content.mainHeading}
           </h2>
-          <p className="text-xl font-lora text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-lora text-purple-700 max-w-3xl mx-auto">
             {profileData.content.subHeading}
           </p>
         </div>
@@ -56,8 +50,8 @@ export default function ProfileTeaser() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-lora-bold text-center text-gray-800 mb-3">{service.title}</h3>
-                <p className="font-lora text-gray-600 text-center mb-4">{service.description}</p>
+                                 <h3 className="text-xl font-lora-bold text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">{service.title}</h3>
+                <p className="font-lora text-purple-600 text-center mb-4">{service.description}</p>
 
                 <div className="text-center">
                   <span className="inline-block px-3 py-1 text-xs font-lora-semibold text-pink-700 bg-pink-100 rounded-full">
@@ -87,7 +81,7 @@ export default function ProfileTeaser() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h3 className="text-2xl font-lora-bold text-gray-800 mb-3">
+            <h3 className="text-2xl font-lora-bold text-fuchsia-600 mb-3">
               {profileData.generalInfo.name}
             </h3>
 
@@ -95,9 +89,9 @@ export default function ProfileTeaser() {
               <p className="font-lora-semibold text-pink-600">
                 {profileData.generalInfo.title} ({profileData.generalInfo.credential})
               </p>
-              <p className="text-gray-900 font-lora-bold">
-                {profileData.generalInfo.specialty} con {profileData.generalInfo.experience}
-              </p>
+                             <p className="text-purple-700 font-lora-bold">
+                 {profileData.generalInfo.specialty} con {profileData.generalInfo.experience}
+               </p>
             </div>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
