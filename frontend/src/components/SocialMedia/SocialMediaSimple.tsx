@@ -20,7 +20,7 @@ export const SocialMediaSimple: React.FC = () => {
             Conecta conmigo
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-lora">
+          <p className="text-lg md:text-xl text-purple-700 max-w-3xl mx-auto leading-relaxed font-lora">
             Sígueme en mis redes sociales para estar al día con contenido sobre bienestar, 
             psicología y transformación personal.
           </p>
@@ -53,7 +53,7 @@ export const SocialMediaSimple: React.FC = () => {
                     {media.name}
                   </h3>
                   
-                  <p className="text-sm text-gray-500 font-lora mb-2">
+                  <p className="text-sm text-purple-600 font-lora mb-2">
                     @{media.username}
                   </p>
                   
@@ -89,7 +89,7 @@ export const SocialMediaSimple: React.FC = () => {
 
         {/* Footer */}
         <div className="text-center mt-16">
-          <p className="text-gray-500 font-lora text-sm">
+          <p className="text-purple-600 font-lora text-sm">
             ¡Conectemos y compartamos este viaje de transformación juntos!
           </p>
         </div>

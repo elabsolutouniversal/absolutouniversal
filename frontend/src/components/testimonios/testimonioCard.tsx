@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Quote, MapPin, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
 import Image from 'next/image';
 import { ITestimonio } from '@/types/testimonios/testimonio';
+import StarRating from '@/components/ui/StarRating';
 
 interface TestimonioCardProps {
   testimonio: ITestimonio;
@@ -26,11 +27,14 @@ const TestimonioCard: React.FC<TestimonioCardProps> = ({ testimonio, className =
     <div className={`bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-pink-100/50 p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:bg-white/95 ${className}`}>      
       <div className="flex justify-between items-start mb-6">
         <Quote className="w-8 h-8 text-purple-500 opacity-80 group-hover:opacity-100 transition-opacity" />
-        {/* Aquí iría tu componente StarRating personalizado */}
-        <span className="text-purple-600 font-lora-bold text-lg">{testimonio.rating ?? '★'}</span>
+        <StarRating 
+          rating={testimonio.rating || 5} 
+          size="md" 
+          className="text-purple-600"
+        />
       </div>
 
-      <blockquote className="text-gray-600 text-base leading-relaxed font-lora text-justify mb-6">
+      <blockquote className="text-purple-700 text-base leading-relaxed font-lora text-justify mb-6">
         &ldquo;{displayText}&rdquo;
       </blockquote>
 
@@ -57,17 +61,17 @@ const TestimonioCard: React.FC<TestimonioCardProps> = ({ testimonio, className =
           <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-2 border-white shadow-sm"></div>
         </div>
         <div className="ml-4 flex-1">
-          <h4 className="font-lora-semibold text-gray-700 text-sm">{testimonio.nombre}</h4>
+                     <h4 className="font-lora-semibold text-purple-800 text-sm">{testimonio.nombre}</h4>
           {testimonio.rol && (
             <div className="flex items-center text-xs text-purple-600 mt-1 font-lora">
               <MapPin className="w-3 h-3 mr-1" />{testimonio.rol}
             </div>
           )}
-          {testimonio.fecha && (
-            <div className="flex items-center text-xs text-gray-500 mt-1 font-lora">
-              <Calendar className="w-3 h-3 mr-1" />{testimonio.fecha}
-            </div>
-          )}
+                     {testimonio.fecha && (
+             <div className="flex items-center text-xs text-purple-500 mt-1 font-lora">
+               <Calendar className="w-3 h-3 mr-1" />{testimonio.fecha}
+             </div>
+           )}
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import { ITestimonio } from '@/types/testimonios/testimonio';
 import { usePagination } from '@/hooks/usePagination';
 import TestimonioCard from '@/components/testimonios/index';
 import Pagination from '@/components/ui/Pagination';
+import StarRating from '@/components/ui/StarRating';
 
 interface TestimoniosSectionProps {
   testimonios: ITestimonio[];
@@ -63,9 +64,9 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
             {title}
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-lora">
-            {subtitle}
-          </p>
+                     <p className="text-lg md:text-xl text-purple-700 max-w-4xl mx-auto leading-relaxed font-lora">
+             {subtitle}
+           </p>
 
           <div className="flex items-center justify-center mt-16 space-x-16">
             <div className="text-center group">
@@ -78,10 +79,14 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
             <div className="h-16 w-px bg-gradient-to-b from-purple-300 to-pink-300" />
 
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-lora-bold bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                {ratingPromedio}★
+              <div className="flex justify-center mb-2">
+                <StarRating 
+                  rating={Math.round(ratingPromedio)} 
+                  size="lg" 
+                  className="text-purple-600"
+                />
               </div>
-              <div className="text-base font-lora-semibold text-purple-600 mt-2">Calificación promedio</div>
+              <div className="text-base font-lora-semibold text-purple-600">Calificación promedio</div>
             </div>
           </div>
         </div>
@@ -102,11 +107,11 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
         />
 
         {/* Info página */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-500 font-lora">
-            Mostrando {((currentPage - 1) * itemsPerPage) + 1} - {Math.min(currentPage * itemsPerPage, testimonios.length)} de {testimonios.length} testimonios
-          </p>
-        </div>
+                 <div className="text-center mt-8">
+           <p className="text-sm text-purple-600 font-lora">
+             Mostrando {((currentPage - 1) * itemsPerPage) + 1} - {Math.min(currentPage * itemsPerPage, testimonios.length)} de {testimonios.length} testimonios
+           </p>
+         </div>
       </div>
     </section>
   );
