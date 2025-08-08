@@ -35,7 +35,7 @@ export default function Servicios({
             </h2>
             {showDescription && (
               <p className="text-lg font-lora text-purple-700 max-w-2xl mx-auto">
-                Descubre las diferentes modalidades terapéuticas que combino para ofrecerte una experiencia integral de sanación y crecimiento personal.
+               Un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral 
               </p>
             )}
           </div>

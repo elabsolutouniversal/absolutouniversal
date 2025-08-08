@@ -1,6 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import { AboutData } from '@/data/aboutme/aboutData'; // Ajusta la ruta según tu proyecto
+import { 
+  Brain, 
+  Heart, 
+  Sparkles, 
+  BookOpen, 
+  Eye, 
+  Zap,
+  GraduationCap,
+  Users,
+  Target,
+  Shield,
+  Star,
+  Lightbulb
+} from 'lucide-react';
 
 interface AboutBiographyProps {
   biography: AboutData['biography'];
@@ -27,6 +41,29 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
     );
   };
 
+  const StudyIcon: React.FC<{ title: string }> = ({ title }) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+      'Formacion Profesional en Psicología Clínica': <GraduationCap className="w-6 h-6" />,
+      'Especialización en Psicoterapia Gestalt': <Users className="w-6 h-6" />,
+      'Terapista de Radiestecia con Péndulo Hebreo': <Target className="w-6 h-6" />,
+      'Formacion en Registros Akáshicos': <BookOpen className="w-6 h-6" />,
+      'Formacion en Tarot Akashicos': <Sparkles className="w-6 h-6" />,
+      'Formacion en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustavo Jung': <Brain className="w-6 h-6" />,
+      'Radiestesia con péndulo hebreo': <Target className="w-6 h-6" />,
+      'Psicotarot desde el enfoque terapéutico de Carl Gustav Jung': <Brain className="w-6 h-6" />,
+      'Terapia Transpersonal': <Heart className="w-6 h-6" />,
+      'Registros Akáshicos': <BookOpen className="w-6 h-6" />,
+      'Integración de simbología y arquetipos': <Eye className="w-6 h-6" />,
+      'Lectura energética intuitiva': <Zap className="w-6 h-6" />
+    };
+
+    return (
+      <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 border border-purple-200/50">
+        {iconMap[title] || <Star className="w-6 h-6" />}
+      </div>
+    );
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
@@ -45,8 +82,8 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
           {/* Texto segundo en móvil, primero en lg */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-transparent shadow-md order-2 lg:order-1">
             <SectionIcon number="1" color="purple" />
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">{biography.awakening.title}</h3>
-            <div className="space-y-4 text-gray-600">
+            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.awakening.title}</h3>
+            <div className="space-y-4 text-purple-700">
               {biography.awakening.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
@@ -68,8 +105,8 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
           {/* Texto segundo */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-transparent shadow-md">
             <SectionIcon number="2" color="indigo" />
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">{biography.professionalFormation.title}</h3>
-            <div className="space-y-4 text-gray-600">
+            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.professionalFormation.title}</h3>
+            <div className="space-y-4 text-purple-700">
               {biography.professionalFormation.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
@@ -91,19 +128,11 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
           {/* Texto segundo en móvil, primero en lg */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-transparent shadow-md order-2 lg:order-1">
             <SectionIcon number="3" color="amber" />
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">{biography.fusion.title}</h3>
-            <div className="space-y-4 text-gray-600">
+            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.fusion.title}</h3>
+            <div className="space-y-4 text-purple-700">
               {biography.fusion.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
-            </div>
-            <div className="mt-6">
-              <h4 className="mb-2 text-lg font-semibold text-gray-900">Especializaciones:</h4>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {biography.fusion.studies.map((s, idx) => (
-                  <li key={idx}>{s}</li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -122,17 +151,25 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
           {/* Texto segundo */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-transparent shadow-md">
             <SectionIcon number="4" color="teal" />
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">{biography.integration.title}</h3>
-            <div className="space-y-4 text-gray-600 mb-4">
+            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.integration.title}</h3>
+            <div className="space-y-4 text-purple-700 mb-4">
               {biography.integration.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
             </div>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              {biography.integration.studies.map((s, idx) => (
-                <li key={idx}>{s}</li>
-              ))}
-            </ul>
+                         <div className="grid gap-4 mt-6">
+               {biography.integration.studies.map((study, idx) => (
+                 <div key={idx} className="flex items-center gap-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-100/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                   <div className="flex-shrink-0">
+                     <StudyIcon title={study.title} />
+                   </div>
+                   <div className="flex-1">
+                     <h4 className="font-lora-semibold text-purple-800 text-sm mb-1">{study.title}</h4>
+                     <p className="text-purple-600 text-xs font-lora">{study.description}</p>
+                   </div>
+                 </div>
+               ))}
+             </div>
           </div>
         </div>
 

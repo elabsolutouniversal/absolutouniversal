@@ -10,8 +10,8 @@ interface TarotGalleryProps {
 }
 
 const TarotGallery: React.FC<TarotGalleryProps> = ({ images, onImageClick }) => {
-  // Mostrar solo las primeras 4 imágenes
-  const displayedImages = images.slice(0, 4);
+  // Mostrar solo las primeras 2 imágenes
+  const displayedImages = images.slice(0, 2);
 
   return (
     <div className="max-w-5xl mx-auto mb-32 px-4">
@@ -19,7 +19,7 @@ const TarotGallery: React.FC<TarotGalleryProps> = ({ images, onImageClick }) => 
         {displayedImages.map((image, idx) => (
           <div
             key={idx}
-            className="relative overflow-hidden rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 h-80 cursor-pointer group"
+            className="relative overflow-hidden rounded-3xl shadow-xl border border-purple-100 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl h-80 cursor-pointer group bg-gradient-to-br from-purple-50 to-indigo-50"
             onClick={() => onImageClick(image)}
           >
             <Image
@@ -31,16 +31,16 @@ const TarotGallery: React.FC<TarotGalleryProps> = ({ images, onImageClick }) => 
             />
 
             {/* Overlay al pasar el mouse */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Título y subtítulo */}
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-semibold drop-shadow-lg">{image.title}</h3>
-              <p className="text-sm drop-shadow-lg">{image.subtitle}</p>
+              <h3 className="text-xl font-bold drop-shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{image.title}</h3>
+              <p className="text-sm drop-shadow-lg text-purple-100">{image.subtitle}</p>
             </div>
 
             {/* Icono de vista */}
-            <div className="absolute top-4 right-4 bg-white/30 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute top-4 right-4 bg-gradient-to-br from-purple-500 to-indigo-600 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
               <Eye className="w-5 h-5 text-white" />
             </div>
           </div>

@@ -24,30 +24,13 @@ export default function CardSesion({
       )}
 
       <div className="flex items-center mb-4">
-        <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg text-gray-800 mr-4 shadow-md">
+        <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg text-purple-800 mr-4 shadow-md">
           {numero}
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{titulo}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-purple-800">{titulo}</h3>
       </div>
 
-      <p className="text-gray-700 leading-relaxed mb-4">{descripcion}</p>
-
-      {(duracion || frecuencia) && (
-        <div className="flex gap-4 text-sm text-gray-600 mt-4 pt-4 border-t border-gray-200/50">
-          {duracion && (
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>{duracion}</span>
-            </div>
-          )}
-          {frecuencia && (
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{frecuencia}</span>
-            </div>
-          )}
-        </div>
-      )}
+      <p className="text-purple-700 leading-relaxed">{descripcion}</p>
     </div>
   );
 }

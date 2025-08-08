@@ -33,36 +33,7 @@ export default function ProfileTeaser() {
         </div>
 
         {/* Tarjetas de servicios destacados */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {profileData.services.map((service, index) => {
-            const IconComponent = iconComponents[service.icon as IconName];
-
-            return (
-              <div 
-                key={index} 
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-pink-100 hover:border-pink-200 relative overflow-hidden group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white to-pink-50 opacity-0 group-hover:opacity-100 transition duration-500 -z-10" />
-
-                <div className="flex justify-center mb-5">
-                  <div className="p-4 bg-pink-50 rounded-xl group-hover:bg-pink-100 transition duration-300">
-                    <IconComponent className="h-10 w-10 text-pink-600" />
-                  </div>
-                </div>
-
-                                 <h3 className="text-xl font-lora-bold text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">{service.title}</h3>
-                <p className="font-lora text-purple-600 text-center mb-4">{service.description}</p>
-
-                <div className="text-center">
-                  <span className="inline-block px-3 py-1 text-xs font-lora-semibold text-pink-700 bg-pink-100 rounded-full">
-                    {service.badge}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
+       
         {/* Sección CTA con mini bio */}
         <div className="flex flex-col lg:flex-row items-center gap-10 bg-white rounded-2xl p-8 border border-pink-100 shadow-sm relative overflow-hidden">
           <div className="absolute -inset-1 bg-gradient-to-r from-pink-100 to-purple-100 opacity-40 rounded-2xl -z-10" />

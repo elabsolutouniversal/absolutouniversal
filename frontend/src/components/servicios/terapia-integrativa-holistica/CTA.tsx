@@ -17,14 +17,11 @@ export default function CTA() {
 
         <div className="relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-lora-bold mb-6">
-            ¿Lista para iniciar tu proceso de transformación?
+            ¿Listo para iniciar el viaje a tu máximo bienestar en la vida?
           </h2>
-          <p className="text-lg md:text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-            Comienza tu camino de sanación integral con este protocolo de 5 sesiones (la última gratuita)
-            y experimenta los beneficios de un enfoque que armoniza mente, emociones y energía.
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+          <div className="flex justify-center items-center">
             <motion.a
               href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20mi%20primera%20sesi%C3%B3n%20de%20Sanaci%C3%B3n%20Integrativa%20Hol%C3%ADstica%3F"
               target="_blank"
@@ -35,20 +32,10 @@ export default function CTA() {
             >
               Reservar mi primera sesión
             </motion.a>
-            <motion.a
-              href="https://wa.me/51962305362?text=Hola%20.%20Tengo%20algunas%20preguntas%20sobre%20la%20Sanaci%C3%B3n%20Integrativa%20Hol%C3%ADstica"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white border-2 border-white/50 px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-white/10 transition-all duration-300 inline-block font-normal-style"
-            >
-              Hablar con un especialista
-            </motion.a>
           </div>
 
           <p className="mt-6 text-purple-200 text-sm">
-            ✨ Agenda tu cita hoy y recibe un 20% de descuento en el paquete de sanacion básica inicial de 5 sesiones
+            ✨ Agenda tu cita hoy y recibe un 15% de descuento en el paquete de tratamiento de limpieza energetica inicial de 5 sesiones
           </p>
         </div>
       </motion.div>

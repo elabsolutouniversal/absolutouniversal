@@ -26,7 +26,7 @@ export default function BloqueTexto({
       viewport={{ once: true }}
     >
       <div className={`${bg} ${border} rounded-3xl shadow-xl p-8 md:p-12 backdrop-blur-sm`}>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
+        <h2 className="mb-6 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
           {titulo}
         </h2>
         <div className="text-base sm:text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">

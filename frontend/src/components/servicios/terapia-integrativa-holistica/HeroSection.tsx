@@ -35,7 +35,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl md:text-2xl mb-8 text-pink-100 max-w-3xl mx-auto leading-relaxed"
           >
-            Un punto de partida integral para tu proceso de sanación emocional, mental, energética y espiritual.
+            Un enfoque único que fusiona lo mejor de tres disciplinas para tu bienestar integral aplicadas para lograr tu maximo bienestar
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -43,15 +43,15 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <a 
-              href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%20de%20Sanaci%C3%B3n%20Integrativa%20Hol%C3%ADstica%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg group inline-flex items-center"
-            >
-              Iniciar mi transformación
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+                         <a 
+               href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%20de%20Sanaci%C3%B3n%20Integrativa%20Hol%C3%ADstica%3F"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg group inline-flex items-center"
+             >
+                               Agenda tu sesion
+               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+             </a>
             <a 
               href="#que-consiste"
               className="text-white border-2 border-white/50 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 inline-block"

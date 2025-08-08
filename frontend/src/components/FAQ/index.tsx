@@ -22,15 +22,15 @@ export default function FAQSection({
   return (
     <section className="space-y-8">
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-lora-bold text-gray-900 mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
           {titulo}
         </h2>
         {subtitulo && (
-          <p className="text-gray-600 max-w-2xl mx-auto">{subtitulo}</p>
+          <p className="text-purple-700 max-w-2xl mx-auto font-medium">{subtitulo}</p>
         )}
       </div>
 
-      <div className="max-w-3xl mx-auto divide-y divide-gray-200 rounded-2xl bg-white shadow">
+      <div className="max-w-3xl mx-auto divide-y divide-purple-200 rounded-2xl bg-white shadow-lg border border-purple-100">
         {faqs.map((f, i) => (
           <FAQRow key={i} {...f} />
         ))}
@@ -44,18 +44,18 @@ function FAQRow({ pregunta, respuesta }: FAQItem) {
   return (
     <div>
       <button
-        className="w-full flex justify-between items-center text-left px-6 py-4 focus:outline-none"
+        className="w-full flex justify-between items-center text-left px-6 py-4 focus:outline-none hover:bg-purple-50 transition-colors"
         onClick={() => setOpen((o) => !o)}
       >
-        <span className="font-medium text-gray-800">{pregunta}</span>
+        <span className="font-semibold text-purple-800">{pregunta}</span>
         <ChevronDown
-          className={`w-5 h-5 text-gray-500 transition-transform ${
+          className={`w-5 h-5 text-purple-600 transition-transform ${
             open ? 'rotate-180' : ''
           }`}
         />
       </button>
       <div
-        className={`px-6 pb-4 text-gray-600 text-sm transition-[max-height,opacity] duration-300 overflow-hidden ${
+        className={`px-6 pb-4 text-purple-700 text-sm transition-[max-height,opacity] duration-300 overflow-hidden ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

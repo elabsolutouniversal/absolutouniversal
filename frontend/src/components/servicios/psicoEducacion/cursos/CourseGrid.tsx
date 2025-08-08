@@ -42,13 +42,15 @@ const CoursesGrid: React.FC<CoursesGridProps> = ({
       </div>
 
       {/* Grid de cursos */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-        {currentItems.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
+      <div className="flex justify-center mb-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {currentItems.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
       </div>
 
-      {/* Paginación */}
+      {/* Paginación - solo se muestra si hay más de una página */}
       {totalPages > 1 && (
         <Pagination
           currentPage={currentPage}

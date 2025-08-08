@@ -44,7 +44,7 @@ export const profileData = {
   content: {
     tagline: "Sanacion integrativa holística",
     mainHeading: "Reconecta con tu esencia auténtica",
-    subHeading: "Un enfoque revolucionario que combina psicología científica y sabiduría ancestral para tu transformación integral",
+    subHeading: "Un enfoque efectivo que combina a Psicología científica y sabiduría ancestral para tu bienestar  integral ",
     ctaText: "Descubre mas sobre mi "
   }
 };

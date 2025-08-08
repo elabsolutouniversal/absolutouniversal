@@ -225,7 +225,7 @@ export default function InitialHero(): JSX.Element {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-100/30 to-purple-100/30 group-hover:from-pink-200/40 group-hover:to-purple-200/40 transition-all duration-500 z-0" />
                 <Image
-                  src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1754526077/ChatGPT_Image_6_ago_2025_19_20_49_q9bnzu.png"
+                  src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1754678204/ChatGPT_Image_8_ago_2025_12_50_02_g1gisz.png"
                   alt="Logo Absoluto Universal"
                   fill
                   className="object-cover w-full h-full relative z-10 rounded-3xl"

@@ -111,7 +111,6 @@ export default function PenduloHebreo() {
       {/* CTA Section */}
       <div className="text-center py-8">
         <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold mb-3">¿Listo para tu transformación energética?</h3>
           <p className="mb-6 opacity-90">
             Agenda una sesión y comienza tu camino hacia el equilibrio y sanación integral.
           </p>

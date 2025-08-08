@@ -1,4 +1,10 @@
 // aboutData.ts
+
+interface StudyItem {
+  title: string;
+  description: string;
+}
+
 export interface AboutData {
   name: string;
   title: string;
@@ -24,12 +30,12 @@ export interface AboutData {
     fusion: {
       title: string;
       content: string[];
-      studies: string[];
+      studies: StudyItem[];
     };
     integration: {
       title: string;
       content: string[];
-      studies: string[];
+      studies: StudyItem[];
     };
   };
   approach: {
@@ -129,15 +135,15 @@ export const aboutData: AboutData = {
     awakening: {
       title: "El Despertar de un Don",
       content: [
-        "Desde muy pequeña, supe por las conversaciones de mis padres que tenía un don peculiar. Mi madre contaba entre risas que encontraba objetos perdidos con facilidad y percibía con claridad las intenciones y la energía de las personas.",
-        "A los 11 años, esa sensibilidad se profundizó cuando aprendí a leer las cartas españolas y comencé a anticipar sucesos importantes en mi familia. Al notar esa capacidad, mi padre me obsequió mi primer tarot —el Tarot Egipcio Fournier—, que también comprendí con naturalidad y me confirmó que ese don era una herramienta sagrada para sanar. Así nació mi misión de unir lo espiritual y lo científico, generando transformaciones profundas y duraderas en quienes confían en mí."
+        "Supe a través de las conversaciones de mis padres que yo desde muy pequeñita tenia un don peculiar, pues mi madre contaba entre risas que yo podía encontrar objetos perdidos con mucha facilidad y percibir con claridad las intenciones ,y energía de las personas",
+
+        "A los 11 años, esa sensibilidad se hizo más evidente cuando  aprendo a leer las cartas españolas logrando predecir sucesos y acontecimientos que ocurrirían en mi familia  , al notar esta capacidad  mi padre, me obsequia mi primer tarot , el Tarot egipcio Fournier, el  cuál también se mi hizo muy fácil de comprender e interpretar. mas adelante adquirí el hermoso tarot de Osho zen descubriendo su gran potencial para el beneficio de los seres humanos, herramienta que he tomado  como guía para orientar a los demás en base a esta filosofía basada en el aquí y ahora."
       ]
     },
     professionalFormation: {
       title: "La Formación Profesional",
       content: [
-        "Decidí darle forma y estructura a lo que sentía desde adentro. Estudié Psicología y me especialicé en Psicoterapia Gestalt, convencida de la capacidad innata de los seres humanos para transformarse.",
-        "A partir de ahí comencé a integrar mi sensibilidad intuitiva con enfoques clínicos: apliqué la psicoterapia Gestalt junto con lecturas energéticas y simbólicas, explorando cómo lo espiritual y lo científico podían dialogar de forma coherente."
+        "Posteriormente, estudie psicología especializándome en psicoterapia gestalt . Lo que le dio forma y estructura a mis habilidades ,  convenciéndome  de la capacidad  y fuerza de  que tenemos todos  los seres humanos para  resolver nuestros problemas y afrontarlos."
       ]
     },
     fusion: {
@@ -149,33 +155,69 @@ export const aboutData: AboutData = {
         "Todas estas herramientas son las que actualmente combino para abordar a mis clientes.",
         "Estoy convencida de que haber nacido humano es maravilloso, que nuestro ser es profundamente perfecto y que el cuerpo humano es también profundamente perfecto, con un sistema operativo bastante complejo. Mientras tenga vida, seguiré investigando en las profundidades de lo que significa ser humano y lo que implica haber nacido humano."
       ],
-      studies: [
-        "Radiestesia con péndulo hebreo",
-        "Psicotarot desde el enfoque terapéutico de Carl Gustav Jung",
-        "Terapia Transpersonal",
-        "Registros Akáshicos",
-        "Integración de simbología y arquetipos",
-        "Lectura energética intuitiva"
-      ]
+             studies: [
+         {
+           title: "Radiestesia con péndulo hebreo",
+           description: "Técnica ancestral para diagnóstico energético"
+         },
+         {
+           title: "Psicotarot desde el enfoque terapéutico de Carl Gustav Jung",
+           description: "Integración de arquetipos y psicología profunda"
+         },
+         {
+           title: "Terapia Transpersonal",
+           description: "Abordaje que trasciende el ego personal"
+         },
+         {
+           title: "Registros Akáshicos",
+           description: "Acceso a la memoria universal del alma"
+         },
+         {
+           title: "Integración de simbología y arquetipos",
+           description: "Comprensión profunda de patrones inconscientes"
+         },
+         {
+           title: "Lectura energética intuitiva",
+           description: "Percepción y sanación del campo energético"
+         }
+       ]
     },
     integration: {
-      title: "La Integración de Enfoques",
+      title: "Especializaciones:",
       content: [
-        "La fusión de mi sensibilidad intuitiva y mi formación profesional es la base de mi método distintivo. Te permite acceder a múltiples capas de tu ser —energética, emocional, mental y espiritual— para que puedas tomar decisiones desde una visión expandida y sanar desde el origen."
+      ""
       ],
       studies: [
-        "Radiestesia con péndulo hebreo",
-        "Psicotarot desde el enfoque terapéutico de Carl Gustav Jung",
-        "Terapia Transpersonal",
-        "Registros Akáshicos",
-        "Integración de simbología y arquetipos",
-        "Lectura energética intuitiva"
+        {
+          title: "Formacion Profesional en Psicología Clínica",
+          description: "Base científica y metodológica para el abordaje terapéutico"
+        },
+        {
+          title: "Especialización en Psicoterapia Gestalt",
+          description: "Enfoque holístico centrado en el aquí y ahora"
+        },
+        {
+          title: "Terapista de Radiestecia con Péndulo Hebreo",
+          description: "Técnica ancestral para diagnóstico y sanación energética"
+        },
+        {
+          title: "Formacion en Registros Akáshicos",
+          description: "Acceso a la memoria universal del alma"
+        },
+        {
+          title: "Formacion en Tarot Akashicos",
+          description: "Lectura profunda de patrones kármicos y espirituales"
+        },
+        {
+          title: "Formacion en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustavo Jung",
+          description: "Integración de arquetipos y psicología profunda"
+        }
       ]
     }
   },
   approach: {
     title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONSCIENCIA",
-    subtitle: "¿En qué me diferencio?",
+    subtitle: "Mi Metodo Integrado",
     comparisons: {
       traditional: {
         title: "Psicología Tradicional",
@@ -206,7 +248,7 @@ export const aboutData: AboutData = {
         points: [
           "Lectura profunda del campo energético",
           "Identificación de patrones inconscientes y kármicos",
-          "Trabajo con arquetipos y simbolismo para integrar la sombra"
+          "Limpieza y Desintoxiacion del Campo Aurico"
         ]
       },
       integrative: {
@@ -275,7 +317,7 @@ export const aboutData: AboutData = {
       options: [
         "Presencial: sesiones en consultorio con atención personalizada",
         "Virtual: acompañamiento profundo desde cualquier lugar",
-        "Seguimiento: apoyo entre sesiones para sostener la transformación"
+        "Asistencia y Soporte Psicologico entre Sesiones"
       ]
     }
   },
@@ -295,8 +337,8 @@ export const aboutData: AboutData = {
     ]
   },
   cta: {
-    title: "COMIENZA TU TRANSFORMACIÓN HOY",
-    subtitle: "Si has llegado hasta aquí, tu interior te está llamando a evolucionar. Da el paso hacia una versión más auténtica y plena de ti.",
+    title: "COMIENZA HOY , DA EL PASO HACIA UNA VERSION MAS AUTENTICA Y PLENA DE TI",
+    subtitle: "",
     quote: "La sanación real integra mente, cuerpo y espíritu en un diálogo consciente y amoroso.",
     author: "Lic. Nunash Dahiana Velásquez Guerrero"
   }

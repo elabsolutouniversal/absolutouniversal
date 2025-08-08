@@ -31,7 +31,7 @@ const About: React.FC = () => {
         }}
       />
       
-      <AboutApproach approach={aboutData.approach} />
+      <AboutApproach approach={aboutData.approach} />   
       
       <AboutResults results={aboutData.results} />
       

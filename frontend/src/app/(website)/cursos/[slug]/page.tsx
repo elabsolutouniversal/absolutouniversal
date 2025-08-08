@@ -128,41 +128,18 @@ export default async function CourseDetailPage({
                             <ul className="space-y-2 text-sm">
                                 <li className="flex items-center">
                                     <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
-                                    Acceso a material complementario
-                                </li>
-                                <li className="flex items-center">
-                                    <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
-                                    Certificado digital al completar
-                                </li>
-                                <li className="flex items-center">
-                                    <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
                                     Soporte durante el curso
+                                </li>
+                                <li className="flex items-center">
+                                    <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
+                                    Acceso a la Comunidad de Estudiantes para asesorías
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Testimonios (opcional) */}
-                <div className="mt-8 bg-white rounded-xl shadow-lg p-6">
-                    <h2 className="text-2xl font-bold text-pink-600 mb-4">
-                        Testimonios de estudiantes
-                    </h2>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        <div className="border-l-4 border-pink-500 pl-4 py-2">
-                            <p className="italic text-gray-700">
-                                Este curso transformó mi comprensión de la sanación energética.
-                            </p>
-                            <p className="text-sm text-pink-600 mt-2">- Ana M.</p>
-                        </div>
-                        <div className="border-l-4 border-pink-500 pl-4 py-2">
-                            <p className="italic text-gray-700">
-                                Las herramientas prácticas son invaluables para mi práctica profesional.
-                            </p>
-                            <p className="text-sm text-pink-600 mt-2">- Carlos R.</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </main>
     );

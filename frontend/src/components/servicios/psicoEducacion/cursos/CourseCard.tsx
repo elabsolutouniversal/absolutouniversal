@@ -27,7 +27,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
         <h3 className="text-lg font-bold text-white">{course.title}</h3>
         <div className="flex items-center mt-1">
           <span className="text-xs bg-pink-600/90 text-white px-2 py-1 rounded-full">
-            Inicia: {course.fechaInicio.split(' ')[0]}
+            {course.duracion}
           </span>
         </div>
       </div>

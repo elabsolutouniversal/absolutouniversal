@@ -30,19 +30,19 @@ const SanacionEnergetica = () => {
           <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
         </div>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 md:mb-4 leading-tight">
-          Sanación Integrativa Energética
+          Tratamiento de Limpieza Energetica Inicial
         </h2>
-        <h3 className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold mb-3 md:mb-4 px-2">
-          Tratamiento Inicial Básico de 5 Sesiones orientadas para establecer tu Bienestar.
-        </h3>
-        <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
-          Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio
-          emocional, físico y energético.</p><br></br>
-        <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
-           Cada sesión ha sido cuidadosamente estructurada para
-          guiarte hacia un estado de bienestar y armonía interior.
+                 <h3 className="text-base sm:text-lg md:text-xl text-purple-700 font-semibold mb-3 md:mb-4 px-2">
+           Tratamiento Inicial Básico de 5 Sesiones orientadas para establecer tu Bienestar.
+         </h3>
+         <p className="text-sm sm:text-base text-purple-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
+           Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio
+           emocional, físico y energético.</p><br></br>
+         <p className="text-sm sm:text-base text-purple-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
+            Cada sesión ha sido cuidadosamente estructurada para
+           guiarte hacia un estado de bienestar y armonía interior.
 
-        </p>
+         </p>
 
       </motion.div>
 
@@ -54,9 +54,9 @@ const SanacionEnergetica = () => {
         transition={{ delay: 0.2 }}
         className="text-center mb-6 md:mb-8"
       >
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 px-2">
-          ¿Qué Incluye tu Tratamiento?
-        </h3>
+                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-800 mb-2 px-2">
+           ¿Qué Incluye tu Tratamiento?
+         </h3>
         <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
       </motion.div>
 
@@ -77,7 +77,7 @@ const SanacionEnergetica = () => {
               transition={{ delay: i * 0.1 }}
               className="group hover:scale-[1.01] md:hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                             <div className="bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-purple-100">
                 <div className="p-4 sm:p-5 md:p-6 lg:p-8">
                   <div className="flex flex-col space-y-4 md:flex-row md:items-start md:gap-6 md:space-y-0">
                     <div className="flex items-center justify-center md:flex-col md:flex-shrink-0">
@@ -86,40 +86,40 @@ const SanacionEnergetica = () => {
                       >
                         <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                       </div>
-                      <div className="md:text-center md:mt-2">
-                        <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">
-                          {sesion.numero}
-                        </span>
-                      </div>
+                                             <div className="md:text-center md:mt-2">
+                         <span className="text-lg sm:text-xl md:text-2xl font-bold text-purple-700">
+                           {sesion.numero}
+                         </span>
+                       </div>
                     </div>
                     <div className="flex-1">
                       <div className="space-y-3 md:space-y-0 md:flex md:items-center md:justify-between mb-4">
-                        <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 leading-tight">
-                          Sesión {sesion.numero}: {sesion.titulo}
-                        </h4>
-                        <div className="flex items-center justify-between md:justify-start gap-3">
-                          {sesion.badge && (
-                            <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 sm:px-3 rounded-full text-xs sm:text-sm font-semibold">
-                              {sesion.badge}
-                            </span>
-                          )}
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
-                            <span className="font-semibold text-xs sm:text-sm md:text-base">
-                              {sesion.duracion}
-                            </span>
-                          </div>
-                        </div>
+                                                 <h4 className="text-base sm:text-lg md:text-xl font-bold text-purple-800 leading-tight">
+                           Sesión {sesion.numero}: {sesion.titulo}
+                         </h4>
+                         <div className="flex items-center justify-between md:justify-start gap-3">
+                           {sesion.badge && (
+                             <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 sm:px-3 rounded-full text-xs sm:text-sm font-semibold">
+                               {sesion.badge}
+                             </span>
+                           )}
+                           <div className="flex items-center gap-2 text-purple-600">
+                             <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                             <span className="font-semibold text-xs sm:text-sm md:text-base">
+                               {sesion.duracion}
+                             </span>
+                           </div>
+                         </div>
                       </div>
                       <div className="space-y-2 md:space-y-3">
-                        {sesion.puntos.map((p, j) => (
-                          <div key={j} className="flex items-start gap-2 md:gap-3">
-                            <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700 leading-relaxed text-xs sm:text-sm md:text-base">
-                              {p}
-                            </span>
-                          </div>
-                        ))}
+                                                 {sesion.puntos.map((p, j) => (
+                           <div key={j} className="flex items-start gap-2 md:gap-3">
+                             <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                             <span className="text-purple-700 leading-relaxed text-xs sm:text-sm md:text-base">
+                               {p}
+                             </span>
+                           </div>
+                         ))}
                       </div>
                     </div>
                   </div>
@@ -139,9 +139,9 @@ const SanacionEnergetica = () => {
         className="mt-8 md:mt-12 text-center"
       >
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 text-white">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-3">
-            ¿Listo para Transformar tu Vida?
-          </h3>
+                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-3">
+             ¿Listo para Iniciar el camino hacia tu maximo bienestar?
+           </h3>
           <p className="text-sm sm:text-base md:text-lg mb-5 md:mb-6 opacity-90 max-w-2xl mx-auto leading-relaxed px-2">
             Inicia tu camino hacia el bienestar integral y descubre el poder de la sanación energética
           </p>

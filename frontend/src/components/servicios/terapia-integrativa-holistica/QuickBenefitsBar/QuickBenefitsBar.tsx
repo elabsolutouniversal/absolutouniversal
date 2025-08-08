@@ -9,7 +9,7 @@ type Item = { icon: ReactNode; text: string; href?: string };
 
 // Ítems por defecto
 const DEFAULT_ITEMS: Item[] = [
-  { icon: <Clock className="w-5 h-5" />, text: '5 sesiones transformadoras' },
+  { icon: <Clock className="w-5 h-5" />, text: 'Tratamiento de Limpieza Energetica Inicial' },
   { icon: <Gift className="w-5 h-5" />, text: 'Última sesión gratuita' },
   { icon: <TrendingUp className="w-5 h-5" />, text: 'Resultados comprobados' },
   { icon: <Shield className="w-5 h-5" />, text: '100% personalizado' },
@@ -73,7 +73,7 @@ export default function QuickBenefitsBar(props: Props) {
       <div className="pointer-events-auto w-full px-4 md:px-0 md:max-w-[72rem] mx-auto">
         <ul
           className={clsx(
-            `bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl rounded-3xl
+            `bg-gradient-to-r from-purple-50 to-indigo-50 backdrop-blur-md border border-purple-200 shadow-xl rounded-3xl
              px-6 py-5 md:px-10 md:py-7
              grid grid-cols-1 gap-4 sm:grid-cols-2
              md:flex md:flex-nowrap md:items-center md:justify-center md:gap-10`,
@@ -86,10 +86,10 @@ export default function QuickBenefitsBar(props: Props) {
               <li key={i} className="flex justify-center md:justify-start">
                 <Tag
                   {...(item.href ? { href: item.href } : {})}
-                  className="flex items-center gap-3 text-sm md:text-base text-gray-700 font-medium
+                  className="flex items-center gap-3 text-sm md:text-base text-purple-700 font-semibold
                              px-3 py-2 rounded-full md:px-4 md:py-2
-                             hover:bg-gray-100/80 transition-colors
-                             focus-visible:ring-2 focus-visible:ring-pink-400 outline-none"
+                             hover:bg-purple-100/80 transition-colors
+                             focus-visible:ring-2 focus-visible:ring-purple-400 outline-none"
                 >
                   <span className="text-purple-600">{item.icon}</span>
                   <span className="text-center md:text-left leading-snug md:whitespace-nowrap">

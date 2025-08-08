@@ -79,21 +79,20 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
 
 export const sesiones: SesionTerapiaIntegrativa[] = [
   {
-    numero: '1–4',
-    titulo: 'Evaluación y Preparación',
-    descripcion: 'Enfocadas en la evaluación, diagnóstico , limpieza inicial y desbloqueo energètico. Abordamos tus desafíos, necesidades y expectativas.',
+    numero: '1–5',
+    titulo: 'Tratamiento de Limpieza Energética Inicial',
+    descripcion: '5 Sesiones Enfocadas en la evaluación, diagnóstico, limpieza inicial y desbloqueo energético. Abordamos tus desafíos, necesidades y expectativas.',
     color: 'bg-gradient-to-r from-pink-100 to-purple-100',
     duracion: '90 min',
     frecuencia: 'Semanal',
   },
   {
-    numero: '5',
-    titulo: 'Inicio del Tratamiento',
-    descripcion: 'Sesión gratuita que marca el inicio  del tratamiento personalizado definido en en las sesiones previas.',
-    color: 'bg-gradient-to-r from-green-100 to-blue-100',
-    gratuita: true,
-    duracion: '120 min',
-    frecuencia: 'Única',
+    numero: '6',
+    titulo: 'Tratamiento Personalizado',
+    descripcion: 'Sesión que marca el inicio del tratamiento personalizado específico definido en las sesiones previas.',
+    color: 'bg-gradient-to-r from-purple-100 to-indigo-100',
+    duracion: '1 hora',
+    frecuencia: '',
   },
 ];
 
@@ -172,7 +171,7 @@ export const faqs: FAQTerapiaIntegrativa[] = [
   },
   {
     pregunta: "¿Qué debo esperar en la primera sesión?",
-    respuesta: "En la primera sesión realizaremos una evaluación integral de tu estado actual, identificaremos tus necesidades específicas y comenzaremos con técnicas suaves de limpieza energética y equilibrio emocional."
+    respuesta: "En la primera sesión, la entrevista, realizaremos una evaluación integral de tu estado actual, identificaremos tus necesidades específicas y posteriormente comenzaremos con las técnicas de limpieza energética, buscando tu equilibrio emocional de forma gradual."
   }
 ];
 
@@ -199,7 +198,6 @@ export const sesiones5Pasos = [
       "Testeo energético completo de tu sistema",
       "Limpieza Inicial de bloqueos energéticos acumulados",
       "Reprogramacion energética celular.",
-      "Técnicas avanzadas de reprogramación celular",
       "Revitalización de tu campo aurico"
     ]
   },
@@ -223,9 +221,9 @@ export const sesiones5Pasos = [
     icon: SunDim,      // 🔹 CAMBIO: era Shield → ahora SunDim (ideal para aura/energía)
     color: "from-yellow-400 to-orange-400",
     puntos: [
-      "Sellado y reparación de tu campo áurico",
+      "Reparacion de grietas y Sellado de tu campo áurico",
       "Fortalecimiento de tu protección energética natural",
-      "Prevención de futuras pérdidas energéticas",
+      "Prevención de futuras fugas energéticas",
       "Técnicas de autoprotección energética"
     ]
   },

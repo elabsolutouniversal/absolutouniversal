@@ -153,7 +153,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
           className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
             pkg.popular 
               ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-              : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+              : 'bg-purple-100 text-purple-800 hover:bg-purple-200'
           }`}
         >
           Reservar ahora
@@ -207,10 +207,10 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
       <div className="text-center mb-16">
         {category ? (
           <>
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
               {therapiesData[category].name}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-700 max-w-3xl mx-auto font-medium">
               {therapiesData[category].description}
             </p>
           </>
@@ -258,7 +258,7 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">Sesiones Confidenciales</h3>
           <p className="text-gray-600">
-            Todas las sesiones se realizan en un espacio seguro y de confianza.
+            Todas las sesiones se realizan en un espacio seguro y de confianza con  absoluta reserva.
           </p>
         </div>
       </div>

@@ -70,65 +70,26 @@ export default function TerapiaIntegrativaHolistica() {
         />
       </section>
 
-      {/* GALERÍA */}
-      <section className="max-w-7xl mx-auto px-4 pb-12 sm:px-6 lg:px-8 relative z-10 mt-10 md:mt-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900 pt-0 md:pt-10">
-            Conoce nuestras terapias
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral
-          </p>
-        </motion.div>
 
-        {/* Mobile horizontal */}
-        <div className="md:hidden flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory -mx-4 px-4">
-          {tarjetas.map((t, i) => (
-            <div key={i} className="min-w-[85%] snap-center">
-              <CardConImagen {...t} onOpen={() => setOpenIndex(i)} />
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6">
-          {tarjetas.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <CardConImagen {...t} onOpen={() => setOpenIndex(i)} />
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
       {/* CONTENIDO PRINCIPAL */}
       <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
-        <BloqueTexto
-          id="que-consiste"
-          titulo="¿En qué consiste este tratamiento?"
-          texto={
-            <>
-              <p className="text-gray-600 leading-relaxed text-justify">
-                La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
-                <span className="font-semibold text-purple-600">psicología</span>,{' '}
-                <span className="font-semibold text-blue-600">radiestesia con péndulo hebreo</span> y{' '}
-                <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este protocolo está diseñado para
-                abrir tu camino de transformación, abordando tanto tus necesidades emocionales como energéticas, e iniciar
-                un proceso profundo de autoconocimiento y bienestar.
-              </p>
-            </>
-          }
-        />
+                 <BloqueTexto
+           id="que-consiste"
+           titulo="¿En qué consiste este tratamiento?"
+           texto={
+             <>
+               <p className="text-purple-700 leading-relaxed text-justify font-medium">
+                 La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
+                 <span className="font-semibold text-purple-600">psicología</span>,{' '}
+                 <span className="font-semibold text-indigo-600">radiestesia con péndulo hebreo</span> y{' '}
+                 <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este tratamiento está diseñado para
+                 abrir tu camino hacia tu maximo bienestar en la vida, abordando tanto tus necesidades emocionales como energéticas, e iniciar
+                 un proceso profundo de autoconocimiento y bienestar.
+               </p>
+             </>
+           }
+         />
 
         {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
         <SanacionEnergetica />
@@ -139,9 +100,9 @@ export default function TerapiaIntegrativaHolistica() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center md:text-justify md:max-w-4xl md:mx-auto"
+            className="mb-8 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-center md:text-justify md:max-w-4xl md:mx-auto"
           >
-            Tu viaje de transformación
+            Etapas del Tratamiento
           </motion.h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {sesiones.map((s, i) => (
@@ -192,18 +153,7 @@ export default function TerapiaIntegrativaHolistica() {
           </motion.div>
         </section>
 
-        <BloqueTexto
-          titulo="Enfoque complementario"
-          texto={
-            <>
-              La Sanación Integrativa Holística <span className="font-semibold">no reemplaza la medicina moderna</span>{' '}
-              ni los tratamientos médicos convencionales. Es un acompañamiento complementario que busca potenciar tu
-              bienestar general, actuando en armonía con el cuidado y las recomendaciones de tus profesionales de salud.
-            </>
-          }
-          bg="bg-gradient-to-r from-blue-50 to-purple-50"
-          border="border-2 border-blue-200"
-        />
+
         
         <TherapyPricing category="holistica" />
 
