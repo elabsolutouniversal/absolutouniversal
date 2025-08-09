@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search, Filter, X } from 'lucide-react';
 import { BlogSearchProps, BlogSearchFilters } from '@/types/blog';
 
@@ -19,17 +19,18 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
   
   // Ref para trackear si es el primer render
   const isFirstRender = useRef(true);
-  const prevFiltersRef = useRef(filters);
-
-  const handleSearch = useCallback(() => {
-    onSearch(filters);
-  }, [filters, onSearch]);
 
   const handleInputChange = (field: keyof BlogSearchFilters, value: string) => {
-    setFilters(prev => ({
-      ...prev,
+    const newFilters = {
+      ...filters,
       [field]: value
-    }));
+    };
+    setFilters(newFilters);
+    
+    // Llamar inmediatamente para categoría y tag
+    if (field === 'categoria' || field === 'tag') {
+      onSearch(newFilters);
+    }
   };
 
   const clearFilters = () => {
@@ -40,26 +41,19 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
 
   const hasActiveFilters = !!(filters.query || filters.categoria || filters.tag);
 
-  // Debounce mejorado que no se ejecuta en el primer render
+  // Debounce solo para query
   useEffect(() => {
-    // Skip en el primer render
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
 
-    // Solo ejecutar si realmente cambiaron los filtros
-    const filtersChanged = 
-      prevFiltersRef.current.query !== filters.query ||
-      prevFiltersRef.current.categoria !== filters.categoria ||
-      prevFiltersRef.current.tag !== filters.tag;
+    const timer = setTimeout(() => {
+      onSearch(filters);
+    }, 400);
 
-    if (filtersChanged) {
-      const id = setTimeout(handleSearch, 300);
-      prevFiltersRef.current = filters;
-      return () => clearTimeout(id);
-    }
-  }, [filters, handleSearch]);
+    return () => clearTimeout(timer);
+  }, [filters, onSearch]); // Incluir todas las dependencias
 
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mb-8">
@@ -123,12 +117,20 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
 
       {/* Resultados y limpiar */}
       <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
-        <div className="text-sm text-gray-600">
+        <div className="text-sm">
           {typeof totalResults === 'number' && (
-            <span>
-              {isLoading
-                ? 'Buscando...'
-                : `${totalResults} artículo${totalResults !== 1 ? 's' : ''} encontrado${totalResults !== 1 ? 's' : ''}`}
+            <span className={`${isLoading ? 'text-purple-600' : 'text-gray-600'} ${isLoading ? 'animate-pulse' : ''}`}>
+              {isLoading ? (
+                <span className="flex items-center">
+                  <div className="w-4 h-4 border-2 border-purple-600 border-t-transparent rounded-full animate-spin mr-2"></div>
+                  Buscando...
+                </span>
+              ) : (
+                <>
+                  <span className="font-semibold text-purple-600">{totalResults}</span>
+                  <span className="text-gray-600"> artículo{totalResults !== 1 ? 's' : ''} encontrado{totalResults !== 1 ? 's' : ''}</span>
+                </>
+              )}
             </span>
           )}
         </div>
@@ -136,7 +138,7 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
-            className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+            className="flex items-center space-x-2 px-4 py-2 text-sm text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
           >
             <X className="w-4 h-4" />
             <span>Limpiar filtros</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { BlogPost, BlogSearchFilters } from '@/types/blog';
 import BlogSearch from './BlogSearch';
 import BlogCard from './BlogCard';
@@ -27,9 +27,7 @@ const BlogList: React.FC<BlogListProps> = ({
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   
-  // Ref para trackear si es el primer renderizado
-  const isFirstRender = useRef(true);
-  const prevFiltersRef = useRef(searchFilters);
+
 
   // Filtrar posts
   const filteredPosts = useMemo(() => {
@@ -62,67 +60,40 @@ const BlogList: React.FC<BlogListProps> = ({
   const endIndex = startIndex + postsPerPage;
   const currentPosts = filteredPosts.slice(startIndex, endIndex);
 
-  // Efecto mejorado para manejar el loading solo cuando hay cambios reales
+  // Manejar cambios en los filtros
   useEffect(() => {
-    // Skip en el primer render
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    // Reset página cuando cambien los filtros
+    setCurrentPage(1);
+  }, [searchFilters]);
 
-    // Solo activar loading si realmente cambiaron los filtros
-    const filtersChanged = 
-      prevFiltersRef.current.query !== searchFilters.query ||
-      prevFiltersRef.current.categoria !== searchFilters.categoria ||
-      prevFiltersRef.current.tag !== searchFilters.tag;
-
-    if (filtersChanged) {
-      setIsLoading(true);
-      const handler = setTimeout(() => {
-        setIsLoading(false);
-        setCurrentPage(1);
-        
-        // Solo hacer scroll en móviles si hay resultados
-        if (window.innerWidth < 768 && filteredPosts.length > 0) {
-          // Usar un pequeño delay para evitar conflictos con el renderizado
-          setTimeout(() => {
-            const element = document.getElementById('blog-results');
-            if (element) {
-              const yOffset = -80; // Offset para considerar headers sticky
-              const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-          }, 100);
-        }
-      }, 300);
-
-      prevFiltersRef.current = searchFilters;
-      return () => clearTimeout(handler);
-    }
-  }, [searchFilters, filteredPosts.length]);
-
-  // Handlers
-  const handleSearch = (filters: BlogSearchFilters) => {
+  // Handlers - Memoizados para evitar re-renders
+  const handleSearch = useCallback((filters: BlogSearchFilters) => {
+    setIsLoading(true);
     setSearchFilters(filters);
-  };
+    
+    // Simular loading corto para UX
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 150);
+  }, []);
 
-  const handlePageChange = (page: number) => {
+  const handlePageChange = useCallback((page: number) => {
     setCurrentPage(page);
     // Scroll suave al top del contenedor de resultados
     const element = document.getElementById('blog-container');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  };
+  }, []);
 
-  const handleReadMore = (postId: number) => {
+  const handleReadMore = useCallback((postId: number) => {
     const post = posts.find(p => p.id === postId);
     if (post) {
       setSelectedPost(post);
       setIsModalOpen(true);
       document.body.style.overflow = 'hidden';
     }
-  };
+  }, [posts]);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -130,9 +101,9 @@ const BlogList: React.FC<BlogListProps> = ({
     document.body.style.overflow = 'auto';
   };
 
-  const resetSearch = () => {
+  const resetSearch = useCallback(() => {
     setSearchFilters({ query: '', categoria: '', tag: '' });
-  };
+  }, []);
 
   return (
     <>
@@ -162,7 +133,7 @@ const BlogList: React.FC<BlogListProps> = ({
       {/* Results */}
       <div id="blog-results" className="pt-2">
         {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="bg-white rounded-lg shadow-sm overflow-hidden animate-pulse">
                 <div className="aspect-video bg-gray-200" />
@@ -196,7 +167,7 @@ const BlogList: React.FC<BlogListProps> = ({
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {currentPosts.map(post => (
                 <BlogCard
                   key={post.id}

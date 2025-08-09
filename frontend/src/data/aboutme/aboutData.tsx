@@ -123,7 +123,7 @@ export const aboutData: AboutData = {
   title: "Psicóloga Clínica",
   license: "CPSP N.°12004 - CDR I Lima y Callao",
   specialties: ["Terapeuta Transpersonal", "Canalizadora Psíquica", "Especialista en Curaciones Energéticas"],
-  tagline: "¿Sientes que hay un vacío que ni la terapia tradicional ni el crecimiento personal convencional han logrado llenar?",
+  tagline: "",
   images: {
     profile: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
     terapiaHolistica: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",

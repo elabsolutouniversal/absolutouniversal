@@ -15,6 +15,12 @@ const nextConfig = {
         port: '',
         pathname: '/api/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/photos/**',
+      },
     ],
     dangerouslyAllowSVG: true,
     // contentSecurityPolicy puedes quitarlo si no lo necesitas:
