@@ -7,7 +7,6 @@ import HeroSection from '@/components/servicios/terapia-integrativa-holistica/He
 import BloqueTexto from '@/components/servicios/terapia-integrativa-holistica/BloqueTexto';
 import CardSesion from '@/components/servicios/terapia-integrativa-holistica/Proceso/CardSesion';
 import CardBeneficio from '@/components/servicios/terapia-integrativa-holistica/Beneficios/CardBeneficio';
-import CardConImagen from '@/components/servicios/terapia-integrativa-holistica/Galeria/CardConImagen';
 import Lightbox from '@/components/servicios/terapia-integrativa-holistica/Galeria/Lightbox';
 import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
 import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';

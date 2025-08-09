@@ -1,36 +1,28 @@
 'use client';
 
-import { Gift, Clock, Calendar } from 'lucide-react';
-import type { SesionTerapiaIntegrativa } from '@/types/servicios/terapia-integrativa-holistica';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
 
-export default function CardSesion({
-  numero,
-  titulo,
-  descripcion,
-  color,
-  gratuita,
-  duracion,
-  frecuencia,
-}: SesionTerapiaIntegrativa) {
+interface CardSesionProps {
+  titulo: string;
+  descripcion: string;
+  color: string;
+}
+
+const CardSesion: React.FC<CardSesionProps> = ({ titulo, descripcion, color }) => {
   return (
-    <div className={`${color} rounded-2xl p-6 sm:p-8 relative overflow-hidden hover:shadow-lg transition-shadow duration-300`}>
-      {gratuita && (
-        <div className="absolute top-4 right-4">
-          <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center shadow-md">
-            <Gift className="w-4 h-4 mr-1" />
-            Gratuita
-          </span>
+    <div className={`${color} rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+      <div className="flex items-start space-x-4">
+        <div className="flex-shrink-0">
+          <CheckCircle className="w-8 h-8 text-purple-600" />
         </div>
-      )}
-
-      <div className="flex items-center mb-4">
-        <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg text-purple-800 mr-4 shadow-md">
-          {numero}
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-purple-800 mb-2">{titulo}</h3>
+          <p className="text-purple-700 leading-relaxed">{descripcion}</p>
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-purple-800">{titulo}</h3>
       </div>
-
-      <p className="text-purple-700 leading-relaxed">{descripcion}</p>
     </div>
   );
-}
+};
+
+export default CardSesion;

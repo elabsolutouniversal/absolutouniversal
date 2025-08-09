@@ -2,18 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, HeartPulse, BrainCircuit } from 'lucide-react';
 import { profileData } from '@/data/profile/tearseprofiledata';
 import Image from 'next/image';
-
-// Mapeo de iconos con tipo seguro
-const iconComponents = {
-  BrainCircuit: BrainCircuit,
-  Sparkles: Sparkles,
-  HeartPulse: HeartPulse
-} as const;
-
-type IconName = keyof typeof iconComponents;
 
 export default function ProfileTeaser() {
   return (

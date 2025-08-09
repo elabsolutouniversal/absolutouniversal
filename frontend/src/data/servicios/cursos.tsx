@@ -1,5 +1,5 @@
 import { Course } from "@/types/servicios/cursos";
-import { BookOpen, Calendar, Users, Heart, Moon, Sun, Feather, Eye, Leaf, Globe, Zap, Aperture } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 export const courses: Course[] = [
   {
@@ -15,7 +15,7 @@ export const courses: Course[] = [
       'Ética profesional en lecturas',
       'Casos prácticos y supervisiones'
     ],
-    fechaInicio: '5 de Septiembre 2023',
+    fechaInicio: 'Próximamente',
     duracion: '5 meses',
     image: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754677952/El-ojo-de-Ra_sbdeqb.jpg',
     icon: BookOpen,

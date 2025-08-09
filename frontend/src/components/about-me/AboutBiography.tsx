@@ -11,9 +11,7 @@ import {
   GraduationCap,
   Users,
   Target,
-  Shield,
   Star,
-  Lightbulb
 } from 'lucide-react';
 
 interface AboutBiographyProps {

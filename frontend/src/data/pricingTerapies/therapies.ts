@@ -136,21 +136,21 @@ export const therapiesData: TherapiesData = {
   },
   
   pendulo: {
-    id: 'pendulo',
-    name: "Péndulo Hebreo",
-    description: "La terapia del péndulo hebreo es una técnica avanzada de radiestesia. Utiliza este péndulo para diagnosticar y tratar, trabajando específicamente en la limpieza energética y sanación.",
-    image: "/images/pendulo-hebreo.jpg",
-    slug: "pendulo-hebreo",
-    packages: [
+    id: 'holistica',
+    name: "Sanación Integrativa Holística",
+    description: "",
+    image: "/images/sanacion-holistica.jpg",
+    slug: "sanacion-integrativa-holistica",
+   packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Sesión de Sanación Inicial  Basica",
+        name: "Tratamiento de Limpieza Energética Inicial",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 285,
-        duration: "5 sesiones",
+        duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza  Inicial de bloqueo Energeticos",
+          "Limpieza  Inicial de bloqueos Energeticos",
           "Equilibrio de todos los chakras",
           "Protección energética avanzada",
           "Instrucciones de mantenimiento"
@@ -171,21 +171,19 @@ export const therapiesData: TherapiesData = {
           "Kit de mantenimiento energético"
         ]
       },
-      {
-        id: 'retiro-danos-amarres',
-        name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
-        description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
-        price: 500,
-        duration: "7 Sesiones ",
-        includes: [
-          "Sanacion Inicial Básica",
-          "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
-          "Limpieza profunda de bloqueos y ataduras",
-          "Reequilibrio de chakras y campo áurico",
-          "Protección energética reforzada y personalizada",
-          "Ritual de cierre y fortalecimiento",
-          "Guía de mantenimiento y seguimiento post sesión"
-        ]
+             {
+         id: 'retiro-danos-amarres',
+         name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
+         description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
+         price: 500,
+         duration: "7 sesiones de  tratamiento",
+                  includes: [
+           "Incluye Tratamiento de Limpieza Energetica Inicial",
+           "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
+           "Limpieza profunda de bloqueos y ataduras",
+           "Protección energética reforzada y personalizada",
+           "Guía de mantenimiento y seguimiento post sesión"
+         ]
       }
     ]
   }
