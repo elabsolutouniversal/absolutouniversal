@@ -20,7 +20,7 @@ export const productos: Producto[] = [
     precio: 25.00,
     precioOriginal: 35.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 15,
     destacado: true,
     tags: ['meditación', 'sanación', 'energía']
@@ -31,7 +31,7 @@ export const productos: Producto[] = [
     descripcion: 'Cuarzo rosa para el amor propio y la sanación emocional',
     precio: 30.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 12,
     tags: ['amor', 'sanación emocional', 'armonía']
   },
@@ -41,7 +41,7 @@ export const productos: Producto[] = [
     descripcion: 'Amatista para protección espiritual y conexión con lo divino',
     precio: 45.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/2735037/pexels-photo-2735037.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 8,
     tags: ['protección', 'espiritualidad', 'paz']
   },
@@ -53,7 +53,7 @@ export const productos: Producto[] = [
     descripcion: 'Péndulo hebreo tradicional para consultas y radiestesia',
     precio: 55.00,
     categoria: 'pendulos',
-    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153968/pendulo-hebreo_fnvk0o.jpg',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 5,
     destacado: true,
     tags: ['radiestesia', 'consultas', 'tradicional']
@@ -64,7 +64,7 @@ export const productos: Producto[] = [
     descripcion: 'Péndulo de cuarzo cristal para consultas energéticas',
     precio: 40.00,
     categoria: 'pendulos',
-    imagen: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 10,
     tags: ['energía', 'consultas', 'cuarzo']
   },
@@ -76,7 +76,7 @@ export const productos: Producto[] = [
     descripcion: 'Mazo de tarot egipcio Kier para lecturas terapéuticas',
     precio: 85.00,
     categoria: 'tarots',
-    imagen: 'https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 3,
     destacado: true,
     tags: ['egipcio', 'terapéutico', 'profesional']
@@ -87,7 +87,7 @@ export const productos: Producto[] = [
     descripcion: 'Tarot clásico Rider Waite para principiantes y expertos',
     precio: 65.00,
     categoria: 'tarots',
-    imagen: 'https://images.pexels.com/photos/6992752/pexels-photo-6992752.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 7,
     tags: ['clásico', 'universal', 'iniciación']
   },
@@ -99,7 +99,7 @@ export const productos: Producto[] = [
     descripcion: 'Vestido ceremonial para rituales y meditaciones',
     precio: 120.00,
     categoria: 'vestidos',
-    imagen: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 4,
     tags: ['ceremonial', 'ritual', 'meditación']
   },
@@ -109,7 +109,7 @@ export const productos: Producto[] = [
     descripcion: 'Túnica cómoda para sesiones de meditación y yoga',
     precio: 95.00,
     categoria: 'vestidos',
-    imagen: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 6,
     tags: ['meditación', 'yoga', 'comodidad']
   },
@@ -121,7 +121,7 @@ export const productos: Producto[] = [
     descripcion: 'Incienso natural de sándalo para purificación y meditación',
     precio: 15.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 20,
     tags: ['purificación', 'meditación', 'aroma']
   },
@@ -131,7 +131,7 @@ export const productos: Producto[] = [
     descripcion: 'Vela aromática de lavanda para relajación y armonía',
     precio: 12.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/6478102/pexels-photo-6478102.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 25,
     tags: ['relajación', 'armonía', 'lavanda']
   },
@@ -143,7 +143,7 @@ export const productos: Producto[] = [
     descripcion: 'Manual completo para aprender tarot con enfoque terapéutico',
     precio: 45.00,
     categoria: 'libros',
-    imagen: 'https://images.pexels.com/photos/159872/book-address-book-learning-learn-159872.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 10,
     tags: ['aprendizaje', 'terapéutico', 'manual']
   },
@@ -153,7 +153,7 @@ export const productos: Producto[] = [
     descripcion: 'Aprende radiestesia y el arte del péndulo desde cero',
     precio: 38.00,
     categoria: 'libros',
-    imagen: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 8,
     tags: ['radiestesia', 'péndulo', 'guía']
   },
@@ -163,7 +163,7 @@ export const productos: Producto[] = [
     descripcion: 'Guía completa sobre el uso de cristales para equilibrar chakras',
     precio: 42.00,
     categoria: 'libros',
-    imagen: 'https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 12,
     destacado: true,
     tags: ['cristales', 'chakras', 'sanación']
@@ -176,7 +176,7 @@ export const productos: Producto[] = [
     descripcion: 'Cuarzo citrino para abundancia y prosperidad',
     precio: 35.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/1166643/pexels-photo-1166643.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 9,
     tags: ['abundancia', 'prosperidad', 'éxito']
   },
@@ -186,7 +186,7 @@ export const productos: Producto[] = [
     descripcion: 'Obsidiana negra para protección y purificación energética',
     precio: 28.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/1029619/pexels-photo-1029619.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 14,
     tags: ['protección', 'purificación', 'energía']
   },
@@ -196,7 +196,7 @@ export const productos: Producto[] = [
     descripcion: 'Cuarzo verde para la sanación del corazón y equilibrio emocional',
     precio: 32.00,
     categoria: 'cuarzos',
-    imagen: 'https://images.pexels.com/photos/1327373/pexels-photo-1327373.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 11,
     tags: ['corazón', 'equilibrio', 'emocional']
   },
@@ -208,7 +208,7 @@ export const productos: Producto[] = [
     descripcion: 'Péndulo de amatista para consultas espirituales profundas',
     precio: 48.00,
     categoria: 'pendulos',
-    imagen: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 7,
     tags: ['espiritual', 'consultas', 'amatista']
   },
@@ -218,7 +218,7 @@ export const productos: Producto[] = [
     descripcion: 'Péndulo en espiral dorado para consultas avanzadas',
     precio: 65.00,
     categoria: 'pendulos',
-    imagen: 'https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 4,
     destacado: true,
     tags: ['avanzado', 'dorado', 'espiral']
@@ -231,7 +231,7 @@ export const productos: Producto[] = [
     descripcion: 'Tarot tradicional de Marsella para lecturas clásicas',
     precio: 58.00,
     categoria: 'tarots',
-    imagen: 'https://images.pexels.com/photos/6992752/pexels-photo-6992752.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 6,
     tags: ['tradicional', 'marsella', 'clásico']
   },
@@ -241,7 +241,7 @@ export const productos: Producto[] = [
     descripcion: 'Cartas angelicales para guía espiritual y protección',
     precio: 72.00,
     categoria: 'tarots',
-    imagen: 'https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 5,
     tags: ['angelical', 'guía', 'protección']
   },
@@ -251,7 +251,7 @@ export const productos: Producto[] = [
     descripcion: 'Cartas oracle para trabajar con los centros energéticos',
     precio: 55.00,
     categoria: 'tarots',
-    imagen: 'https://images.pexels.com/photos/6992752/pexels-photo-6992752.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 8,
     tags: ['oracle', 'chakras', 'energía']
   },
@@ -263,7 +263,7 @@ export const productos: Producto[] = [
     descripcion: 'Capa negra tradicional para ceremonias y rituales de luna nueva',
     precio: 85.00,
     categoria: 'vestidos',
-    imagen: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 3,
     tags: ['ritual', 'ceremonia', 'luna nueva']
   },
@@ -273,7 +273,7 @@ export const productos: Producto[] = [
     descripcion: 'Túnica blanca para rituales de purificación y sanación',
     precio: 110.00,
     categoria: 'vestidos',
-    imagen: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 4,
     destacado: true,
     tags: ['purificación', 'sanación', 'ceremonial']
@@ -286,7 +286,7 @@ export const productos: Producto[] = [
     descripcion: 'Palo santo peruano para limpieza energética y meditación',
     precio: 18.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 15,
     tags: ['limpieza', 'palo santo', 'energía']
   },
@@ -296,7 +296,7 @@ export const productos: Producto[] = [
     descripcion: 'Cuenco tibetano artesanal para meditación y terapia de sonido',
     precio: 95.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/6478102/pexels-photo-6478102.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 6,
     destacado: true,
     tags: ['meditación', 'sonido', 'tibetano']
@@ -307,7 +307,7 @@ export const productos: Producto[] = [
     descripcion: 'Aceite esencial puro de lavanda para aromaterapia y relajación',
     precio: 22.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 18,
     tags: ['aromaterapia', 'relajación', 'lavanda']
   },
@@ -317,7 +317,7 @@ export const productos: Producto[] = [
     descripcion: 'Vara de selenita para limpieza y recarga de otros cristales',
     precio: 35.00,
     categoria: 'herramientas',
-    imagen: 'https://images.pexels.com/photos/6478102/pexels-photo-6478102.jpeg?auto=compress&cs=tinysrgb&w=400',
+    imagen: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754828682/no_disponible_nffuwg.png',
     stock: 12,
     tags: ['limpieza', 'recarga', 'selenita']
   }
