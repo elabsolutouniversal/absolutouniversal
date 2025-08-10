@@ -135,22 +135,22 @@ export const aboutData: AboutData = {
     awakening: {
       title: "El Despertar de un Don",
       content: [
-        "Supe a través de las conversaciones de mis padres que yo desde muy pequeñita tenia un don peculiar, pues mi madre contaba entre risas que yo podía encontrar objetos perdidos con mucha facilidad y percibir con claridad las intenciones ,y energía de las personas",
+        "Supe a través de las conversaciones de mis padres que yo desde muy pequeñita tenía un don peculiar, pues mi madre contaba entre risas que yo podía encontrar objetos perdidos con mucha facilidad y percibir con claridad las intenciones y la energía de las personas",
 
-        "A los 11 años, esa sensibilidad se hizo más evidente cuando  aprendo a leer las cartas españolas logrando predecir sucesos y acontecimientos que ocurrirían en mi familia  , al notar esta capacidad  mi padre, me obsequia mi primer tarot , el Tarot egipcio Fournier, el  cuál también se mi hizo muy fácil de comprender e interpretar. mas adelante adquirí el hermoso tarot de Osho zen descubriendo su gran potencial para el beneficio de los seres humanos, herramienta que he tomado  como guía para orientar a los demás en base a esta filosofía basada en el aquí y ahora."
+        "A los 11 años, esa sensibilidad se hizo más evidente cuando aprendí a leer las cartas españolas, logrando predecir sucesos y acontecimientos que ocurrirían en mi familia. Al notar esta capacidad, mi padre me obsequió mi primer tarot, el Tarot Egipcio Fournier, el cual también se me hizo muy fácil de comprender e interpretar. Más adelante, adquirí el hermoso Tarot de Osho Zen, descubriendo su gran potencial para el beneficio de los seres humanos, herramienta que he tomado como guía para orientar a los demás en base a esta filosofía basada en el aquí y ahora."
       ]
     },
     professionalFormation: {
       title: "La Formación Profesional",
       content: [
-        "Posteriormente, estudie psicología especializándome en psicoterapia gestalt . Lo que le dio forma y estructura a mis habilidades ,  convenciéndome  de la capacidad  y fuerza de  que tenemos todos  los seres humanos para  resolver nuestros problemas y afrontarlos."
+        "Posteriormente, estudié psicología, especializándome en psicoterapia Gestalt. Esto le dio forma y estructura a mis habilidades, convenciéndome de la capacidad y fuerza que tenemos todos los seres humanos para resolver y afrontar nuestros problemas."
       ]
     },
     fusion: {
       title: "La Fusión: Ciencia, Mente, Cuerpo y Espíritu",
       content: [
         "Por este motivo, seguí investigando y estudiando otras disciplinas complementarias que trabajan no solo sobre la psique y el cuerpo físico, sino también a niveles energéticos y espirituales.",
-        "Decidí formarme en terapia de radioestecia con péndulo hebreo y posteriormente me especialicé en registros akáshicos y Tarot Akáshicos.",
+        "Decidí formarme en terapia de radiestesia con péndulo hebreo y posteriormente me especialicé en Registros Akáshicos y Tarot Akáshico.",
         "Luego afiné todos estos conocimientos con disciplinas como el Tarot terapéutico Junguiano basado en la psicoterapia analítica de Carl Gustav Jung, y el Tarot para el desarrollo personal.",
         "Todas estas herramientas son las que actualmente combino para abordar a mis clientes.",
         "Estoy convencida de que haber nacido humano es maravilloso, que nuestro ser es profundamente perfecto y que el cuerpo humano es también profundamente perfecto, con un sistema operativo bastante complejo. Mientras tenga vida, seguiré investigando en las profundidades de lo que significa ser humano y lo que implica haber nacido humano."
@@ -189,7 +189,7 @@ export const aboutData: AboutData = {
       ],
       studies: [
         {
-          title: "Formacion Profesional en Psicología Clínica",
+          title: "Formación Profesional en Psicología Clínica",
           description: "Base científica y metodológica para el abordaje terapéutico"
         },
         {
@@ -197,27 +197,27 @@ export const aboutData: AboutData = {
           description: "Enfoque holístico centrado en el aquí y ahora"
         },
         {
-          title: "Terapista de Radiestecia con Péndulo Hebreo",
+          title: "Terapeuta de Radiestesia con Péndulo Hebreo",
           description: "Técnica ancestral para diagnóstico y sanación energética"
         },
         {
-          title: "Formacion en Registros Akáshicos",
+          title: "Formación en Registros Akáshicos",
           description: "Acceso a la memoria universal del alma"
         },
         {
-          title: "Formacion en Tarot Akashicos",
+          title: "Formación en Tarot Akáshico",
           description: "Lectura profunda de patrones kármicos y espirituales"
         },
         {
-          title: "Formacion en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustavo Jung",
+          title: "Formación en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustav Jung",
           description: "Integración de arquetipos y psicología profunda"
         }
       ]
     }
   },
   approach: {
-    title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONSCIENCIA",
-    subtitle: "Mi Metodo Integrado",
+    title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONCIENCIA",
+    subtitle: "Mi Método Integrado",
     comparisons: {
       traditional: {
         title: "Psicología Tradicional",
@@ -248,7 +248,7 @@ export const aboutData: AboutData = {
         points: [
           "Lectura profunda del campo energético",
           "Identificación de patrones inconscientes y kármicos",
-          "Limpieza y Desintoxiacion del Campo Aurico"
+          "Limpieza y Desintoxicación del Campo Áurico"
         ]
       },
       integrative: {
@@ -295,7 +295,7 @@ export const aboutData: AboutData = {
     title: "¿ES ESTE ENFOQUE PARA TI?",
     points: [
       "Sientes que algo falta en tu proceso, aunque no sabes exactamente qué.",
-      "Repetes patrones en relaciones o situaciones de vida.",
+      "Repites patrones en relaciones o situaciones de vida.",
       "Experimentas síntomas físicos sin explicación médica clara.",
       "Quieres integrar tu crecimiento personal con tu evolución espiritual.",
       "Deseas descubrir y vivir tu propósito auténtico.",
@@ -317,7 +317,7 @@ export const aboutData: AboutData = {
       options: [
         "Presencial: sesiones en consultorio con atención personalizada",
         "Virtual: acompañamiento profundo desde cualquier lugar",
-        "Asistencia y Soporte Psicologico entre Sesiones"
+        "Asistencia y Soporte Psicológico entre Sesiones"
       ]
     }
   },
@@ -337,7 +337,7 @@ export const aboutData: AboutData = {
     ]
   },
   cta: {
-    title: "COMIENZA HOY , DA EL PASO HACIA UNA VERSION MAS AUTENTICA Y PLENA DE TI",
+    title: "COMIENZA HOY, DA EL PASO HACIA UNA VERSIÓN MÁS AUTÉNTICA Y PLENA DE TI",
     subtitle: "",
     quote: "La sanación real integra mente, cuerpo y espíritu en un diálogo consciente y amoroso.",
     author: "Lic. Nunash Dahiana Velásquez Guerrero"

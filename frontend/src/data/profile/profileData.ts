@@ -18,7 +18,7 @@ export const profileData = {
   generalInfo: {
     name: "Lic. Nunash Dahiana Velásquez Guerrero",
     title: "Psicóloga colegiada",
-    credential: "CPSP N.°12004 – CDR I Lima y Callao",
+    credential: "CPSP N °12004 – CDR I Lima y Callao",
     specialty: "Terapia Integrativa Holística",
     experience: "15 años de experiencia",
     imageUrl: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"

@@ -41,7 +41,7 @@ export interface GalleryData {
 }
 
 export const penduloData: PenduloData = {
-  title: "Terapia Con Péndulo Hebreo",
+  title: "Terapia con Péndulo Hebreo",
   description: "La terapia de péndulo hebreo es una técnica avanzada de radiestesia, permitiendo limpiar y equilibrar todos los niveles del ser humano: físico, mental, emocional y espiritual.",
   benefitsSection: {
     title: "¿Para qué sirve el péndulo hebreo?",
@@ -64,13 +64,13 @@ export const penduloData: PenduloData = {
     {
       id: "como-se-cura",
       title: "¿Cómo se cura con el péndulo hebreo?",
-      content: "Se testa cada centro energético para detectar desequilibrios en sus primeras fases, antes que se manifiesten en el cuerpo físico. Funciona gracias a la alta vibración que transmiten las letras hebreas, escritas en la plaquita que se coloca alrededor del péndulo, permitiendo la sanación física, mental, emocional y espiritual.",
+      content: "Se testea cada centro energético para detectar desequilibrios en sus primeras fases, antes de que se manifiesten en el cuerpo físico. Funciona gracias a la alta vibración que transmiten las letras hebreas, escritas en la plaquita que se coloca alrededor del péndulo, permitiendo la sanación física, mental, emocional y espiritual.",
       iconType: "time"
     },
     {
       id: "tratamiento-distancia",
       title: "¿Qué es el tratamiento a distancia con el Péndulo Hebreo?",
-      content: "La energía se dirige a intención la fuerza, sin las limitaciones de tiempo y espacio, como ha demostrado la física cuántica. El tratamiento a distancia se realiza siempre con el permiso de la persona que deseará la liberación. Cuando el tratamiento es presencial, el receptor se encuentra cómodamente sobre una camilla de masaje.",
+      content: "La energía se dirige con intención y fuerza, sin las limitaciones de tiempo y espacio, como ha demostrado la física cuántica. El tratamiento a distancia se realiza siempre con el permiso de la persona que desea la liberación. Cuando el tratamiento es presencial, el receptor se encuentra cómodamente sobre una camilla de masaje.",
       iconType: "distance"
     },
     {

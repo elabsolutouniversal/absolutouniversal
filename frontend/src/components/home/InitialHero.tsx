@@ -13,13 +13,9 @@ export default function InitialHero(): JSX.Element {
       <style jsx global>{`
         /* Efecto de degradado suave y elegante - invertido */
         .hero-gradient {
-          background: linear-gradient(180deg,
-            #ffccdb 0%,
-            #ffd6e0 20%,
-            #ffe0e8 40%,
-            #ffebf0 60%,
-            #fff5f7 80%,
-            #ffffff 100%);
+          background-image: url('https://res.cloudinary.com/dhhjcvwll/image/upload/v1754843228/bosque_orquideas_luminoso_1_rc734f.jpg');
+          background-size: cover;
+          background-position: center;
           position: relative;
         }
         
@@ -39,9 +35,6 @@ export default function InitialHero(): JSX.Element {
         
         /* Efecto de brillo suave mejorado */
         .text-glow {
-          text-shadow: 0 0 20px rgba(236, 72, 153, 0.3),
-                       0 0 40px rgba(168, 85, 247, 0.2),
-                       0 0 60px rgba(236, 72, 153, 0.1);
         }
 
         /* Estilos de texto elegantes con Lora en cursiva */
@@ -91,21 +84,18 @@ export default function InitialHero(): JSX.Element {
 
         /* Efecto de glassmorphism mejorado */
         .glass-card {
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
           box-shadow: 
-            0 8px 32px rgba(236, 72, 153, 0.12),
-            0 4px 16px rgba(168, 85, 247, 0.08),
-            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .glass-card:hover {
-          background: rgba(255, 255, 255, 0.98);
+          background: rgba(255, 255, 255, 0.25);
+          border: 1px solid rgba(255, 255, 255, 0.3);
           box-shadow: 
-            0 20px 40px rgba(236, 72, 153, 0.18),
-            0 8px 24px rgba(168, 85, 247, 0.12),
-            inset 0 1px 0 rgba(255, 255, 255, 0.95);
+            0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
         /* Efecto de logo mejorado */
@@ -207,91 +197,56 @@ export default function InitialHero(): JSX.Element {
           />
         </div>
 
-        <div className="container max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Logo con efecto suave mejorado */}
-            <div className="w-full lg:w-2/5 xl:w-5/12 flex justify-center order-2 lg:order-1 mb-8 lg:mb-0">
-              <motion.div
-                className="logo-container relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] xl:w-[480px] xl:h-[480px] transition-all duration-700 group"
-                initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  transition: { duration: 0.3 }
-                }}
-                aria-label="Logo de Absoluto Universal"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-100/30 to-purple-100/30 group-hover:from-pink-200/40 group-hover:to-purple-200/40 transition-all duration-500 z-0" />
-                <Image
-                  src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1754678204/ChatGPT_Image_8_ago_2025_12_50_02_g1gisz.png"
-                  alt="Logo Absoluto Universal"
-                  fill
-                  className="object-cover w-full h-full relative z-10 rounded-3xl"
-                  priority
-                  sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, (max-width: 1280px) 420px, 480px"
-                />
-                <div className="absolute inset-0 rounded-3xl border border-white/40 pointer-events-none z-20" />
-              </motion.div>
-            </div>
-
+        <div className="container max-w-4xl mx-auto px-4 relative z-10">
+          <div className="flex flex-col items-center text-center">
             {/* Texto principal con estilo elegante mejorado */}
-            <div className="w-full lg:w-3/5 xl:w-7/12 text-center lg:text-left order-1 lg:order-2 px-4 lg:px-0">
-              <motion.div
-                className="glass-card rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 transition-all duration-700"
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <h1 className="mb-8">
-                  <motion.span 
-                    className="block text-elegant-title text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight text-glow"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                  >
-                    Todo volverá a estar bien
-                  </motion.span>
-                  <motion.span 
-                    className="block text-elegant-subtitle text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-7xl text-fuchsia-500 mt-8 leading-tight text-glow"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                  >
-                    ¿Te acompaño en el proceso?
-                  </motion.span>
-                </h1>
-                
-                {/* Botón mejorado */}
-                <motion.div
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+            >
+              <h1 className="mb-8">
+                <motion.span 
+                  className="block text-elegant-title text-5xl sm:text-6xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-9xl text-violet-400 leading-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1, duration: 0.6 }}
-                  className="mt-10"
+                  transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById('bienvenida');
-                      if (element) {
-                        element.scrollIntoView({ 
-                          behavior: 'smooth',
-                          block: 'start'
-                        });
-                      }
-                    }}
-                    className="gradient-button inline-flex items-center gap-4 text-white font-semibold px-10 py-5 rounded-full transition-all duration-300 transform hover:scale-105 text-lg md:text-xl font-normal-style cursor-pointer"
-                  >
-                    <span>Descubre más</span>
-                    <FaArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
-                </motion.div>
+                  Todo volverá a estar bien
+                </motion.span>
+                <motion.span 
+                  className="block text-elegant-subtitle text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8xl text-violet-400 mt-10 leading-tight"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                  ¿Te acompaño en el proceso?
+                </motion.span>
+              </h1>
+              
+              {/* Botón mejorado */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                className="mt-10"
+              >
+                <button
+                  onClick={() => {
+                    const element = document.getElementById('bienvenida');
+                    if (element) {
+                      element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }
+                  }}
+                  className="bg-yellow-100/90 text-violet-500 font-lora-semibold italic text-xl rounded-full px-10 py-4 shadow-lg hover:bg-yellow-100 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                >
+                  <span>Descubre más</span>
+                </button>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

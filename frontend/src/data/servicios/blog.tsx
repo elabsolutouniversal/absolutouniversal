@@ -1,4 +1,4 @@
-// psico-educion.tsx
+// blog.tsx
 export interface BlogPost {
   id: number;
   titulo: string;
