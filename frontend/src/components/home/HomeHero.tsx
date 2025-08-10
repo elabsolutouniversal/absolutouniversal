@@ -74,8 +74,8 @@ export default function HomeHero(): JSX.Element {
               <Image
                 src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg"
                 alt="Psicoterapia con péndulo"
-                width={400}
-                height={500}
+                width={500}
+                height={600}
                 className="object-cover w-full h-auto"
                 priority
               />
