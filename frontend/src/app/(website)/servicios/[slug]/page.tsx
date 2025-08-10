@@ -8,7 +8,7 @@ import TerapiaIntegrativaHolistica from '@/components/servicios/terapia-integrat
 const componentBySlug: Record<string, React.ComponentType> = {
   'sanacion-integrativa-holistica': TerapiaIntegrativaHolistica,
   'tarot-predictivo': TarotPredictivo,
-  'psico-educacion-consciente': PsicoEducacion,
+  'psicoeducacion-consciente': PsicoEducacion,
   'pendulo-hebreo': PenduloHebreo,
 };
 

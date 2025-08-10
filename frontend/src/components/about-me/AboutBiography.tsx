@@ -11,7 +11,7 @@ import {
   GraduationCap,
   Users,
   Target,
-  Star,
+  Star
 } from 'lucide-react';
 
 interface AboutBiographyProps {

@@ -25,16 +25,16 @@ const services = [
     link: "/servicios/tarot-predictivo"
   },
   {
-    id: "psico-educacion",
-    title: "Psico Educación",
+            id: "psicoeducacion",
+          title: "Psicoeducación",
     description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
     image: "/images/psicoteria.png", 
-    link: "/psico-educacion"
+            link: "/psicoeducacion"
   },
   {
     id: "pendulo-hebreo",
     title: "Péndulo Hebreo",
-    description: "La terapia del péndulo hebreo es una técnica avanzada de radioestesia. Utiliza este péndulo para diagnosticar y tratar, trabajando específicamente sobre el cuerpo electromagnético (aura).",
+            description: "La terapia del péndulo hebreo es una técnica avanzada de radiestesia. Utiliza este péndulo para diagnosticar y tratar, trabajando específicamente sobre el cuerpo electromagnético (aura).",
     image: "/images/pendelo-hebreo.png",
     link: "/servicios/pendulo-hebreo"
   }

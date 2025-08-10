@@ -25,7 +25,7 @@ export default function TiendaHero() {
         </h1>
         
         <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed font-lora-normal">
-          Descubre productos auténticos para tu crecimiento espiritual y bienestar integral
+          Descubre Lindos Productos Esotericos y Misticos
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 text-purple-100 mb-8">
@@ -40,22 +40,6 @@ export default function TiendaHero() {
           <div className="flex items-center gap-2">
             <Star className="w-5 h-5 text-yellow-300" />
             <span className="font-lora-normal">Calidad Premium</span>
-          </div>
-        </div>
-
-        {/* Estadísticas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-3xl font-lora-bold-normal text-white mb-2">500+</div>
-            <div className="text-purple-100 font-lora-normal">Clientes Satisfechos</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-3xl font-lora-bold-normal text-white mb-2">100%</div>
-            <div className="text-purple-100 font-lora-normal">Productos Auténticos</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-3xl font-lora-bold-normal text-white mb-2">24/7</div>
-            <div className="text-purple-100 font-lora-normal">Soporte Espiritual</div>
           </div>
         </div>
       </div>

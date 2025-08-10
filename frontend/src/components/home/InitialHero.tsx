@@ -1,9 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
 import { JSX } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function InitialHero(): JSX.Element {

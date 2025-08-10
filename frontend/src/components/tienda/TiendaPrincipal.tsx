@@ -6,8 +6,6 @@ import { productos, categorias, Producto } from '@/data/tienda/productos';
 import ProductoCard from './ProductoCard';
 import CarritoModal from './CarritoModal';
 import TiendaHero from './TiendaHero';
-import TiendaBeneficios from './TiendaBeneficios';
-import TestimoniosTienda from './TestimoniosTienda';
 import NotificacionProducto from './NotificacionProducto';
 import MiniCarrito from './MiniCarrito';
 
@@ -240,8 +238,6 @@ export default function TiendaPrincipal() {
       </div>
 
       {/* Secciones adicionales */}
-      <TiendaBeneficios />
-      <TestimoniosTienda />
 
       {/* Mini Carrito Flotante */}
       <MiniCarrito 

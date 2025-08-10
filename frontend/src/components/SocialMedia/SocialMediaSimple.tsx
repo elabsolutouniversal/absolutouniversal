@@ -1,11 +1,28 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { socialMediaData } from '@/data/RedesSocialesData';
 import { SocialMedia } from '@/types/RedesSocialesTypes';
 import { Sparkles } from 'lucide-react';
 
 export const SocialMediaSimple: React.FC = () => {
+  // Función para obtener el color de fondo del icono según la red social
+  const getIconBgColor = (mediaId: string) => {
+    switch (mediaId) {
+      case 'facebook':
+        return 'bg-blue-600';
+      case 'instagram':
+        return 'bg-gradient-to-br from-purple-600 to-pink-500';
+      case 'tiktok':
+        return 'bg-purple-600';
+      case 'youtube':
+        return 'bg-red-600';
+      default:
+        return 'bg-gray-600';
+    }
+  };
+
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-pink-50 via-rose-50 to-purple-50">
       <div className="max-w-6xl mx-auto">
@@ -26,69 +43,60 @@ export const SocialMediaSimple: React.FC = () => {
           </p>
         </div>
 
-        {/* Grid de redes sociales */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Botones simples apilados verticalmente */}
+        <div className="max-w-md mx-auto space-y-4">
           {socialMediaData.map((media: SocialMedia) => {
             const Icon = media.icon;
             return (
-              <div
+              <a
                 key={media.id}
-                className="group relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-pink-100/50 overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:bg-white/95"
+                href={media.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 w-full px-6 py-4 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 group"
               >
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 opacity-0 group-hover:opacity-100 transition duration-500 -z-10 rounded-2xl" />
-
-                {/* Icono con efecto */}
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl group-hover:from-purple-200 group-hover:to-pink-200 transition-all duration-300 shadow-md">
-                    <Icon
-                      className={`w-10 h-10 ${media.iconColor} transition-all duration-300 group-hover:scale-110`}
-                    />
-                  </div>
+                {/* Icono con color sólido */}
+                <div className={`w-12 h-12 ${getIconBgColor(media.id)} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
-
-                {/* Contenido */}
-                <div className="text-center">
-                  <h3 className="font-lora-bold text-xl text-gray-700 mb-2 group-hover:text-purple-700 transition-colors duration-300">
+                
+                {/* Contenido de texto */}
+                <div className="flex-1">
+                  <h3 className="font-lora-bold text-lg text-purple-700 mb-1">
                     {media.name}
                   </h3>
-                  
-                  <p className="text-sm text-purple-600 font-lora mb-2">
+                  <p className="text-sm text-purple-600 font-lora mb-1">
                     @{media.username}
                   </p>
-                  
-                  <p className="text-sm text-purple-600 font-lora-semibold mb-6">
+                  <p className="text-sm text-purple-600 font-lora">
                     {media.followers} seguidores
                   </p>
-
-                  {/* Botón mejorado */}
-                  <a
-                    href={media.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-lora-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group/btn"
-                  >
-                    <span>Visitar</span>
-                    <svg 
-                      className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
                 </div>
-
-                {/* Efecto de brillo sutil */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-              </div>
+                
+                {/* Flecha indicadora */}
+                <div className="text-purple-600 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </a>
             );
           })}
         </div>
 
         {/* Footer */}
         <div className="text-center mt-16">
+          {/* Logo de la página */}
+          <div className="flex justify-center mb-6">
+            <Image
+              src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
+              alt="El Absoluto Universal"
+              width={192}
+              height={192}
+              className="w-48 h-48"
+            />
+          </div>
+          
           <p className="text-purple-600 font-lora text-sm">
             ¡Conectemos y compartamos este viaje de transformación juntos!
           </p>

@@ -17,7 +17,7 @@ const categorias = [
     descripcion: 'Formación especializada en técnicas espirituales',
     icono: BookOpen,
     color: 'from-blue-500 to-blue-600',
-    href: '/psico-educacion'
+            href: '/psicoeducacion'
   },
   {
     id: 'terapia',

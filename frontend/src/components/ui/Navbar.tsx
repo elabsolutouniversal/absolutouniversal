@@ -26,7 +26,7 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
     { href: "/home", label: "Inicio" },
     { href: "/sobre-mi", label: "Sobre mí" },
     { href: "/servicios", label: "Servicios" },
-    { href: "/psico-educacion", label: "Psico Educacion" },
+            { href: "/psicoeducacion", label: "Psicoeducación" },
     { href: "/tienda", label: "Tienda" },
      { href: "/intranet", label: "Intranet" },
   ];

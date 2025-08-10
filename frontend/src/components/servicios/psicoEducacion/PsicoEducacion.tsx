@@ -1,13 +1,7 @@
 // page.tsx
 "use client";
-import { Metadata } from 'next';
 import CoursesGrid from './cursos/CourseGrid';
 import { courses } from '@/data/servicios/cursos';
-
-export const metadata: Metadata = {
-  title: 'Cursos de Transformación | Terapias Holísticas',
-  description: 'Talleres y cursos para tu crecimiento espiritual y emocional',
-};
 
 export default function PsicoEducacion() {
   return (

@@ -42,7 +42,7 @@ export default function Servicios({
         )}
 
         {/* Grid de servicios */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {serviciosToShow.map((servicio) => (
             <ServicioCard
               key={servicio.slug}
