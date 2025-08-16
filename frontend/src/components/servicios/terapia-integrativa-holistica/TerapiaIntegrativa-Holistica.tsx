@@ -73,22 +73,23 @@ export default function TerapiaIntegrativaHolistica() {
 
       {/* CONTENIDO PRINCIPAL */}
       <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
-                 <BloqueTexto
-           id="que-consiste"
-           titulo="¿En qué consiste este tratamiento?"
-           texto={
-             <>
-               <p className="text-purple-700 leading-relaxed text-justify font-medium">
-                 La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
-                 <span className="font-semibold text-purple-600">psicología</span>,{' '}
-                 <span className="font-semibold text-indigo-600">radiestesia con péndulo hebreo</span> y{' '}
-                 <span className="font-semibold text-pink-600">Tarot terapéutico</span>. Este tratamiento está diseñado para
-                 abrir tu camino hacia tu maximo bienestar en la vida, abordando tanto tus necesidades emocionales como energéticas, e iniciar
-                 un proceso profundo de autoconocimiento y bienestar.
-               </p>
-             </>
-           }
-         />
+        <BloqueTexto
+          id="que-consiste"
+          titulo="¿En qué consiste este tratamiento?"
+          texto={
+            <>
+              <p className="text-purple-700 leading-relaxed text-justify font-medium">
+                La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
+                <span className="font-semibold text-purple-600">Psicología</span>,{' '}
+                <span className="font-semibold text-indigo-600">Radiestesia con Péndulo Hebreo</span> y{' '}
+                <span className="font-semibold text-pink-600">Tarot Terapéutico</span>.
+                Este tratamiento está diseñado para abrir tu camino hacia el máximo bienestar,
+                abordando tanto tus necesidades emocionales como energéticas, e iniciando
+                un profundo proceso de autoconocimiento y armonía.
+              </p>
+            </>
+          }
+        />
 
         {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
         <SanacionEnergetica />
@@ -119,7 +120,7 @@ export default function TerapiaIntegrativaHolistica() {
         </section>
 
         {/* Avisos Importantes */}
-         <ConsideracionesTratamiento/>
+        <ConsideracionesTratamiento />
 
         {/* Beneficios */}
         <section>
@@ -153,7 +154,7 @@ export default function TerapiaIntegrativaHolistica() {
         </section>
 
 
-        
+
         <TherapyPricing category="holistica" />
 
         {/* FAQ */}

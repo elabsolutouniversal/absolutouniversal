@@ -50,7 +50,7 @@ export default function HomeHero(): JSX.Element {
               </h2>
               <p className="text-elegant-body text-purple-700 text-base md:text-lg mb-6 leading-relaxed">
                 Un lugar para reconectar contigo, sanar desde la raíz y transformar tu vida desde la
-                consciencia y el corazón.
+                conciencia y el corazón.
               </p>
               <Link
                 href="/servicios"

@@ -4,9 +4,9 @@ export const profileData = {
   generalInfo: {
     name: "Lic. Nunash Dahiana Velásquez Guerrero",
             title: "Psicóloga Clínica Colegiada",
-    credential: "CPSP N.°12004",
-            specialty: "Terapeuta holística, especialista en curaciones energéticas",
-    experience: "20+ años de experiencia transformando vidas",
+    credential: "CPSP N.° 12004",
+            specialty: "Terapeuta holística y especialista en curaciones energéticas",
+    experience: "más de 20 años de experiencia transformando vidas.",
     imageUrl: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg"
   },
 
@@ -42,9 +42,9 @@ export const profileData = {
   ],
 
   content: {
-            tagline: "Sanación integrativa holística",
+            tagline: "Sanación Integrativa Holística",
     mainHeading: "Reconecta con tu esencia auténtica",
-    subHeading: "Un enfoque efectivo que combina a Psicología científica y sabiduría ancestral para tu bienestar  integral ",
+    subHeading: "Un enfoque efectivo que combina la Psicología Científica y sabiduría ancestral para tu bienestar  integral.",
     ctaText: "Descubre mas sobre mi "
   }
 };
