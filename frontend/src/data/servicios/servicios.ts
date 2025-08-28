@@ -26,17 +26,17 @@ export const servicios: Servicio[] = [
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
   },
   {
-    title: "Tarot Akáshico",
+    title: "El Askasha",
     slug: "tarot-akashico",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3724_bpugkm.jpg",
     description: "Acceso a la memoria universal, las cartas actuan como puertas simbolicas que facilita el acceso a la memorias profunda explorando aprendizajes karmicos y bloqueos transpersonales.",
   },
-  {
-    title: "Lectura de Registros Akáshicos",
-    slug: "lectura-registros-akashicos",
-    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
-    description: "A traves de este proceso se logra sanaciòn de patrones destructivos generacionales ",
-  },
+  // {
+  //   title: "Lectura de Registros Akáshicos",
+  //   slug: "lectura-registros-akashicos",
+  //   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
+  //   description: "A traves de este proceso se logra sanaciòn de patrones destructivos generacionales ",
+  // },
   {
           title: "Psicoeducación Consciente",
             slug: "psicoeducacion-consciente",

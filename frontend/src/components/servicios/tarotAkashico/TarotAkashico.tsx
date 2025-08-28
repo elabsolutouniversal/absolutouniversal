@@ -16,7 +16,7 @@ const TarotAkashico: React.FC = () => {
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold text-center text-purple-700 mb-8">Tarot Akáshico</h1>
+      <h1 className="text-4xl font-bold text-center text-purple-700 mb-8">El Askasha</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         {tarotAkashicoImages.map((image, index) => (
@@ -57,7 +57,7 @@ const TarotAkashico: React.FC = () => {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg border border-purple-100 p-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800">Sesión Completa de Tarot Akáshico</h3>
+            <h3 className="text-2xl font-bold text-gray-800">Sesión Completa de El Askasha</h3>
             <p className="text-gray-500 mt-1">1 hora y 30 minutos</p>
             <div className="my-6">
               <span className="text-5xl font-bold text-indigo-600">$75</span>
