@@ -5,7 +5,7 @@ import React from 'react';
 
 interface Props {
   id?: string;
-  titulo: string;
+  titulo: React.ReactNode;
   texto: React.ReactNode;
   bg?: string;
   border?: string;

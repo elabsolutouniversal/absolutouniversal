@@ -33,22 +33,24 @@ export default function Servicios({
              <h2 className="text-6xl md:text-7xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
                 Descubre mi <i>Método</i> <b>SATHYA</b>
              </h2>
-             <p className="text-xl font-lora-italic text-purple-800 max-w-3xl mx-auto my-4">
+             <p className="text-2xl font-lora-italic text-purple-500 max-w-4xl mx-auto my-6">
               Sanación Ancestral, Transpersonal, Holística y Akasha
             </p>
-            <h2 className="text-2xl md:text-3xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+          
+            {showDescription && (
+              <p className="text-xl font-lora text-purple-700 max-w-3xl mx-auto mb-8">
+             El Método SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral (Psicología Clínica, Terapias Holísticas, Registros Akáshicos).
+              </p>
+            
+            )}
+              <h2 className="text-4xl md:text-5xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
               Herramientas que integro en las sesiones
             </h2>
-            {showDescription && (
-              <p className="text-lg font-lora text-purple-700 max-w-2xl mx-auto">
-             El Mètodo SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral.
-              </p>
-            )}
           </div>
         )}
 
         {/* Grid de servicios */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {serviciosToShow.map((servicio) => (
             <ServicioCard
               key={servicio.slug}

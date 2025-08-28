@@ -20,7 +20,6 @@ import {
   beneficios,
   faqs
 } from '@/data/servicios/terapia-holistica-integrativa/terapia-integrativa-holistica';
-import QuickBenefitsBar from './QuickBenefitsBar/QuickBenefitsBar';
 import SanacionEnergetica from './5PasosSanacionEnergetica/PasosSanacionEnergetica';
 import TherapyPricing from '@/components/therapy/TherapyPricing';
 import ConsideracionesTratamiento from './ConsideracionesAntesInicia/ConsideracionesTratamiento';
@@ -57,16 +56,6 @@ export default function TerapiaIntegrativaHolistica() {
           <HeroSection />
         </div>
 
-        {/* Barra mobile */}
-        <QuickBenefitsBar variant="static" className="mt-5 px-4 md:hidden" />
-
-        {/* Barra desktop (menos espacio) */}
-        <QuickBenefitsBar
-          variant="floating"
-          gapTop={20}        // antes 56
-          gapBottom={14}     // antes 40-48
-          className="hidden md:block"
-        />
       </section>
 
 
@@ -75,17 +64,22 @@ export default function TerapiaIntegrativaHolistica() {
       <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-16">
         <BloqueTexto
           id="que-consiste"
-          titulo="¿En qué consiste este tratamiento?"
+          titulo={
+            <>
+              ¿En qué consiste el método{' '}
+              <span className="font-lora-bold not-italic text-4xl">SATHYA</span>?
+            </>
+          }
           texto={
             <>
               <p className="text-purple-700 leading-relaxed text-justify font-medium">
-                La <strong>Sanación Integrativa Holística</strong> fusiona técnicas de{' '}
-                <span className="font-semibold text-purple-600">Psicología</span>,{' '}
-                <span className="font-semibold text-indigo-600">Radiestesia con Péndulo Hebreo</span> y{' '}
-                <span className="font-semibold text-pink-600">Tarot Terapéutico</span>.
+              El metodo SATHYA integra y combina  técnicas de {' '}
+                <span className="font-semibold text-purple-600">Psicología Cientifica</span>,{' '}
+                <span className="font-semibold text-indigo-600">Terapias Holisticas</span> y{' '}
+                <span className="font-semibold text-pink-600">Lecutra de Registros Askashicos</span>.
                 Este tratamiento está diseñado para abrir tu camino hacia el máximo bienestar,
-                abordando tanto tus necesidades emocionales como energéticas, e iniciando
-                un profundo proceso de autoconocimiento y armonía.
+                abordando tanto tus necesidades emocionales, fisicas y energèticas, iniciando
+                un profundo proceso de autoconocimiento y armonía para vivir en verdad y coherencia.
               </p>
             </>
           }

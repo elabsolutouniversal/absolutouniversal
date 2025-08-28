@@ -4,12 +4,16 @@ import PenduloHebreo from '@/components/servicios/pendulo/PenduloHebreo';
 import PsicoEducacion from '@/components/servicios/psicoEducacion/PsicoEducacion';
 import TarotPredictivo from '@/components/servicios/tarotPredictivo/TarotPredictivo';
 import TerapiaIntegrativaHolistica from '@/components/servicios/terapia-integrativa-holistica/TerapiaIntegrativa-Holistica';
+import TarotAkashico from '@/components/servicios/tarotAkashico/TarotAkashico';
+import LecturaRegistrosAkashicos from '@/components/servicios/lecturaRegistrosAkashicos/LecturaRegistrosAkashicos';
 
 const componentBySlug: Record<string, React.ComponentType> = {
   'sanacion-integrativa-holistica': TerapiaIntegrativaHolistica,
   'tarot-predictivo': TarotPredictivo,
   'psicoeducacion-consciente': PsicoEducacion,
   'pendulo-hebreo': PenduloHebreo,
+  'tarot-akashico': TarotAkashico,
+  'lectura-registros-akashicos': LecturaRegistrosAkashicos,
 };
 
 // Si quieres SSG para estos slugs

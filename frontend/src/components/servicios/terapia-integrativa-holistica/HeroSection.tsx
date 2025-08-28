@@ -35,7 +35,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl md:text-2xl mb-8 text-pink-100 max-w-3xl mx-auto leading-relaxed"
           >
-            Un enfoque que fusiona lo mejor de tres disciplinas para tu bienestar integrar aplicadas para logres vivir de una manera más plena y coherente
+           Mètodo, <span className='text-3xl'>SATHYA</span> Un enfoque que fusiona lo mejor de tres disciplinas para tu bienestar integrar aplicadas para logres vivir de una manera más plena y coherente
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

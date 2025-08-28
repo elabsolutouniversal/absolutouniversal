@@ -11,7 +11,7 @@ export const servicios: Servicio[] = [
           title: "Sanación integrativa holística",
     slug: "sanacion-integrativa-holistica",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
-    description: "Combino recursos de la psicología moderna con radiestesia mediante péndulo hebreo y Tarot terapéutico para liberar bloqueos y guiarte hacia una sanación integral.",
+    description: "El Metodo SATHAYA  combina recursos de la psicología moderna, terapias holisticas y los registros akashicos.",
   },
   // {
   //   title: "Lectura de Registros Akáshicos",
@@ -24,6 +24,18 @@ export const servicios: Servicio[] = [
     slug: "tarot-predictivo",
    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
+  },
+  {
+    title: "Tarot Akáshico",
+    slug: "tarot-akashico",
+    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3724_bpugkm.jpg",
+    description: "Acceso a la memoria universal, las cartas actuan como puertas simbolicas que facilita el acceso a la memorias profunda explorando aprendizajes karmicos y bloqueos transpersonales.",
+  },
+  {
+    title: "Lectura de Registros Akáshicos",
+    slug: "lectura-registros-akashicos",
+    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
+    description: "A traves de este proceso se logra sanaciòn de patrones destructivos generacionales ",
   },
   {
           title: "Psicoeducación Consciente",

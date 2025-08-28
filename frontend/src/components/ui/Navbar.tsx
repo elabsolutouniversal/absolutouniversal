@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Props = {
+interface Props {
   isMobile: boolean;
   closeMenu?: () => void;
-  isTransparent?: boolean;
 };
 
-export default function Navbar({ isMobile, closeMenu, isTransparent = false }: Props) {
+export default function Navbar({ isMobile, closeMenu }: Props) {
   const pathname = usePathname();
 
   const links = [

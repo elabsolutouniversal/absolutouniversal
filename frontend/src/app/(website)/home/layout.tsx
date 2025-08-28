@@ -43,7 +43,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
           </Link>
 
           {/* NAVBAR DESKTOP */}
-          <Navbar isMobile={false} isTransparent={true} />
+          <Navbar isMobile={false} />
 
           {/* HAMBURGUESA MÓVIL */}
           <button
@@ -55,7 +55,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         </div>
 
         {/* NAVBAR MÓVIL */}
-        {isOpen && <Navbar isMobile={true} closeMenu={() => setIsOpen(false)} isTransparent={true} />}
+        {isOpen && <Navbar isMobile={true} closeMenu={() => setIsOpen(false)} />}
       </header>
 
       {/* Contenido principal */}
