@@ -90,18 +90,6 @@ export const tarotAkashicoImages: ImageData[] = [
       subtitle: ""
     },
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
-      alt: "Terapia con Tarot Akáshico",
-      title: "",
-      subtitle: ""
-    },
-    {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3665_s4whct.jpg",
-      alt: "",
-      title: "",
-      subtitle: ""
-    },
-    {
       src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3670_baozpb.jpg",
       alt: "Profesional en Tarot Akáshico",
       title: "",

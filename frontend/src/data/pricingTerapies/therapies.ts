@@ -4,7 +4,8 @@ import type { TherapiesData } from '../../types/therapy.types';
 export const therapiesData: TherapiesData = {
   holistica: {
     id: 'holistica',
-    name: "Sanación Integrativa Holística",
+    name: "Metodo SATHYA",
+    subtitle: "Sanacion Ancestral, Transpersonal, Holistica y Akasha",
     description: "",
     image: "/images/sanacion-holistica.jpg",
     slug: "sanacion-integrativa-holistica",

@@ -13,6 +13,7 @@ export interface TherapyPackage {
 export interface Therapy {
   id: string;
   name: string;
+  subtitle?: string;
   description: string;
   image: string;
   slug: string;
