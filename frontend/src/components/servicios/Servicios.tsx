@@ -30,12 +30,18 @@ export default function Servicios({
         {/* Título de la sección - condicional */}
         {showTitle && (
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+             <h2 className="text-6xl md:text-7xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                Descubre mi <i>Método</i> <b>SATHYA</b>
+             </h2>
+             <p className="text-xl font-lora-italic text-purple-800 max-w-3xl mx-auto my-4">
+              Sanación Ancestral, Transpersonal, Holística y Akasha
+            </p>
+            <h2 className="text-2xl md:text-3xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
               Herramientas que integro en las sesiones
             </h2>
             {showDescription && (
               <p className="text-lg font-lora text-purple-700 max-w-2xl mx-auto">
-               Un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral 
+             El Mètodo SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral.
               </p>
             )}
           </div>

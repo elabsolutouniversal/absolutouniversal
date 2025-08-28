@@ -57,7 +57,7 @@ export default function HomeHero(): JSX.Element {
                 aria-label="Descubre mis servicios"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-normal-style"
               >
-                Descubre mis servicios
+               Metodo <span className="text-3xl">SATHYA</span>
                 <FaArrowRight className="text-base" />
               </Link>
             </motion.div>
