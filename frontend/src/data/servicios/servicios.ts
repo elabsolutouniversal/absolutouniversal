@@ -10,7 +10,7 @@ export const servicios: Servicio[] = [
   {
           title: "Sanación integrativa holística",
     slug: "sanacion-integrativa-holistica",
-    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
+    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
     description: "El Metodo SATHAYA  combina recursos de la psicología moderna, terapias holisticas y los registros akashicos.",
   },
   // {
@@ -22,7 +22,7 @@ export const servicios: Servicio[] = [
   {
     title: "Tarot Predictivo con Enfoque Terapéutico",
     slug: "tarot-predictivo",
-   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
+   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
   },
   {

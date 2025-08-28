@@ -112,24 +112,24 @@ export const galleryData: GalleryData = {
     },
     {
       id: "terapia-integrativa-34",
-      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
+      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3680_klmwz2.jpg",
       alt: "Sesión Holística",
       title: "Sesión Holística",
       description: "Ambiente tranquilo y armonioso para la sanación integral"
     },
     {
       id: "terapia-integrativa-42",
-      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
-      alt: "Sesión Holística",
-      title: "Sesión Holística",
-      description: "Ambiente tranquilo y armonioso para la sanación integral"
+      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
+      alt: "Sanación Energética",
+      title: "Sanación Energética",
+      description: "Equilibrio y restauración del campo energético"
     },
     {
       id: "terapia-integrativa-52",
-      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154284/terapiaIntegrativa-holiticia-2_itvxcj.jpg",
-      alt: "Sesión Holística",
-      title: "Sesión Holística",
-      description: "Ambiente tranquilo y armonioso para la sanación integral"
+      url: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3724_bpugkm.jpg",
+      alt: "Conexión Espiritual",
+      title: "Conexión Espiritual",
+      description: "Armonización de cuerpo, mente y espíritu"
     }
   ]
 };
