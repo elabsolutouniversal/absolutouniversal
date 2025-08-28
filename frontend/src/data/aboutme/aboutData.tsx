@@ -152,6 +152,7 @@ export const aboutData: AboutData = {
         "Por este motivo, seguí investigando y estudiando otras disciplinas complementarias que trabajan no solo sobre la psique y el cuerpo físico, sino también a niveles energéticos y espirituales.",
         "Decidí formarme en terapia de radiestesia con péndulo hebreo y posteriormente me especialicé en Registros Akáshicos y Tarot Akáshico.",
         "Luego afiné todos estos conocimientos con disciplinas como el Tarot terapéutico Junguiano basado en la psicoterapia analítica de Carl Gustav Jung, y el Tarot para el desarrollo personal.",
+        "Es asi como surge mi metodo Sathya, donde todas estas herramientas son las que combino para abordar a mi clientes",
         "Todas estas herramientas son las que actualmente combino para abordar a mis clientes.",
         "Estoy convencida de que haber nacido humano es maravilloso, que nuestro ser es profundamente perfecto y que el cuerpo humano es también profundamente perfecto, con un sistema operativo bastante complejo. Mientras tenga vida, seguiré investigando en las profundidades de lo que significa ser humano y lo que implica haber nacido humano."
       ],
@@ -217,7 +218,7 @@ export const aboutData: AboutData = {
   },
   approach: {
     title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONCIENCIA",
-    subtitle: "Mi Método Integrado",
+    subtitle: "Mi Método <strong class='text-3xl text-pink-600'>SATHYA</strong>",
     comparisons: {
       traditional: {
         title: "Psicología Tradicional",

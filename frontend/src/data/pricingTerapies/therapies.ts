@@ -137,8 +137,9 @@ export const therapiesData: TherapiesData = {
   },
   
   pendulo: {
-    id: 'holistica',
-    name: "Sanación Integrativa Holística",
+    id: 'pendulo',
+    name: "Metodo SATHYA",
+    subtitle: "Sanación Integrativa Holística",
     description: "",
     image: "/images/sanacion-holistica.jpg",
     slug: "sanacion-integrativa-holistica",

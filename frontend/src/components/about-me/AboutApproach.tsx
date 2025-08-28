@@ -28,7 +28,10 @@ const AboutApproach: React.FC<AboutApproachProps> = ({ approach }) => {
           <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent md:text-4xl">
             {approach.title}
           </h2>
-          <p className="text-xl font-semibold text-purple-700">{approach.subtitle}</p>
+          <h3
+            className="text-3xl font-bold text-purple-700 mt-2 mb-8"
+            dangerouslySetInnerHTML={{ __html: approach.subtitle }}
+          />
         </div>
         
       
