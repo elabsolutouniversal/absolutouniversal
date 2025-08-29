@@ -129,7 +129,13 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.fusion.title}</h3>
             <div className="space-y-4 text-purple-700">
               {biography.fusion.content.map((p, idx) => (
-                <p key={idx} className="text-justify">{p}</p>
+                <p key={idx} className="text-justify">
+                  {typeof p === 'string' ? p.split(/\*\*(.*?)\*\*/).map((part, i) => 
+                    i % 2 === 1
+                      ? <span key={i} className="text-2xl font-normal bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent uppercase">{part}</span>
+                      : part
+                  ) : p}
+                </p>
               ))}
             </div>
           </div>

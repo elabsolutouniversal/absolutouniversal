@@ -1,4 +1,5 @@
 // aboutData.ts
+import React from 'react';
 
 interface StudyItem {
   title: string;
@@ -29,7 +30,7 @@ export interface AboutData {
     };
     fusion: {
       title: string;
-      content: string[];
+      content: (string | React.ReactElement)[];
       studies: StudyItem[];
     };
     integration: {
@@ -152,7 +153,7 @@ export const aboutData: AboutData = {
         "Por este motivo, seguí investigando y estudiando otras disciplinas complementarias que trabajan no solo sobre la psique y el cuerpo físico, sino también a niveles energéticos y espirituales.",
         "Decidí formarme en terapia de radiestesia con péndulo hebreo y posteriormente me especialicé en Registros Akáshicos y Tarot Akáshico.",
         "Luego afiné todos estos conocimientos con disciplinas como el Tarot terapéutico Junguiano basado en la psicoterapia analítica de Carl Gustav Jung, y el Tarot para el desarrollo personal.",
-        "Es asi como surge mi metodo Sathya, donde todas estas herramientas son las que combino para abordar a mi clientes",
+        "Así nace mi método: **SATHYA**, palabra en sánscrito que significa **VERDAD** en el pensamiento, la palabra y la acción. Su propósito es guiar a las personas hacia una vida coherente, entre lo que piensan, dicen y hacen. Para ello, integro todas las herramientas que domino, acompañando a cada persona en el camino de vivir en coherencia, lo que naturalmente conduce a la tranquilidad y a la verdadera felicidad.",
         "Todas estas herramientas son las que actualmente combino para abordar a mis clientes.",
         "Estoy convencida de que haber nacido humano es maravilloso, que nuestro ser es profundamente perfecto y que el cuerpo humano es también profundamente perfecto, con un sistema operativo bastante complejo. Mientras tenga vida, seguiré investigando en las profundidades de lo que significa ser humano y lo que implica haber nacido humano."
       ],
@@ -218,7 +219,7 @@ export const aboutData: AboutData = {
   },
   approach: {
     title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONCIENCIA",
-    subtitle: "Mi Método <strong class='text-3xl text-pink-600'>SATHYA</strong>",
+    subtitle: "Mi Método <strong class='text-xl text-pink-600'>Sathya</strong>",
     comparisons: {
       traditional: {
         title: "Psicología Tradicional",
