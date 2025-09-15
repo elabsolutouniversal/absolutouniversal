@@ -34,7 +34,7 @@ export default function Servicios({
                 Descubre mi <i>Método</i> <b>SATHYA</b>
              </h2>
              <p className="text-2xl font-lora-italic text-purple-500 max-w-4xl mx-auto my-6">
-              Sanación Ancestral, Transpersonal, Holística y Akasha
+              Sanación  Transpersonal, Holística y Akasha
             </p>
           
             {showDescription && (
