@@ -30,10 +30,10 @@ const SanacionEnergetica = () => {
           <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
         </div>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 md:mb-4 leading-tight">
-          Tratamiento de Limpieza Energetica Inicial
+          Tratamiento de Limpieza Energetica Basico
         </h2>
                  <h3 className="text-base sm:text-lg md:text-xl text-purple-700 font-semibold mb-3 md:mb-4 px-2">
-           Tratamiento Inicial Básico de 5 Sesiones orientadas para establecer tu Bienestar.
+           Tratamiento  Básico de 5 Sesiones orientadas para establecer tu Bienestar.
          </h3>
          <p className="text-sm sm:text-base text-purple-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
            Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio

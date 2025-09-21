@@ -12,7 +12,7 @@ export const therapiesData: TherapiesData = {
    packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Tratamiento de Limpieza Energética Inicial",
+        name: "Tratamiento de Limpieza Energética Basico",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 285,
         duration: "5 sesiones tratamiento base",
@@ -146,7 +146,7 @@ export const therapiesData: TherapiesData = {
    packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Tratamiento de Limpieza Energética Inicial",
+        name: "Tratamiento de Limpieza Energética Basico",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 285,
         duration: "5 sesiones tratamiento base",

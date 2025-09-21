@@ -52,7 +52,7 @@ export const consideracionesData: ConsideracionesData = {
     title: "Nuestro Protocolo de Sanación",
     stages: [
              {
-         title: "1. Tratamiento de Limpieza Energética Inicial",
+         title: "1. Tratamiento de Limpieza Energética Basico",
                  content: [
            "Este tratamiento está compuesto de 5 sesiones iniciales.",
            "Su objetivo es preparar tu campo energético eliminando bloqueos, energías estancadas y desequilibrios energeticos. Imagina este proceso como limpiar un jardín: se retiran las malas hierbas antes de plantar nuevas semillas.",

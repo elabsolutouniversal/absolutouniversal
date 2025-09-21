@@ -80,7 +80,7 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
 export const sesiones: SesionTerapiaIntegrativa[] = [
   {
     numero: '1–5',
-    titulo: 'Tratamiento de Limpieza Energética Inicial',
+    titulo: 'Tratamiento de Limpieza Energética Basico',
     descripcion: '5 Sesiones Enfocadas en la evaluación, diagnóstico, limpieza inicial y desbloqueo energético. Abordamos tus desafíos, necesidades y expectativas.',
     color: 'bg-gradient-to-r from-pink-100 to-purple-100',
     duracion: '90 min',
