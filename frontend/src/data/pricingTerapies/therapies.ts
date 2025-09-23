@@ -85,7 +85,7 @@ export const therapiesData: TherapiesData = {
         id: 'tarot-completa',
         name: "Sesión Tarot con Enfoque Terapéutico",
         description: "Consulta integral con enfoque terapéutico completo",
-        price: 60,
+        price: 70,
         pricePEN: 245, // Assuming 1 USD = 3.75 PEN
         duration: "1 hora",
         includes: [
