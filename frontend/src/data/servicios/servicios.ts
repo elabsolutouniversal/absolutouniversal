@@ -11,7 +11,7 @@ export const servicios: Servicio[] = [
           title: "Sanación integrativa holística",
     slug: "sanacion-integrativa-holistica",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
-    description: "El Metodo SATHAYA  combina recursos de la psicología moderna, terapias holisticas y los registros akashicos.",
+    description: "El Metodo SATHYA  combina recursos de la psicología moderna, terapias holisticas y los registros akashicos.",
   },
   // {
   //   title: "Lectura de Registros Akáshicos",
