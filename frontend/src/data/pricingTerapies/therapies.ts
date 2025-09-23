@@ -14,7 +14,8 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-sanacion',
         name: "Tratamiento de Limpieza Energética Basico",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
-        price: 285,
+        price: 245 ,
+        pricePEN: 860, // Assuming 1 USD = 3.75 PEN
         duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
@@ -29,7 +30,9 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
         description: "Servicio a domicilio para limpieza espacial",
-        price: 250,
+        price: 200,
+        pricePEN: 700.00, // Assuming 1 USD = 3.75 PEN
+        isStartingPrice: true,
         duration: "2 horas",
         includes: [
           "Diagnóstico energético del espacio",
@@ -44,6 +47,7 @@ export const therapiesData: TherapiesData = {
          name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
          description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
          price: 500,
+         pricePEN: 1875.00, // Assuming 1 USD = 3.75 PEN
          duration: "7 sesiones de  tratamiento",
                   includes: [
            "Incluye Tratamiento de Limpieza Energetica Inicial",
@@ -68,6 +72,7 @@ export const therapiesData: TherapiesData = {
         name: "1 Pregunta Rápida",
         description: "Respuesta clara y directa a una pregunta específica",
         price: 15,
+        pricePEN: 50, // Assuming 1 USD = 3.75 PEN
         duration: "15 min",
         includes: [
           "Respuesta Sí o No",
@@ -80,7 +85,8 @@ export const therapiesData: TherapiesData = {
         id: 'tarot-completa',
         name: "Sesión Tarot con Enfoque Terapéutico",
         description: "Consulta integral con enfoque terapéutico completo",
-        price: 70,
+        price: 60,
+        pricePEN: 245, // Assuming 1 USD = 3.75 PEN
         duration: "1 hora",
         includes: [
           "Lectura completa y profunda",
@@ -97,6 +103,7 @@ export const therapiesData: TherapiesData = {
         name: "Sesión Media Hora",
         description: "Exploración profunda de tu situación actual",
         price: 50,
+        pricePEN: 170, // Assuming 1 USD = 3.75 PEN
         duration: "30 min",
         includes: [
           "Múltiples preguntas",
@@ -111,6 +118,7 @@ export const therapiesData: TherapiesData = {
         name: "Sesión 15 Minutos",
         description: "Respuesta clara y directa a varias preguntas específicas",
         price: 30,
+        pricePEN: 100, // Assuming 1 USD = 3.75 PEN
         duration: "15 min",
         includes: [
           "Varias preguntas concretas",
@@ -124,6 +132,7 @@ export const therapiesData: TherapiesData = {
         name: "Lectura Anual Completa",
         description: "Predicciones y guía energética para todo el año",
         price: 85,
+        pricePEN: 297, // Assuming 1 USD = 3.75 PEN
         duration: "2 horas",
         includes: [
           "Tirada anual mes por mes",
@@ -139,7 +148,7 @@ export const therapiesData: TherapiesData = {
   pendulo: {
     id: 'pendulo',
     name: "Metodo SATHYA",
-    subtitle: "Sanación Integrativa Holística",
+    subtitle: "Sanacion Ancestral, Transpersonal, Holistica y Akasha",
     description: "",
     image: "/images/sanacion-holistica.jpg",
     slug: "sanacion-integrativa-holistica",
@@ -148,7 +157,8 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-sanacion',
         name: "Tratamiento de Limpieza Energética Basico",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
-        price: 285,
+        price: 245 ,
+        pricePEN: 860, // Assuming 1 USD = 3.75 PEN
         duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
@@ -163,7 +173,9 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
         description: "Servicio a domicilio para limpieza espacial",
-        price: 250,
+        price: 200,
+        pricePEN: 700.00, // Assuming 1 USD = 3.75 PEN
+        isStartingPrice: true,
         duration: "2 horas",
         includes: [
           "Diagnóstico energético del espacio",
@@ -178,6 +190,7 @@ export const therapiesData: TherapiesData = {
          name: "Limpieza y curación energética completa contra daños energéticos profundos , brujería, amarres , y magias.",
          description: "Combinación poderosa: se eliminan influencias negativas externas (daños, brujería y amarres) y se integra una sanación energética profunda para restaurar, proteger y alinear tu campo energético en su totalidad.",
          price: 500,
+         pricePEN: 1875.00, // Assuming 1 USD = 3.75 PEN
          duration: "7 sesiones de  tratamiento",
                   includes: [
            "Incluye Tratamiento de Limpieza Energetica Inicial",

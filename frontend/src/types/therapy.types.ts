@@ -4,6 +4,8 @@ export interface TherapyPackage {
   name: string;
   description: string;
   price: number;
+  pricePEN?: number; // Precio en Soles Peruanos
+  isStartingPrice?: boolean; // Indicates if the price is a starting price
   originalPrice?: number;
   duration: string;
   includes: string[];

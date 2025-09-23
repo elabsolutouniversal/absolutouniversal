@@ -3,6 +3,7 @@ export interface TarotPlan {
   name: string;
   duration: string;
   price: number;
+  pricePEN?: number; // Precio en Soles Peruanos
   currency: string;
   description: string;
   features: string[];

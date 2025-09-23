@@ -9,7 +9,9 @@ const TarotAkashico: React.FC = () => {
 
   const handleBooking = () => {
     const whatsappNumber = "51962305362"; // Reemplaza con tu número de WhatsApp
-    const message = `🌟 ¡Hola! Estoy interesado/a en reservar una sesión de Tarot Akáshico.\n\n• Servicio: Sesión Completa\n• Inversión: $75\n\n¿Podríamos coordinar una fecha? ✨`;
+    const priceUSD = 75;
+    const pricePEN = 265; // Assuming 1 USD = 3.75 PEN
+    const message = `🌟 ¡Hola! Estoy interesado/a en reservar una sesión de Tarot Akáshico.\n\n• Servicio: Sesión Completa\n• Inversión: $${priceUSD} (S/ ${pricePEN.toFixed(2)})\n\n¿Podríamos coordinar una fecha? ✨`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -61,6 +63,9 @@ const TarotAkashico: React.FC = () => {
             <p className="text-gray-500 mt-1">1 hora y 30 minutos</p>
             <div className="my-6">
               <span className="text-5xl font-bold text-indigo-600">$75</span>
+              <span className="text-lg text-gray-500 ml-2">
+                (S/ 265)
+              </span>
             </div>
           </div>
           <div className="mb-6">

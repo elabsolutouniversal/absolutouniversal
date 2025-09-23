@@ -11,6 +11,7 @@ export interface Course {
   image: string;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
   price: string;
+  pricePEN?: string; // Precio en Soles Peruanos
   precioOriginal?: string; // Para mostrar descuentos
   incluye?: string[]; // Qué incluye el curso
 }

@@ -48,6 +48,11 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
             <span className="text-lg text-gray-500">{plan.currency}</span>
             <span className="text-5xl font-bold text-fuchsia-600 mx-2">{plan.price}</span>
           </div>
+          {plan.pricePEN && (
+            <div className="text-center text-gray-500 mt-2">
+              (Aprox. S/ {plan.pricePEN.toFixed(2)})
+            </div>
+          )}
         </div>
 
         {/* Description */}
