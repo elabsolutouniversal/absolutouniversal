@@ -27,7 +27,7 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
       {/* Card Container */}
       <div className={`
         h-full rounded-3xl p-6 md:p-8 transition-all duration-300
-        ${plan.recommended 
+        ${ plan.recommended 
           ? 'bg-gradient-to-br from-pink-50 to-fuchsia-50 border-2 border-fuchsia-300' 
           : 'bg-white border border-pink-200'
         }
