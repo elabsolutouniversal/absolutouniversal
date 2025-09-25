@@ -262,7 +262,7 @@ export const aboutData: AboutData = {
         {
           title: "Formación en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustav Jung",
           description: "Integración de arquetipos y psicología profunda",
-          longDescription: "El Tarot Terapéutico, bajo el enfoque junguiano, emplea arquetipos y símbolos del tarot para iluminar el inconsciente, facilitando el autoconocimiento, la integración personal y la individuación más allá de la adivinación.",
+          longDescription: "El Tarot Terapéutico, bajo el enfoque junguiano, emplea arquetipos y símbolos del tarot para iluminar el inconsciente, facilitando el autoconocimiento, la integración personal y la individuación más allá de la adivinación. Las herramientas que yo utilizo son Tarot Egipcio, Tarot Osho y Tarot Rider-Waite.",
           slug: "formacion-en-tarot-terapeutico-desde-el-enfoque-de-la-psicologia-analitica-de-carl-gustav-jung",
           icon: "🔍"
         }
