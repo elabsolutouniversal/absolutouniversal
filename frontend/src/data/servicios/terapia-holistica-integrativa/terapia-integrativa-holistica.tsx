@@ -89,7 +89,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
   {
     numero: '6',
     titulo: 'Tratamiento Personalizado',
-    descripcion: 'Sesión que marca el inicio del tratamiento personalizado específico definido en las sesiones previas.',
+    descripcion: 'El tratamiento personalizado, esta orientado a tratar temas especificos y/o situaciones de forma individual para cada persona,ya sea un problema de salud, fisico emocional o espiritual o algun desafio de vida, asi como algùn problema especifico a nivel personal , economico y/o espiritual.',
     color: 'bg-gradient-to-r from-purple-100 to-indigo-100',
     duracion: '1 hora',
     frecuencia: '',
