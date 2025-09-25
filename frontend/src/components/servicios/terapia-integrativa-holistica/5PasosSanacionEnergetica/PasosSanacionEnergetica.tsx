@@ -18,6 +18,7 @@ const SanacionEnergetica = () => {
   };
 
   return (
+    
     <section className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12">
       {/* HEADER */}
       <motion.div

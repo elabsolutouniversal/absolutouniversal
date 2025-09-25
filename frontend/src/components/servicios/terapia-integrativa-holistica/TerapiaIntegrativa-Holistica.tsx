@@ -74,9 +74,9 @@ export default function TerapiaIntegrativaHolistica() {
             <>
               <p className="text-purple-700 leading-relaxed text-justify font-medium">
               El metodo SATHYA integra y combina  técnicas de {' '}
-                <span className="font-semibold text-purple-600">Psicología Cientifica</span>,{' '}
-                <span className="font-semibold text-indigo-600">Terapias de Radiestecia con Pendulo Hebreo</span> y{' '}
-                <span className="font-semibold text-pink-600">y lectura de tarot terapeutico y akashico</span>.
+                <span className="font-semibold text-purple-600">Psicología Cientifica</span>{' '}
+                <span className="font-semibold text-indigo-600">Terapia de Radiestecia con Pendulo Hebreo</span> y{' '}
+                <span className="font-semibold text-pink-600"> lectura de tarot terapeutico y akashico</span>.
                 Este tratamiento está diseñado para abrir tu camino hacia el máximo bienestar,
                 abordando tanto tus necesidades emocionales, fisicas y energèticas, iniciando
                 un profundo proceso de autoconocimiento y armonía para vivir en verdad y coherencia.
@@ -85,11 +85,8 @@ export default function TerapiaIntegrativaHolistica() {
           }
         />
 
-        {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
-        <SanacionEnergetica />
-
-        {/* Proceso */}
-        <section id="proceso">
+          {/* Proceso */}
+          <section id="proceso">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,6 +110,10 @@ export default function TerapiaIntegrativaHolistica() {
           </div>
         </section>
 
+        {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
+        <SanacionEnergetica />
+
+      
         {/* Avisos Importantes */}
         <ConsideracionesTratamiento />
 
