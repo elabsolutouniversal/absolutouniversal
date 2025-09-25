@@ -80,7 +80,7 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
 export const sesiones: SesionTerapiaIntegrativa[] = [
   {
     numero: '1–5',
-    titulo: 'Tratamiento de Limpieza Energética Basico',
+    titulo: 'Etapa 1: Tratamiento de Limpieza Energética Basico',
     descripcion: '5 Sesiones Enfocadas en la evaluación, diagnóstico, limpieza inicial y desbloqueo energético. Abordamos tus desafíos, necesidades y expectativas.',
     color: 'bg-gradient-to-r from-pink-100 to-purple-100',
     duracion: '90 min',
@@ -88,7 +88,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
   },
   {
     numero: '6',
-    titulo: 'Tratamiento Personalizado',
+    titulo: 'Etapa 2: Tratamiento Personalizado',
     descripcion: 'El tratamiento personalizado, esta orientado a tratar temas especificos y/o situaciones de forma individual para cada persona,ya sea un problema de salud, fisico emocional o espiritual o algun desafio de vida, asi como algùn problema especifico a nivel personal , economico y/o espiritual.',
     color: 'bg-gradient-to-r from-purple-100 to-indigo-100',
     duracion: '1 hora',
