@@ -236,7 +236,7 @@ export const aboutData: AboutData = {
           description: "Enfoque holístico centrado en el aquí y ahora",
           longDescription: "La psicoterapia Gestalt es un enfoque humanista que promueve la autoconciencia y la responsabilidad personal, centrándose en la experiencia presente para integrar pensamientos, sentimientos y acciones.",
           slug: "especializacion-en-psicoterapia-gestalt",
-          icon: "🌈"
+          icon: "⏳"
         },
         {
           title: "Terapeuta de Radiestesia con Péndulo Hebreo",
@@ -255,7 +255,7 @@ export const aboutData: AboutData = {
         {
           title: "Formación en Tarot Akáshico",
           description: "Lectura profunda de patrones kármicos y espirituales",
-          longDescription: "El Tarot Akáshico utiliza las cartas como un portal simbólico para conectar con los Registros Akáshicos, desvelando patrones kármicos y espirituales que influyen en el presente para guía y sanación. Las herramientas que yo utilizo son Tarot Egipcio, Tarot Osho y Tarot Rider-Waite.",
+          longDescription: "El Tarot Akáshico utiliza las cartas como un portal simbólico para conectar con los Registros Akáshicos, desvelando patrones kármicos y espirituales que influyen en el presente para guía y sanación. Utilizo como herramienta el Tarot Akáshico.",
           slug: "formacion-en-tarot-akashico",
           icon: "🃏"
         },
