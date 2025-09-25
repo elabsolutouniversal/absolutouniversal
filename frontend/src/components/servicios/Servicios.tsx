@@ -39,13 +39,10 @@ export default function Servicios({
           
             {showDescription && (
               <p className="text-xl font-lora text-purple-700 max-w-3xl mx-auto mb-8">
-             El Método SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral (Psicología Clínica, Terapias Holísticas, Registros Akáshicos).
+             El Método SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral (Psicología Clínica, Terapia de Radiestesia con Pèndulo Hebreo , Tarot Terapéutico y Akáshico).
               </p>
             
-            )}
-              <h2 className="text-4xl md:text-5xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Herramientas que integro en las sesiones
-            </h2>
+            )}  
           </div>
         )}
 
