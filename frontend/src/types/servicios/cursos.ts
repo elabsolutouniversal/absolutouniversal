@@ -9,7 +9,7 @@ export interface Course {
   fechaInicio: string;
   duracion: string;
   image: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  icon: string;
   price: string;
   pricePEN?: string; // Precio en Soles Peruanos
   precioOriginal?: string; // Para mostrar descuentos
