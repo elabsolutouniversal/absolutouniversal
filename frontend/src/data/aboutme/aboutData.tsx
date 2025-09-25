@@ -4,13 +4,16 @@ import React from 'react';
 interface StudyItem {
   title: string;
   description: string;
+  longDescription: string; // Re-adding longDescription
+  slug: string; // Re-adding slug
+  icon: string;
 }
 
 export interface AboutData {
   name: string;
   title: string;
   license: string;
-  specialties: string[];
+  specialties: { title: string; longDescription: string }[];
   tagline: string;
   images: {
     profile: string;
@@ -123,7 +126,20 @@ export const aboutData: AboutData = {
   name: "Lic. Nunash Dahiana  Velásquez Guerrero",
   title: "Psicóloga Clínica",
   license: "CPSP N.°12004 - CDR I Lima y Callao",
-  specialties: ["Terapeuta Transpersonal", "Canalizadora Psíquica", "Especialista en Curaciones Energéticas"],
+  specialties: [
+    {
+      title: "Terapeuta Transpersonal",
+      longDescription: "Acompañamiento más allá del ego, explorando dimensiones espirituales para sanación profunda y propósito de vida."
+    },
+    {
+      title: "Canalizadora Psíquica",
+      longDescription: "Acceso a información intuitiva para guiar y conectar con sabiduría interior, facilitando decisiones y crecimiento."
+    },
+    {
+      title: "Especialista en Curaciones Energéticas",
+      longDescription: "Trabajo con el campo áurico para detectar y liberar bloqueos, restaurando el flujo vital y promoviendo sanación integral."
+    }
+  ],
   tagline: "",
   images: {
     profile: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
@@ -160,59 +176,95 @@ export const aboutData: AboutData = {
              studies: [
          {
            title: "Radiestesia con péndulo hebreo",
-           description: "Técnica ancestral para diagnóstico energético"
+           description: "Técnica ancestral para diagnóstico energético",
+           longDescription: "La radiestesia con péndulo hebreo es una técnica que utiliza un péndulo con letras hebreas para detectar y armonizar desequilibrios energéticos en el campo áurico, promoviendo la sanación física, emocional y espiritual.",
+           slug: "radiestesia-con-pendulo-hebreo",
+           icon: "🔮"
          },
          {
            title: "Psicotarot desde el enfoque terapéutico de Carl Gustav Jung",
-           description: "Integración de arquetipos y psicología profunda"
+           description: "Integración de arquetipos y psicología profunda",
+           longDescription: "El psicotarot, basado en la psicología de Jung, utiliza las cartas como un espejo del inconsciente para explorar arquetipos y símbolos, facilitando el autoconocimiento y el crecimiento personal.",
+           slug: "psicotarot-desde-el-enfoque-terapeutico-de-carl-gustav-jung",
+           icon: "🧠"
          },
          {
            title: "Terapia Transpersonal",
-           description: "Abordaje que trasciende el ego personal"
+           description: "Abordaje que trasciende el ego personal",
+           longDescription: "La terapia transpersonal es un enfoque que integra dimensiones espirituales y trascendentes de la experiencia humana para la sanación profunda, el autodescubrimiento y la conexión con un propósito mayor.",
+           slug: "terapia-transpersonal",
+           icon: "✨"
          },
          {
            title: "Registros Akáshicos",
-           description: "Acceso a la memoria universal del alma"
+           description: "Acceso a la memoria universal del alma",
+           longDescription: "Los Registros Akáshicos son la 'biblioteca' energética universal que contiene la información de todas las experiencias del alma, ofreciendo claridad y sanación de patrones pasados y presentes.",
+           slug: "registros-akashicos",
+           icon: "📚"
          },
          {
            title: "Integración de simbología y arquetipos",
-           description: "Comprensión profunda de patrones inconscientes"
+           description: "Comprensión profunda de patrones inconscientes",
+           longDescription: "La integración de simbología y arquetipos es el estudio de patrones universales y símbolos que emergen del inconsciente, facilitando la comprensión de comportamientos y la transformación personal.",
+           slug: "integracion-de-simbologia-y-arquetipos",
+           icon: "🗝️"
          },
          {
            title: "Lectura energética intuitiva",
-           description: "Percepción y sanación del campo energético"
+           description: "Percepción y sanación del campo energético",
+           longDescription: "La lectura energética intuitiva es la capacidad de percibir y trabajar con las vibraciones sutiles del campo áurico para identificar y liberar bloqueos, promoviendo el equilibrio y bienestar.",
+           slug: "lectura-energetica-intuitiva",
+           icon: "⚡"
          }
        ]
     },
     integration: {
       title: "Especializaciones:",
       content: [
-      ""
+      "Conoce mis áreas de estudio y cómo cada una enriquece mi práctica para tu bienestar."
       ],
       studies: [
         {
           title: "Formación Profesional en Psicología Clínica",
-          description: "Base científica y metodológica para el abordaje terapéutico"
+          description: "Base científica y metodológica para el abordaje terapéutico",
+          longDescription: "La psicología clínica es una rama que se enfoca en el diagnóstico, tratamiento y prevención de trastornos mentales, emocionales y del comportamiento, utilizando métodos científicos y terapéuticos.",
+          slug: "formacion-profesional-en-psicologia-clinica",
+          icon: "🧠"
         },
         {
           title: "Especialización en Psicoterapia Gestalt",
-          description: "Enfoque holístico centrado en el aquí y ahora"
+          description: "Enfoque holístico centrado en el aquí y ahora",
+          longDescription: "La psicoterapia Gestalt es un enfoque humanista que promueve la autoconciencia y la responsabilidad personal, centrándose en la experiencia presente para integrar pensamientos, sentimientos y acciones.",
+          slug: "especializacion-en-psicoterapia-gestalt",
+          icon: "🌈"
         },
         {
           title: "Terapeuta de Radiestesia con Péndulo Hebreo",
-          description: "Técnica ancestral para diagnóstico y sanación energética"
+          description: "Técnica ancestral para diagnóstico y sanación energética",
+          longDescription: "La radiestesia con péndulo hebreo es una técnica que utiliza un péndulo con letras hebreas para detectar y armonizar desequilibrios energéticos en el campo áurico, promoviendo la sanación física, emocional y espiritual.",
+          slug: "terapeuta-de-radiestesia-con-pendulo-hebreo",
+          icon: "🔮"
         },
         {
           title: "Formación en Registros Akáshicos",
-          description: "Acceso a la memoria universal del alma"
+          description: "Acceso a la memoria universal del alma",
+          longDescription: "Los Registros Akáshicos son la 'biblioteca' energética universal que contiene la información de todas las experiencias del alma, ofreciendo claridad y sanación de patrones pasados y presentes.",
+          slug: "formacion-en-registros-akashicos",
+          icon: "📚"
         },
         {
           title: "Formación en Tarot Akáshico",
-          description: "Lectura profunda de patrones kármicos y espirituales"
+          description: "Lectura profunda de patrones kármicos y espirituales",
+          longDescription: "El Tarot Akáshico utiliza las cartas como un portal simbólico para conectar con los Registros Akáshicos, desvelando patrones kármicos y espirituales que influyen en el presente para guía y sanación. Las herramientas que yo utilizo son Tarot Egipcio, Tarot Osho y Tarot Rider-Waite.",
+          slug: "formacion-en-tarot-akashico",
+          icon: "🃏"
         },
         {
           title: "Formación en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustav Jung",
-          description: "Integración de arquetipos y psicología profunda"
+          description: "Integración de arquetipos y psicología profunda",
+          longDescription: "El Tarot Terapéutico, bajo el enfoque junguiano, emplea arquetipos y símbolos del tarot para iluminar el inconsciente, facilitando el autoconocimiento, la integración personal y la individuación más allá de la adivinación.",
+          slug: "formacion-en-tarot-terapeutico-desde-el-enfoque-de-la-psicologia-analitica-de-carl-gustav-jung",
+          icon: "🔍"
         }
       ]
     }

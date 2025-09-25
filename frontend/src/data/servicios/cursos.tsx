@@ -1,5 +1,5 @@
 import { Course } from "@/types/servicios/cursos";
-import { BookOpen } from "lucide-react";
+// import { BookOpen } from "lucide-react";
 
 export const courses: Course[] = [
   {

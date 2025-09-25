@@ -5,7 +5,7 @@ import { MessageCircle, Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, Refr
 import AccordionItem from './AccordionItem';
 import { penduloData, galleryData } from '@/data/servicios/pendulo';
 import SimpleGallery from './SimpleGalery';
-import TherapyPricing from '@/components/therapy/TherapyPricing';
+// import TherapyPricing from '@/components/therapy/TherapyPricing';
 
 const BenefitIcon = ({ index }: { index: number }) => {
   const icons = [

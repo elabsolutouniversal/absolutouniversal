@@ -1,17 +1,20 @@
-// components/about/AboutHero.tsx
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { ChevronDown } from 'lucide-react';
 
 interface AboutHeroProps {
   name: string;
   title: string;
   license: string;
-  specialties: string[];
+  specialties: { title: string; longDescription: string }[];
   tagline: string;
   profileImage?: string;
 }
 
-const AboutHero: React.FC<AboutHeroProps> = ({
+const AboutHero: React.FC<AboutHeroProps> = (
+  {
   name,
   title,
   license,
@@ -19,6 +22,12 @@ const AboutHero: React.FC<AboutHeroProps> = ({
   tagline,
   profileImage,
 }) => {
+  const [expandedSpecialty, setExpandedSpecialty] = useState<string | null>(null);
+
+  const toggleExpand = (title: string) => {
+    setExpandedSpecialty(expandedSpecialty === title ? null : title);
+  };
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-pink-50 via-rose-50 to-purple-50 py-16 md:py-24">
       {/* Background decoration */}
@@ -61,15 +70,30 @@ const AboutHero: React.FC<AboutHeroProps> = ({
             {license}
           </p>
 
-                    {/* Specialties */}
-          <div className="mb-8 flex flex-wrap justify-center gap-3">
+          {/* Specialties */}
+          <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {specialties.map((specialty, index) => (
-              <span
+              <div
                 key={index}
-                className="rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-lora-medium text-purple-600 shadow-lg border border-purple-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="flex flex-col items-center p-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-md border border-purple-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                onClick={() => toggleExpand(specialty.title)}
               >
-                {specialty}
-              </span>
+                <div className="flex items-center justify-between w-full">
+                  <span className="text-sm font-lora-medium text-purple-600 text-center">
+                    {specialty.title}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-purple-600 transition-transform duration-300 ${
+                      expandedSpecialty === specialty.title ? 'rotate-180' : ''
+                    }`}
+                  />
+                </div>
+                {expandedSpecialty === specialty.title && (
+                  <p className="mt-4 text-xs text-gray-700 leading-relaxed text-justify">
+                    {specialty.longDescription}
+                  </p>
+                )}
+              </div>
             ))}
           </div>
 

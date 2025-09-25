@@ -1,7 +1,7 @@
 import React from 'react'
 import Servicios from '@/components/servicios/Servicios';
-import TestimoniosSection from '@/components/testimonios/TestimoniosSection';
-import { testimonios } from '@/data/testimonios/testimonios';
+// import TestimoniosSection from '@/components/testimonios/TestimoniosSection';
+// import { testimonios } from '@/data/testimonios/testimonios';
 
 export default function Serviciospage() {
   return (

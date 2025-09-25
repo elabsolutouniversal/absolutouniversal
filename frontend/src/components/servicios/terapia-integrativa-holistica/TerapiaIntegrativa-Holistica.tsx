@@ -8,7 +8,7 @@ import BloqueTexto from '@/components/servicios/terapia-integrativa-holistica/Bl
 import CardSesion from '@/components/servicios/terapia-integrativa-holistica/Proceso/CardSesion';
 import CardBeneficio from '@/components/servicios/terapia-integrativa-holistica/Beneficios/CardBeneficio';
 import Lightbox from '@/components/servicios/terapia-integrativa-holistica/Galeria/Lightbox';
-import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
+// import CTA from '@/components/servicios/terapia-integrativa-holistica/CTA';
 import { fadeInUp, staggerContainer } from '@/components/servicios/terapia-integrativa-holistica/Animations';
 import FAQSection from '@/components/FAQ';
 

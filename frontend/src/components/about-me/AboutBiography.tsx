@@ -1,18 +1,21 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { AboutData } from '@/data/aboutme/aboutData'; // Ajusta la ruta según tu proyecto
 import { 
-  Brain, 
-  Heart, 
-  Sparkles, 
-  BookOpen, 
-  Eye, 
-  Zap,
-  GraduationCap,
-  Users,
-  Target,
-  Star
+  // Brain, 
+  // Heart, 
+  // Sparkles, 
+  // BookOpen, 
+  // Eye, 
+  // Zap,
+  // GraduationCap,
+  // Users,
+  // Target,
+  // Star
 } from 'lucide-react';
+// import Link from 'next/link';
 
 interface AboutBiographyProps {
   biography: AboutData['biography'];
@@ -39,27 +42,10 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
     );
   };
 
-  const StudyIcon: React.FC<{ title: string }> = ({ title }) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'Formacion Profesional en Psicología Clínica': <GraduationCap className="w-6 h-6" />,
-      'Especialización en Psicoterapia Gestalt': <Users className="w-6 h-6" />,
-      'Terapista de Radiestecia con Péndulo Hebreo': <Target className="w-6 h-6" />,
-      'Formacion en Registros Akáshicos': <BookOpen className="w-6 h-6" />,
-      'Formacion en Tarot Akashicos': <Sparkles className="w-6 h-6" />,
-      'Formacion en Tarot Terapéutico desde el enfoque de la psicología analítica de Carl Gustavo Jung': <Brain className="w-6 h-6" />,
-      'Radiestesia con péndulo hebreo': <Target className="w-6 h-6" />,
-      'Psicotarot desde el enfoque terapéutico de Carl Gustav Jung': <Brain className="w-6 h-6" />,
-      'Terapia Transpersonal': <Heart className="w-6 h-6" />,
-      'Registros Akáshicos': <BookOpen className="w-6 h-6" />,
-      'Integración de simbología y arquetipos': <Eye className="w-6 h-6" />,
-      'Lectura energética intuitiva': <Zap className="w-6 h-6" />
-    };
+  const [expandedStudy, setExpandedStudy] = useState<string | null>(null);
 
-    return (
-      <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 border border-purple-200/50">
-        {iconMap[title] || <Star className="w-6 h-6" />}
-      </div>
-    );
+  const toggleExpand = (title: string) => {
+    setExpandedStudy(expandedStudy === title ? null : title);
   };
 
   return (
@@ -163,14 +149,32 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             </div>
                          <div className="grid gap-4 mt-6">
                {biography.integration.studies.map((study, idx) => (
-                 <div key={idx} className="flex items-center gap-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-100/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                   <div className="flex-shrink-0">
-                     <StudyIcon title={study.title} />
+                 <div key={idx} className="flex flex-col gap-2 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-100/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                   onClick={() => toggleExpand(study.title)}>
+                   <div className="flex items-center gap-4">
+                     <div className="flex-shrink-0 text-3xl">
+                       {study.icon}
+                     </div>
+                     <div className="flex-1">
+                       <h4 className="font-lora-semibold text-purple-800 text-sm mb-1">{study.title}</h4>
+                       <p className="text-purple-600 text-xs font-lora">{study.description}</p>
+                     </div>
+                     {/* Toggle icon */}
+                     <svg
+                       className={`w-5 h-5 text-purple-600 transition-transform duration-300 ${expandedStudy === study.title ? 'rotate-180' : ''}`}
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                       xmlns="http://www.w3.org/2000/svg"
+                     >
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                     </svg>
                    </div>
-                   <div className="flex-1">
-                     <h4 className="font-lora-semibold text-purple-800 text-sm mb-1">{study.title}</h4>
-                     <p className="text-purple-600 text-xs font-lora">{study.description}</p>
-                   </div>
+                   {expandedStudy === study.title && (
+                     <div className="mt-4 text-sm text-gray-700 bg-purple-50 p-3 rounded-md">
+                       {study.longDescription}
+                     </div>
+                   )}
                  </div>
                ))}
              </div>
