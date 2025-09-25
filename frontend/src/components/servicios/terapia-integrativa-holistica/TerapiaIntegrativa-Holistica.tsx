@@ -159,7 +159,7 @@ export default function TerapiaIntegrativaHolistica() {
 
       <PenduloHebreo />
 
-      <CTA />
+      {/* <CTA /> */}
 
       {/* Lightbox */}
       <AnimatePresence>
