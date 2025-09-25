@@ -8,7 +8,7 @@ export interface Servicio {
 
 export const servicios: Servicio[] = [
   {
-          title: "Sanación integrativa holística",
+          title: "Sanación Transpersonal, Holística y Akasha",
     slug: "sanacion-integrativa-holistica",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
     description: "El Metodo SATHYA  combina recursos de la psicología moderna, terapias holisticas y los registros akashicos.",
