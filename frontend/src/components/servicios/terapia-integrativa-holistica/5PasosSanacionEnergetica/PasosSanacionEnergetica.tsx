@@ -20,6 +20,7 @@ const SanacionEnergetica = () => {
   return (
     
     <section className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12">
+      <h1 className='text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 md:mb-6'>Etapa 1</h1>
       {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -27,6 +28,7 @@ const SanacionEnergetica = () => {
         viewport={{ once: true }}
         className="text-center mb-8 md:mb-12"
       >
+        
         <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4 md:mb-6">
           <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
         </div>
@@ -130,6 +132,14 @@ const SanacionEnergetica = () => {
           );
         })}
       </motion.div>
+
+      <section className='mt-10 text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 md:mb-6'>
+        Etapa 2: Tratamiento Personalizado
+
+        <p className='text-purple-700 leading-relaxed text-xl text-justify font-medium m-10'>
+        Para esta etapa es necesario haber culminado satisfactoriamente la etapa 1  En el tratamiento personalizado se identifica y se trata un tema especifico o situacion de vida de manera individual para cada tipo de persona sea un desafio de salud, fisica o emocional o algùn desafio de vida especifico a nivel personal, economico y/o espiritual.
+        </p>
+      </section>
 
       {/* CALL TO ACTION */}
       <motion.div

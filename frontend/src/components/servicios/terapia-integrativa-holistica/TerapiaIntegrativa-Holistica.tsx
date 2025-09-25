@@ -109,7 +109,7 @@ export default function TerapiaIntegrativaHolistica() {
             ))}
           </div>
         </section>
-
+       
         {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
         <SanacionEnergetica />
 
