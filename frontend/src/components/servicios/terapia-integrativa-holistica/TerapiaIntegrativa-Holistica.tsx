@@ -75,8 +75,8 @@ export default function TerapiaIntegrativaHolistica() {
               <p className="text-purple-700 leading-relaxed text-justify font-medium">
               El metodo SATHYA integra y combina  técnicas de {' '}
                 <span className="font-semibold text-purple-600">Psicología Cientifica</span>,{' '}
-                <span className="font-semibold text-indigo-600">Terapias Holisticas</span> y{' '}
-                <span className="font-semibold text-pink-600">Lecutra de Registros Askashicos</span>.
+                <span className="font-semibold text-indigo-600">Terapias de Radiestecia con Pendulo Hebreo</span> y{' '}
+                <span className="font-semibold text-pink-600">y lectura de tarot terapeutico y akashico</span>.
                 Este tratamiento está diseñado para abrir tu camino hacia el máximo bienestar,
                 abordando tanto tus necesidades emocionales, fisicas y energèticas, iniciando
                 un profundo proceso de autoconocimiento y armonía para vivir en verdad y coherencia.
