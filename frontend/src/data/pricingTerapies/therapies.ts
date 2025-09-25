@@ -5,7 +5,7 @@ export const therapiesData: TherapiesData = {
   holistica: {
     id: 'holistica',
     name: "Metodo SATHYA",
-    subtitle: "Sanacion Ancestral, Transpersonal, Holistica y Akasha",
+    subtitle: "Sanacion Transpersonal, Holistica y Akasha",
     description: "",
     image: "/images/sanacion-holistica.jpg",
     slug: "sanacion-integrativa-holistica",
