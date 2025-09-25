@@ -14,12 +14,12 @@ export default function Serviciospage() {
             showViewAllButton={false}
           />
          
-           <TestimoniosSection
+           {/* <TestimoniosSection
                 testimonios={testimonios}
                 itemsPerPage={6}
                 title="Experiencias que transforman vidas"
                 subtitle="Testimonios reales de personas que han encontrado claridad, sanación y transformación a través de nuestros servicios especializados"
-            />
+            /> */}
            
         </div>
       </main>
