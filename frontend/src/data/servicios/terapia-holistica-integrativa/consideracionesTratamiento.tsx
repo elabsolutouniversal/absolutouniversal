@@ -52,7 +52,7 @@ export const consideracionesData: ConsideracionesData = {
     title: "Nuestro Protocolo de Sanación",
     stages: [
              {
-         title: "1. Tratamiento de Limpieza Energética Basico",
+         title: "Etapa 1. Tratamiento de Limpieza Energética Basico",
                  content: [
            "Este tratamiento está compuesto de 5 sesiones iniciales.",
            "Su objetivo es preparar tu campo energético eliminando bloqueos, energías estancadas y desequilibrios energeticos. Imagina este proceso como limpiar un jardín: se retiran las malas hierbas antes de plantar nuevas semillas.",
@@ -60,7 +60,7 @@ export const consideracionesData: ConsideracionesData = {
          ]
       },
       {
-        title: "2. Profundización y Tratamiento Especializado",
+        title: "Etapa 2. Profundización y Tratamiento Especializado",
         content: [
           "Según los resultados de los análisis, testeos y limpieza de la fase inicial, podría ser necesario continuar con sesiones adicionales especializadas. Estas están orientadas a desafíos específicos: salud física, emocional, espiritual u objetivos personales.",
                      "En casos de daños energéticos profundos como brujería, amarres o trabajos de magia, se recomienda adquirir el paquete 'Limpieza y Sanación Energética Integral contra Daños, Brujería, Amarres y Trabajos de Magia', que incluye obligatoriamente la etapa inicial."

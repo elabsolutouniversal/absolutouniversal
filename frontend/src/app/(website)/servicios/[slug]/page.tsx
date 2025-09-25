@@ -5,12 +5,14 @@ import PsicoEducacion from '@/components/servicios/psicoEducacion/PsicoEducacion
 import TarotPredictivo from '@/components/servicios/tarotPredictivo/TarotPredictivo';
 import TerapiaIntegrativaHolistica from '@/components/servicios/terapia-integrativa-holistica/TerapiaIntegrativa-Holistica';
 import TarotAkashico from '@/components/servicios/tarotAkashico/TarotAkashico';
+import MetodoSathya from '@/components/servicios/metodoSathya/MetodoSathya';
 // import LecturaRegistrosAkashicos from '@/components/servicios/lecturaRegistrosAkashicos/LecturaRegistrosAkashicos';
 
 const componentBySlug: Record<string, React.ComponentType> = {
   'sanacion-integrativa-holistica': TerapiaIntegrativaHolistica,
   'tarot-predictivo': TarotPredictivo,
   'psicoeducacion-consciente': PsicoEducacion,
+  'metodoSathya': MetodoSathya,
   'pendulo-hebreo': PenduloHebreo,
   'tarot-akashico': TarotAkashico,
   // 'lectura-registros-akashicos': LecturaRegistrosAkashicos,

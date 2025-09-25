@@ -14,10 +14,11 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
   const links = [
     { href: "/home", label: "Inicio" },
     { href: "/sobre-mi", label: "Sobre mí" },
+    { href: "/servicios/sanacion-integrativa-holistica", label: "Metodo SATHYA" },
     { href: "/servicios", label: "Servicios" },
     { href: "/psicoeducacion", label: "Psicoeducación" },
     { href: "/tienda", label: "Tienda" },
-    { href: "/intranet", label: "Intranet" },
+   
   ];
 
   // 🔧 FUNCIÓN PARA VERIFICAR SI EL LINK ESTÁ ACTIVO

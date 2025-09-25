@@ -12,7 +12,7 @@ export const therapiesData: TherapiesData = {
    packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Tratamiento de Limpieza Energética Basico",
+        name: "Etapa 1: Tratamiento de Limpieza Energética Basico",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 245 ,
         pricePEN: 860, // Assuming 1 USD = 3.75 PEN
@@ -21,6 +21,8 @@ export const therapiesData: TherapiesData = {
           "Diagnóstico energético completo",
           "Limpieza  Inicial de bloqueos Energeticos",
           "Equilibrio de todos los chakras",
+          "Reparaciòn de Grietas del Aura y Sellado Aurico",
+          "Lectura de Tarot Terapeutico y Askachico",
           "Protección energética avanzada",
           "Instrucciones de mantenimiento"
         ],
