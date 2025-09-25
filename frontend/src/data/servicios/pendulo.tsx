@@ -84,6 +84,12 @@ export const penduloData: PenduloData = {
       title: "Limpieza, Purificación y Armonización de los Lugares",
       content: "Purificar tu hogar o lugar de trabajo elimina energías negativas y renueva el ambiente. La limpieza energética permite vivir mejor, liberarse de dolencias físicas y trastornos emocionales. Se recomienda hacerlo regularmente o cuando la intuición lo sugiera.",
       iconType: "space"
+    },
+    {
+      id: "tratamiento-animales",
+      title: "Tratamiento para animales y mascotas",
+      content: "El péndulo hebreo también puede aplicarse en animales, proporcionando equilibrio energético y sanación a distancia para mejorar su bienestar físico y emocional.",
+      iconType: "healing"
     }
   ],
   ctaButton: {
