@@ -23,6 +23,7 @@ import {
 import SanacionEnergetica from './5PasosSanacionEnergetica/PasosSanacionEnergetica';
 import TherapyPricing from '@/components/therapy/TherapyPricing';
 import ConsideracionesTratamiento from './ConsideracionesAntesInicia/ConsideracionesTratamiento';
+import PenduloHebreo from '@/components/servicios/pendulo/PenduloHebreo';
 
 
 export default function TerapiaIntegrativaHolistica() {
@@ -155,6 +156,8 @@ export default function TerapiaIntegrativaHolistica() {
         {/* FAQ */}
         <FAQSection faqs={faqs} />
       </main>
+
+      <PenduloHebreo />
 
       <CTA />
 

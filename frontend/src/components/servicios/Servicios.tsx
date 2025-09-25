@@ -31,15 +31,15 @@ export default function Servicios({
         {showTitle && (
           <div className="text-center mb-12">
              <h2 className="text-6xl md:text-7xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                Descubre mi <i>Método</i> <b>SATHYA</b>
+                  
              </h2>
              <p className="text-2xl font-lora-italic text-purple-500 max-w-4xl mx-auto my-6">
-              Sanación  Transpersonal, Holística y Akasha
+             
             </p>
           
             {showDescription && (
               <p className="text-xl font-lora text-purple-700 max-w-3xl mx-auto mb-8">
-             El Método SATHYA es un enfoque único que combina lo mejor de tres disciplinas para tu bienestar integral (Psicología Clínica, Terapia de Radiestesia con Pèndulo Hebreo , Tarot Terapéutico y Akáshico).
+           
               </p>
             
             )}  

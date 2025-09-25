@@ -15,7 +15,7 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
     { href: "/home", label: "Inicio" },
     { href: "/sobre-mi", label: "Sobre mí" },
     { href: "/servicios/sanacion-integrativa-holistica", label: "Metodo SATHYA" },
-    { href: "/servicios", label: "Servicios" },
+    { href: "/servicios", label: "Lectura de Tarot" },
     { href: "/psicoeducacion", label: "Psicoeducación" },
     { href: "/tienda", label: "Tienda" },
    

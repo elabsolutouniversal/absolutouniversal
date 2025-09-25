@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Course } from '@/types/servicios/cursos';
 import Image from 'next/image';
+import { BookOpen } from "lucide-react";
 
 interface CourseCardProps {
   course: Course;
@@ -21,7 +22,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       <div className="absolute top-3 left-3 bg-white/90 rounded-full p-1.5 shadow-sm">
-        <course.icon className="w-5 h-5 text-pink-600" />
+        {course.icon === 'BookOpen' && <BookOpen className="w-5 h-5 text-pink-600" />}
       </div>
       <div className="absolute bottom-3 left-4 right-4">
         <h3 className="text-lg font-bold text-white">{course.title}</h3>

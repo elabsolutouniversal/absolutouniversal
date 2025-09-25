@@ -18,7 +18,7 @@ export const courses: Course[] = [
     fechaInicio: 'Próximamente',
     duracion: '5 meses',
     image: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754677952/El-ojo-de-Ra_sbdeqb.jpg',
-    icon: BookOpen,
+    icon: 'BookOpen',
     price: '$500.00',
     precioOriginal: '$500.00',
     incluye: []

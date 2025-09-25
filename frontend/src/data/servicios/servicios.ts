@@ -7,12 +7,12 @@ export interface Servicio {
 }
 
 export const servicios: Servicio[] = [
-  {
-          title: "Sanación Transpersonal, Holística y Akasha",
-    slug: "sanacion-integrativa-holistica",
-    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
-    description: "El Metodo SATHYA  combina recursos de la psicología moderna, terapia de radiestecia con pendulo hebreo, tarot terapéutico y akashico.",
-  },
+  // {
+  //         title: "Sanación Transpersonal, Holística y Akasha",
+  //   slug: "sanacion-integrativa-holistica",
+  //   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
+  //   description: "El Metodo SATHYA  combina recursos de la psicología moderna, terapia de radiestecia con pendulo hebreo, tarot terapéutico y akashico.",
+  // },
   // {
   //   title: "Lectura de Registros Akáshicos",
   //   slug: "registros-akashicos",
@@ -26,7 +26,7 @@ export const servicios: Servicio[] = [
     description: "Sesiones de Tarot para orientación, toma de decisiones y guía espiritual.",
   },
   {
-    title: "El Askasha",
+    title: "Tarot Askachico, Lectura de Registros Askachicos",
     slug: "tarot-akashico",
     image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3724_bpugkm.jpg",
     description: "Acceso a la memoria universal, las cartas actuan como puertas simbolicas que facilita el acceso a la memorias profunda explorando aprendizajes karmicos y bloqueos transpersonales.",
@@ -37,19 +37,19 @@ export const servicios: Servicio[] = [
   //   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753153757/terapia-integrativa-holistica_czqzhs.jpg",
   //   description: "A traves de este proceso se logra sanaciòn de patrones destructivos generacionales ",
   // },
-  {
-          title: "Psicoeducación Consciente",
-            slug: "psicoeducacion-consciente",
-    image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
-    description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
-  },
-  {
-    title: "Péndulo Hebreo",
-    slug: "pendulo-hebreo",
-        image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154206/pendulo-hebreo-1_n1lavx.jpg",
-
-            description: "La terapia del péndulo hebreo es una técnica avanzada de radiestesia. Utiliza este péndulo para diagnosticar y tratar, trabajando específicamente sobre el cuerpo electromagnético (aura).",
-   }
+  // {
+  //         title: "Psicoeducación Consciente",
+  //           slug: "psicoeducacion-consciente",
+  //   image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
+  //   description: "Talleres y cursos orientados a lograr la comprensión de la consciencia de unidad. La conexión con el ciclo cósmico y comprensión de la unidad universal.",
+  // },
+  // {
+  //   title: "Péndulo Hebreo",
+  //   slug: "pendulo-hebreo",
+  //       image: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154206/pendulo-hebreo-1_n1lavx.jpg",
+  //
+  //           description: "La terapia del péndulo hebreo es una técnica avanzada de radiestesia. Utiliza este péndulo para diagnosticar y tratar, trabajando específicamente sobre el cuerpo electromagnético (aura).",
+  // }
   // {
   //   title: "Entretenimiento y Eventos Sociales",
   //   slug: "entrenimiento-sociales",

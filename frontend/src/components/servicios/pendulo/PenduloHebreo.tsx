@@ -107,7 +107,7 @@ export default function PenduloHebreo() {
           />
         ))}
       </div>
-      <TherapyPricing category="pendulo"/>
+
       {/* CTA Section */}
       <div className="text-center py-8">
         <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
