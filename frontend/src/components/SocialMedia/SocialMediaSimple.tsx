@@ -68,9 +68,9 @@ export const SocialMediaSimple: React.FC = () => {
                   <p className="text-sm text-purple-600 font-lora mb-1">
                     @{media.username}
                   </p>
-                  <p className="text-sm text-purple-600 font-lora">
+                  {/* <p className="text-sm text-purple-600 font-lora">
                     {media.followers} seguidores
-                  </p>
+                  </p> */}
                 </div>
                 
                 {/* Flecha indicadora */}

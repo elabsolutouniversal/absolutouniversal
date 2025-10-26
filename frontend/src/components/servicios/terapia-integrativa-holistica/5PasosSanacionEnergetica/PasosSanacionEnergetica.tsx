@@ -137,6 +137,7 @@ const SanacionEnergetica = () => {
     
 
         <p className='text-purple-700 leading-relaxed text-xl text-justify font-medium m-10'>
+         <h2 className='text-3xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 md:mb-6'>Tratamiento Personalizado</h2>
          En el tratamiento personalizado se identifica y se trata un tema especifico o situacion de vida de manera individual para cada tipo de persona sea un desafio de salud, fisica o emocional o algùn desafio de vida especifico a nivel personal, economico y/o espiritual.
         </p>
       </section>
