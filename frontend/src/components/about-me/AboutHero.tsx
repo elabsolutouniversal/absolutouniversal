@@ -104,7 +104,10 @@ const AboutHero: React.FC<AboutHeroProps> = (
 
           {/* Subtext */}
           <div className="mt-8">
-            <p className="text-lg md:text-xl font-lora-medium text-purple-700 leading-relaxed">
+            <p className="text-2xl md:text-xl font-lora-medium leading-relaxed text-justify bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-10">
+            Uso en mis sesiones el pendulo hebreo, el tarot , y el tarot akashico como herramientas espirituales
+            </p>
+            <p className="text-xl md:text-2xl font-lora-medium text-purple-700 leading-relaxed mb-12">
               Nada sucede por casualidad, si has llegado hasta aquí ,es porque estás listo para empezar a vivir de una forma más plena y coherente
             </p>
           </div>

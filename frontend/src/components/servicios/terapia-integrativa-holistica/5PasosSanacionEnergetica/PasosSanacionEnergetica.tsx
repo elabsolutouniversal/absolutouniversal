@@ -20,7 +20,7 @@ const SanacionEnergetica = () => {
   return (
     
     <section className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12">
-      <h1 className='text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 md:mb-6'>Etapa 1</h1>
+     
       {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -33,10 +33,10 @@ const SanacionEnergetica = () => {
           <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
         </div>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 md:mb-4 leading-tight">
-          Tratamiento de Limpieza Energetica Basico
+          Tratamiento de Limpieza Energetica Completo
         </h2>
                  <h3 className="text-base sm:text-lg md:text-xl text-purple-700 font-semibold mb-3 md:mb-4 px-2">
-           Tratamiento  Básico de 5 Sesiones orientadas para establecer tu Bienestar.
+           Tratamiento Completo de 5 Sesiones orientadas para reestablecer tu Bienestar.
          </h3>
          <p className="text-sm sm:text-base text-purple-600 max-w-3xl mx-auto leading-relaxed px-2 text-justify">
            Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio
@@ -134,10 +134,10 @@ const SanacionEnergetica = () => {
       </motion.div>
 
       <section className='mt-10 text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 md:mb-6'>
-        Etapa 2: Tratamiento Personalizado
+    
 
         <p className='text-purple-700 leading-relaxed text-xl text-justify font-medium m-10'>
-        Para esta etapa es necesario haber culminado satisfactoriamente la etapa 1  En el tratamiento personalizado se identifica y se trata un tema especifico o situacion de vida de manera individual para cada tipo de persona sea un desafio de salud, fisica o emocional o algùn desafio de vida especifico a nivel personal, economico y/o espiritual.
+         En el tratamiento personalizado se identifica y se trata un tema especifico o situacion de vida de manera individual para cada tipo de persona sea un desafio de salud, fisica o emocional o algùn desafio de vida especifico a nivel personal, economico y/o espiritual.
         </p>
       </section>
 

@@ -107,10 +107,33 @@ const PackageCard: React.FC<PackageCardProps> = ({
 
       <div className="p-6">
         <div className="text-center mb-4">
-          <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
-            pkg.popular ? 'bg-gradient-to-br from-indigo-500 to-purple-500' : 'bg-gray-100'
-          }`}>
-            <svg className={`w-8 h-8 ${pkg.popular ? 'text-white' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div
+            className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+            style={{
+              backgroundColor: pkg.id === 'pendulo-sanacion'
+                ? '#8B5CF6' // Lila for the first package
+                : pkg.id === 'pendulo-hogar'
+                  ? '#FACC15' // Yellow for the second package
+                  : pkg.id === 'retiro-danos-amarres'
+                    ? '#D946EF' // Fuchsia for the third package
+                    : '#E5E7EB', // Default gray
+            }}
+          >
+            <svg
+              className="w-8 h-8"
+              style={{
+                color: pkg.id === 'pendulo-sanacion'
+                  ? '#FFFFFF' // White icon for Lila
+                  : pkg.id === 'pendulo-hogar'
+                    ? '#A16207' // Dark yellow icon for Yellow
+                    : pkg.id === 'retiro-danos-amarres'
+                      ? '#FFFFFF' // White icon for Fuchsia
+                      : '#9CA3AF', // Default gray icon
+              }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               {pkg.id.includes('rapida') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
               {pkg.id.includes('media') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />}
               {pkg.id.includes('completa') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
@@ -159,7 +182,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
           className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
             pkg.popular 
               ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-              : 'bg-purple-100 text-purple-800 hover:bg-purple-200'
+              : 'bg-indigo-600 text-white hover:bg-purple-200'
           }`}
         >
           Reservar ahora

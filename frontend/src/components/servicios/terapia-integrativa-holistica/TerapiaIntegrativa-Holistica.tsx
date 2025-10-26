@@ -87,36 +87,13 @@ export default function TerapiaIntegrativaHolistica() {
         />
 
           {/* Proceso */}
-          <section id="proceso">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-8 text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-center md:text-justify md:max-w-4xl md:mx-auto"
-          >
-            Etapas del Tratamiento
-          </motion.h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {sesiones.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-              >
-                <CardSesion {...s} />
-              </motion.div>
-            ))}
-          </div>
-        </section>
-       
+        
         {/* 🔹 AQUÍ SE INSERTA EL COMPONENTE DE SANACIÓN ENERGÉTICA 🔹 */}
         <SanacionEnergetica />
 
       
         {/* Avisos Importantes */}
-        <ConsideracionesTratamiento />
+        {/* <ConsideracionesTratamiento /> */}
 
         {/* Beneficios */}
         <section>

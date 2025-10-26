@@ -5,11 +5,14 @@ export interface TherapyPackage {
   description: string;
   price: number;
   pricePEN?: number; // Precio en Soles Peruanos
+  currency?: string; // Add currency field
+  currencyPEN?: string; // Add currencyPEN field
   isStartingPrice?: boolean; // Indicates if the price is a starting price
   originalPrice?: number;
   duration: string;
   includes: string[];
   popular?: boolean;
+  iconBgColor?: string; // Add icon background color property
 }
 
 export interface Therapy {

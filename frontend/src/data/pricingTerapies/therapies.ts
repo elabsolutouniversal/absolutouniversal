@@ -12,11 +12,11 @@ export const therapiesData: TherapiesData = {
    packages: [
       {
         id: 'pendulo-sanacion',
-        name: "Etapa 1: Tratamiento de Limpieza Energética Basico",
+        name: "Tratamiento de Limpieza Energética Completo",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
         price: 245 ,
         pricePEN: 860, // Assuming 1 USD = 3.75 PEN
-        duration: "5 sesiones tratamiento base",
+        duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",
           "Limpieza  Inicial de bloqueos Energeticos",
@@ -31,17 +31,21 @@ export const therapiesData: TherapiesData = {
       {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
-        description: "Servicio a domicilio para limpieza espacial",
+        description: "Tratamiento y limpieza energética de hogares y negocios",
         price: 200,
-        pricePEN: 700.00, // Assuming 1 USD = 3.75 PEN
-        isStartingPrice: true,
+        originalPrice: 200,
+        currency: "$",
+        currencyPEN: "S/ ",
+        pricePEN: 700,
         duration: "2 horas",
+        popular: false,
+        iconBgColor: 'bg-yellow-400',
         includes: [
           "Diagnóstico energético del espacio",
           "Limpieza completa de la vivienda",
           "Protección de todos los ambientes",
           "Ritual de consagración del hogar",
-          "Kit de mantenimiento energético"
+          "Kit de mantenimiento energético",
         ]
       },
              {
@@ -51,6 +55,8 @@ export const therapiesData: TherapiesData = {
          price: 500,
          pricePEN: 1875.00, // Assuming 1 USD = 3.75 PEN
          duration: "7 sesiones de  tratamiento",
+         popular: false,
+         iconBgColor: 'bg-fuchsia-500',
                   includes: [
            "Incluye Tratamiento de Limpieza Energetica Inicial",
            "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
@@ -179,6 +185,8 @@ export const therapiesData: TherapiesData = {
         pricePEN: 700.00, // Assuming 1 USD = 3.75 PEN
         isStartingPrice: true,
         duration: "2 horas",
+        popular: false,
+        iconBgColor: 'bg-yellow-400',
         includes: [
           "Diagnóstico energético del espacio",
           "Limpieza completa de la vivienda",
