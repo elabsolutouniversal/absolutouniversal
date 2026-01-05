@@ -1,7 +1,22 @@
 // src/data/RedesSocialesData.ts
 import { Facebook, Instagram, Youtube } from 'lucide-react';
-import { SiTiktok } from 'react-icons/si';
+import React from 'react';
 import { SocialMedia } from '@/types/RedesSocialesTypes';
+
+const SiTiktok: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth="0"
+    viewBox="0 0 448 512"
+    className={className}
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,185.06V274.3h54.22V.08a210.1,210.1,0,0,1,210.06,209.83Z"></path>
+  </svg>
+);
 
 export const socialMediaData: SocialMedia[] = [
   {

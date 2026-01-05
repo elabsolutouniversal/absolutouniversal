@@ -11,7 +11,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
   // Si estamos en la página de inicio, solo renderizamos el contenido
   if (isHomePage) {
-    return children;
+    return <>{children}</>;
   }
 
   // Para todas las demás páginas, mostramos el layout completo

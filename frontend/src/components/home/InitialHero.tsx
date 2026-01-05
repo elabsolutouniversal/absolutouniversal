@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import { JSX } from 'react';
 import { motion } from 'framer-motion';
 
-export default function InitialHero(): JSX.Element {
+export default function InitialHero(): React.ReactElement {
   return (
     <section className="h-[calc(100vh-80px)] flex items-center justify-center">
       <div className="container max-w-6xl mx-auto px-4 relative">

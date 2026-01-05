@@ -32,7 +32,7 @@ export default function Lightbox({
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <button
           className="absolute top-4 right-4 md:-right-16 md:top-0 text-white hover:text-pink-300 transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 backdrop-blur-sm z-10"

@@ -154,7 +154,7 @@ export default function Lightbox({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <div className="text-center text-white bg-black/60 backdrop-blur-sm rounded-full px-6 py-2">
           <h3 className="text-lg font-medium">
