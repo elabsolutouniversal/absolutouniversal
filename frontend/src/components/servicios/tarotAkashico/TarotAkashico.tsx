@@ -29,7 +29,7 @@ const TarotAkashico: React.FC = () => {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-pink-600 mb-6">¿Qué puedes esperar de una sesión de Tarot Akáshico?</h2>
+        <h2 className="text-3xl font-semibold text-red-600 mb-6">¿Qué puedes esperar de una sesión de lectura de Registros Akáshico?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviciosDataTarotAkashico.map(servicio => (
             <div key={servicio.id} className="bg-purple-50 p-6 rounded-lg flex items-start">
@@ -59,12 +59,12 @@ const TarotAkashico: React.FC = () => {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg border border-purple-100 p-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800">Sesión Completa de El Askasha</h3>
+            <h3 className="text-2xl font-bold text-gray-800">Sesion Completa de Lectura de Registros Akáshicos</h3>
             <p className="text-gray-500 mt-1">1 hora y 30 minutos</p>
             <div className="my-6">
-              <span className="text-5xl font-bold text-indigo-600">$75</span>
+              <span className="text-5xl font-bold text-indigo-600">$95</span>
               <span className="text-lg text-gray-500 ml-2">
-                (S/ 265)
+                (S/ 320)
               </span>
             </div>
           </div>

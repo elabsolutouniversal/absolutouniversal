@@ -14,7 +14,7 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-sanacion',
         name: "Tratamiento de Limpieza Energética Completo",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
-        price: 245 ,
+        price: 255 ,
         pricePEN: 860, // Assuming 1 USD = 3.75 PEN
         duration: "5 sesiones",
         includes: [
@@ -32,11 +32,11 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-hogar',
         name: "Limpieza Energética de Lugares, Negocios y Hogar",
         description: "Tratamiento y limpieza energética de hogares y negocios",
-        price: 200,
+        price: 300,
         originalPrice: 200,
         currency: "$",
         currencyPEN: "S/ ",
-        pricePEN: 700,
+        pricePEN: 1000,
         duration: "2 horas",
         popular: false,
         iconBgColor: 'bg-yellow-400',
@@ -93,8 +93,8 @@ export const therapiesData: TherapiesData = {
         id: 'tarot-completa',
         name: "Sesión Tarot con Enfoque Terapéutico",
         description: "Consulta integral con enfoque terapéutico completo",
-        price: 70,
-        pricePEN: 245, // Assuming 1 USD = 3.75 PEN
+        price: 80,
+        pricePEN: 270, // Assuming 1 USD = 3.375 PEN
         duration: "1 hora",
         includes: [
           "Lectura completa y profunda",
@@ -110,8 +110,8 @@ export const therapiesData: TherapiesData = {
         id: 'tarot-media',
         name: "Sesión Media Hora",
         description: "Exploración profunda de tu situación actual",
-        price: 50,
-        pricePEN: 170, // Assuming 1 USD = 3.75 PEN
+        price: 55,
+        pricePEN: 185, // Assuming 1 USD = 3.36 PEN
         duration: "30 min",
         includes: [
           "Múltiples preguntas",
