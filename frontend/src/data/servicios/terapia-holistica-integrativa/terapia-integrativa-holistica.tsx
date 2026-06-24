@@ -106,7 +106,7 @@ export const beneficios: BeneficioTerapiaIntegrativa[] = [
   {
     icon: <Sparkles className="w-6 h-6 text-brand-medium" />,
     titulo: 'Armonía energética',
-    descripcion: 'Limpieza y fortalecimiento de tu campo electromagnético para un flujo energético óptimo.',
+    descripcion: 'Limpieza y fortalecimiento de tu campo electromagnético para una mayor coherencia energetica.',
     delay: 0.1
   },
   {
@@ -123,8 +123,8 @@ export const beneficios: BeneficioTerapiaIntegrativa[] = [
   },
   {
     icon: <Flower2 className="w-6 h-6 text-green-600" />,
-    titulo: 'Conexión espiritual',
-    descripcion: 'Fortalece tu conexión con tu esencia y propósito de vida.',
+    titulo: 'Coherencia Cuántica',
+    descripcion: 'Fortalece la conexión con tu esencia y propósito de vida.',
     delay: 0.4
   },
   {
@@ -159,7 +159,7 @@ export const testimonios: TestimonioTerapiaIntegrativa[] = [
 export const faqs: FAQTerapiaIntegrativa[] = [
   {
     pregunta: "¿Cuánto dura cada sesión?",
-    respuesta: "La entrevista inicial dura una hora. El diagnóstico y limpieza inicial duran aproximadamente dos horas y 15 minutos. El desbloqueo de chakras dura una hora. La reparación de grietas del aura dura entre una hora y media y dos horas. La sesión de regalo dura aproximadamente 45 minutos.."
+    respuesta: "La entrevista inicial dura una hora. El diagnóstico y limpieza energética duran aproximadamente dos horas y las sesiones posteriores duran aproximadamente 1 hora."
   },
   {
     pregunta: "¿Con qué frecuencia debo asistir?",
@@ -232,7 +232,7 @@ export const sesiones5Pasos = [
     titulo: "Integración y Consolidación",
     duracion: "1 Hora",
     icon: Target,      // 🔹 CAMBIO: era Star → ahora Target (mejor para objetivos)
-    color: "from-[#8B6048] to-brand-dark",
+    color: "from-teal-400 to-cyan-500",
     badge: "GRATUITA",
     puntos: [
       "Sesión personalizada basada en tus necesidades específicas",

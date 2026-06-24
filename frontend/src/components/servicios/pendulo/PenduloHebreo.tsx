@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { MessageCircle, Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, RefreshCw, Zap, Sun, Moon, ChevronDown } from 'lucide-react';
+import { Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, RefreshCw, Zap, Sun, Moon, ChevronDown } from 'lucide-react';
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
 import AccordionItem from './AccordionItem';
 import { penduloData, galleryData } from '@/data/servicios/pendulo';
 import SimpleGallery from './SimpleGalery';
@@ -124,9 +125,9 @@ export default function PenduloHebreo() {
             </p>
             <button
               onClick={() => window.open(penduloData.ctaButton.link, '_blank', 'noopener,noreferrer')}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-6 py-3 rounded-full text-lg font-lora-semibold shadow-lg shadow-orange-300/50 hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-4 py-2.5 rounded-full text-sm sm:px-6 sm:py-3 sm:text-base font-lora-semibold shadow-lg shadow-orange-300/50 hover:scale-105 transition-transform"
             >
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" />
               {penduloData.ctaButton.text}
             </button>
           </div>

@@ -84,7 +84,7 @@ export const audienciaDataTarotAkashico: AudienciaItem[] = [
 
 export const tarotAkashicoImages: ImageData[] = [
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076008/IMG_3626_xznh7g.jpg",
       alt: "Sesión de Tarot Akáshico",
       title: "",
       subtitle: ""

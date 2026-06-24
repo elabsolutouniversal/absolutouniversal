@@ -19,11 +19,11 @@ export const therapiesData: TherapiesData = {
         duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza  Inicial de bloqueos Energeticos",
-          "Equilibrio de todos los chakras",
+          "Limpieza de la Energias Densas y de Baja Vibración",
+          "Desbloqueo y Potenciamiento de los Principales Centros Energéticos - Chakras",
           "Reparaciòn de Grietas del Aura y Sellado Aurico",
           "Lectura de Tarot Terapeutico y Askachico",
-          "Protección energética avanzada",
+          "Protecciones Enérgeticas Avanzadas",
           "Instrucciones de mantenimiento"
         ],
         popular: true
@@ -42,10 +42,10 @@ export const therapiesData: TherapiesData = {
         iconBgColor: 'bg-yellow-400',
         includes: [
           "Diagnóstico energético del espacio",
-          "Limpieza completa de la vivienda",
-          "Protección de todos los ambientes",
+          "Limpieza Energetica Completa del espacio",
+          "Proteccion Energetica de todos los Ambientes",
           "Ritual de consagración del hogar",
-          "Kit de mantenimiento energético",
+          "Códigos para el Mantemiento Energetico Optimo del Espacio",
         ]
       },
              {
@@ -58,11 +58,11 @@ export const therapiesData: TherapiesData = {
          popular: false,
          iconBgColor: 'bg-fuchsia-500',
                   includes: [
-           "Incluye Tratamiento de Limpieza Energetica Inicial",
+           "Incluye el Tratamiento de Limpieza Energetica completo",
            "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
            "Limpieza profunda de bloqueos y ataduras",
-           "Protección energética reforzada y personalizada",
-           "Guía de mantenimiento y seguimiento post sesión"
+           "Protecciones Enérgeticas Avanzadas",
+           "Códigos de Protección y Seguimiento Post Sesion"
          ]
       }
     ]
@@ -170,9 +170,9 @@ export const therapiesData: TherapiesData = {
         duration: "5 sesiones tratamiento base",
         includes: [
           "Diagnóstico energético completo",
-          "Limpieza  Inicial de bloqueos Energeticos",
-          "Equilibrio de todos los chakras",
-          "Protección energética avanzada",
+          "Limpieza de la Energias Densas y de Baja Vibración",
+          "Desbloqueo y Potenciamiento de los Principales Centros Energéticos - Chakras",
+          "Protecciones Enérgeticas Avanzadas",
           "Instrucciones de mantenimiento"
         ],
         popular: true
@@ -189,10 +189,10 @@ export const therapiesData: TherapiesData = {
         iconBgColor: 'bg-yellow-400',
         includes: [
           "Diagnóstico energético del espacio",
-          "Limpieza completa de la vivienda",
-          "Protección de todos los ambientes",
+          "Limpieza Energetica Completa del espacio",
+          "Proteccion Energetica de todos los Ambientes",
           "Ritual de consagración del hogar",
-          "Kit de mantenimiento energético"
+          "Códigos para el Mantemiento Energetico Optimo del Espacio"
         ]
       },
              {
@@ -203,11 +203,11 @@ export const therapiesData: TherapiesData = {
          pricePEN: 1875.00, // Assuming 1 USD = 3.75 PEN
          duration: "7 sesiones de  tratamiento",
                   includes: [
-           "Incluye Tratamiento de Limpieza Energetica Inicial",
+           "Incluye el Tratamiento de Limpieza Energetica completo",
            "Retiro de daños energéticos, liberación de trabajos de brujería, magias y amarres",
            "Limpieza profunda de bloqueos y ataduras",
-           "Protección energética reforzada y personalizada",
-           "Guía de mantenimiento y seguimiento post sesión"
+           "Protecciones Enérgeticas Avanzadas",
+           "Códigos de Protección y Seguimiento Post Sesion"
          ]
       }
     ]

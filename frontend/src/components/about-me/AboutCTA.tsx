@@ -3,6 +3,7 @@
 // components/about/AboutCTA.tsx
 import React from 'react';
 import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
 
 interface CTAData {
   title: string;
@@ -49,8 +50,9 @@ const AboutCTA: React.FC<AboutCTAProps> = ({ cta }) => {
           <div className="mb-12">
             <button 
               onClick={handleWhatsAppClick}
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-orange-400 to-orange-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:shadow-xl cursor-pointer"
+              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-orange-400 to-orange-600 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-white transition-all hover:scale-105 hover:shadow-xl cursor-pointer"
             >
+              <WhatsAppIcon className="relative z-10 w-5 h-5 sm:w-6 sm:h-6" />
               <span className="relative z-10">Agenda tu Consulta</span>
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-700 opacity-0 transition-opacity group-hover:opacity-100"></div>
             </button>

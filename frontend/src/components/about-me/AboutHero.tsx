@@ -115,7 +115,7 @@ const AboutHero: React.FC<AboutHeroProps> = (
 
             <div>
               <p className="text-2xl md:text-xl font-lora-medium leading-relaxed text-justify text-brand-dark mb-10">
-                Uso en mis sesiones el pendulo hebreo, el tarot , y el tarot akashico como herramientas espirituales
+                Uso en mis sesiones el pendulo hebreo, el tarot , y el tarot akashico como herramientas terapeuticas y espirituales
               </p>
               <p className="text-xl md:text-2xl font-lora-medium text-brand-medium leading-relaxed">
                 Nada sucede por casualidad, si has llegado hasta aquí ,es porque estás listo para empezar a vivir de una forma más plena y coherente

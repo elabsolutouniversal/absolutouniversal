@@ -21,6 +21,7 @@ export interface AboutData {
     workspace1: string;
     tarot: string;
     workspace2: string;
+    especializaciones: string;
   };
   biography: {
     awakening: {
@@ -146,7 +147,8 @@ export const aboutData: AboutData = {
     terapiaHolistica: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154045/tarot-predictivo-terapeutico_blkb6c.jpg",
     workspace1: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg",
     tarot: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076494/IMG_3535_1_ecjcra.jpg",
-    workspace2: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154286/terapiaIntegrativa-holiticia-2_uli8ak.jpg"
+    workspace2: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753154286/terapiaIntegrativa-holiticia-2_uli8ak.jpg",
+    especializaciones: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1782310096/WhatsApp_Image_2026-06-24_at_9.04.52_AM_xayvbq.jpg"
   },
   biography: {
     awakening: {
@@ -271,7 +273,7 @@ export const aboutData: AboutData = {
   },
   approach: {
     title: "MI ENFOQUE: LA SÍNTESIS ENTRE CIENCIA Y CONCIENCIA",
-    subtitle: "Mi Método <strong class='text-xl text-pink-600'>Sathya</strong>",
+    subtitle: "Mi Método SATHYA",
     comparisons: {
       traditional: {
         title: "Psicología Tradicional",
@@ -330,7 +332,7 @@ export const aboutData: AboutData = {
       physical: {
         title: "Nivel Físico/Energético",
         benefits: [
-          "Liberación de tensiones crónicas",
+          "Desarrollo de tu Coherencia Enérgetica",
           "Comprensión del origen emocional de síntomas",
           "Restauración del flujo y vitalidad energética"
         ]
@@ -340,7 +342,8 @@ export const aboutData: AboutData = {
         benefits: [
           "Claridad en tu propósito de vida",
           "Reconexión con tu sabiduría interior",
-          "Desarrollo de intuición y alineamiento profundo"
+          "Desarrollo de tu Coherencia Cuantica",
+          "Descubrimiento de tu Supra Conciencia"
         ]
       }
     }
@@ -393,7 +396,7 @@ export const aboutData: AboutData = {
   cta: {
     title: "COMIENZA HOY, DA EL PASO HACIA UNA VERSIÓN MÁS AUTÉNTICA Y PLENA DE TI",
     subtitle: "",
-    quote: "La sanación real integra mente, cuerpo y espíritu en un diálogo consciente y amoroso.",
+    quote: "La sanación real integra mente, cuerpo y alma en un diálogo consciente y amoroso.",
     author: "Lic. Nunash Dahiana Velásquez Guerrero"
   }
 };

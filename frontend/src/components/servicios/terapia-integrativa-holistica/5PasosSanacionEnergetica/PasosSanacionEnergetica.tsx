@@ -37,7 +37,7 @@ const SanacionEnergetica = () => {
           Tratamiento de Limpieza Energetica Completo
         </h2>
                  <h3 className="text-base sm:text-lg md:text-xl text-brand-medium font-semibold mb-3 md:mb-4 px-2">
-           Tratamiento Completo de 5 Sesiones orientadas para reestablecer tu Bienestar.
+           Tratamiento Completo de 5 Sesiones orientadas para reestablecer tu Bienestar y tu coherencia energetica.
          </h3>
          <p className="text-sm sm:text-base text-brand-medium max-w-3xl mx-auto leading-relaxed px-2 text-justify">
            Transforma tu vida con nuestro programa integral diseñado para restablecer tu equilibrio

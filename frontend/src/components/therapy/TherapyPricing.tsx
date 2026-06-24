@@ -240,7 +240,7 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
       <div className="text-center mb-16">
         {category && therapiesData[category] ? (
           <>
-            <h1 className="text-4xl font-bold text-brand-dark mb-2">
+            <h1 className="text-4xl md:text-5xl font-lora-bold mb-2 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent not-italic">
               {therapiesData[category].name}
             </h1>
             {therapiesData[category].subtitle && (
@@ -268,7 +268,7 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
         <div key={therapy.id} className="mb-16">
           {!category && (
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-brand-medium mb-2">{therapy.name}</h2>
+              <h2 className="text-3xl font-lora-bold mb-2 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent not-italic">{therapy.name}</h2>
               {therapy.subtitle && (
                 <h3 className="text-xl font-semibold text-brand-light mb-4">{therapy.subtitle}</h3>
               )}

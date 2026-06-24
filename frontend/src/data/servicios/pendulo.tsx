@@ -57,7 +57,8 @@ export const penduloData: PenduloData = {
       { text: "Corrige alteraciones físicas, mentales y emocionales." },
       { text: "Ayuda a la desintoxicación y eliminación de adicciones." },
       { text: "Desbloquea la conexión con la fuente divina, estimulando capacidades y dones." },
-      { text: "Alivia situaciones de alto estrés emocional (accidentes, depresión, duelos, ansiedad, etc.)." }
+      { text: "Alivia situaciones de alto estrés emocional (accidentes, depresión, duelos, ansiedad, etc.)." },
+      { text: "Reestablece tu Coherencia Cuantica y Energetica para lograr tu maximo bienestar en la vida." }
     ]
   },
   accordionSections: [
@@ -93,7 +94,7 @@ export const penduloData: PenduloData = {
     }
   ],
   ctaButton: {
-    text: "Agenda tu sesión por WhatsApp",
+    text: "Conversa Conmigo",
     link: "https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%3F"
   }
 };

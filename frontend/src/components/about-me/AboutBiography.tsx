@@ -24,6 +24,7 @@ interface AboutBiographyProps {
     workspace1: string;
     tarot: string;
     workspace2?: string;
+    especializaciones: string;
   };
 }
 
@@ -118,7 +119,7 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
                 <p key={idx} className="text-justify">
                   {typeof p === 'string' ? p.split(/\*\*(.*?)\*\*/).map((part, i) => 
                     i % 2 === 1
-                      ? <span key={i} className="text-2xl font-normal text-brand-dark uppercase">{part}</span>
+                      ? <span key={i} className="text-2xl font-lora-bold uppercase not-italic bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{part}</span>
                       : part
                   ) : p}
                 </p>
@@ -128,14 +129,15 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
         </div>
 
         {/* Sección 4: La Integración de Enfoques */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          {/* Imagen primero */}
-          <div className="relative rounded-2xl overflow-hidden shadow-md h-64 lg:h-80">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+          {/* Imagen primero — retrato vertical, sin recorte agresivo */}
+          <div className="relative rounded-2xl overflow-hidden shadow-md w-full aspect-[3/4] max-h-[560px] bg-gradient-to-br from-stone-100 to-amber-50/40">
             <Image
-              src={images.tarot}
-              alt="Tarot Integrativo"
+              src={images.especializaciones}
+              alt="Especializaciones profesionales"
               fill
-              className="object-cover"
+              className="object-contain object-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           {/* Texto segundo */}

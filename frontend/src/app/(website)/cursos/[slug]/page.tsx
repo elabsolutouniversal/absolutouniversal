@@ -22,10 +22,10 @@ export default async function CourseDetailPage({
 
   if (!course) return notFound();
     return (
-        <main className="bg-pink-50 min-h-screen py-12">
+        <main className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20 py-12">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header del curso */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-brand-light/20">
                     <div className="md:flex">
                         {/* Imagen principal */}
                         <div className="md:w-1/2 relative">
@@ -36,8 +36,8 @@ export default async function CourseDetailPage({
                              height={240}    
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                                <h1 className="text-3xl font-bold text-white">
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-dark/80 to-transparent p-6">
+                                <h1 className="text-3xl font-lora-bold text-white">
                                     {course.title}
                                 </h1>
                             </div>
@@ -45,16 +45,16 @@ export default async function CourseDetailPage({
 
                         {/* Información básica */}
                         <div className="md:w-1/2 p-6 space-y-4">
-                            <div className="flex items-center space-x-4">
-                                <div className="flex items-center text-pink-600">
+                            <div className="flex flex-wrap items-center gap-4">
+                                <div className="flex items-center text-brand-dark">
                                     <Calendar className="w-5 h-5 mr-2" />
-                                    <span className="font-medium">
+                                    <span className="font-lora-semibold">
                                         Inicia: {course.fechaInicio}
                                     </span>
                                 </div>
-                                <div className="flex items-center text-pink-600">
+                                <div className="flex items-center text-brand-dark">
                                     <Clock className="w-5 h-5 mr-2" />
-                                    <span className="font-medium">
+                                    <span className="font-lora-semibold">
                                         Duración: {course.duracion}
                                     </span>
                                 </div>
@@ -62,22 +62,22 @@ export default async function CourseDetailPage({
 
                             <div className="pt-4">
                                 {course.precioOriginal && (
-                                    <span className="text-gray-400 line-through mr-2">
+                                    <span className="text-brand-light line-through mr-2">
                                         {course.precioOriginal}
                                     </span>
                                 )}
-                                <span className="text-3xl font-bold text-pink-600">
+                                <span className="text-3xl font-lora-bold text-brand-dark">
                                     {course.price}
                                 </span>
                             </div>
 
-                            <p className="text-gray-700">{course.resumen}</p>
+                            <p className="text-brand-medium font-lora">{course.resumen}</p>
 
                             <a
                                 href="https://wa.me/51962305362?text=Hola%20deseo%20inscribirme%20en%20el%20curso"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-pink-600 to-pink-500 text-white rounded-lg hover:from-pink-700 hover:to-pink-600 transition-colors font-medium text-center"
+                                className="inline-flex w-full md:w-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white rounded-lg shadow-lg shadow-orange-300/50 transition-all duration-300 font-lora-semibold text-center transform hover:scale-105"
                             >
                                 Inscribirse ahora
                             </a>
@@ -88,50 +88,50 @@ export default async function CourseDetailPage({
                 {/* Contenido detallado */}
                 <div className="mt-8 grid md:grid-cols-3 gap-8">
                     {/* Contenido del curso */}
-                    <div className="md:col-span-2 bg-white rounded-xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-pink-600 mb-4 flex items-center">
-                            <BookOpen className="w-6 h-6 mr-2" />
+                    <div className="md:col-span-2 bg-white rounded-xl shadow-lg p-6 border border-brand-light/20">
+                        <h2 className="text-2xl font-lora-bold text-brand-dark mb-4 flex items-center">
+                            <BookOpen className="w-6 h-6 mr-2 text-brand-medium" />
                             Contenido del Curso
                         </h2>
                         <ul className="space-y-3">
                             {course.contenido.map((item, index) => (
                                 <li key={index} className="flex items-start">
-                                    <CheckCircle className="w-5 h-5 text-pink-500 mt-0.5 mr-2 flex-shrink-0" />
-                                    <span className="text-gray-700">{item}</span>
+                                    <CheckCircle className="w-5 h-5 text-brand-medium mt-0.5 mr-2 flex-shrink-0" />
+                                    <span className="text-brand-medium font-lora">{item}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Lo que incluye */}
-                    <div className="bg-white rounded-xl shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-pink-600 mb-4 flex items-center">
-                            <Award className="w-6 h-6 mr-2" />
+                    <div className="bg-white rounded-xl shadow-lg p-6 border border-brand-light/20">
+                        <h2 className="text-2xl font-lora-bold text-brand-dark mb-4 flex items-center">
+                            <Award className="w-6 h-6 mr-2 text-brand-medium" />
                             ¿Qué incluye?
                         </h2>
                         <ul className="space-y-3">
                             {course.incluye?.map((item, index) => (
                                 <li key={index} className="flex items-start">
-                                    <div className="bg-pink-100 text-pink-600 rounded-full p-1 mr-2">
+                                    <div className="bg-amber-100 text-brand-dark rounded-full p-1 mr-2">
                                         <Users className="w-4 h-4" />
                                     </div>
-                                    <span className="text-gray-700">{item}</span>
+                                    <span className="text-brand-medium font-lora">{item}</span>
                                 </li>
                             ))}
                         </ul>
 
                         {/* Beneficios adicionales */}
-                        <div className="mt-6 p-4 bg-pink-50 rounded-lg">
-                            <h3 className="font-medium text-pink-600 mb-2">
+                        <div className="mt-6 p-4 bg-amber-50/80 rounded-lg border border-brand-light/20">
+                            <h3 className="font-lora-semibold text-brand-dark mb-2">
                                 Beneficios adicionales:
                             </h3>
                             <ul className="space-y-2 text-sm">
-                                <li className="flex items-center">
-                                    <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
+                                <li className="flex items-center text-brand-medium font-lora">
+                                    <CheckCircle className="w-4 h-4 text-brand-medium mr-2" />
                                     Soporte durante el curso
                                 </li>
-                                <li className="flex items-center">
-                                    <CheckCircle className="w-4 h-4 text-pink-500 mr-2" />
+                                <li className="flex items-center text-brand-medium font-lora">
+                                    <CheckCircle className="w-4 h-4 text-brand-medium mr-2" />
                                     Acceso a la Comunidad de Estudiantes para asesorías
                                 </li>
                             </ul>

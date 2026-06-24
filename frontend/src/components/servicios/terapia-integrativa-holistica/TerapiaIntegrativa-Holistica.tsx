@@ -68,13 +68,15 @@ export default function TerapiaIntegrativaHolistica() {
           titulo={
             <>
               ¿En qué consiste el método{' '}
-              <span className="font-lora-bold not-italic text-4xl">SATHYA</span>?
+              <span className="font-lora-bold not-italic text-4xl bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">SATHYA</span>?
             </>
           }
           texto={
             <>
               <p className="text-brand-medium leading-relaxed text-justify font-medium">
-              El metodo SATHYA integra y combina  técnicas de {' '}
+              El metodo{' '}
+                <span className="font-semibold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent not-italic">SATHYA</span>{' '}
+                integra y combina  técnicas de{' '}
                 <span className="font-semibold text-brand-dark">Psicología Cientifica</span>{' '}
                 <span className="font-semibold text-brand-dark">Terapia de Radiestecia con Pendulo Hebreo</span> y{' '}
                 <span className="font-semibold text-brand-dark"> lectura de tarot terapeutico y akashico</span>.

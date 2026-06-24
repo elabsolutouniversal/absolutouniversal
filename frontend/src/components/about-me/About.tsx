@@ -27,7 +27,9 @@ const About: React.FC = () => {
         images={{
           terapiaHolistica: aboutData.images.terapiaHolistica,
           workspace1: aboutData.images.workspace1,
-          tarot: aboutData.images.tarot
+          workspace2: aboutData.images.workspace2,
+          tarot: aboutData.images.tarot,
+          especializaciones: aboutData.images.especializaciones,
         }}
       />
       
