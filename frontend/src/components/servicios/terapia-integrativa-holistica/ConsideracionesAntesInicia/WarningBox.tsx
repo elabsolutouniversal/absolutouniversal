@@ -24,7 +24,7 @@ export default function WarningBox({ title, content }: WarningBoxProps) {
       </div>
       <div>
         <h3 className="font-semibold text-[#2a2f55] mb-1 text-sm sm:text-base">{title}</h3>
-        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{content}</p>
+        <p className="text-xs sm:text-sm text-brand-medium leading-relaxed">{content}</p>
       </div>
     </motion.div>
   )

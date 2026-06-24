@@ -29,7 +29,7 @@ const TarotPredictivo: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
       <div className="container mx-auto px-4 py-16">
         <TarotHeader />
         

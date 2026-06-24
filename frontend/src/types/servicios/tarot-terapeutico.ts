@@ -4,6 +4,7 @@ export interface ImageData {
   alt: string;
   title: string;
   subtitle: string;
+  objectFit?: 'cover' | 'contain';
 }
 
 export interface Servicio {

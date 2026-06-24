@@ -20,10 +20,7 @@ export default function InitialHero(): React.ReactElement {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <span 
-                  className="block text-elegant-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl leading-tight"
-                  style={{ color: '#A370FF' }}
-                >
+                <span className="block text-elegant-hero-title text-hero-gradient text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl leading-tight">
                   Todo volverá a estar bien
                 </span>
               </motion.div>
@@ -33,10 +30,7 @@ export default function InitialHero(): React.ReactElement {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <span 
-                  className="block text-elegant-subtitle text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl leading-tight"
-                  style={{ color: '#A370FF' }}
-                >
+                <span className="block text-elegant-hero-subtitle text-hero-gradient text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl leading-tight">
                   ¿Te acompaño en el proceso?
                 </span>
               </motion.div>
@@ -58,7 +52,7 @@ export default function InitialHero(): React.ReactElement {
                     });
                   }
                 }}
-                className="bg-yellow-200/90 text-gray-700 font-lora-semibold italic text-xl rounded-full px-10 py-3 shadow-lg hover:bg-yellow-300/90 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="bg-yellow-200/90 text-brand-dark font-lora-semibold italic text-xl rounded-full px-10 py-3 shadow-lg hover:bg-yellow-300/90 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
                 <span>Descubre más</span>
               </button>

@@ -22,15 +22,15 @@ export default function FAQSection({
   return (
     <section className="space-y-8">
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark mb-3">
           {titulo}
         </h2>
         {subtitulo && (
-          <p className="text-purple-700 max-w-2xl mx-auto font-medium">{subtitulo}</p>
+          <p className="text-brand-medium max-w-2xl mx-auto font-medium">{subtitulo}</p>
         )}
       </div>
 
-      <div className="max-w-3xl mx-auto divide-y divide-purple-200 rounded-2xl bg-white shadow-lg border border-purple-100">
+      <div className="max-w-3xl mx-auto divide-y divide-brand-light/30 rounded-2xl bg-white shadow-lg border border-brand-light/20">
         {faqs.map((f, i) => (
           <FAQRow key={i} {...f} />
         ))}
@@ -44,18 +44,18 @@ function FAQRow({ pregunta, respuesta }: FAQItem) {
   return (
     <div>
       <button
-        className="w-full flex justify-between items-center text-left px-6 py-4 focus:outline-none hover:bg-purple-50 transition-colors"
+        className="w-full flex justify-between items-center text-left px-6 py-4 focus:outline-none hover:bg-amber-50/40 transition-colors"
         onClick={() => setOpen((o) => !o)}
       >
-        <span className="font-semibold text-purple-800">{pregunta}</span>
+        <span className="font-semibold text-brand-dark">{pregunta}</span>
         <ChevronDown
-          className={`w-5 h-5 text-purple-600 transition-transform ${
+          className={`w-5 h-5 text-brand-medium transition-transform ${
             open ? 'rotate-180' : ''
           }`}
         />
       </button>
       <div
-        className={`px-6 pb-4 text-purple-700 text-sm transition-[max-height,opacity] duration-300 overflow-hidden ${
+        className={`px-6 pb-4 text-brand-medium text-sm transition-[max-height,opacity] duration-300 overflow-hidden ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

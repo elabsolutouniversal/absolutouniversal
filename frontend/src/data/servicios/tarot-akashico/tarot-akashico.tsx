@@ -90,10 +90,11 @@ export const tarotAkashicoImages: ImageData[] = [
       subtitle: ""
     },
     {
-      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442586/IMG_3670_baozpb.jpg",
-      alt: "Profesional en Tarot Akáshico",
+      src: "https://res.cloudinary.com/dhhjcvwll/image/upload/v1782272403/WhatsApp_Image_2026-06-23_at_10.34.33_PM_l7pq6u.jpg",
+      alt: "Tarot Akáshico — cartas y oráculos",
       title: "",
-      subtitle: ""
+      subtitle: "",
+      objectFit: "contain",
     }
      
   ]

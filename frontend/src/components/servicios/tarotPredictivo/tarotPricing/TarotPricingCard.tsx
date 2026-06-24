@@ -18,7 +18,7 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
       {/* Badge Recomendado - Ahora más arriba */}
       {plan.recommended && (
         <div className="absolute -top-5 left-0 right-0 mx-auto w-36 text-center z-10">
-          <span className="bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+          <span className="bg-gradient-to-r from-[#2DD4BF] to-[#0D9488] text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
             Recomendado
           </span>
         </div>
@@ -28,35 +28,35 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
       <div className={`
         h-full rounded-3xl p-6 md:p-8 transition-all duration-300
         ${ plan.recommended 
-          ? 'bg-gradient-to-br from-pink-50 to-fuchsia-50 border-2 border-fuchsia-300' 
-          : 'bg-white border border-pink-200'
+          ? 'bg-gradient-to-br from-amber-50/40 to-yellow-50/30 border-2 border-brand-light/30' 
+          : 'bg-white border border-brand-light/20'
         }
-        shadow-lg hover:shadow-2xl hover:shadow-pink-200/50
+        shadow-lg hover:shadow-2xl hover:shadow-brand-light/30
       `}>
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-100 to-fuchsia-100 rounded-2xl flex items-center justify-center text-3xl">
+          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-100/70 to-amber-100/50 rounded-2xl flex items-center justify-center text-3xl">
             {plan.icon}
           </div>
-          <h3 className="text-2xl font-bold text-fuchsia-600 mb-2">{plan.name}</h3>
-          <p className="text-gray-600 text-sm">{plan.duration}</p>
+          <h3 className="text-2xl font-bold text-brand-dark mb-2">{plan.name}</h3>
+          <p className="text-brand-medium text-sm">{plan.duration}</p>
         </div>
 
         {/* Price */}
         <div className="text-center mb-6">
           <div className="flex items-baseline justify-center">
-            <span className="text-lg text-gray-500">{plan.currency}</span>
-            <span className="text-5xl font-bold text-fuchsia-600 mx-2">{plan.price}</span>
+            <span className="text-lg text-brand-light">{plan.currency}</span>
+            <span className="text-5xl font-bold text-brand-dark mx-2">{plan.price}</span>
           </div>
           {plan.pricePEN && (
-            <div className="text-center text-gray-500 mt-2">
+            <div className="text-center text-brand-light mt-2">
               (Aprox. S/ {plan.pricePEN.toFixed(2)})
             </div>
           )}
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 text-center mb-6 min-h-[3rem]">
+        <p className="text-brand-medium text-center mb-6 min-h-[3rem]">
           {plan.description}
         </p>
 
@@ -65,7 +65,7 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
           {plan.features.map((feature, idx) => (
             <li key={idx} className="flex items-start">
               <svg 
-                className="w-5 h-5 text-fuchsia-500 mr-3 flex-shrink-0 mt-0.5" 
+                className="w-5 h-5 text-brand-medium mr-3 flex-shrink-0 mt-0.5" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
                   d="M5 13l4 4L19 7" 
                 />
               </svg>
-              <span className="text-gray-600 text-sm">{feature}</span>
+              <span className="text-brand-medium text-sm">{feature}</span>
             </li>
           ))}
         </ul>
@@ -89,8 +89,8 @@ export default function TarotPricingCard({ plan }: TarotPricingCardProps) {
             w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300
             flex items-center justify-center gap-3 group
             ${plan.recommended
-              ? 'bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:from-pink-600 hover:to-fuchsia-600 text-white shadow-lg'
-              : 'bg-fuchsia-50 hover:bg-fuchsia-100 text-fuchsia-600 border border-fuchsia-200'
+              ? 'bg-gradient-to-r from-[#2DD4BF] to-[#0D9488] hover:from-[#14B8A6] hover:to-[#0F766E] text-white shadow-lg'
+              : 'bg-yellow-200/90 hover:bg-yellow-300/90 text-brand-dark border border-yellow-300/60'
             }
           `}
         >

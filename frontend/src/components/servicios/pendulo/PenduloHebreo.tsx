@@ -5,21 +5,22 @@ import { MessageCircle, Sparkles, Cross, EyeOff, HeartPulse, Brain, Shield, Refr
 import AccordionItem from './AccordionItem';
 import { penduloData, galleryData } from '@/data/servicios/pendulo';
 import SimpleGallery from './SimpleGalery';
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 // import TherapyPricing from '@/components/therapy/TherapyPricing';
 
 const BenefitIcon = ({ index }: { index: number }) => {
   const icons = [
-    <Sparkles key="sparkles" className="text-pink-500" />,
-    <RefreshCw key="refresh" className="text-purple-500" />,
+    <Sparkles key="sparkles" className="text-brand-medium" />,
+    <RefreshCw key="refresh" className="text-brand-light" />,
     <Shield key="shield" className="text-red-500" />,
     <Zap key="zap" className="text-yellow-500" />,
     <HeartPulse key="heart" className="text-green-500" />,
     <Cross key="cross" className="text-blue-500" />,
     <Sun key="sun" className="text-orange-500" />,
-    <Brain key="brain" className="text-indigo-500" />,
+    <Brain key="brain" className="text-brand-light" />,
     <EyeOff key="eye" className="text-rose-500" />,
     <Moon key="moon" className="text-violet-500" />,
-    <HeartPulse key="heart2" className="text-pink-400" />
+    <HeartPulse key="heart2" className="text-brand-light" />
   ];
   
   return icons[index % icons.length];
@@ -37,16 +38,16 @@ export default function PenduloHebreo() {
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 rounded-full px-6 py-2 mb-3">
-          <Sparkles className="w-5 h-5 text-pink-500 mr-2" />
-          <span className="text-sm font-medium text-pink-700">Terapia Energética</span>
+        <div className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-100/70 to-amber-100/50 rounded-full px-6 py-2 mb-3">
+          <Sparkles className="w-5 h-5 text-brand-medium mr-2" />
+          <span className="text-sm font-medium text-brand-medium">Terapia Energética</span>
         </div>
         
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-brand-dark">
           {penduloData.title}
         </h1>
         
-        <p className="text-gray-700 text-lg mx-auto max-w-2xl leading-relaxed">
+        <p className="text-brand-medium text-lg mx-auto max-w-2xl leading-relaxed">
           {penduloData.description}
         </p>
       </div>
@@ -55,7 +56,7 @@ export default function PenduloHebreo() {
       <SimpleGallery data={galleryData} />
 
       {/* Benefits Section */}
-      <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6 shadow-sm">
+      <div className="bg-gradient-to-br from-amber-50/40 to-orange-50/20 rounded-2xl p-6 shadow-sm">
         <div 
           className="cursor-pointer"
           onClick={() => setBenefitsOpen(!benefitsOpen)}
@@ -63,14 +64,14 @@ export default function PenduloHebreo() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white rounded-xl shadow-sm">
-                <HeartPulse className="w-6 h-6 text-pink-600" />
+                <HeartPulse className="w-6 h-6 text-brand-medium" />
               </div>
-              <h2 className="text-2xl font-bold text-pink-800">
+              <h2 className="text-2xl font-bold text-brand-dark">
                 {penduloData.benefitsSection.title}
               </h2>
             </div>
             <ChevronDown 
-              className={`w-6 h-6 text-pink-600 transition-transform ${benefitsOpen ? 'rotate-180' : ''}`}
+              className={`w-6 h-6 text-brand-medium transition-transform ${benefitsOpen ? 'rotate-180' : ''}`}
             />
           </div>
         </div>
@@ -82,7 +83,7 @@ export default function PenduloHebreo() {
                 <div className="mt-1">
                   <BenefitIcon index={index} />
                 </div>
-                <p className="text-gray-700">{benefit.text}</p>
+                <p className="text-brand-medium">{benefit.text}</p>
               </div>
             ))}
           </div>
@@ -97,7 +98,7 @@ export default function PenduloHebreo() {
             id={sec.id}
             title={sec.title}
             content={
-              <div className="prose prose-pink max-w-none text-gray-700">
+              <div className="prose prose-stone max-w-none text-brand-medium">
                 {sec.content}
               </div>
             }
@@ -110,17 +111,25 @@ export default function PenduloHebreo() {
 
       {/* CTA Section */}
       <div className="text-center py-8">
-        <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl max-w-2xl mx-auto">
-          <p className="mb-6 opacity-90">
-            Agenda una sesión y comienza tu camino hacia el equilibrio y sanación integral.
-          </p>
-          <button
-            onClick={() => window.open(penduloData.ctaButton.link, '_blank')}
-            className="inline-flex items-center gap-3 bg-white text-pink-600 px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:scale-105 transition-transform"
-          >
-            <MessageCircle className="w-5 h-5" />
-            {penduloData.ctaButton.text}
-          </button>
+        <div className="relative overflow-hidden rounded-2xl p-8 shadow-xl max-w-2xl mx-auto">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+            }}
+          />
+          <div className="relative z-10">
+            <p className="mb-6 text-brand-dark font-lora-medium text-lg">
+              Agenda una sesión y comienza tu camino hacia el equilibrio y sanación integral.
+            </p>
+            <button
+              onClick={() => window.open(penduloData.ctaButton.link, '_blank', 'noopener,noreferrer')}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-6 py-3 rounded-full text-lg font-lora-semibold shadow-lg shadow-orange-300/50 hover:scale-105 transition-transform"
+            >
+              <MessageCircle className="w-5 h-5" />
+              {penduloData.ctaButton.text}
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -73,7 +73,7 @@ export default function QuickBenefitsBar(props: Props) {
       <div className="pointer-events-auto w-full px-4 md:px-0 md:max-w-[72rem] mx-auto">
         <ul
           className={clsx(
-            `bg-gradient-to-r from-purple-50 to-indigo-50 backdrop-blur-md border border-purple-200 shadow-xl rounded-3xl
+            `bg-gradient-to-r from-amber-50/50 to-orange-50/30 backdrop-blur-md border border-brand-light/30 shadow-xl rounded-3xl
              px-6 py-5 md:px-10 md:py-7
              grid grid-cols-1 gap-4 sm:grid-cols-2
              md:flex md:flex-nowrap md:items-center md:justify-center md:gap-10`,
@@ -86,12 +86,12 @@ export default function QuickBenefitsBar(props: Props) {
               <li key={i} className="flex justify-center md:justify-start">
                 <Tag
                   {...(item.href ? { href: item.href } : {})}
-                  className="flex items-center gap-3 text-sm md:text-base text-purple-700 font-semibold
+                  className="flex items-center gap-3 text-sm md:text-base text-brand-medium font-semibold
                              px-3 py-2 rounded-full md:px-4 md:py-2
-                             hover:bg-purple-100/80 transition-colors
-                             focus-visible:ring-2 focus-visible:ring-purple-400 outline-none"
+                             hover:bg-yellow-100/60/80 transition-colors
+                             focus-visible:ring-2 focus-visible:ring-brand-light outline-none"
                 >
-                  <span className="text-purple-600">{item.icon}</span>
+                  <span className="text-brand-medium">{item.icon}</span>
                   <span className="text-center md:text-left leading-snug md:whitespace-nowrap">
                     {item.text}
                   </span>

@@ -39,8 +39,8 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
           onClick={closeMenu}
           className={`w-full text-center py-4 font-lora-semibold ${
             isActive(link.href) 
-              ? "text-[#7C3AED] font-lora-bold" // Color más fuerte para activo
-              : "text-[#8B5CF6] hover:text-[#7C3AED]" // Color base más fuerte y hover aún más fuerte
+              ? "text-brand-dark font-lora-bold"
+              : "text-brand-medium hover:text-brand-dark"
           }`}
         >
           {link.label}
@@ -55,8 +55,8 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
           href={link.href}
           className={`font-lora-semibold tracking-wide ${
             isActive(link.href) 
-              ? "text-[#7C3AED] font-lora-bold border-b-2 border-[#7C3AED]" // Color más fuerte para activo y subrayado
-              : "text-[#8B5CF6] hover:text-[#7C3AED]" // Color base más fuerte y hover aún más fuerte
+              ? "text-brand-dark font-lora-bold border-b-2 border-brand-dark"
+              : "text-brand-medium hover:text-brand-dark"
           }`}
         >
           {link.label}

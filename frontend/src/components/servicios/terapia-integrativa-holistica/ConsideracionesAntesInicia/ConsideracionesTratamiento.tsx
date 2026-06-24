@@ -39,7 +39,7 @@ export default function ConsideracionesTratamientoHolistico() {
           <h3 className="font-semibold text-[#2a2f55] mb-1">
             {consideracionesData.warning.title}
           </h3>
-          <p className="text-sm text-gray-700">
+          <p className="text-sm text-brand-medium">
             {consideracionesData.warning.content}
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function ConsideracionesTratamientoHolistico() {
           {consideracionesData.processOverview.stages.map((stage, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-400 text-white font-bold text-lg shadow">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#8B6048] to-brand-dark text-white font-bold text-lg shadow">
                   {idx + 1}
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function ConsideracionesTratamientoHolistico() {
                 <h3 className="text-2xl font-semibold mb-3 text-[#3f2975]">
                   {stage.title}
                 </h3>
-                <div className="text-gray-700">
+                <div className="text-brand-medium">
                   {stage.content.map((para, i) => (
                     <p key={i} className="mb-4 leading-relaxed">
                       {para}

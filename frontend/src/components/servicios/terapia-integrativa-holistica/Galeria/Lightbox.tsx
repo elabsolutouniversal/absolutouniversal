@@ -35,7 +35,7 @@ export default function Lightbox({
         onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <button
-          className="absolute top-4 right-4 md:-right-16 md:top-0 text-white hover:text-pink-300 transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 backdrop-blur-sm z-10"
+          className="absolute top-4 right-4 md:-right-16 md:top-0 text-white hover:text-brand-light transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 backdrop-blur-sm z-10"
           onClick={onClose}
           aria-label="Cerrar imagen"
         >
@@ -45,7 +45,7 @@ export default function Lightbox({
         <div className="relative w-full h-[80vh] md:h-[85vh] flex items-center justify-center">
           {!imageLoaded && !imageError && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-brand-medium border-t-transparent rounded-full animate-spin"></div>
             </div>
           )}
 

@@ -13,7 +13,7 @@ export default function ItemAviso({ children }: { children: React.ReactNode }) {
       viewport={{ once: true }}
     >
       <CheckCircle className="w-6 h-6 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
-      <p className="text-gray-700">{children}</p>
+      <p className="text-brand-medium">{children}</p>
     </motion.div>
   );
 }

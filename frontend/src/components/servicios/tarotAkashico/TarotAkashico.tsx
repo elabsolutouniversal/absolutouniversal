@@ -1,114 +1,124 @@
 'use client';
 
-import React from 'react';
-import { serviciosDataTarotAkashico, audienciaDataTarotAkashico, tarotAkashicoImages } from '@/data/servicios/tarot-akashico/tarot-akashico';
-import Image from 'next/image';
-import { CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle, Sparkles } from 'lucide-react';
+import { ImageData } from '@/types/servicios/tarot-terapeutico';
+import {
+  serviciosDataTarotAkashico,
+  audienciaDataTarotAkashico,
+  tarotAkashicoImages,
+} from '@/data/servicios/tarot-akashico/tarot-akashico';
+import TarotHeader from '@/components/servicios/tarotPredictivo/TarotHeader';
+import TarotGallery from '@/components/servicios/tarotPredictivo/TarotGallery';
+import ImageModal from '@/components/servicios/tarotPredictivo/ImageModal';
+import ServicesSection from '@/components/servicios/tarotPredictivo/ServicesSection';
+import AudienceSection from '@/components/servicios/tarotPredictivo/AudienceSection';
+import TarotFooter from '@/components/servicios/tarotPredictivo/TarotFooter';
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 
 const TarotAkashico: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
 
   const handleBooking = () => {
-    const whatsappNumber = "51962305362"; // Reemplaza con tu número de WhatsApp
-    const priceUSD = 75;
-    const pricePEN = 265; // Assuming 1 USD = 3.75 PEN
+    const whatsappNumber = '51962305362';
+    const priceUSD = 95;
+    const pricePEN = 320;
     const message = `🌟 ¡Hola! Estoy interesado/a en reservar una sesión de Tarot Akáshico.\n\n• Servicio: Sesión Completa\n• Inversión: $${priceUSD} (S/ ${pricePEN.toFixed(2)})\n\n¿Podríamos coordinar una fecha? ✨`;
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
+  const openModal = (image: ImageData): void => {
+    setSelectedImage(image);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = (): void => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'unset';
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold text-center text-purple-700 mb-8">El Askasha</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        {tarotAkashicoImages.map((image, index) => (
-          <div key={index} className="overflow-hidden rounded-lg shadow-md">
-            <Image src={image.src} alt={image.alt} width={500} height={300} className="object-cover w-full h-full" />
-          </div>
-        ))}
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
+      <div className="container mx-auto px-4 py-16">
+        <TarotHeader
+          titleLines={['Tarot Akáshico', 'Lectura de Registros Akáshicos']}
+          subtitle="Accede a la memoria universal: las cartas actúan como puertas simbólicas que facilitan el acceso a memorias profundas, aprendizajes kármicos y bloqueos transpersonales."
+        />
 
-      <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-red-600 mb-6">¿Qué puedes esperar de una sesión de lectura de Registros Akáshico?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {serviciosDataTarotAkashico.map(servicio => (
-            <div key={servicio.id} className="bg-purple-50 p-6 rounded-lg flex items-start">
-              <div className="text-purple-600 mr-4">{servicio.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold text-purple-800 mb-2">{servicio.titulo}</h3>
-                <p className="text-gray-700">{servicio.descripcion}</p>
+        <TarotGallery images={tarotAkashicoImages} onImageClick={openModal} />
+
+        <ServicesSection
+          servicios={serviciosDataTarotAkashico}
+          title="¿Qué puedes esperar de una sesión?"
+          subtitle="Exploración profunda de tus registros akáshicos con enfoque terapéutico y espiritual"
+        />
+
+        <AudienceSection
+          audiencia={audienciaDataTarotAkashico}
+          title="¿Es para ti si...?"
+          subtitle="Esta lectura puede ser especialmente transformadora si te identificas con lo siguiente"
+        />
+
+        {/* Precio */}
+        <div className="mt-16">
+          <div className="max-w-md mx-auto relative overflow-hidden rounded-2xl shadow-xl">
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+              }}
+            />
+            <div className="absolute inset-0 bg-white/35" />
+
+            <div className="relative z-10 p-8">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-400 to-orange-600 shadow-md shadow-orange-300/40">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-brand-dark">
+                  Sesión Completa de Lectura de Registros Akáshicos
+                </h3>
+                <p className="text-brand-medium mt-1">1 hora y 30 minutos</p>
+                <div className="my-6">
+                  <span className="text-5xl font-bold text-brand-dark">$95</span>
+                  <span className="text-lg text-brand-medium ml-2">(S/ 320)</span>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      <div>
-        <h2 className="text-3xl font-semibold text-pink-600 mb-6">¿Es para ti si...?</h2>
-        <ul className="space-y-4">
-          {audienciaDataTarotAkashico.map(item => (
-            <li key={item.id} className="flex items-start">
-              <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-              <span className="text-lg text-gray-800">{item.texto}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-brand-medium mb-3 text-center">INCLUYE:</h4>
+                <ul className="space-y-2">
+                  {[
+                    'Conexión y apertura de Registros Akáshicos',
+                    'Identificación de Patrones Destructivos Generacionales',
+                    'Análisis de vidas pasadas relevantes',
+                    'Guía sobre tu propósito de alma y misión de vida',
+                    'Espacio para preguntas y respuestas',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start">
+                      <CheckCircle className="flex-shrink-0 w-5 h-5 text-brand-medium mt-0.5" />
+                      <span className="ml-2 text-brand-medium text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-      {/* Pricing Section */}
-      <div className="mt-12 pt-8 border-t border-gray-200">
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg border border-purple-100 p-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800">Sesion Completa de Lectura de Registros Akáshicos</h3>
-            <p className="text-gray-500 mt-1">1 hora y 30 minutos</p>
-            <div className="my-6">
-              <span className="text-5xl font-bold text-indigo-600">$95</span>
-              <span className="text-lg text-gray-500 ml-2">
-                (S/ 320)
-              </span>
+              <button
+                onClick={handleBooking}
+                className="w-full bg-yellow-200/90 hover:bg-yellow-300/90 text-brand-dark font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-md border border-yellow-300/60"
+              >
+                Reservar Sesión por WhatsApp
+              </button>
             </div>
           </div>
-          <div className="mb-6">
-            <h4 className="text-sm font-semibold text-gray-500 mb-3 text-center">INCLUYE:</h4>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Conexión y apertura de Registros Akáshicos</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Identificacion de Patrones Destructivos Generacionales</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Análisis de vidas pasadas relevantes</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Guía sobre tu propósito de alma y misión de vida</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Espacio para preguntas y respuestas</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" />
-                <span className="ml-2 text-gray-700">Guía de tu Propósito de Alma y misión de vida</span>
-              </li>
-            </ul>
-          </div>
-          <div className="text-center">
-            <button
-              onClick={handleBooking}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105"
-            >
-              Reservar Sesión por WhatsApp
-            </button>
-          </div>
         </div>
+
+        <TarotFooter />
       </div>
+
+      <ImageModal selectedImage={selectedImage} onClose={closeModal} />
     </div>
   );
-}
+};
 
 export default TarotAkashico;

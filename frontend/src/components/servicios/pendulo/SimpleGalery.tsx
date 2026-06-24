@@ -45,9 +45,9 @@ export default function SimpleGallery({ data = galleryData }: Props) {
   return (
     <div className="space-y-4 px-2 sm:px-4">
       <div className="text-center px-2">
-        <h2 className="text-xl sm:text-2xl font-bold text-pink-700">{data.title}</h2>
+        <h2 className="text-xl sm:text-2xl font-lora-bold text-brand-dark">{data.title}</h2>
         {data.subtitle && (
-          <p className="text-gray-600 text-sm sm:text-base mt-1">
+          <p className="text-brand-medium text-sm sm:text-base mt-1 font-lora">
             {data.subtitle}
           </p>
         )}

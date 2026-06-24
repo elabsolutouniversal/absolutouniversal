@@ -24,20 +24,20 @@ export const SocialMediaSimple: React.FC = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-pink-50 via-rose-50 to-purple-50">
+    <section className="py-20 px-6 bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/30">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center mb-8 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full border border-pink-200/50 shadow-lg">
-            <Sparkles className="w-6 h-6 text-purple-600 mr-3" />
-            <span className="text-purple-600 font-lora-bold text-base uppercase tracking-wide">Redes Sociales</span>
+          <div className="inline-flex items-center justify-center mb-8 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full border border-brand-light/40 shadow-lg">
+            <Sparkles className="w-6 h-6 text-brand-medium mr-3" />
+            <span className="text-brand-medium font-lora-bold text-base uppercase tracking-wide">Redes Sociales</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora-bold bg-gradient-to-r from-purple-700 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-lora-bold text-brand-dark mb-8 leading-tight">
             Conecta conmigo
           </h2>
 
-          <p className="text-lg md:text-xl text-purple-700 max-w-3xl mx-auto leading-relaxed font-lora">
+          <p className="text-lg md:text-xl text-brand-medium max-w-3xl mx-auto leading-relaxed font-lora">
             Sígueme en mis redes sociales para estar al día con contenido sobre bienestar, 
             psicología y transformación personal.
           </p>
@@ -53,7 +53,7 @@ export const SocialMediaSimple: React.FC = () => {
                 href={media.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 w-full px-6 py-4 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 group"
+                className="flex items-center gap-4 w-full px-6 py-4 bg-white rounded-xl shadow-lg border border-brand-light/20 hover:shadow-xl hover:border-brand-light/40 hover:bg-amber-50/30 transition-all duration-300 group"
               >
                 {/* Icono con color sólido */}
                 <div className={`w-12 h-12 ${getIconBgColor(media.id)} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -62,19 +62,16 @@ export const SocialMediaSimple: React.FC = () => {
                 
                 {/* Contenido de texto */}
                 <div className="flex-1">
-                  <h3 className="font-lora-bold text-lg text-purple-700 mb-1">
+                  <h3 className="font-lora-bold text-lg text-brand-dark mb-1">
                     {media.name}
                   </h3>
-                  <p className="text-sm text-purple-600 font-lora mb-1">
+                  <p className="text-sm text-brand-medium font-lora mb-1">
                     @{media.username}
                   </p>
-                  {/* <p className="text-sm text-purple-600 font-lora">
-                    {media.followers} seguidores
-                  </p> */}
                 </div>
                 
                 {/* Flecha indicadora */}
-                <div className="text-purple-600 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0">
+                <div className="text-brand-medium group-hover:text-brand-dark group-hover:translate-x-1 transition-all duration-300 flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -97,7 +94,7 @@ export const SocialMediaSimple: React.FC = () => {
             />
           </div>
           
-          <p className="text-purple-600 font-lora text-sm">
+          <p className="text-brand-medium font-lora text-sm">
             ¡Conectemos y compartamos este viaje de transformación juntos!
           </p>
         </div>

@@ -10,13 +10,13 @@ const AboutGallery: React.FC<AboutGalleryProps> = ({ workspace2 }) => {
   if (!workspace2) return null;
   
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent md:text-4xl">
+          <h2 className="mb-4 text-3xl font-bold text-brand-dark md:text-4xl">
             Un Espacio Sagrado para Tu Transformación
           </h2>
-          <p className="text-xl font-semibold text-purple-700 max-w-3xl mx-auto">
+          <p className="text-xl font-semibold text-brand-medium max-w-3xl mx-auto">
             Cada sesión es un viaje único donde la ciencia y la espiritualidad se encuentran para guiarte hacia tu sanación integral
           </p>
         </div>

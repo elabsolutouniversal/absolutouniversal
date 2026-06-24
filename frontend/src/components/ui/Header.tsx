@@ -11,8 +11,8 @@ export default function Header() {
 
   // 🎨 COLORES CONFIGURABLES - Cambia solo aquí
   const headerBg = "bg-white/90";          // Fondo del header
-  const logoTextColor = "text-purple-700"; // Color del texto del logo
-  const hamburgerColor = "text-purple-700"; // Color del botón móvil
+  const logoTextColor = "text-brand-dark";
+  const hamburgerColor = "text-brand-dark";
 
   return (
     <header className={`${headerBg} backdrop-blur-md shadow-md sticky top-0 z-50`}>

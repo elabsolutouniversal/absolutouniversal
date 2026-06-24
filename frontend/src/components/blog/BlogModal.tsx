@@ -47,18 +47,18 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
 
   const getCategoryColor = (categoria: string) => {
     const colors: Record<string, string> = {
-      'Terapia Holística': 'bg-purple-100 text-purple-800 border-purple-200',
+      'Terapia Holística': 'bg-yellow-100/60 text-brand-dark border-brand-light/20',
       'Péndulo': 'bg-blue-100 text-blue-800 border-blue-200',
       'Energía': 'bg-green-100 text-green-800 border-green-200',
       'Meditación': 'bg-indigo-100 text-indigo-800 border-indigo-200',
       'Rituales': 'bg-orange-100 text-orange-800 border-orange-200',
       'Astrología': 'bg-violet-100 text-violet-800 border-violet-200',
       'Homeopatía': 'bg-emerald-100 text-emerald-800 border-emerald-200',
-      'Tarot': 'bg-pink-100 text-pink-800 border-pink-200',
+      'Tarot': 'bg-yellow-100/70 text-brand-dark border-yellow-300/60',
       'Musicoterapia': 'bg-cyan-100 text-cyan-800 border-cyan-200',
       'Pranayama': 'bg-amber-100 text-amber-800 border-amber-200'
     };
-    return colors[categoria] || 'bg-gray-100 text-gray-800 border-gray-200';
+    return colors[categoria] || 'bg-gray-100 text-gray-800 border-brand-light/20';
   };
 
   const handleShare = async () => {
@@ -90,26 +90,26 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
       <div className="flex items-start justify-center min-h-screen p-0 sm:p-4">
         <div className="relative bg-white w-full h-screen sm:h-auto sm:max-h-[90vh] sm:max-w-4xl sm:rounded-xl shadow-xl overflow-hidden flex flex-col">
           {/* Header móvil */}
-          <div className="sm:hidden sticky top-0 z-10 bg-white border-b border-gray-200 p-3">
+          <div className="sm:hidden sticky top-0 z-10 bg-white border-b border-brand-light/20 p-3">
             <button
               onClick={onClose}
-              className="p-1 text-gray-600 rounded-full"
+              className="p-1 text-brand-medium rounded-full"
             >
               <ArrowLeft className="w-6 h-6" />
             </button>
           </div>
 
           {/* Header desktop */}
-          <div className="hidden sm:flex sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-4 justify-between items-center">
+          <div className="hidden sm:flex sticky top-0 z-10 bg-white border-b border-brand-light/20 px-6 py-4 justify-between items-center">
             <div className="flex items-center space-x-4">
               <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(post.categoria)}`}>
                 {post.categoria}
               </span>
-              <div className="flex items-center text-gray-500 text-sm">
+              <div className="flex items-center text-brand-light text-sm">
                 <Calendar className="w-4 h-4 mr-1" />
                 <time dateTime={post.fecha}>{formatDate(post.fecha)}</time>
               </div>
-              <div className="flex items-center text-gray-500 text-sm">
+              <div className="flex items-center text-brand-light text-sm">
                 <Clock className="w-4 h-4 mr-1" />
                 <span>{getReadingTime(post.contenido)} min de lectura</span>
               </div>
@@ -118,14 +118,14 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
             <div className="flex items-center space-x-2">
               <button
                 onClick={handleShare}
-                className="p-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                className="p-2 text-brand-light hover:text-brand-medium hover:bg-amber-50/40 rounded-lg transition-colors"
                 title="Compartir"
               >
                 <Share2 className="w-5 h-5" />
               </button>
               <button
                 onClick={onClose}
-                className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                className="p-2 text-brand-light hover:text-brand-medium hover:bg-gray-100 rounded-lg transition-colors"
                 title="Cerrar"
               >
                 <X className="w-5 h-5" />
@@ -137,7 +137,7 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
           <div className="overflow-y-auto flex-1">
             {/* Imagen */}
             {post.imagen && (
-              <div className="w-full aspect-video sm:aspect-[21/9] relative bg-gradient-to-br from-purple-400 via-pink-400 to-indigo-400">
+              <div className="w-full aspect-video sm:aspect-[21/9] relative bg-gradient-to-br from-amber-100/80 via-stone-200/60 to-orange-100/80">
                 <Image
                   src={post.imagen}
                   alt={post.titulo}
@@ -152,19 +152,19 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
             {/* Contenido principal */}
             <div className="p-4 sm:p-6">
               {/* Título */}
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold text-brand-dark mb-4 sm:mb-6">
                 {post.titulo}
               </h1>
 
               {/* Resumen */}
-              <div className="bg-purple-50 border-l-4 border-purple-400 p-4 sm:p-5 mb-5 sm:mb-6 rounded-r-lg">
-                <p className="text-purple-800 text-sm sm:text-base">
+              <div className="bg-amber-50/40 border-l-4 border-brand-light/40 p-4 sm:p-5 mb-5 sm:mb-6 rounded-r-lg">
+                <p className="text-brand-dark text-sm sm:text-base">
                   {post.resumen}
                 </p>
               </div>
 
               {/* Contenido */}
-              <div className="prose prose-sm sm:prose max-w-none text-gray-700">
+              <div className="prose prose-sm sm:prose max-w-none text-brand-medium">
                 {post.contenido.split('\n').map((paragraph, index) => (
                   <p key={index} className="mb-4">
                     {paragraph}
@@ -174,13 +174,13 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
 
               {/* Tags */}
               {post.tags?.length > 0 && (
-                <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-gray-200">
-                  <h3 className="text-sm font-semibold text-gray-700 mb-3">Etiquetas:</h3>
+                <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-brand-light/20">
+                  <h3 className="text-sm font-semibold text-brand-medium mb-3">Etiquetas:</h3>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
+                        className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-brand-medium"
                       >
                         <Tag className="w-3 h-3 mr-1.5" />
                         {tag}
@@ -193,15 +193,15 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, isOpen, onClose }) => {
           </div>
 
           {/* Footer móvil */}
-          <div className="sm:hidden sticky bottom-0 bg-white border-t border-gray-200 p-3 flex justify-between items-center">
+          <div className="sm:hidden sticky bottom-0 bg-white border-t border-brand-light/20 p-3 flex justify-between items-center">
             <button
               onClick={handleShare}
-              className="flex items-center text-purple-600 text-sm font-medium"
+              className="flex items-center text-brand-medium text-sm font-medium"
             >
               <Share2 className="w-4 h-4 mr-1.5" />
               Compartir
             </button>
-            <div className="flex items-center text-gray-500 text-xs">
+            <div className="flex items-center text-brand-light text-xs">
               <Clock className="w-3 h-3 mr-1" />
               <span>{getReadingTime(post.contenido)} min</span>
             </div>

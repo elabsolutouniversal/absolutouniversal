@@ -7,17 +7,17 @@ import Image from 'next/image';
 
 export default function ProfileTeaser() {
   return (
-    <div className="bg-gradient-to-b from-pink-50 via-rose-50 to-purple-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Encabezado principal */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-lora-medium mb-5">
+          <span className="inline-block px-4 py-2 bg-yellow-100/60 text-brand-medium rounded-full text-sm font-lora-medium mb-5">
             {profileData.content.tagline}
           </span>
-          <h2 className="text-4xl md:text-5xl font-lora-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-lora-bold text-brand-dark mb-6 leading-tight">
             {profileData.content.mainHeading}
           </h2>
-          <p className="text-xl font-lora text-purple-700 max-w-3xl mx-auto">
+          <p className="text-xl font-lora text-brand-medium max-w-3xl mx-auto">
             {profileData.content.subHeading}
           </p>
         </div>
@@ -25,12 +25,12 @@ export default function ProfileTeaser() {
         {/* Tarjetas de servicios destacados */}
        
         {/* Sección CTA con mini bio */}
-        <div className="flex flex-col lg:flex-row items-center gap-10 bg-white rounded-2xl p-8 border border-pink-100 shadow-sm relative overflow-hidden">
-          <div className="absolute -inset-1 bg-gradient-to-r from-pink-100 to-purple-100 opacity-40 rounded-2xl -z-10" />
+        <div className="flex flex-col lg:flex-row items-center gap-10 bg-white rounded-2xl p-8 border border-brand-light/20 shadow-sm relative overflow-hidden">
+          <div className="absolute -inset-1 bg-gradient-to-r from-yellow-100/70 to-amber-100/50 opacity-40 rounded-2xl -z-10" />
 
           <div className="flex-shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-3 bg-gradient-to-r from-pink-400 to-purple-400 rounded-2xl opacity-20 blur-md group-hover:opacity-30 transition duration-500 -z-10" />
+              <div className="absolute -inset-3 bg-gradient-to-r from-amber-300/50 to-orange-200/50 rounded-2xl opacity-20 blur-md group-hover:opacity-30 transition duration-500 -z-10" />
               <Image 
                 src={profileData.generalInfo.imageUrl} 
                 alt={profileData.generalInfo.name} 
@@ -42,18 +42,18 @@ export default function ProfileTeaser() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h3 className="text-2xl font-lora-bold text-fuchsia-600 mb-3">
+            <h3 className="text-2xl font-lora-bold text-brand-dark mb-3">
               {profileData.generalInfo.name}
             </h3>
 
             <div className="mb-5 space-y-2">
-              <p className="font-lora-semibold text-pink-600">
+              <p className="font-lora-semibold text-brand-medium">
                 {profileData.generalInfo.title}
               </p>
-              <p className="font-lora-semibold text-pink-600">
+              <p className="font-lora-semibold text-brand-medium">
                 ({profileData.generalInfo.credential})
               </p>
-                             <p className="text-purple-700 font-lora-bold">
+              <p className="text-brand-dark font-lora-bold">
                  {profileData.generalInfo.specialty} con {profileData.generalInfo.experience}
                </p>
             </div>
@@ -74,7 +74,7 @@ export default function ProfileTeaser() {
 
             <Link
               href="/sobre-mi"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-lora-medium px-6 py-3 rounded-lg transition-all group shadow-md hover:shadow-lg font-normal-style"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-lora-medium px-8 py-4 rounded-full shadow-lg shadow-orange-300/50 transition-all duration-300 transform hover:scale-105 group font-normal-style"
             >
               {profileData.content.ctaText}
               <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">

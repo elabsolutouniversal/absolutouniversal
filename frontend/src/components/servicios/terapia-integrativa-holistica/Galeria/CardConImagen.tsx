@@ -53,7 +53,7 @@ export default function CardConImagen({
       {/* Loading state */}
       {loading && shouldShowImage && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-8 h-8 border-4 border-brand-medium border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
 
@@ -77,7 +77,7 @@ export default function CardConImagen({
         // Fallback when there's no image or error
         <div className={`absolute inset-0 flex flex-col ${fallbackBg} items-center justify-center`}>
           {icon}
-          <p className="font-medium text-gray-700 mt-2 text-center px-4">{titulo}</p>
+          <p className="font-medium text-brand-medium mt-2 text-center px-4">{titulo}</p>
           {error && (
             <p className="text-xs text-gray-500 mt-1">Error al cargar imagen</p>
           )}

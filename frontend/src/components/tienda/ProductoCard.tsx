@@ -77,19 +77,19 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
       <div className="p-4">
         {/* Categoría */}
         <div className="flex items-center gap-2 mb-2">
-          <Tag className="w-4 h-4 text-purple-600" />
-          <span className="text-sm text-purple-600 font-medium capitalize">
+          <Tag className="w-4 h-4 text-brand-medium" />
+          <span className="text-sm text-brand-medium font-medium capitalize">
             {producto.categoria}
           </span>
         </div>
 
         {/* Nombre del producto */}
-        <h3 className="text-lg font-lora-semibold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-lg font-lora-semibold text-brand-dark mb-2 line-clamp-2">
           {producto.nombre}
         </h3>
 
         {/* Descripción */}
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+        <p className="text-brand-medium text-sm mb-3 line-clamp-2">
           {producto.descripcion}
         </p>
 
@@ -98,7 +98,7 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
           {producto.tags.slice(0, 3).map((tag, index) => (
             <span 
               key={index}
-              className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs"
+              className="bg-yellow-100/70 text-brand-dark px-2 py-1 rounded-full text-xs"
             >
               {tag}
             </span>
@@ -107,7 +107,7 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
 
         {/* Precio */}
         <div className="flex items-center gap-2 mb-4">
-          <span className="text-2xl font-lora-bold-normal text-purple-600">
+          <span className="text-2xl font-lora-bold-normal text-brand-dark">
             {formatearPrecio(producto.precio)}
           </span>
           {producto.precioOriginal && (
@@ -124,7 +124,7 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
           className={`w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
             producto.stock === 0
               ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              : 'bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:from-purple-700 hover:to-purple-800 transform hover:scale-105'
+              : 'bg-purple-200/90 text-brand-dark border border-purple-300/50 hover:bg-purple-300/90 transform hover:scale-105'
           }`}
         >
           <ShoppingCart className="w-5 h-5" />
@@ -135,7 +135,7 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
         {/* Indicador de cantidad en carrito */}
         {cantidadEnCarrito > 0 && (
           <div className="mt-2 text-center">
-            <span className="text-sm text-purple-600 font-medium">
+            <span className="text-sm text-brand-medium font-medium">
               {cantidadEnCarrito} en tu carrito
             </span>
           </div>

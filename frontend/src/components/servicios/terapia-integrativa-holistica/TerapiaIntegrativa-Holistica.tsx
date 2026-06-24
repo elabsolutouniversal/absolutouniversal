@@ -49,7 +49,7 @@ export default function TerapiaIntegrativaHolistica() {
   }, [openIndex, onKey]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
       {/* HERO + BARRA DE BENEFICIOS */}
       <section className="relative md:overflow-visible pb-4 md:pb-20">
         {/* Hero */}
@@ -73,11 +73,11 @@ export default function TerapiaIntegrativaHolistica() {
           }
           texto={
             <>
-              <p className="text-purple-700 leading-relaxed text-justify font-medium">
+              <p className="text-brand-medium leading-relaxed text-justify font-medium">
               El metodo SATHYA integra y combina  técnicas de {' '}
-                <span className="font-semibold text-purple-600">Psicología Cientifica</span>{' '}
-                <span className="font-semibold text-indigo-600">Terapia de Radiestecia con Pendulo Hebreo</span> y{' '}
-                <span className="font-semibold text-pink-600"> lectura de tarot terapeutico y akashico</span>.
+                <span className="font-semibold text-brand-dark">Psicología Cientifica</span>{' '}
+                <span className="font-semibold text-brand-dark">Terapia de Radiestecia con Pendulo Hebreo</span> y{' '}
+                <span className="font-semibold text-brand-dark"> lectura de tarot terapeutico y akashico</span>.
                 Este tratamiento está diseñado para abrir tu camino hacia el máximo bienestar,
                 abordando tanto tus necesidades emocionales, fisicas y energèticas, iniciando
                 un profundo proceso de autoconocimiento y armonía para vivir en verdad y coherencia.
@@ -103,10 +103,10 @@ export default function TerapiaIntegrativaHolistica() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-brand-dark">
               Beneficios que transformarán tu vida
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-brand-medium text-lg max-w-2xl mx-auto">
               Experimenta cambios profundos en todas las áreas de tu ser
             </p>
           </motion.div>

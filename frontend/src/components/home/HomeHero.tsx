@@ -55,11 +55,11 @@ export default function HomeHero(): React.ReactElement {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-elegant-title text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 leading-tight">
+              <h2 className="text-elegant-title text-brand-dark text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
                 Bienvenido a tu espacio de bienestar
               </h2>
 
-              <p className="text-elegant-body text-purple-700 text-base md:text-lg mb-6 leading-relaxed">
+              <p className="text-elegant-body text-brand-medium text-base md:text-lg mb-6 leading-relaxed">
                 Un lugar para reconectar contigo, sanar desde la raíz y transformar tu vida
                 desde la conciencia y el corazón.
               </p>
@@ -67,7 +67,7 @@ export default function HomeHero(): React.ReactElement {
               <Link
                 href="/servicios/sanacion-integrativa-holistica"
                 aria-label="Descubre mis servicios"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-8 py-4 rounded-full shadow-lg shadow-orange-300/50 transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
               >
                 Metodo <span className="text-3xl">SATHYA</span>
                 <FaArrowRight className="text-base" />

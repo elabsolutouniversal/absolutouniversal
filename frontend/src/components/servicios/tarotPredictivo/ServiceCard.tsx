@@ -9,17 +9,17 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ servicio, index }) => {
   return (
     <div
-      className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/30 hover:scale-105 hover:-translate-y-2"
+      className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-brand-light/20 hover:scale-105 hover:-translate-y-2"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="flex flex-col items-center text-center">
-        <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+        <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
           {servicio.icon}
         </div>
-        <h3 className="text-xl font-bold text-gray-800 mb-4">
+        <h3 className="text-xl font-bold text-brand-dark mb-4">
           {servicio.titulo}
         </h3>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-brand-medium leading-relaxed">
           {servicio.descripcion}
         </p>
       </div>

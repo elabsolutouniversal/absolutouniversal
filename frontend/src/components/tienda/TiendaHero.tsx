@@ -2,43 +2,45 @@
 
 import React from 'react';
 import { ShoppingBag, Sparkles, Heart, Star } from 'lucide-react';
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 
 export default function TiendaHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 py-16">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <section className="relative overflow-hidden py-16 md:py-20">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+        }}
+      />
+      <div className="absolute inset-0 bg-white/35" />
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="flex justify-center mb-6">
-          <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-            <ShoppingBag className="w-12 h-12 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-md border border-brand-light/20">
+            <ShoppingBag className="w-12 h-12 text-brand-medium" />
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-lora-bold-normal text-white mb-6">
+        <h1 className="text-5xl md:text-6xl font-lora-bold-normal text-brand-dark mb-6">
           🛍️ Tienda Holística
         </h1>
         
-        <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed font-lora-normal">
+        <p className="text-xl md:text-2xl text-brand-medium mb-8 max-w-3xl mx-auto leading-relaxed font-lora-normal">
           Descubre Lindos Productos Esotericos y Misticos
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6 text-purple-100 mb-8">
+        <div className="flex flex-wrap justify-center gap-6 text-brand-medium mb-8">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-yellow-300" />
+            <Sparkles className="w-5 h-5 text-brand-light" />
             <span className="font-lora-normal">Productos Certificados</span>
           </div>
           <div className="flex items-center gap-2">
-            <Heart className="w-5 h-5 text-pink-300" />
+            <Heart className="w-5 h-5 text-brand-light" />
             <span className="font-lora-normal">Energía Positiva</span>
           </div>
           <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 text-yellow-300" />
+            <Star className="w-5 h-5 text-brand-light" />
             <span className="font-lora-normal">Calidad Premium</span>
           </div>
         </div>

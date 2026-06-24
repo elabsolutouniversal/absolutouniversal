@@ -34,7 +34,7 @@ export default function SocialAside() {
   };
 
   return (
-    <aside className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-6">
+    <aside className="bg-white rounded-2xl shadow-lg border border-brand-light/20 p-6 space-y-6">
       {/* Perfil del autor */}
       <div className="flex flex-col items-center space-y-3">
         <Image
@@ -44,16 +44,16 @@ export default function SocialAside() {
           height={120}
           className="rounded-full"
         />
-        <p className="text-center text-sm text-gray-700">
+        <p className="text-center text-sm text-brand-medium">
           Psicóloga, Psicoterapeuta Holística<br />
           y Especialista en Sanación Energética
         </p>
-        <p className="text-center text-purple-600 font-semibold">
+        <p className="text-center text-brand-medium font-semibold">
           Dahiana Velasquez — Lima, Perú
         </p>
       </div>
    
-      <h2 className="text-center text-purple-600 font-semibold">
+      <h2 className="text-center text-brand-medium font-semibold">
         Siguenos en nuestras redes
       </h2>
       {/* Enlaces sociales */}
@@ -62,7 +62,7 @@ export default function SocialAside() {
           href="https://www.facebook.com/tarotdeoshodahiana/?locale=es_LA"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
+          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-yellow-200/90 text-brand-dark font-semibold rounded-xl border border-yellow-300/60 hover:bg-yellow-300/90 transition-colors"
         >
           <Facebook className="w-5 h-5" /> Facebook
         </a>
@@ -70,7 +70,7 @@ export default function SocialAside() {
           href="https://www.instagram.com/absoluto_universal?igsh=ZGM5Nnp5cmU0NHg4"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-xl hover:opacity-90"
+          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-[#6B7F3B] text-white font-semibold rounded-xl hover:bg-[#5a6b32] transition-colors"
         >
           <Instagram className="w-5 h-5" /> Instagram
         </a>
@@ -78,7 +78,7 @@ export default function SocialAside() {
           href="https://www.tiktok.com/@absoluto_universal?is_from_webapp=1&sender_device=pc"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-black text-white rounded-xl hover:opacity-90"
+          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-gradient-to-r from-[#2DD4BF] to-[#0D9488] text-white font-semibold rounded-xl hover:from-[#14B8A6] hover:to-[#0F766E] transition-colors"
         >
           <TikTokIcon className="w-5 h-5" /> TikTok
         </a>
@@ -86,7 +86,7 @@ export default function SocialAside() {
           href="https://www.youtube.com/@absolutouniversal"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700"
+          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-500 hover:to-orange-700 transition-colors"
         >
           <YoutubeIcon className="w-5 h-5" /> YouTube
         </a>
@@ -103,27 +103,27 @@ export default function SocialAside() {
       </div>
 
       {/* CTA Comunidad */}
-      <div className="p-4 bg-purple-50 rounded-lg text-center">
-        <span className="font-semibold text-purple-600">
+      <div className="p-4 bg-amber-50/40 rounded-lg text-center">
+        <span className="font-semibold text-brand-medium">
           ✨ Únete a mi comunidad
         </span>
-        <p className="text-xs text-gray-600 mt-1">
+        <p className="text-xs text-brand-medium mt-1">
           Tips diarios de sanación y bienestar
         </p>
       </div>
 
       {/* Newsletter semanal */}
       <div>
-        <h4 className="text-sm font-semibold text-gray-700 mb-2">
+        <h4 className="text-sm font-semibold text-brand-medium mb-2">
           Newsletter semanal
         </h4>
         <form onSubmit={handleSubmit} className="space-y-2">
           <input
             type="email"
             placeholder="Tu email"
-            className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-3 py-2 border border-brand-light/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-light/40"
           />
-          <button className="w-full py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg hover:opacity-90">
+          <button className="w-full py-2 text-sm font-semibold text-brand-dark bg-yellow-200/90 border border-yellow-300/60 rounded-lg hover:bg-yellow-300/90">
             Suscribirme
           </button>
         </form>

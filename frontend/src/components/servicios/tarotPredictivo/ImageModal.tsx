@@ -36,7 +36,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ selectedImage, onClose }) => {
           type="button"
           aria-label="Cerrar modal"
         >
-          <X className="w-6 h-6 text-gray-800" />
+          <X className="w-6 h-6 text-brand-dark" />
         </button>
         
         {/* Imagen ampliada: uso de fill dentro de contenedor relativo */}

@@ -6,12 +6,12 @@ export default function CardBeneficio({ icon, titulo, descripcion }: BeneficioTe
   return (
     <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105 border border-gray-100">
       <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-        <div className="p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-full">
+        <div className="p-3 bg-gradient-to-br from-amber-50/40 to-yellow-50/30 rounded-full">
           {icon}
         </div>
       </div>
-      <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">{titulo}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{descripcion}</p>
+      <h3 className="text-lg sm:text-xl font-bold mb-3 text-brand-dark">{titulo}</h3>
+      <p className="text-brand-medium leading-relaxed text-sm sm:text-base">{descripcion}</p>
     </div>
   );
 }

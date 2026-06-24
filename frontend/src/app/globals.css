@@ -5,6 +5,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-lora);
   --font-mono: var(--font-geist-mono);
+
+  /* Marca — tono café #6E5050 */
+  --color-brand: #6E5050;
+  --color-brand-medium: #807070;
+  --color-brand-light: #958585;
+  --color-brand-dark: #6E5050;
   
   /* Configuración de fuentes personalizadas */
   --font-family-lora: var(--font-lora), Georgia, serif;
@@ -187,6 +193,29 @@ p {
   .font-italic-style {
     font-style: italic;
   }
+}
+
+/* Degradado exclusivo del hero principal (solo InitialHero) */
+.text-hero-gradient {
+  background: linear-gradient(90deg, #6E5050 0%, #9A5C38 50%, #D4845A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-elegant-hero-title {
+  font-family: var(--font-lora), Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-elegant-hero-subtitle {
+  font-family: var(--font-lora), Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* Estilos adicionales para la tienda */

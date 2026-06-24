@@ -22,34 +22,34 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       <div className="absolute top-3 left-3 bg-white/90 rounded-full p-1.5 shadow-sm">
-        {course.icon === 'BookOpen' && <BookOpen className="w-5 h-5 text-pink-600" />}
+        {course.icon === 'BookOpen' && <BookOpen className="w-5 h-5 text-brand-dark" />}
       </div>
       <div className="absolute bottom-3 left-4 right-4">
         <h3 className="text-lg font-bold text-white">{course.title}</h3>
         <div className="flex items-center mt-1">
-          <span className="text-xs bg-pink-600/90 text-white px-2 py-1 rounded-full">
+          <span className="text-xs bg-brand-dark/90 text-white px-2 py-1 rounded-full">
             {course.duracion}
           </span>
         </div>
       </div>
     </div>
     <div className="p-4 space-y-3">
-      <p className="text-gray-600 text-sm line-clamp-2">{course.description}</p>
+      <p className="text-brand-medium text-sm line-clamp-2">{course.description}</p>
       <div className="flex justify-between items-center">
         <div>
           {course.precioOriginal && (
-            <span className="text-xs text-gray-400 line-through mr-2">
+            <span className="text-xs text-brand-light/70 line-through mr-2">
               {course.precioOriginal}
             </span>
           )}
-          <span className="font-medium text-pink-600 text-sm">
+          <span className="font-medium text-brand-dark text-sm">
             {course.price} USD
             {course.pricePEN && ` (S/ ${course.pricePEN})`}
           </span>
         </div>
         <Link
           href={`/cursos/${course.slug}`}
-          className="px-4 py-1.5 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors duration-300 text-sm font-medium flex items-center"
+          className="px-4 py-1.5 bg-yellow-200/90 text-brand-dark border border-yellow-300/60 rounded-full hover:bg-yellow-300/90 transition-colors duration-300 text-sm font-semibold flex items-center"
         >
           Ver más
           <svg 

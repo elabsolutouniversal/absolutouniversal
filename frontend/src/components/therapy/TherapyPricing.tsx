@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { therapiesData } from '@/data/pricingTerapies/therapies';
 
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 import type { 
   TherapyPricingProps, 
   SelectedPackage, 
@@ -17,6 +18,20 @@ const formatPrice = (price: number, currency: string = "$ "): string => `${curre
 const calculateSavings = (originalPrice?: number, currentPrice?: number): number => (!originalPrice || !currentPrice || originalPrice <= currentPrice) ? 0 : originalPrice - currentPrice;
 const isValidTherapyCategory = (category: string): category is TherapyCategory => ['holistica', 'tarot', 'psico', 'pendulo'].includes(category);
 
+const PACKAGE_CIRCLE_COLORS: Record<string, { bg: string; icon: string }> = {
+  'pendulo-sanacion': { bg: '#14B8A6', icon: '#FFFFFF' },
+  'pendulo-hogar': { bg: '#FACC15', icon: '#A16207' },
+  'retiro-danos-amarres': { bg: '#6B7F3B', icon: '#FFFFFF' },
+  'tarot-rapida-15': { bg: '#14B8A6', icon: '#FFFFFF' },
+  'tarot-completa': { bg: '#8B6048', icon: '#FFFFFF' },
+  'tarot-media': { bg: '#FACC15', icon: '#A16207' },
+  'tarot-15-minutos-rapida': { bg: '#F59E42', icon: '#FFFFFF' },
+  'tarot-anual': { bg: '#6B7F3B', icon: '#FFFFFF' },
+};
+
+const getPackageCircleColors = (pkgId: string) =>
+  PACKAGE_CIRCLE_COLORS[pkgId] ?? { bg: '#E5E7EB', icon: '#9CA3AF' };
+
 // Enhanced Confirmation Modal
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ 
   isOpen, 
@@ -30,7 +45,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
       <div className="bg-white rounded-xl max-w-md w-full overflow-hidden shadow-2xl transform transition-all">
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 text-white">
+        <div className="bg-gradient-to-r from-orange-400 to-orange-600 p-6 text-white">
           <div className="flex justify-center mb-3">
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +73,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
             </div>
             <div className="border-t border-gray-100 pt-4 flex justify-between items-center">
               <span className="text-gray-500">Total:</span>
-              <span className="text-2xl font-bold text-indigo-600">{formatPrice(selectedPackage.price)}</span>
+              <span className="text-2xl font-bold text-brand-medium">{formatPrice(selectedPackage.price)}</span>
             </div>
           </div>
 
@@ -74,7 +89,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
             </button>
             <button
               onClick={onClose}
-              className="w-full bg-gray-100 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+              className="w-full bg-gray-100 text-brand-medium py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
             >
               Volver atrás
             </button>
@@ -94,13 +109,14 @@ const PackageCard: React.FC<PackageCardProps> = ({
 }) => {
   const hasDiscount = Boolean(pkg.originalPrice && pkg.originalPrice > pkg.price);
   const savings = calculateSavings(pkg.originalPrice, pkg.price);
+  const circleColors = getPackageCircleColors(pkg.id);
 
   return (
     <div className={`relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 ${
-      pkg.popular ? 'ring-2 ring-indigo-400 transform hover:scale-[1.02]' : ''
+      pkg.popular ? 'ring-2 ring-orange-300 transform hover:scale-[1.02]' : ''
     }`}>
       {pkg.popular && (
-        <div className="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-400 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
           RECOMENDADO
         </div>
       )}
@@ -110,25 +126,13 @@ const PackageCard: React.FC<PackageCardProps> = ({
           <div
             className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
             style={{
-              backgroundColor: pkg.id === 'pendulo-sanacion'
-                ? '#8B5CF6' // Lila for the first package
-                : pkg.id === 'pendulo-hogar'
-                  ? '#FACC15' // Yellow for the second package
-                  : pkg.id === 'retiro-danos-amarres'
-                    ? '#D946EF' // Fuchsia for the third package
-                    : '#E5E7EB', // Default gray
+              backgroundColor: circleColors.bg,
             }}
           >
             <svg
               className="w-8 h-8"
               style={{
-                color: pkg.id === 'pendulo-sanacion'
-                  ? '#FFFFFF' // White icon for Lila
-                  : pkg.id === 'pendulo-hogar'
-                    ? '#A16207' // Dark yellow icon for Yellow
-                    : pkg.id === 'retiro-danos-amarres'
-                      ? '#FFFFFF' // White icon for Fuchsia
-                      : '#9CA3AF', // Default gray icon
+                color: circleColors.icon,
               }}
               fill="none"
               stroke="currentColor"
@@ -136,7 +140,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
             >
               {pkg.id.includes('rapida') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
               {pkg.id.includes('media') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />}
-              {pkg.id.includes('completa') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
+              {(pkg.id.includes('completa') || pkg.id.includes('anual')) && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
             </svg>
           </div>
           <h3 className="text-xl font-bold text-gray-800">{pkg.name}</h3>
@@ -146,7 +150,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
         <div className="text-center my-6">
           <div className="flex justify-center items-baseline gap-2">
             {pkg.id === 'pendulo-hogar' && <span className="text-xl font-semibold text-gray-500 mr-1">Desde</span>}
-            <span className="text-4xl font-bold text-indigo-600">{formatPrice(pkg.price)}</span>
+            <span className="text-4xl font-bold text-brand-medium">{formatPrice(pkg.price)}</span>
             {pkg.pricePEN && pkg.id !== 'retiro-danos-amarres' && (
               <span className="text-lg text-gray-500 ml-2">
                 (S/ {pkg.pricePEN.toFixed(2)})
@@ -168,10 +172,10 @@ const PackageCard: React.FC<PackageCardProps> = ({
           <ul className="space-y-2">
             {pkg.includes.map((item, index) => (
               <li key={index} className="flex items-start">
-                <svg className="flex-shrink-0 w-5 h-5 text-indigo-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="flex-shrink-0 w-5 h-5 text-brand-light mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="ml-2 text-gray-700">{item}</span>
+                <span className="ml-2 text-brand-medium">{item}</span>
               </li>
             ))}
           </ul>
@@ -181,8 +185,8 @@ const PackageCard: React.FC<PackageCardProps> = ({
           onClick={() => onSelect(pkg, therapyName, therapyId)}
           className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
             pkg.popular 
-              ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-              : 'bg-indigo-600 text-white hover:bg-purple-200'
+              ? 'bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:from-orange-500 hover:to-orange-700' 
+              : 'bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:bg-yellow-200/60'
           }`}
         >
           Reservar ahora
@@ -236,21 +240,21 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
       <div className="text-center mb-16">
         {category && therapiesData[category] ? (
           <>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold text-brand-dark mb-2">
               {therapiesData[category].name}
             </h1>
             {therapiesData[category].subtitle && (
-              <h2 className="text-2xl font-semibold text-pink-500 mb-4">
+              <h2 className="text-2xl font-semibold text-brand-medium mb-4">
                 {therapiesData[category].subtitle}
               </h2>
             )}
-            <p className="text-xl text-purple-700 max-w-3xl mx-auto font-medium">
+            <p className="text-xl text-brand-medium max-w-3xl mx-auto font-medium">
               {therapiesData[category].description}
             </p>
           </>
         ) : (
           <>
-            <h1 className="text-4xl font-bold text-pink-600 mb-4">
+            <h1 className="text-4xl font-bold text-brand-medium mb-4">
               Nuestras Terapias
             </h1>
             <p className="text-xl   max-w-3xl mx-auto">
@@ -264,11 +268,11 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
         <div key={therapy.id} className="mb-16">
           {!category && (
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-pink-600 mb-2">{therapy.name}</h2>
+              <h2 className="text-3xl font-bold text-brand-medium mb-2">{therapy.name}</h2>
               {therapy.subtitle && (
-                <h3 className="text-xl font-semibold text-pink-400 mb-4">{therapy.subtitle}</h3>
+                <h3 className="text-xl font-semibold text-brand-light mb-4">{therapy.subtitle}</h3>
               )}
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">{therapy.description}</p>
+              <p className="text-lg text-brand-medium max-w-3xl mx-auto">{therapy.description}</p>
             </div>
           )}
           
@@ -287,16 +291,26 @@ const TherapyPricing: React.FC<TherapyPricingProps> = ({
       ))}
 
       <div className="mt-16 text-center">
-        <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm max-w-2xl mx-auto">
-          <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+        <div className="relative overflow-hidden rounded-2xl p-8 md:p-10 shadow-xl max-w-2xl mx-auto">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+            }}
+          />
+          <div className="absolute inset-0 bg-white/35" />
+
+          <div className="relative z-10">
+            <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md border border-brand-light/20">
+              <svg className="w-8 h-8 text-brand-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-brand-dark mb-2">Sesiones Confidenciales</h3>
+            <p className="text-brand-medium">
+              Todas las sesiones se realizan en un espacio seguro y de confianza con absoluta reserva.
+            </p>
           </div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Sesiones Confidenciales</h3>
-          <p className="text-gray-600">
-            Todas las sesiones se realizan en un espacio seguro y de confianza con  absoluta reserva.
-          </p>
         </div>
       </div>
 

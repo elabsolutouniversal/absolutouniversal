@@ -64,7 +64,7 @@ export default function Servicios({
           <div className="text-center mt-12">
             <Link
               href="/servicios"
-              className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-lora-semibold px-8 py-3 rounded-full shadow-lg transition-all transform hover:scale-105 font-normal-style"
+              className="inline-block bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-lora-semibold px-8 py-4 rounded-full shadow-lg shadow-orange-300/50 transition-all duration-300 transform hover:scale-105 font-normal-style"
             >
               Ver todos los servicios
             </Link>

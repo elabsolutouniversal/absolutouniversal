@@ -13,22 +13,16 @@ export const metadata: Metadata = {
 
 export default function PsicoEducacionPage() {
   return (
-    <>
-     <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
       <section>
         <div className="container mx-auto px-4 sm:px-6 lg:px-2">
           <CoursesGrid courses={courses} />
         </div>
       </section>
-      <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <BlogWithSidebar />
       </div>
-    </div>
     </main>
-
-    </>
-  
   );
 }
 

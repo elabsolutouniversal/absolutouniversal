@@ -14,11 +14,11 @@ const CardSesion: React.FC<CardSesionProps> = ({ titulo, descripcion, color }) =
     <div className={`${color} rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
-          <CheckCircle className="w-8 h-8 text-purple-600" />
+          <CheckCircle className="w-8 h-8 text-brand-medium" />
         </div>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-purple-800 mb-2">{titulo}</h3>
-          <p className="text-purple-700 leading-relaxed">{descripcion}</p>
+          <h3 className="text-lg font-semibold text-brand-dark mb-2">{titulo}</h3>
+          <p className="text-brand-medium leading-relaxed">{descripcion}</p>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ export function InfoCard({ title, content, icon, isImportant = false }: CardProp
       transition={{ duration: 0.35 }}
       className={`
         bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-6 flex flex-col gap-4
-        border ${isImportant ? 'border-purple-500' : 'border-purple-200'}
+        border ${isImportant ? 'border-brand-medium' : 'border-brand-light/30'}
       `}
       role="region"
       aria-label={title}
@@ -28,7 +28,7 @@ export function InfoCard({ title, content, icon, isImportant = false }: CardProp
         <div
           className={`
             w-11 h-11 flex items-center justify-center rounded-full flex-shrink-0
-            ${isImportant ? 'bg-purple-100 text-purple-700' : 'bg-purple-50 text-purple-500'}
+            ${isImportant ? 'bg-yellow-100/60 text-brand-medium' : 'bg-amber-50/40 text-brand-light'}
           `}
         >
           {icon}
@@ -39,12 +39,12 @@ export function InfoCard({ title, content, icon, isImportant = false }: CardProp
               {title}
             </h3>
             {isImportant && (
-              <span className="inline-block text-xs font-medium uppercase tracking-wide bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
+              <span className="inline-block text-xs font-medium uppercase tracking-wide bg-yellow-100/60 text-brand-dark px-2 py-1 rounded-full">
                 Relevante
               </span>
             )}
           </div>
-          <p className="mt-1 text-sm text-gray-700 leading-relaxed">{content}</p>
+          <p className="mt-1 text-sm text-brand-medium leading-relaxed">{content}</p>
         </div>
       </div>
     </motion.div>

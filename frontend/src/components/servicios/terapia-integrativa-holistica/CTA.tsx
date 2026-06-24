@@ -9,7 +9,7 @@ export default function CTA() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden"
+        className="max-w-7xl mx-auto bg-gradient-to-r from-orange-400 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden"
       >
         {/* decorativos */}
         <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full -translate-x-20 -translate-y-20"></div>
@@ -28,13 +28,13 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-purple-600 px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-purple-50 transition-all duration-300 shadow-lg inline-block font-normal-style"
+              className="bg-white text-brand-medium px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-amber-50/40 transition-all duration-300 shadow-lg inline-block font-normal-style"
             >
               Reservar mi primera sesión
             </motion.a>
           </div>
 
-          <p className="mt-6 text-purple-200 text-sm">
+          <p className="mt-6 text-brand-light/70 text-sm">
             ✨ Agenda tu cita hoy y recibe un 15% de descuento en el paquete de tratamiento de limpieza energetica inicial de 5 sesiones
           </p>
         </div>

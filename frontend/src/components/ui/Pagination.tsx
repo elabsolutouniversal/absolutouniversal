@@ -4,6 +4,14 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PaginationProps } from '@/types/testimonios/testimonio';
 
+const navButtonClass =
+  "flex items-center px-5 py-2.5 text-sm font-lora-semibold italic text-brand-dark bg-yellow-200/90 rounded-full shadow-md hover:bg-yellow-300/90 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-yellow-200/90 transition-all duration-200";
+
+const pageButtonClass = (isActive: boolean) =>
+  isActive
+    ? "min-w-[2.5rem] px-4 py-2.5 text-sm font-lora-semibold italic text-brand-dark bg-yellow-200/90 rounded-full shadow-lg hover:bg-yellow-300/90 transition-all duration-200"
+    : "min-w-[2.5rem] px-4 py-2.5 text-sm font-lora-medium italic text-brand-medium bg-white/90 border border-brand-light/25 rounded-full hover:bg-yellow-100/70 hover:text-brand-dark transition-all duration-200";
+
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalPages,
@@ -46,33 +54,27 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>
-      {/* Previous Button */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="flex items-center px-4 py-2 text-sm font-medium text-purple-600 bg-white border border-purple-200 rounded-lg hover:bg-purple-50 hover:text-purple-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-purple-600 transition-colors duration-200"
+        className={navButtonClass}
         aria-label="Página anterior"
       >
         <ChevronLeft className="w-4 h-4 mr-1" />
         Anterior
       </button>
 
-      {/* Page Numbers */}
-      <div className="flex items-center space-x-1">
+      <div className="flex items-center space-x-2">
         {visiblePages.map((page, index) => (
           <React.Fragment key={index}>
             {page === '...' ? (
-              <span className="px-3 py-2 text-sm font-medium text-gray-400">
+              <span className="px-2 py-2 text-sm font-lora-medium text-brand-light">
                 ...
               </span>
             ) : (
               <button
                 onClick={() => onPageChange(page as number)}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                  currentPage === page
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md'
-                    : 'text-purple-600 bg-white border border-purple-200 hover:bg-purple-50 hover:text-purple-700'
-                }`}
+                className={pageButtonClass(currentPage === page)}
                 aria-label={`Página ${page}`}
                 aria-current={currentPage === page ? 'page' : undefined}
               >
@@ -83,11 +85,10 @@ const Pagination: React.FC<PaginationProps> = ({
         ))}
       </div>
 
-      {/* Next Button */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="flex items-center px-4 py-2 text-sm font-medium text-purple-600 bg-white border border-purple-200 rounded-lg hover:bg-purple-50 hover:text-purple-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-purple-600 transition-colors duration-200"
+        className={navButtonClass}
         aria-label="Página siguiente"
       >
         Siguiente

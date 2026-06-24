@@ -32,8 +32,8 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   {
     titulo: 'Sesión 1: Evaluación Integral Personalizada',
     src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753442587/IMG_3608_ug76nv.jpg',
-    fallbackBg: 'bg-purple-200',
-    icon: <User className="w-12 h-12 mx-auto mb-2 text-purple-600" />,
+    fallbackBg: 'bg-yellow-200',
+    icon: <User className="w-12 h-12 mx-auto mb-2 text-brand-medium" />,
     href: '/servicios/proceso-de-sanacion',
     descripcion:
       'Entrevista profunda, detección de patrones energéticos y emocionales y diseño de un plan de tratamiento personalizado.'
@@ -68,8 +68,8 @@ export const tarjetas: TarjetaTerapiaIntegrativa[] = [
   {
     titulo: 'Sesión 5: Integración y Consolidación',
     src: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1754076494/IMG_3555_njpbnc.jpg',
-    fallbackBg: 'bg-indigo-200',
-    icon: <RefreshCw className="w-12 h-12 mx-auto mb-2 text-indigo-600" />,
+    fallbackBg: 'bg-amber-200',
+    icon: <RefreshCw className="w-12 h-12 mx-auto mb-2 text-brand-medium" />,
     href: '/servicios/proceso-de-sanacion',
     descripcion:
       'Sesión personalizada gratuita para consolidar avances, recibir herramientas de mantenimiento y establecer un plan de seguimiento.'
@@ -82,7 +82,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
     numero: '1–5',
     titulo: 'Etapa 1: Tratamiento de Limpieza Energética Basico',
     descripcion: '5 Sesiones Enfocadas en la evaluación, diagnóstico, limpieza inicial y desbloqueo energético. Abordamos tus desafíos, necesidades y expectativas.',
-    color: 'bg-gradient-to-r from-pink-100 to-purple-100',
+    color: 'bg-gradient-to-r from-yellow-100 to-amber-100',
     duracion: '90 min',
     frecuencia: 'Semanal',
   },
@@ -90,7 +90,7 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
     numero: '6',
     titulo: 'Etapa 2: Tratamiento Personalizado',
     descripcion: 'El tratamiento personalizado, esta orientado a tratar temas especificos y/o situaciones de forma individual para cada persona,ya sea un problema de salud, fisico emocional o espiritual o algun desafio de vida, asi como algùn problema especifico a nivel personal , economico y/o espiritual.',
-    color: 'bg-gradient-to-r from-purple-100 to-indigo-100',
+    color: 'bg-gradient-to-r from-amber-100 to-orange-100',
     duracion: '1 hora',
     frecuencia: '',
   },
@@ -98,13 +98,13 @@ export const sesiones: SesionTerapiaIntegrativa[] = [
 
 export const beneficios: BeneficioTerapiaIntegrativa[] = [
   {
-    icon: <Heart className="w-6 h-6 text-pink-600" />,
+    icon: <Heart className="w-6 h-6 text-brand-medium" />,
     titulo: 'Equilibrio emocional',
     descripcion: 'Bienestar mental y emocional a través de técnicas integradas de sanación.',
     delay: 0
   },
   {
-    icon: <Sparkles className="w-6 h-6 text-purple-600" />,
+    icon: <Sparkles className="w-6 h-6 text-brand-medium" />,
     titulo: 'Armonía energética',
     descripcion: 'Limpieza y fortalecimiento de tu campo electromagnético para un flujo energético óptimo.',
     delay: 0.1
@@ -116,7 +116,7 @@ export const beneficios: BeneficioTerapiaIntegrativa[] = [
     delay: 0.2
   },
   {
-    icon: <Brain className="w-6 h-6 text-indigo-600" />,
+    icon: <Brain className="w-6 h-6 text-brand-medium" />,
     titulo: 'Claridad mental',
     descripcion: 'Mejora tu enfoque y toma de decisiones eliminando bloqueos mentales.',
     delay: 0.3
@@ -181,7 +181,7 @@ export const sesiones5Pasos = [
     titulo: "Evaluación Integral Personalizada",
     duracion: "1 hora",
     icon: User,        // ✅ MANTENER - funciona perfecto
-    color: "from-purple-400 to-pink-400",
+    color: "from-amber-400 to-orange-500",
     puntos: [
       "Entrevista profunda para conocer tu historia y necesidades específicas",
       "Identificación de patrones repetitivos , y bloqueos energéticos y emocionales",
@@ -193,7 +193,7 @@ export const sesiones5Pasos = [
     titulo: "Diagnóstico y Limpieza Energética",
     duracion: "2 horas",
     icon: Sparkle,     // 🔹 CAMBIO: era Sparkles → ahora Sparkle (más específico)
-    color: "from-blue-400 to-cyan-400",
+    color: "from-amber-500 to-yellow-500",
     puntos: [
       "Testeo energético completo de tu sistema",
       "Limpieza Inicial de bloqueos energéticos acumulados",
@@ -206,7 +206,7 @@ export const sesiones5Pasos = [
     titulo: "Armonización de Chakras",
     duracion: "1 hora",
     icon: FlowerLotus,       // 🔹 CAMBIO: era Heart → ahora Lotus (PERFECTO para chakras!)
-    color: "from-green-400 to-emerald-400",
+    color: "from-orange-400 to-amber-500",
     puntos: [
       "Desbloqueo y equilibrio de los 7 chakras principales",
       "Potenciación de tu flujo energético natural",
@@ -232,7 +232,7 @@ export const sesiones5Pasos = [
     titulo: "Integración y Consolidación",
     duracion: "1 Hora",
     icon: Target,      // 🔹 CAMBIO: era Star → ahora Target (mejor para objetivos)
-    color: "from-indigo-400 to-purple-400",
+    color: "from-[#8B6048] to-brand-dark",
     badge: "GRATUITA",
     puntos: [
       "Sesión personalizada basada en tus necesidades específicas",

@@ -19,28 +19,28 @@ const TarotGallery: React.FC<TarotGalleryProps> = ({ images, onImageClick }) => 
         {displayedImages.map((image, idx) => (
           <div
             key={idx}
-            className="relative overflow-hidden rounded-3xl shadow-xl border border-purple-100 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl h-80 cursor-pointer group bg-gradient-to-br from-purple-50 to-indigo-50"
+            className={`relative overflow-hidden rounded-3xl shadow-xl border border-brand-light/20 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer group bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20 ${image.objectFit === 'contain' ? 'h-96' : 'h-80'}`}
             onClick={() => onImageClick(image)}
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover group-hover:brightness-110 transition-filter duration-500"
+              className={`${image.objectFit === 'contain' ? 'object-contain object-center' : 'object-cover object-center'} group-hover:brightness-110 transition-filter duration-500`}
               sizes="(max-width: 640px) 100vw, 50vw"
             />
 
             {/* Overlay al pasar el mouse */}
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Título y subtítulo */}
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold drop-shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{image.title}</h3>
-              <p className="text-sm drop-shadow-lg text-purple-100">{image.subtitle}</p>
+              <h3 className="text-xl font-bold drop-shadow-lg text-brand-dark">{image.title}</h3>
+              <p className="text-sm drop-shadow-lg text-white/90">{image.subtitle}</p>
             </div>
 
             {/* Icono de vista */}
-            <div className="absolute top-4 right-4 bg-gradient-to-br from-purple-500 to-indigo-600 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+            <div className="absolute top-4 right-4 bg-gradient-to-r from-teal-400 to-cyan-500 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
               <Eye className="w-5 h-5 text-white" />
             </div>
           </div>

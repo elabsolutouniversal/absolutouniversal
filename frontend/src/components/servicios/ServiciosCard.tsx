@@ -10,7 +10,7 @@ interface ServicioCardProps {
 
 export default function ServicioCard({ title, slug, image, description }: ServicioCardProps) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-pink-100">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-brand-light/20">
       {/* Imagen */}
       <div className="relative h-48 w-full">
         <Image
@@ -25,17 +25,17 @@ export default function ServicioCard({ title, slug, image, description }: Servic
 
       {/* Contenido */}
       <div className="p-6">
-        <h3 className="text-xl font-lora-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 leading-tight">
+        <h3 className="text-xl font-lora-semibold text-brand-dark mb-3 leading-tight">
           {title}
         </h3>
-        <p className="font-lora text-purple-600 mb-4 text-sm leading-relaxed line-clamp-3">
+        <p className="font-lora text-brand-medium mb-4 text-sm leading-relaxed line-clamp-3">
           {description}
         </p>
         
         {/* Botón */}
         <Link
           href={`/servicios/${slug}`}
-          className="inline-block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-lora-medium py-2 px-4 rounded-lg transition-colors duration-200 font-normal-style"
+          className="inline-block w-full text-center bg-gradient-to-r from-[#2DD4BF] to-[#0D9488] hover:from-[#14B8A6] hover:to-[#0F766E] text-white font-lora-semibold py-3 px-4 rounded-full shadow-md shadow-teal-400/35 transition-all duration-300 transform hover:scale-105 font-normal-style"
         >
           Conocer más
         </Link>

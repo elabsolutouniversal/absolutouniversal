@@ -4,17 +4,23 @@ import ServiceCard from './ServiceCard'
 
 interface ServicesSectionProps {
   servicios: Servicio[];
+  title?: string;
+  subtitle?: string;
 }
 
-const ServicesSection: React.FC<ServicesSectionProps> = ({ servicios }) => {
+const ServicesSection: React.FC<ServicesSectionProps> = ({
+  servicios,
+  title = '¿Qué incluye tu sesión?',
+  subtitle = 'Cada consulta combina técnicas de tarot con enfoque terapéutico',
+}) => {
   return (
     <div className="mb-32">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent mb-4">
-          ¿Qué incluye tu sesión?
+        <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
+          {title}
         </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Cada consulta combina técnicas de tarot con enfoque terapéutico
+        <p className="text-xl text-brand-medium max-w-2xl mx-auto">
+          {subtitle}
         </p>
       </div>
       

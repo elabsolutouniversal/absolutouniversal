@@ -30,8 +30,8 @@ interface AboutBiographyProps {
 const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) => {
   const SectionIcon: React.FC<{ number: string | number; color?: 'purple' | 'indigo' | 'amber' | 'teal' }> = ({ number, color = 'purple' }) => {
     const colorClasses = {
-      purple: 'bg-purple-100 text-purple-600',
-      indigo: 'bg-indigo-100 text-indigo-600',
+      purple: 'bg-yellow-100/60 text-brand-medium',
+      indigo: 'bg-yellow-100/60 text-brand-medium',
       amber: 'bg-amber-100 text-amber-600',
       teal: 'bg-teal-100 text-teal-600',
     };
@@ -64,10 +64,10 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             />
           </div>
           {/* Texto segundo en móvil, primero en lg */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-transparent shadow-md order-2 lg:order-1">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-amber-50/40 to-transparent shadow-md order-2 lg:order-1">
             <SectionIcon number="1" color="purple" />
-            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.awakening.title}</h3>
-            <div className="space-y-4 text-purple-700">
+            <h3 className="mb-4 text-2xl font-bold text-brand-dark">{biography.awakening.title}</h3>
+            <div className="space-y-4 text-brand-medium">
               {biography.awakening.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
@@ -87,10 +87,10 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             />
           </div>
           {/* Texto segundo */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-transparent shadow-md">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-orange-50/30 to-transparent shadow-md">
             <SectionIcon number="2" color="indigo" />
-            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.professionalFormation.title}</h3>
-            <div className="space-y-4 text-purple-700">
+            <h3 className="mb-4 text-2xl font-bold text-brand-dark">{biography.professionalFormation.title}</h3>
+            <div className="space-y-4 text-brand-medium">
               {biography.professionalFormation.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
@@ -110,15 +110,15 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             />
           </div>
           {/* Texto segundo en móvil, primero en lg */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-transparent shadow-md order-2 lg:order-1">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-yellow-50/50 to-transparent shadow-md order-2 lg:order-1">
             <SectionIcon number="3" color="amber" />
-            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.fusion.title}</h3>
-            <div className="space-y-4 text-purple-700">
+            <h3 className="mb-4 text-2xl font-bold text-brand-dark">{biography.fusion.title}</h3>
+            <div className="space-y-4 text-brand-medium">
               {biography.fusion.content.map((p, idx) => (
                 <p key={idx} className="text-justify">
                   {typeof p === 'string' ? p.split(/\*\*(.*?)\*\*/).map((part, i) => 
                     i % 2 === 1
-                      ? <span key={i} className="text-2xl font-normal bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent uppercase">{part}</span>
+                      ? <span key={i} className="text-2xl font-normal text-brand-dark uppercase">{part}</span>
                       : part
                   ) : p}
                 </p>
@@ -139,29 +139,29 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
             />
           </div>
           {/* Texto segundo */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-transparent shadow-md">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-amber-50/40 to-transparent shadow-md">
             <SectionIcon number="4" color="teal" />
-            <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{biography.integration.title}</h3>
-            <div className="space-y-4 text-purple-700 mb-4">
+            <h3 className="mb-4 text-2xl font-bold text-brand-dark">{biography.integration.title}</h3>
+            <div className="space-y-4 text-brand-medium mb-4">
               {biography.integration.content.map((p, idx) => (
                 <p key={idx} className="text-justify">{p}</p>
               ))}
             </div>
                          <div className="grid gap-4 mt-6">
                {biography.integration.studies.map((study, idx) => (
-                 <div key={idx} className="flex flex-col gap-2 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-purple-100/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                 <div key={idx} className="flex flex-col gap-2 p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-brand-light/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                    onClick={() => toggleExpand(study.title)}>
                    <div className="flex items-center gap-4">
                      <div className="flex-shrink-0 text-3xl">
                        {study.icon}
                      </div>
                      <div className="flex-1">
-                       <h4 className="font-lora-semibold text-purple-800 text-sm mb-1">{study.title}</h4>
-                       <p className="text-purple-600 text-xs font-lora">{study.description}</p>
+                       <h4 className="font-lora-semibold text-brand-dark text-sm mb-1">{study.title}</h4>
+                       <p className="text-brand-medium text-xs font-lora">{study.description}</p>
                      </div>
                      {/* Toggle icon */}
                      <svg
-                       className={`w-5 h-5 text-purple-600 transition-transform duration-300 ${expandedStudy === study.title ? 'rotate-180' : ''}`}
+                       className={`w-5 h-5 text-brand-medium transition-transform duration-300 ${expandedStudy === study.title ? 'rotate-180' : ''}`}
                        fill="none"
                        stroke="currentColor"
                        viewBox="0 0 24 24"
@@ -171,7 +171,7 @@ const AboutBiography: React.FC<AboutBiographyProps> = ({ biography, images }) =>
                      </svg>
                    </div>
                    {expandedStudy === study.title && (
-                     <div className="mt-4 text-sm text-gray-700 bg-purple-50 p-3 rounded-md">
+                     <div className="mt-4 text-sm text-brand-medium bg-amber-50/40 p-3 rounded-md">
                        {study.longDescription}
                      </div>
                    )}

@@ -34,10 +34,10 @@ const AboutResults: React.FC<AboutResultsProps> = ({ results }) => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent md:text-4xl">
+          <h2 className="mb-4 text-3xl font-bold text-brand-dark md:text-4xl">
             {results.title}
           </h2>
         </div>
@@ -45,21 +45,21 @@ const AboutResults: React.FC<AboutResultsProps> = ({ results }) => {
         <div className="grid gap-8 md:grid-cols-3">
           {Object.entries(results.levels).map(([key, level], index) => (
             <div key={index} className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full bg-purple-100 opacity-50 blur-2xl"></div>
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full bg-yellow-100/60 opacity-50 blur-2xl"></div>
               <div className="relative">
-                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg">
+                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg">
                   {levelIcons[key as keyof typeof levelIcons]}
                 </div>
                 
-                <h3 className="mb-4 text-xl font-bold text-purple-800">{level.title}</h3>
+                <h3 className="mb-4 text-xl font-bold text-brand-dark">{level.title}</h3>
                 
                 <ul className="space-y-3">
                   {level.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start">
-                      <svg className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-brand-light" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-purple-700">{benefit}</span>
+                      <span className="text-brand-medium">{benefit}</span>
                     </li>
                   ))}
                 </ul>

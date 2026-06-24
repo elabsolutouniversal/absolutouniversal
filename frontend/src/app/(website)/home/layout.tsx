@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/ui/Navbar";
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       <div 
         className="absolute top-0 left-0 right-0 h-[100vh] z-0"
         style={{
-          backgroundImage: `url('https://res.cloudinary.com/dhhjcvwll/image/upload/v1754843228/bosque_orquideas_luminoso_1_rc734f.jpg')`,
+          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -37,7 +38,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
               className="w-[65px] h-[65px] object-contain rounded-full"
               priority
             />
-            <span className="text-2xl font-lora-bold-normal text-[#9D6BFF]">
+            <span className="text-2xl font-lora-bold-normal text-brand-dark">
               EL ABSOLUTO UNIVERSAL
             </span>
           </Link>
@@ -47,7 +48,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
 
           {/* HAMBURGUESA MÓVIL */}
           <button
-            className="md:hidden text-[#9D6BFF]"
+            className="md:hidden text-brand-dark"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
