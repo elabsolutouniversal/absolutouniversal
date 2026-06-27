@@ -44,7 +44,6 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
           )}
           <span className="font-medium text-brand-dark text-sm">
             {course.price} USD
-            {course.pricePEN && ` (S/ ${course.pricePEN})`}
           </span>
         </div>
         <Link

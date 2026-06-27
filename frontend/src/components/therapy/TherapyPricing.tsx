@@ -151,11 +151,6 @@ const PackageCard: React.FC<PackageCardProps> = ({
           <div className="flex justify-center items-baseline gap-2">
             {pkg.id === 'pendulo-hogar' && <span className="text-xl font-semibold text-gray-500 mr-1">Desde</span>}
             <span className="text-4xl font-bold text-brand-medium">{formatPrice(pkg.price)}</span>
-            {pkg.pricePEN && pkg.id !== 'retiro-danos-amarres' && (
-              <span className="text-lg text-gray-500 ml-2">
-                (S/ {pkg.pricePEN.toFixed(2)})
-              </span>
-            )}
             {hasDiscount && (
               <span className="text-lg text-gray-400 line-through">{formatPrice(pkg.originalPrice!)}</span>
             )}
