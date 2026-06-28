@@ -76,13 +76,13 @@ export default function Servicios({
         )}
 
         {showLogoAtEnd && (
-          <div className="flex justify-center mt-12 pt-4">
+          <div className="flex justify-center mt-12 pt-6 px-4">
             <Image
               src={SITE_LOGO_URL}
               alt={SITE_LOGO_ALT}
-              width={180}
-              height={180}
-              className="w-32 h-32 sm:w-44 sm:h-44 object-contain"
+              width={320}
+              height={320}
+              className="w-[min(280px,88vw)] h-auto sm:w-64 md:w-72 object-contain"
             />
           </div>
         )}
