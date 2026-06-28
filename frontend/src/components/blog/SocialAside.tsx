@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
 import Image from 'next/image';
 import { Facebook, Instagram } from 'lucide-react';
 
@@ -95,8 +96,8 @@ export default function SocialAside() {
       {/* Logo de la página */}
       <div className="flex justify-center">
         <Image
-          src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
-          alt="El Absoluto Universal"
+          src={SITE_LOGO_URL}
+          alt={SITE_LOGO_ALT}
           width={200}
           height={200}
         />

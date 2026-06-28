@@ -3,6 +3,7 @@
 import { Lora } from 'next/font/google'
 import type { Metadata } from 'next';
 import './globals.css'
+import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
 
 const lora = Lora({ 
   subsets: ['latin'],
@@ -23,10 +24,10 @@ export const metadata: Metadata = {
     siteName: 'El Absoluto Universal',
     images: [
       {
-        url: 'https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png?v=20250723',
+        url: SITE_LOGO_URL,
         width: 1200,
         height: 630,
-        alt: 'El Absoluto Universal',
+        alt: SITE_LOGO_ALT,
       },
     ],
   },

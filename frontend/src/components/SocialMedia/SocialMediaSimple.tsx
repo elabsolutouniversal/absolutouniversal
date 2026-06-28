@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
 import Image from 'next/image';
 import { socialMediaData } from '@/data/RedesSocialesData';
 import { SocialMedia } from '@/types/RedesSocialesTypes';
@@ -86,11 +87,11 @@ export const SocialMediaSimple: React.FC = () => {
           {/* Logo de la página */}
           <div className="flex justify-center mb-6">
             <Image
-              src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
-              alt="El Absoluto Universal"
+              src={SITE_LOGO_URL}
+              alt={SITE_LOGO_ALT}
               width={192}
               height={192}
-              className="w-48 h-48"
+              className="w-48 h-48 object-contain"
             />
           </div>
           

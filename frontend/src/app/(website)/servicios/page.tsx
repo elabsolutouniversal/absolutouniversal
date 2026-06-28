@@ -12,6 +12,7 @@ export default function Serviciospage() {
             showTitle={true}
             showDescription={true}
             showViewAllButton={false}
+            showLogoAtEnd={true}
           />
          
            {/* <TestimoniosSection

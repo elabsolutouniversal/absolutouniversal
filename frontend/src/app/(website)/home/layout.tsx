@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/ui/Navbar";
 import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
+import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +32,11 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-4">
             <Image
-              src="https://res.cloudinary.com/dhhjcvwll/image/upload/v1753151623/logo_vwzf9j.png"
-              alt="Logo El Absoluto Universal"
-              width={65}
-              height={65}
-              className="w-[65px] h-[65px] object-contain rounded-full"
+              src={SITE_LOGO_URL}
+              alt={SITE_LOGO_ALT}
+              width={72}
+              height={72}
+              className="h-14 w-14 sm:h-[72px] sm:w-[72px] object-contain"
               priority
             />
             <span className="text-2xl font-lora-bold-normal text-brand-dark">

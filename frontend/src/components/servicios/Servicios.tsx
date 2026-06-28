@@ -2,12 +2,15 @@
 
 import ServicioCard from "@/components/servicios/ServiciosCard";
 import { servicios } from "@/data/servicios/servicios";
-import Link from "next/link";
+import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface ServiciosProps {
   showTitle?: boolean;
   showDescription?: boolean;
   showViewAllButton?: boolean;
+  showLogoAtEnd?: boolean;
   maxItems?: number;
   className?: string;
 }
@@ -16,6 +19,7 @@ export default function Servicios({
   showTitle = true,
   showDescription = true,
   showViewAllButton = true,
+  showLogoAtEnd = false,
   maxItems,
   className = "bg-white py-16 px-6"
 }: ServiciosProps) {
@@ -68,6 +72,18 @@ export default function Servicios({
             >
               Ver todos los servicios
             </Link>
+          </div>
+        )}
+
+        {showLogoAtEnd && (
+          <div className="flex justify-center mt-12 pt-4">
+            <Image
+              src={SITE_LOGO_URL}
+              alt={SITE_LOGO_ALT}
+              width={180}
+              height={180}
+              className="w-32 h-32 sm:w-44 sm:h-44 object-contain"
+            />
           </div>
         )}
 
