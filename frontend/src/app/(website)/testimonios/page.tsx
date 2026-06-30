@@ -4,7 +4,7 @@ import { testimonios } from '@/data/testimonios/testimonios';
 
 const TestimoniosPage: React.FC = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <TestimoniosSection
                 testimonios={testimonios}
                 itemsPerPage={6}

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { MessageSquare, Sparkles } from 'lucide-react';
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 import { ITestimonio } from '@/types/testimonios/testimonio';
 import { usePagination } from '@/hooks/usePagination';
 import TestimonioCard from '@/components/testimonios/index';
@@ -40,8 +41,16 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
 
   if (testimonios.length === 0) {
     return (
-      <section className={`py-16 bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20 ${className}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className={`relative overflow-hidden py-16 ${className}`}>
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+          }}
+        />
+        <div className="absolute inset-0 z-[1] bg-white/35" />
+
+        <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <MessageSquare className="w-16 h-16 text-brand-light mx-auto mb-4" />
           <h2 className="text-2xl font-lora-bold text-brand-dark mb-2">No hay testimonios disponibles</h2>
           <p className="text-brand-medium">Sé el primero en compartir tu experiencia con nosotros.</p>
@@ -51,8 +60,16 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
   }
 
   return (
-    <section className={`py-20 bg-gradient-to-b from-stone-50 via-amber-50/40 to-orange-50/20 ${className}`}>      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`relative overflow-hidden py-20 ${className}`}>
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+        }}
+      />
+      <div className="absolute inset-0 z-[1] bg-white/35" />
+
+      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center mb-8 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full border border-brand-light/30 shadow-lg">

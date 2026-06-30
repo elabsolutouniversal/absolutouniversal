@@ -2,6 +2,7 @@
 
 import ServicioCard from "@/components/servicios/ServiciosCard";
 import { servicios } from "@/data/servicios/servicios";
+import { FLORAL_BACKGROUND_URL } from '@/constants/floralBackground';
 import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,7 +22,7 @@ export default function Servicios({
   showViewAllButton = true,
   showLogoAtEnd = false,
   maxItems,
-  className = "bg-white py-16 px-6"
+  className = "relative overflow-hidden py-16 px-6"
 }: ServiciosProps) {
   
   // Si se especifica maxItems, limitar los servicios mostrados
@@ -29,7 +30,15 @@ export default function Servicios({
 
   return (
     <section className={className} id="servicios">
-      <div className="max-w-7xl mx-auto">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+        }}
+      />
+      <div className="absolute inset-0 z-[1] bg-white/35" />
+
+      <div className="relative z-[2] max-w-7xl mx-auto">
         
         {/* Título de la sección - condicional */}
         {showTitle && (
