@@ -22,11 +22,21 @@ const PACKAGE_CIRCLE_COLORS: Record<string, { bg: string; icon: string }> = {
   'pendulo-sanacion': { bg: '#14B8A6', icon: '#FFFFFF' },
   'pendulo-hogar': { bg: '#FACC15', icon: '#A16207' },
   'retiro-danos-amarres': { bg: '#6B7F3B', icon: '#FFFFFF' },
-  'tarot-rapida-15': { bg: '#14B8A6', icon: '#FFFFFF' },
-  'tarot-completa': { bg: '#8B6048', icon: '#FFFFFF' },
-  'tarot-media': { bg: '#FACC15', icon: '#A16207' },
-  'tarot-15-minutos-rapida': { bg: '#F59E42', icon: '#FFFFFF' },
+  'tarot-esencial': { bg: '#FACC15', icon: '#A16207' },
+  'tarot-profunda': { bg: '#8B6048', icon: '#FFFFFF' },
+  'tarot-premium': { bg: '#C4A574', icon: '#FFFFFF' },
   'tarot-anual': { bg: '#6B7F3B', icon: '#FFFFFF' },
+  'tarot-pregunta': { bg: '#14B8A6', icon: '#FFFFFF' },
+  'tarot-express': { bg: '#F59E42', icon: '#FFFFFF' },
+};
+
+const PACKAGE_ICON_PATHS: Record<string, string> = {
+  'tarot-esencial': 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+  'tarot-profunda': 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z',
+  'tarot-premium': 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z',
+  'tarot-anual': 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z',
+  'tarot-pregunta': 'M13 10V3L4 14h7v7l9-11h-7z',
+  'tarot-express': 'M13 10V3L4 14h7v7l9-11h-7z',
 };
 
 const getPackageCircleColors = (pkgId: string) =>
@@ -138,19 +148,28 @@ const PackageCard: React.FC<PackageCardProps> = ({
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              {pkg.id.includes('rapida') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
-              {pkg.id.includes('media') && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />}
-              {(pkg.id.includes('completa') || pkg.id.includes('anual')) && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={PACKAGE_ICON_PATHS[pkg.id] ?? 'M5 13l4 4L19 7'}
+              />
             </svg>
           </div>
           <h3 className="text-xl font-bold text-gray-800">{pkg.name}</h3>
           <p className="text-gray-500 text-sm mt-1">{pkg.duration}</p>
+          {pkg.description && (
+            <p className="text-sm text-gray-600 mt-3 leading-relaxed">{pkg.description}</p>
+          )}
         </div>
 
         <div className="text-center my-6">
-          <div className="flex justify-center items-baseline gap-2">
+          <div className="flex justify-center items-baseline gap-2 flex-wrap">
             {pkg.id === 'pendulo-hogar' && <span className="text-xl font-semibold text-gray-500 mr-1">Desde</span>}
             <span className="text-4xl font-bold text-brand-medium">{formatPrice(pkg.price)}</span>
+            {pkg.pricePEN != null && (
+              <span className="text-base font-medium text-gray-500">dólares (S/. {pkg.pricePEN} soles)</span>
+            )}
             {hasDiscount && (
               <span className="text-lg text-gray-400 line-through">{formatPrice(pkg.originalPrice!)}</span>
             )}

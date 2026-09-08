@@ -76,78 +76,106 @@ export const therapiesData: TherapiesData = {
     slug: "tarot-predictivo-terapeutico",
     packages: [
       {
-        id: 'tarot-rapida-15',
-        name: "1 Pregunta Rápida",
-        description: "Respuesta clara y directa a una pregunta específica",
-        price: 15,
-        pricePEN: 50, // Assuming 1 USD = 3.75 PEN
-        duration: "15 min",
+        id: 'tarot-esencial',
+        name: "Lectura esencial",
+        description: "Tirada de visión general con espacio para preguntas y seguimiento",
+        price: 55,
+        pricePEN: 185,
+        duration: "30 minutos",
         includes: [
-          "Respuesta Sí o No",
-          "Respuesta inmediata",
-          "Orientación puntual",
-          "Mensaje de cierre"
+          "Tirada de visión general personalizada",
+          "Espacio para preguntas",
+          "1 Lectura esencial de Seguimiento con 10% descuento en el año",
+          "Mensaje del oráculo de Ángeles",
+          "Palabra clave",
+          "Recomendaciones específicas",
+          "Atención privada y confidencial"
         ]
       },
       {
-        id: 'tarot-completa',
-        name: "Sesión Tarot con Enfoque Terapéutico",
-        description: "Consulta integral con enfoque terapéutico completo",
-        price: 80,
-        pricePEN: 270, // Assuming 1 USD = 3.375 PEN
-        duration: "1 hora",
+        id: 'tarot-profunda',
+        name: "Lectura profunda",
+        description: "Sesión privada y personalizada para identificar patrones inconscientes y tomar mejores decisiones frente a cualquier desafío de vida",
+        price: 100,
+        pricePEN: 335,
+        duration: "60 minutos (recomendable)",
         includes: [
-          "Lectura completa y profunda",
-          "Análisis de patrones inconscientes",
-          "Trabajo con bloqueos emocionales",
-          "Plan de acción personalizado",
-          "2 Lecturas de Seguimiento con 10% descuento en el año",
-          "Material de apoyo incluido"
+          "2 Tiradas principales personalizadas",
+          "Tiradas complementarias para profundizar",
+          "Análisis de relaciones, trabajo, decisiones o proyectos según lo que surja",
+          "Espacio para preguntas durante la sesión",
+          "Palabra clave",
+          "Mensaje de cierre",
+          "Fotografía de la sesión",
+          "Atención privada y confidencial"
         ],
         popular: true
       },
       {
-        id: 'tarot-media',
-        name: "Sesión Media Hora",
-        description: "Exploración profunda de tu situación actual",
-        price: 55,
-        pricePEN: 185, // Assuming 1 USD = 3.36 PEN
-        duration: "30 min",
+        id: 'tarot-premium',
+        name: "Lectura premium",
+        description: "Método de lectura Las 7 puertas, con interpretación profunda de las cartas",
+        price: 130,
+        pricePEN: 435,
+        duration: "90 minutos",
         includes: [
-          "Múltiples preguntas",
-          "Identificación de patrones Inconscientes - Logra que se den la condiciones optimas para resolucion de cualquier desafio de vida que afrontes como por ejemplo asuntos judiciales, mejorar la economìa . mejorar tus relaciones interpresonales y de pareja , etc",
-          "1 Lectura de Seguimiento con 10% descuento en el año",
-          "Guía personalizada",
-          "Recomendaciones específicas"
-        ]
-      },
-      {
-        id: 'tarot-15-minutos-rapida',
-        name: "Sesión 15 Minutos",
-        description: "Respuesta clara y directa a varias preguntas específicas",
-        price: 30,
-        pricePEN: 100, // Assuming 1 USD = 3.75 PEN
-        duration: "15 min",
-        includes: [
-          "Varias preguntas concretas",
-          "Respuesta inmediata",
-          "Orientación puntual",
-          "Mensaje de cierre"
+          "Método de lectura: las 7 puertas",
+          "Interpretación profunda de las cartas",
+          "2 Tiradas personalizadas",
+          "Tiradas complementarias cuando sea necesario",
+          "Espacio para preguntas",
+          "Fotografía de la tirada",
+          "Mensaje del oráculo de Ángeles",
+          "Palabra clave",
+          "Atención privada y confidencial"
         ]
       },
       {
         id: 'tarot-anual',
-        name: "Lectura Anual Completa",
-        description: "Predicciones y guía energética para todo el año",
-        price: 85,
-        pricePEN: 297, // Assuming 1 USD = 3.75 PEN
-        duration: "2 horas",
+        name: "Lectura especial anual y de cumpleaños",
+        description: "Tirada anual mes por mes, con seguimiento y terapia floral personalizada",
+        price: 180,
+        pricePEN: 600,
+        duration: "120 minutos",
         includes: [
           "Tirada anual mes por mes",
-          "Rituales estacionales",
-          "1 Lectura de Seguimiento 10% descuento a mitad de año",
-          "Material  de Apoyo",
-          "Tratamiento incluido de Flores de Bach y California personalizado"
+          "Tiradas complementarias cuando sea necesario",
+          "1 Lectura profunda de Seguimiento con 10% de descuento al año",
+          "Espacio para preguntas",
+          "Palabra clave",
+          "Mensaje de cierre",
+          "Tratamiento incluido de Flores de Bach y California personalizado",
+          "Atención privada y confidencial"
+        ]
+      },
+      {
+        id: 'tarot-pregunta',
+        name: "1 Pregunta",
+        description: "Respuesta clara y directa a una pregunta específica",
+        price: 20,
+        pricePEN: 67,
+        duration: "1 pregunta",
+        includes: [
+          "Respuesta inmediata",
+          "Orientación puntual",
+          "Mensaje de cierre",
+          "Atención privada y confidencial"
+        ]
+      },
+      {
+        id: 'tarot-express',
+        name: "Lectura express",
+        description: "Respuesta clara y directa a varias preguntas concretas",
+        price: 35,
+        pricePEN: 117,
+        duration: "15 minutos",
+        includes: [
+          "Varias preguntas concretas",
+          "Respuesta inmediata",
+          "Orientación puntual",
+          "Palabra clave",
+          "Mensaje de cierre",
+          "Atención privada y confidencial"
         ]
       }
     ]

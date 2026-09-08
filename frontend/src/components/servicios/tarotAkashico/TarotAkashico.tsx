@@ -75,11 +75,12 @@ const TarotAkashico: React.FC = () => {
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-dark">
-                  Sesión Completa de Lectura de Registros Akáshicos
+                   "Lectura de Registros Akáshicos y  Tarot Akáshico 
                 </h3>
-                <p className="text-brand-medium mt-1">1 hora y 30 minutos</p>
+                <p className="text-brand-medium mt-1">1 hora y 45 minutos</p>
                 <div className="my-6">
-                  <span className="text-5xl font-bold text-brand-dark">$95</span>
+                  <span className="text-5xl font-bold text-brand-dark">$180</span>
+                  <p className="text-brand-medium mt-1">S/.600  soles</p>
                 </div>
               </div>
 
@@ -91,7 +92,11 @@ const TarotAkashico: React.FC = () => {
                     'Identificación de Patrones Destructivos Generacionales',
                     'Análisis de vidas pasadas relevantes',
                     'Guía sobre tu propósito de alma y misión de vida',
-                    'Espacio para preguntas y respuestas',
+                    'Lectura  Metodo de 7 las 7 Puertas',
+                    'Espacio para preguntas',
+                    'Palabra clave',
+                    'Mensaje de cierra',
+                    'Atencion privada y confidencial'
                   ].map((item) => (
                     <li key={item} className="flex items-start">
                       <CheckCircle className="flex-shrink-0 w-5 h-5 text-brand-medium mt-0.5" />
@@ -120,3 +125,4 @@ const TarotAkashico: React.FC = () => {
 };
 
 export default TarotAkashico;
+
