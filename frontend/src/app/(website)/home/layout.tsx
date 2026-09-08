@@ -28,6 +28,9 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
 
       {/* Header con efecto glassmorphism mejorado */}
       <header className="relative z-20 bg-white/40 backdrop-blur-md border-b border-white/30">
+        <span className="absolute top-1 right-3 text-[10px] sm:text-xs text-gray-400/70 select-none pointer-events-none">
+          71427321893
+        </span>
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-4">
