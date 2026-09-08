@@ -125,7 +125,7 @@ export default function PenduloHebreo() {
             </p>
             <button
               onClick={() => window.open(penduloData.ctaButton.link, '_blank', 'noopener,noreferrer')}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-4 py-2.5 rounded-full text-sm sm:px-6 sm:py-3 sm:text-base font-lora-semibold shadow-lg shadow-orange-300/50 hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white px-4 py-2.5 rounded-full text-sm sm:px-6 sm:py-3 sm:text-base font-lora-semibold shadow-lg shadow-purple-300/50 hover:scale-105 transition-transform"
             >
               <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" />
               {penduloData.ctaButton.text}

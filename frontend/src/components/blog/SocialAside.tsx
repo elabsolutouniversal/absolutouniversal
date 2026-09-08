@@ -87,7 +87,7 @@ export default function SocialAside() {
           href="https://www.youtube.com/@absolutouniversal"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-500 hover:to-orange-700 transition-colors"
+          className="flex items-center justify-center gap-3 w-full px-4 py-3 bg-gradient-to-r from-purple-400 to-purple-600 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-purple-700 transition-colors"
         >
           <YoutubeIcon className="w-5 h-5" /> YouTube
         </a>

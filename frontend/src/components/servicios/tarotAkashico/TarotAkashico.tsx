@@ -75,7 +75,7 @@ const TarotAkashico: React.FC = () => {
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-dark">
-                   "Lectura de Registros Akáshicos y  Tarot Akáshico 
+                   Lectura de Registros Akáshicos y  Tarot Akáshico
                 </h3>
                 <p className="text-brand-medium mt-1">1 hora y 45 minutos</p>
                 <div className="my-6">

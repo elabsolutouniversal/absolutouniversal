@@ -77,7 +77,7 @@ export default async function CourseDetailPage({
                                 href="https://wa.me/51962305362?text=Hola%20deseo%20inscribirme%20en%20el%20curso"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex w-full md:w-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white rounded-lg shadow-lg shadow-orange-300/50 transition-all duration-300 font-lora-semibold text-center transform hover:scale-105"
+                                className="inline-flex w-full md:w-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white rounded-lg shadow-lg shadow-purple-300/50 transition-all duration-300 font-lora-semibold text-center transform hover:scale-105"
                             >
                                 Inscribirse ahora
                             </a>

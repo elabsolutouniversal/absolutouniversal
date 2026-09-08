@@ -74,7 +74,7 @@ export default function ProfileTeaser() {
 
             <Link
               href="/sobre-mi"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-lora-medium px-8 py-4 rounded-full shadow-lg shadow-orange-300/50 transition-all duration-300 transform hover:scale-105 group font-normal-style"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white font-lora-medium px-8 py-4 rounded-full shadow-lg shadow-purple-300/50 transition-all duration-300 transform hover:scale-105 group font-normal-style"
             >
               {profileData.content.ctaText}
               <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">

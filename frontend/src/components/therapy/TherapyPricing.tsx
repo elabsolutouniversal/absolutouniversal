@@ -23,8 +23,8 @@ const PACKAGE_CIRCLE_COLORS: Record<string, { bg: string; icon: string }> = {
   'pendulo-hogar': { bg: '#FACC15', icon: '#A16207' },
   'retiro-danos-amarres': { bg: '#6B7F3B', icon: '#FFFFFF' },
   'tarot-esencial': { bg: '#FACC15', icon: '#A16207' },
-  'tarot-profunda': { bg: '#8B6048', icon: '#FFFFFF' },
-  'tarot-premium': { bg: '#C4A574', icon: '#FFFFFF' },
+  'tarot-profunda': { bg: '#7C3AED', icon: '#FFFFFF' },
+  'tarot-premium': { bg: '#C4B5FD', icon: '#6D28D9' },
   'tarot-anual': { bg: '#6B7F3B', icon: '#FFFFFF' },
   'tarot-pregunta': { bg: '#14B8A6', icon: '#FFFFFF' },
   'tarot-express': { bg: '#F59E42', icon: '#FFFFFF' },
@@ -123,10 +123,10 @@ const PackageCard: React.FC<PackageCardProps> = ({
 
   return (
     <div className={`relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 ${
-      pkg.popular ? 'ring-2 ring-orange-300 transform hover:scale-[1.02]' : ''
+      pkg.popular ? 'ring-2 ring-[#6B7F3B]/40 transform hover:scale-[1.02]' : ''
     }`}>
       {pkg.popular && (
-        <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-400 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-[#7C9645] to-[#6B7F3B] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
           RECOMENDADO
         </div>
       )}
@@ -198,9 +198,9 @@ const PackageCard: React.FC<PackageCardProps> = ({
         <button
           onClick={() => onSelect(pkg, therapyName, therapyId)}
           className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-            pkg.popular 
-              ? 'bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:from-orange-500 hover:to-orange-700' 
-              : 'bg-gradient-to-r from-orange-400 to-orange-600 text-white hover:bg-yellow-200/60'
+            pkg.popular
+              ? 'bg-gradient-to-r from-purple-400 to-purple-600 text-white hover:from-purple-500 hover:to-purple-700'
+              : 'bg-gradient-to-r from-purple-400 to-purple-600 text-white hover:from-purple-500 hover:to-purple-700'
           }`}
         >
           Reservar ahora

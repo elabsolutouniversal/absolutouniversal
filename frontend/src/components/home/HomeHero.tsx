@@ -67,7 +67,7 @@ export default function HomeHero(): React.ReactElement {
               <Link
                 href="/servicios/sanacion-integrativa-holistica"
                 aria-label="Descubre mis servicios"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white px-8 py-4 rounded-full shadow-lg shadow-orange-300/50 transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white px-8 py-4 rounded-full shadow-lg shadow-purple-300/50 transition-all duration-300 transform hover:scale-105 text-base md:text-lg font-semibold"
               >
                 Metodo <span className="text-3xl">SATHYA</span>
                 <FaArrowRight className="text-base" />

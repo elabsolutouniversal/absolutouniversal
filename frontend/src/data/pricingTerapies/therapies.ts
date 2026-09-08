@@ -14,16 +14,16 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-sanacion',
         name: "Tratamiento de Limpieza Energética Completo",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
-        price: 255 ,
-        pricePEN: 860, // Assuming 1 USD = 3.75 PEN
+        price: 300 ,
+        pricePEN: 1000, // Assuming 1 USD = 3.75 PEN
         duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",
           "Limpieza de la Energias Densas y de Baja Vibración",
           "Desbloqueo y Potenciamiento de los Principales Centros Energéticos - Chakras",
           "Reparaciòn de Grietas del Aura y Sellado Aurico",
-          "Lectura de Tarot Terapeutico y Askachico",
-          "Protecciones Enérgeticas Avanzadas",
+          "Lectura de Tarot Terapéutico",
+          "Protecciones Enérgeticas",
           "Instrucciones de mantenimiento"
         ],
         popular: true
