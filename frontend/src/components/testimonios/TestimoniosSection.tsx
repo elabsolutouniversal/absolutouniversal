@@ -10,6 +10,29 @@ import TestimonioCard from '@/components/testimonios/index';
 import Pagination from '@/components/ui/Pagination';
 import StarRating from '@/components/ui/StarRating';
 
+/**
+ * Fondo del hero (bosque con orquídeas) encuadrado en la zona del sol
+ * (arriba a la derecha). La capa es sticky y mide algo más de una pantalla (margen
+ * para barras móviles que se ocultan), así la imagen
+ * no se estira a lo alto de toda la sección y el sol se ve siempre,
+ * igual en escritorio que en móvil.
+ */
+const SunnyBackground = () => (
+  <>
+    <div className="absolute inset-0 z-0" aria-hidden="true">
+      <div
+        className="sticky top-0 h-[calc(100vh+6rem)] w-full bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
+          backgroundPosition: '75% 25%',
+        }}
+      />
+    </div>
+    {/* Velo crema suave: da legibilidad sin apagar el amarillo */}
+    <div className="absolute inset-0 z-[1] bg-[#FFF8E6]/30" aria-hidden="true" />
+  </>
+);
+
 interface TestimoniosSectionProps {
   testimonios: ITestimonio[];
   itemsPerPage?: number;
@@ -41,14 +64,8 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
 
   if (testimonios.length === 0) {
     return (
-      <section className={`relative overflow-hidden py-16 ${className}`}>
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
-          }}
-        />
-        <div className="absolute inset-0 z-[1] bg-white/35" />
+      <section className={`relative overflow-clip py-16 ${className}`}>
+        <SunnyBackground />
 
         <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <MessageSquare className="w-16 h-16 text-brand-light mx-auto mb-4" />
@@ -60,14 +77,8 @@ const TestimoniosSection: React.FC<TestimoniosSectionProps> = ({
   }
 
   return (
-    <section className={`relative overflow-hidden py-20 ${className}`}>
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('${FLORAL_BACKGROUND_URL}')`,
-        }}
-      />
-      <div className="absolute inset-0 z-[1] bg-white/35" />
+    <section className={`relative overflow-clip py-20 ${className}`}>
+      <SunnyBackground />
 
       <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

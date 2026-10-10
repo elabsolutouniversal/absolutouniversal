@@ -48,7 +48,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
         </div>
         <Link
           href={`/cursos/${course.slug}`}
-          className="btn-gold px-4 py-1.5 text-sm flex items-center"
+          className="btn-gold px-4 py-1.5 flex items-center"
         >
           Ver más
           <svg 

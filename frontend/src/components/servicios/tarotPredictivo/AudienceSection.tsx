@@ -43,7 +43,7 @@ const AudienceSection: React.FC<AudienceSectionProps> = ({
           href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%3F"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-gold group px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 text-xs sm:text-sm md:text-base lg:text-lg inline-flex items-center justify-center space-x-1 sm:space-x-2 md:space-x-3 w-full sm:w-auto max-w-sm sm:max-w-none"
+          className="btn-gold group px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 text-base lg:text-lg inline-flex items-center justify-center space-x-1 sm:space-x-2 md:space-x-3 w-full sm:w-auto max-w-sm sm:max-w-none"
         >
           <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform duration-300 flex-shrink-0" />
           <span className="text-center leading-tight">

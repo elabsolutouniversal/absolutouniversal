@@ -118,7 +118,7 @@ export default function MiniCarrito({ isVisible, onToggle, onOpenCarritoCompleto
         
         <button 
           onClick={onOpenCarritoCompleto}
-          className="btn-gold w-full py-2 px-4 text-sm"
+          className="btn-gold w-full py-2 px-4"
         >
           Ver Carrito Completo
         </button>

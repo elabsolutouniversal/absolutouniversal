@@ -125,7 +125,7 @@ export default function PenduloHebreo() {
             </p>
             <button
               onClick={() => window.open(penduloData.ctaButton.link, '_blank', 'noopener,noreferrer')}
-              className="btn-gold inline-flex items-center gap-2 px-4 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base"
+              className="btn-gold inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3"
             >
               <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" />
               {penduloData.ctaButton.text}

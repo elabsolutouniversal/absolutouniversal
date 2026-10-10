@@ -41,7 +41,7 @@ const TestimonioCard: React.FC<TestimonioCardProps> = ({ testimonio, className =
       {needsTruncation && (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="btn-gold inline-flex items-center text-sm px-4 py-2 mb-6"
+          className="btn-gold inline-flex items-center px-4 py-2 mb-6"
         >
           {isExpanded ? 'Ver menos' : 'Ver más'}
           {isExpanded ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}

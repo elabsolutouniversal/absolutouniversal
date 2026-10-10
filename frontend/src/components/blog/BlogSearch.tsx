@@ -138,7 +138,7 @@ const BlogSearchComponent: React.FC<BlogSearchProps> = ({
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
-            className="btn-gold flex items-center space-x-2 px-4 py-2 text-sm"
+            className="btn-gold flex items-center space-x-2 px-4 py-2"
           >
             <X className="w-4 h-4" />
             <span>Limpiar filtros</span>

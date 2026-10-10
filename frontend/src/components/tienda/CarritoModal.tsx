@@ -198,7 +198,7 @@ ${productos}
                 
                 <button
                   onClick={limpiarCarrito}
-                  className="btn-gold w-full py-2 md:py-3 px-3 md:px-4 text-sm md:text-base"
+                  className="btn-gold w-full py-2 md:py-3 px-3 md:px-4"
                 >
                   Limpiar Carrito
                 </button>

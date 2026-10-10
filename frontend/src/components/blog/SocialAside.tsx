@@ -125,7 +125,7 @@ export default function SocialAside() {
             placeholder="Tu email"
             className="w-full px-3 py-2 border border-brand-light/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-light/40"
           />
-          <button className="btn-gold w-full py-2 text-sm">
+          <button className="btn-gold w-full py-2">
             Suscribirme
           </button>
         </form>

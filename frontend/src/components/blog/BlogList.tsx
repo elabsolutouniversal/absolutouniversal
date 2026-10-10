@@ -160,7 +160,7 @@ const BlogList: React.FC<BlogListProps> = ({
             </p>
             <button
               onClick={resetSearch}
-              className="btn-gold inline-flex items-center px-4 py-2 text-sm"
+              className="btn-gold inline-flex items-center px-4 py-2"
             >
               Mostrar todos
             </button>
