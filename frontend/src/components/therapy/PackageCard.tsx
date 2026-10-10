@@ -86,11 +86,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
         {/* CTA Button */}
         <button
           onClick={handleSelect}
-          className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-            pkg.popular 
-              ? 'bg-blue-600 text-white hover:bg-blue-700' 
-              : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-          }`}
+          className="btn-gold w-full py-3 px-4"
         >
           Reservar ahora
         </button>

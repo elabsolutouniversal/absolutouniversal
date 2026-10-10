@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Navbar from "./Navbar"; // importas el nuevo componente
-import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
+import { SITE_LOGO_ALT, SITE_LOGO_MARK_URL } from '@/constants/siteLogo';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,19 +17,20 @@ export default function Header() {
 
   return (
     <header className={`${headerBg} backdrop-blur-md shadow-md sticky top-0 z-50`}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-between gap-6 px-4 sm:px-6 py-3">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-4">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 min-w-0">
           <Image
-            src={SITE_LOGO_URL}
+            src={SITE_LOGO_MARK_URL}
             alt={SITE_LOGO_ALT}
-            width={72}
-            height={72}
-            className="h-14 w-14 sm:h-[72px] sm:w-[72px] object-contain"
+            width={96}
+            height={96}
+            className="h-16 w-16 sm:h-[84px] sm:w-[84px] lg:h-24 lg:w-24 shrink-0 rounded-xl object-contain"
             priority
           />
-          <span className={`text-xl font-lora-bold-normal ${logoTextColor}`}>
-            EL ABSOLUTO UNIVERSAL
+          <span className={`flex flex-col text-lg sm:text-2xl 2xl:text-3xl font-lora-bold-normal leading-tight whitespace-nowrap ${logoTextColor}`}>
+            <span>EL ABSOLUTO</span>
+            <span>UNIVERSAL</span>
           </span>
         </Link>
 
@@ -38,10 +39,10 @@ export default function Header() {
 
         {/* HAMBURGUESA MÓVIL */}
         <button
-          className={`md:hidden ${hamburgerColor}`}
+          className={`xl:hidden shrink-0 ${hamburgerColor}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 

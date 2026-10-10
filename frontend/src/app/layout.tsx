@@ -3,7 +3,7 @@
 import { Lora } from 'next/font/google'
 import type { Metadata } from 'next';
 import './globals.css'
-import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
+import { SITE_LOGO_ALT, SITE_OG_IMAGE_URL } from '@/constants/siteLogo';
 
 const lora = Lora({ 
   subsets: ['latin'],
@@ -14,7 +14,6 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  icons: '/favicon.ico',
   metadataBase: new URL('https://www.absolutouniversal.com'),
    title: 'El Absoluto Universal',
   openGraph: {
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'El Absoluto Universal',
     images: [
       {
-        url: SITE_LOGO_URL,
+        url: SITE_OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: SITE_LOGO_ALT,

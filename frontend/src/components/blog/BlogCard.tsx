@@ -100,7 +100,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
 
           <button
             onClick={() => onReadMore(post.id)}
-            className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-brand-medium bg-amber-50/40 rounded-lg hover:bg-yellow-100/60 transition-colors group-hover:bg-brand-dark group-hover:text-white"
+            className="btn-gold inline-flex items-center px-3 py-1.5 text-xs"
           >
             Leer
             <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />

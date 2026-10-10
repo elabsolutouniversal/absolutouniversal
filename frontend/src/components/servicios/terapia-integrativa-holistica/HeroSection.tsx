@@ -48,14 +48,14 @@ export default function HeroSection() {
                href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%20de%20Sanaci%C3%B3n%20Integrativa%20Hol%C3%ADstica%3F"
                target="_blank"
                rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white font-lora-semibold px-8 py-4 rounded-full shadow-lg shadow-purple-300/50 transition-all duration-300 transform hover:scale-105 group"
+               className="btn-gold inline-flex items-center gap-2 px-8 py-4 group"
              >
                                Agenda tu sesion
                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
              </a>
             <a 
               href="#que-consiste"
-              className="bg-yellow-200/90 text-brand-dark font-lora-semibold italic px-8 py-4 rounded-full text-lg hover:bg-yellow-300/90 shadow-lg transition-all duration-300 transform hover:scale-105 inline-block"
+              className="btn-gold px-8 py-4 text-lg inline-block"
             >
               Conocer más
             </a>

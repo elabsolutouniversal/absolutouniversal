@@ -79,7 +79,7 @@ export default function IntranetLogin() {
             {/* Login Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center"
+              className="btn-gold w-full py-3 px-4 flex items-center justify-center"
             >
               <LogIn className="w-5 h-5 mr-2" />
               Iniciar Sesión

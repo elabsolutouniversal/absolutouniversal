@@ -170,22 +170,7 @@ const SanacionEnergetica = () => {
 
             <Link
               href="https://wa.me/51962305362?text=Hola%20Dahiana,%20quisiera%20agendar%20una%20sesión"
-              className="
-                w-full sm:inline-block sm:w-auto
-                bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700
-                text-white
-                px-6 sm:px-8 md:px-8
-                py-3 sm:py-3 md:py-4
-                rounded-full
-                font-lora-semibold
-                text-sm sm:text-base md:text-lg
-                transition-all duration-300
-                shadow-lg shadow-purple-300/50 hover:shadow-xl
-                transform hover:scale-105
-                active:scale-95
-                min-h-[48px] sm:min-h-[52px]
-                text-center
-              "
+              className="btn-gold w-full sm:inline-block sm:w-auto px-6 sm:px-8 md:px-8 py-3 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg min-h-[48px] sm:min-h-[52px] text-center"
             >
               Reservar mi Tratamiento
             </Link>

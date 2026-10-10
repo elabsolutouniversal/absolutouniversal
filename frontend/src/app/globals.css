@@ -232,3 +232,77 @@ p {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* ===========================================================
+   Botón dorado (estilo de marca) — usar la clase .btn-gold
+   Tamaños opcionales: .btn-gold-sm / .btn-gold-lg
+   Las utilidades de Tailwind (px-*, py-*, text-*, w-full…)
+   siguen pudiendo ajustar tamaño y layout.
+   =========================================================== */
+@layer components {
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid #F2C14E;
+    border-radius: 9999px;
+    background-color: #F5B83D;
+    background-image: linear-gradient(135deg, #FFD978 0%, #F5B83D 35%, #D98A2B 72%, #B0601C 100%);
+    color: #5A2A0E;
+    font-family: var(--font-lora), Georgia, serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 236, 180, 0.55);
+    cursor: pointer;
+    /* brillo metálico interno arriba + sombra suave debajo */
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.7),
+      inset 0 10px 12px -8px rgba(255, 250, 225, 0.85),
+      inset 0 -6px 10px -6px rgba(120, 55, 10, 0.35),
+      0 4px 10px -2px rgba(140, 75, 20, 0.35);
+    /* `translate` (no `transform`) para no chocar con animaciones que usan transform */
+    transition: translate 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .btn-gold:hover {
+    filter: brightness(1.08) saturate(1.05);
+    translate: 0 -2px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 10px 12px -8px rgba(255, 252, 235, 0.95),
+      inset 0 -6px 10px -6px rgba(120, 55, 10, 0.3),
+      0 8px 18px -4px rgba(140, 75, 20, 0.45);
+  }
+
+  .btn-gold:active {
+    translate: 0 0;
+    filter: brightness(0.98);
+  }
+
+  .btn-gold:focus-visible {
+    outline: 2px solid #F2C14E;
+    outline-offset: 3px;
+  }
+
+  .btn-gold:disabled,
+  .btn-gold[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.55;
+    filter: grayscale(0.4);
+    translate: 0 0;
+  }
+
+  .btn-gold-sm {
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-gold-lg {
+    padding: 1rem 2.25rem;
+    font-size: 1.125rem;
+  }
+}

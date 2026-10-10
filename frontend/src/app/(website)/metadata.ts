@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
-import { SITE_LOGO_ALT, SITE_LOGO_URL } from '@/constants/siteLogo';
+import { SITE_LOGO_ALT, SITE_OG_IMAGE_URL } from '@/constants/siteLogo';
 
 export const metadata: Metadata = {
-  icons: '/favicon.ico',
   metadataBase: new URL('https://www.absolutouniversal.com'),
   openGraph: {
     title: 'El Absoluto Universal',
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'El Absoluto Universal',
     images: [
       {
-        url: SITE_LOGO_URL,
+        url: SITE_OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: SITE_LOGO_ALT,

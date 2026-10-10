@@ -136,7 +136,7 @@ export default function ProfessionalProfile() {
                 href="https://wa.me/51962305362?text=Hola%20Dahiana,%20quisiera%20agendar%20una%20sesión"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center justify-center ${profileData.colors.whatsappBg} ${profileData.colors.whatsappHover} text-white font-lora-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none font-normal-style`}
+                className="btn-gold inline-flex items-center justify-center px-8 py-4 flex-1 sm:flex-none"
               >
                 <WhatsAppIcon className="mr-3 text-xl" />
                 <span>WhatsApp</span>
@@ -145,7 +145,7 @@ export default function ProfessionalProfile() {
               
               <Link
                 href="#"
-                className={`inline-flex items-center justify-center ${profileData.colors.bookingBg} ${profileData.colors.bookingHover} text-white font-lora-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:shadow-xl flex-1 sm:flex-none font-normal-style`}
+                className="btn-gold inline-flex items-center justify-center px-8 py-4 flex-1 sm:flex-none"
               >
                 <svg
                   stroke="currentColor"

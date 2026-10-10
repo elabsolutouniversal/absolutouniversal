@@ -35,7 +35,7 @@ export default function ServicioCard({ title, slug, image, description }: Servic
         {/* Botón */}
         <Link
           href={`/servicios/${slug}`}
-          className="inline-block w-full text-center bg-gradient-to-r from-[#2DD4BF] to-[#0D9488] hover:from-[#14B8A6] hover:to-[#0F766E] text-white font-lora-semibold py-3 px-4 rounded-full shadow-md shadow-teal-400/35 transition-all duration-300 transform hover:scale-105 font-normal-style"
+          className="btn-gold inline-block w-full text-center py-3 px-4"
         >
           Conocer más
         </Link>

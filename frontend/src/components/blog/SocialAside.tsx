@@ -98,8 +98,9 @@ export default function SocialAside() {
         <Image
           src={SITE_LOGO_URL}
           alt={SITE_LOGO_ALT}
-          width={200}
-          height={200}
+          width={300}
+          height={300}
+          className="w-60 sm:w-[300px] lg:w-60 xl:w-[300px] max-w-full h-auto rounded-2xl object-contain"
         />
       </div>
 
@@ -124,7 +125,7 @@ export default function SocialAside() {
             placeholder="Tu email"
             className="w-full px-3 py-2 border border-brand-light/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-light/40"
           />
-          <button className="w-full py-2 text-sm font-semibold text-brand-dark bg-yellow-200/90 border border-yellow-300/60 rounded-lg hover:bg-yellow-300/90">
+          <button className="btn-gold w-full py-2 text-sm">
             Suscribirme
           </button>
         </form>

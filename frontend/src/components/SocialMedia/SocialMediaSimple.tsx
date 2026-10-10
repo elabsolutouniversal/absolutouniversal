@@ -89,9 +89,9 @@ export const SocialMediaSimple: React.FC = () => {
             <Image
               src={SITE_LOGO_URL}
               alt={SITE_LOGO_ALT}
-              width={192}
-              height={192}
-              className="w-48 h-48 object-contain"
+              width={288}
+              height={288}
+              className="w-60 h-60 sm:w-72 sm:h-72 rounded-2xl object-contain"
             />
           </div>
           

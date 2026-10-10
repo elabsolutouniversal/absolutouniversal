@@ -31,7 +31,7 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
   };
 
   return isMobile ? (
-    <nav className="md:hidden flex flex-col items-center px-6 pb-6 text-xl bg-white/40 backdrop-blur-md">
+    <nav className="xl:hidden flex flex-col items-center px-6 pb-6 text-xl bg-white/40 backdrop-blur-md">
       {links.map((link) => (
         <Link
           key={link.href}
@@ -48,12 +48,12 @@ export default function Navbar({ isMobile, closeMenu }: Props) {
       ))}
     </nav>
   ) : (
-    <nav className="hidden md:flex space-x-10 text-xl">
+    <nav className="hidden xl:flex items-center gap-6 2xl:gap-8 text-lg 2xl:text-xl">
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className={`font-lora-semibold tracking-wide ${
+          className={`whitespace-nowrap font-lora-semibold tracking-wide ${
             isActive(link.href) 
               ? "text-brand-dark font-lora-bold border-b-2 border-brand-dark"
               : "text-brand-medium hover:text-brand-dark"

@@ -121,11 +121,7 @@ export default function ProductoCard({ producto, onProductoAgregado }: ProductoC
         <button
           onClick={handleAgregarProducto}
           disabled={producto.stock === 0}
-          className={`w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-            producto.stock === 0
-              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              : 'bg-purple-200/90 text-brand-dark border border-purple-300/50 hover:bg-purple-300/90 transform hover:scale-105'
-          }`}
+          className="btn-gold w-full flex items-center justify-center gap-2 py-3 px-4"
         >
           <ShoppingCart className="w-5 h-5" />
           {producto.stock === 0 ? 'Agotado' : 

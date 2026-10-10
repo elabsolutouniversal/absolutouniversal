@@ -14,8 +14,8 @@ export const therapiesData: TherapiesData = {
         id: 'pendulo-sanacion',
         name: "Tratamiento de Limpieza Energética Completo",
         description: "Limpieza y Curación Energética Integrativa (Tratamiento Base)",
-        price: 300 ,
-        pricePEN: 1000, // Assuming 1 USD = 3.75 PEN
+        price: 375 ,
+        pricePEN: 1400, // Assuming 1 USD = 3.75 PEN
         duration: "5 sesiones",
         includes: [
           "Diagnóstico energético completo",

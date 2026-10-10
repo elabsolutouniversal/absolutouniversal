@@ -229,7 +229,7 @@ export default function TiendaPrincipal() {
                 setBusqueda('');
                 setCategoriaActiva('todas');
               }}
-              className="bg-purple-200/90 text-brand-dark border border-purple-300/50 px-6 py-3 rounded-lg hover:bg-purple-300/90 transition-colors font-semibold"
+              className="btn-gold px-6 py-3"
             >
               Limpiar filtros
             </button>

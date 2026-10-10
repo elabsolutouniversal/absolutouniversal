@@ -52,7 +52,7 @@ export default function InitialHero(): React.ReactElement {
                     });
                   }
                 }}
-                className="bg-yellow-200/90 text-brand-dark font-lora-semibold italic text-xl rounded-full px-10 py-3 shadow-lg hover:bg-yellow-300/90 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="btn-gold text-xl px-10 py-3"
               >
                 <span>Descubre más</span>
               </button>

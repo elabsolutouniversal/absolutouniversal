@@ -19,7 +19,7 @@ export default function WhatsAppCTA() {
           href="https://wa.me/51962305362?text=Hola%20.%C2%BFQuisiera%20agendar%20una%20sesion%3F"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-normal-style"
+          className="btn-gold inline-flex items-center gap-3 text-lg px-8 py-4"
         >
           <WhatsAppIcon className="text-2xl" />
           Hablemos por WhatsApp

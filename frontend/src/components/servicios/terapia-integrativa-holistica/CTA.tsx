@@ -28,7 +28,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-brand-medium px-10 py-4 rounded-full font-lora-bold text-lg hover:bg-amber-50/40 transition-all duration-300 shadow-lg inline-block font-normal-style"
+              className="btn-gold px-10 py-4 text-lg inline-block"
             >
               Reservar mi primera sesión
             </motion.a>

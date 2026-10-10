@@ -25,7 +25,7 @@ export default function TiendaCTA() {
               href="https://wa.me/51962305362?text=Hola! Me gustaría consultar sobre los servicios de la tienda"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="btn-gold inline-block px-6 py-3"
             >
               Contactar por WhatsApp
             </a>
@@ -39,7 +39,7 @@ export default function TiendaCTA() {
             <p className="text-purple-100 mb-4">Llamada directa</p>
             <a 
               href="tel:+51962305362"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="btn-gold inline-block px-6 py-3"
             >
               Llamar Ahora
             </a>
@@ -53,7 +53,7 @@ export default function TiendaCTA() {
             <p className="text-purple-100 mb-4">Consulta detallada</p>
             <a 
               href="mailto:info@absolutouniversal.com"
-              className="inline-block bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="btn-gold inline-block px-6 py-3"
             >
               Enviar Email
             </a>

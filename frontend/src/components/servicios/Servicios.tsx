@@ -77,7 +77,7 @@ export default function Servicios({
           <div className="text-center mt-12">
             <Link
               href="/servicios"
-              className="inline-block bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white font-lora-semibold px-8 py-4 rounded-full shadow-lg shadow-purple-300/50 transition-all duration-300 transform hover:scale-105 font-normal-style"
+              className="btn-gold inline-block px-8 py-4"
             >
               Ver todos los servicios
             </Link>
@@ -89,9 +89,9 @@ export default function Servicios({
             <Image
               src={SITE_LOGO_URL}
               alt={SITE_LOGO_ALT}
-              width={320}
-              height={320}
-              className="w-[min(280px,88vw)] h-auto sm:w-64 md:w-72 object-contain"
+              width={432}
+              height={432}
+              className="w-[min(360px,85vw)] h-auto sm:w-96 md:w-[432px] rounded-2xl object-contain"
             />
           </div>
         )}

@@ -82,7 +82,7 @@ export default function NotificacionProducto({ producto, onClose, onVerCarrito }
                   setIsVisible(false);
                   setTimeout(onClose, 300);
                 }}
-                className="flex items-center gap-1 text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full hover:bg-purple-200 transition-colors"
+                className="btn-gold flex items-center gap-1 text-xs px-2 py-1"
               >
                 <ShoppingCart className="w-3 h-3" />
                 Vista Rápida

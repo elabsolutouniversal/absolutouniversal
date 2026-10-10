@@ -108,7 +108,7 @@ const TarotAkashico: React.FC = () => {
 
               <button
                 onClick={handleBooking}
-                className="w-full bg-yellow-200/90 hover:bg-yellow-300/90 text-brand-dark font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-md border border-yellow-300/60"
+                className="btn-gold w-full py-3 px-6"
               >
                 Reservar Sesión por WhatsApp
               </button>

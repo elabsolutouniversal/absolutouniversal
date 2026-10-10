@@ -190,7 +190,7 @@ ${productos}
                 <button
                   onClick={enviarWhatsApp}
                   disabled={isEnviando}
-                  className="w-full bg-green-500 hover:bg-green-600 disabled:bg-green-300 text-white py-3 md:py-4 px-4 md:px-6 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 text-base md:text-lg"
+                  className="btn-gold w-full py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 text-base md:text-lg"
                 >
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
                   {isEnviando ? 'Enviando...' : 'Comprar por WhatsApp'}
@@ -198,7 +198,7 @@ ${productos}
                 
                 <button
                   onClick={limpiarCarrito}
-                  className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 md:py-3 px-3 md:px-4 rounded-xl font-medium transition-colors text-sm md:text-base"
+                  className="btn-gold w-full py-2 md:py-3 px-3 md:px-4 text-sm md:text-base"
                 >
                   Limpiar Carrito
                 </button>

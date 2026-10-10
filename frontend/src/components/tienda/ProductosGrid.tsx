@@ -102,7 +102,7 @@ export default function ProductosGrid() {
                 {/* Botón */}
                 <Link 
                   href={servicio.href}
-                  className="block w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white text-center py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105"
+                  className="btn-gold block w-full text-center py-3 px-6"
                 >
                   Ver Detalles
                   <ArrowRight className="w-4 h-4 inline ml-2" />
@@ -142,7 +142,7 @@ export default function ProductosGrid() {
                   </div>
                   <Link 
                     href={`/cursos/${curso.slug}`}
-                    className="block w-full bg-purple-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                    className="btn-gold block w-full text-center py-2 px-4"
                   >
                     Ver Curso
                   </Link>
